@@ -1,9 +1,16 @@
-import Heading from "./components/Heading"
+import NavBar from "./components/NavBar/NavBar"
+import Section from "./components/Section/Section"
 
 function App() {
   
   return (
-    <Heading title={'ExploAgro'} />
+    <>
+      <NavBar />
+      <Section
+        title={'Title from App'}
+       
+      >Otro entre etiquetas</Section>
+    </>
   )
 }
 
