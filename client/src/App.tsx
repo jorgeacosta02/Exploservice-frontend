@@ -1,13 +1,10 @@
-import React from 'react';
-import Landing from './views/Landing/landing';
-import './App.css';
+import Heading from "./components/Heading"
 
-function App(): JSX.Element {
+function App() {
+  
   return (
-    <div className="App">
-      <Landing />
-    </div>
-  );
+    <Heading title={'ExploAgro'} />
+  )
 }
 
-export default App;
+export default App
