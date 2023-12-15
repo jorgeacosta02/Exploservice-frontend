@@ -1,3 +1,7 @@
+@use "../../styles/variables" as vars;
+
 .navBar {
-    background-color: blue;
+    text-decoration: none;
+    background-color: vars.$grey-color;
+    color: vars.$main-color;
 }

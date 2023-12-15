@@ -7,10 +7,10 @@ const NavBar: React.FC = () => {
 
   return (
     <div className={styles.navBar}>
-      <NavLink to="/products">Products</NavLink>
-      <NavLink to="/signup">Sign Up</NavLink>
-      <NavLink to="/login">Log in</NavLink>
-      <NavLink to="/contact">Contact Us</NavLink>
+      <NavLink to="/products" className={styles.navBar} >Products</NavLink>
+      <NavLink to="/signup" className={styles.navBar} >Sign Up</NavLink>
+      <NavLink to="/login" className={styles.navBar} >Log in</NavLink>
+      <NavLink to="/contact" className={styles.navBar} >Contact Us</NavLink>
     </div>
   )
 }
