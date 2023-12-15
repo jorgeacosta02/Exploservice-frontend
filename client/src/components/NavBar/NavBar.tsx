@@ -8,10 +8,20 @@ const NavBar: React.FC = () => {
   return (
     <div className={styles.navBar}>
       <h1>ExploAgro</h1>
-      <NavLink to="/products" className={styles.navBar} >Products</NavLink>
-      <NavLink to="/signup" className={styles.navBar} >Sign Up</NavLink>
-      <NavLink to="/login" className={styles.navBar} >Log in</NavLink>
-      <NavLink to="/contact" className={styles.navBar} >Contact Us</NavLink>
+      <ul className={styles.navlist}>
+        <li>
+          <NavLink to="/products" className={styles.navBar} >Products</NavLink>
+        </li>
+        <li>
+          <NavLink to="/signup" className={styles.navBar} >Sign Up</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login" className={styles.navBar} >Log in</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className={styles.navBar} >Contact Us</NavLink>
+        </li>
+      </ul>
       <svg
         xmlns="http://www.w3.org/2000/svg" 
         width="24" 
