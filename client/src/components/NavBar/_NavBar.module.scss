@@ -1,5 +1,5 @@
 @use "../../styles/variables" as vars;
-@use "../../styles/breakpoints" as brps;
+@use "../../styles/breakpoints" as brkps;
 @use "../../styles/mixins" as mxns;
 
 .navBar {
@@ -21,7 +21,7 @@
         height: calc(100vh - 50px);
         // right: -100%;
         transition: left 0.3s;
-        @include brps.display-large{
+        @include brkps.display-large{
             justify-content: space-between;
             position: relative;
             flex-direction: row;
@@ -37,4 +37,17 @@
             color: inherit;
         }
     }
+    // .menu{
+    //     font-size: 35px;
+    //     width: 5vw;
+    //     color: red;
+    //     z-index: 1000;
+    //     cursor: pointer;
+    //     margin-right: 10%;
+    //     @include brkps.display-large{
+    //         display: none;
+    //         color: red;
+    //         background-color: blue;
+    //     }
+    // }
 }
