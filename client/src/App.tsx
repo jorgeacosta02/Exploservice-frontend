@@ -1,16 +1,17 @@
 import NavBar from "./components/NavBar/NavBar";
-import Section from "./components/Section/Section";
+import Center from "./components/Center/Center";
+import field from './assets/images/campo-04.jpg'
 
 function App() {
   
   return (
-    <>
+    <div>
       <NavBar />
-      <Section
-        title={'Title from App'}
-       
-      >Otro entre etiquetas</Section>
-    </>
+      <Center>
+        {field}
+      </Center>
+      
+    </div>
   )
 }
 

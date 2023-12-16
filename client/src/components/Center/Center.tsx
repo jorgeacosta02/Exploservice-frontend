@@ -1,4 +1,6 @@
 import { ReactNode } from "react"
+import './_Center.modules.scss';
+
 
 
 type SectionProps = {
@@ -8,9 +10,10 @@ type SectionProps = {
 
 const Section = ({children, title = "My subheding"}: SectionProps) => {
     return (
-        <section>
+        <section className='container'>
             <h2>{title}</h2>
             <p>{children}</p>
+            
         </section>
   )
 }
