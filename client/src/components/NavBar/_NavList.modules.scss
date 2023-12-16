@@ -1,0 +1,29 @@
+@use '../../styles/globals.scss' as g;
+
+.navList{ // ul
+    box-sizing: border-box;
+    list-style: none;
+    @include g.create-flexbox(column, space-evenly);
+    background-color: g.$second-bg-color;
+    padding: 20px 0 60px;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    // right: -100%;
+    transition: left 0.3s;
+    @include g.display-large{
+        justify-content: space-between;
+        position: relative;
+        flex-direction: row;
+        padding: 0 4vw;
+        width: 40%;
+        height: 70px;
+        right: 0;
+        top: 0;
+        background-color: blue;
+    }
+    .navLink{
+        text-decoration: none;
+        color: inherit;
+    }
+}

@@ -1,0 +1,16 @@
+@use '../../styles/globals.scss' as g;
+
+
+
+.menu{
+    font-size: 35px;
+    width: 30px;
+    height: 30px;
+    fill: g.$text-color;
+    z-index: 1000;
+    cursor: pointer;
+    margin-right: 10%;
+    @include g.display-large{
+        display: none;
+    }
+}
