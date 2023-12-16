@@ -5,16 +5,19 @@ const NavList = () => {
   return (
     <ul className='navList'>
         <li>
-          <NavLink to="/products" className='navLink' >Products</NavLink>
+          <NavLink to="/products" className='navLink' >Productos</NavLink>
         </li>
         <li>
-          <NavLink to="/signup" className='navLink' >Sign Up</NavLink>
+          <NavLink to="/products" className='navLink' >Empresa</NavLink>
         </li>
         <li>
-          <NavLink to="/login" className='navLink' >Log in</NavLink>
+          <NavLink to="/signup" className='navLink' >Registrarse</NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className='navLink' >Contact Us</NavLink>
+          <NavLink to="/login" className='navLink' >Ingresar</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className='navLink' >Contactanos</NavLink>
         </li>
       </ul>
   )

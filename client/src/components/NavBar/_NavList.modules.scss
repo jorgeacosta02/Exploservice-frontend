@@ -1,4 +1,4 @@
-@use '../../styles/globals.scss' as g;
+@use "../../styles/globals.modules" as g;;
 
 .navList{ // ul
     box-sizing: border-box;
@@ -13,14 +13,15 @@
     transition: left 0.3s;
     @include g.display-large{
         justify-content: space-between;
-        position: relative;
+        // position: relative;
         flex-direction: row;
+        font-size: min(#{2vw}, #{15px});
         padding: 0 4vw;
-        width: 40%;
+        width: 70%;
         height: 70px;
-        right: 0;
-        top: 0;
-        background-color: blue;
+        // right: 0;
+        // top: 0;
+        background-color: inherit;
     }
     .navLink{
         text-decoration: none;

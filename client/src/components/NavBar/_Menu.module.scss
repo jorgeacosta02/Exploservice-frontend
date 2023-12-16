@@ -1,6 +1,4 @@
-@use '../../styles/globals.scss' as g;
-
-
+@use "../../styles/globals.modules" as g;
 
 .menu{
     font-size: 35px;
@@ -10,6 +8,7 @@
     z-index: 1000;
     cursor: pointer;
     margin-right: 10%;
+    fill: red;
     @include g.display-large{
         display: none;
     }
