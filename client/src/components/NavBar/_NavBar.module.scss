@@ -3,35 +3,38 @@
 @use "../../styles/mixins" as mxns;
 
 .navBar {
-    // position: absolute;
     position: fixed;
     width: 100%;
     height: 200px;
     top: 0;
-    text-decoration: none;
     background-color: vars.$main-color;
     color: vars.$text-color;
-}
-.navlist{
-    box-sizing: border-box;
-    list-style: none;
-    @include mxns.create-flexbox(column, space-evenly);
-    background-color: vars.$second-bg-color;
-    padding: 20px 0 60px;
-    top: 50px;
-    width: 100%;
-    height: calc(100vh - 50px);
-    // right: -100%;
-    transition: left 0.3s;
-    @include brps.display-large{
-        justify-content: space-between;
-        position: relative;
-        flex-direction: row;
-        padding: 0 4vw;
-        width: 60%;
-        height: 70px;
-        right: 0;
-        top: 0;
-        background-color: vars.$bg-color;
+    @include mxns.create-flexbox(row, space-evenly);
+    .navlist{
+        box-sizing: border-box;
+        list-style: none;
+        @include mxns.create-flexbox(column, space-evenly);
+        background-color: vars.$second-bg-color;
+        padding: 20px 0 60px;
+        top: 50px;
+        width: 100%;
+        height: calc(100vh - 50px);
+        // right: -100%;
+        transition: left 0.3s;
+        @include brps.display-large{
+            justify-content: space-between;
+            position: relative;
+            flex-direction: row;
+            padding: 0 4vw;
+            width: 40%;
+            height: 70px;
+            right: 0;
+            top: 0;
+            background-color: blue;
+        }
+        .navLink{
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }

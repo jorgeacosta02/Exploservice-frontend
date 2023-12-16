@@ -7,19 +7,19 @@ const NavBar: React.FC = () => {
 
   return (
     <div className={styles.navBar}>
-      <h1>ExploAgro</h1>
+      <h1 className={styles.logo}>ExploAgro</h1>
       <ul className={styles.navlist}>
         <li>
-          <NavLink to="/products" className={styles.navBar} >Products</NavLink>
+          <NavLink to="/products" className={styles.navLink} >Products</NavLink>
         </li>
         <li>
-          <NavLink to="/signup" className={styles.navBar} >Sign Up</NavLink>
+          <NavLink to="/signup" className={styles.navLink} >Sign Up</NavLink>
         </li>
         <li>
-          <NavLink to="/login" className={styles.navBar} >Log in</NavLink>
+          <NavLink to="/login" className={styles.navLink} >Log in</NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className={styles.navBar} >Contact Us</NavLink>
+          <NavLink to="/contact" className={styles.navLink} >Contact Us</NavLink>
         </li>
       </ul>
       <svg
