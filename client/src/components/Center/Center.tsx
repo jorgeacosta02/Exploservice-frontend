@@ -1,24 +1,26 @@
-import { ReactNode } from "react"
 import './_Center.modules.scss';
+import img04 from '../../assets/images/campo-04.jpg'
 
 
 
-type SectionProps = {
-    title?: string,
-    children: ReactNode
-}
 
-const Section = ({children, title = "My subheding"}: SectionProps) => {
+
+const Center = () => {
     return (
         <section className='container'>
-            <h2>{title}</h2>
-            <p>{children}</p>
+            <img
+                className="img"
+                src={img04} alt="Field" />
+            <h2 className="mainTitle">
+                Productos para el agro...
+            </h2>
+            <p></p>
             
         </section>
   )
 }
 
-export default Section
+export default Center
 
 
 
