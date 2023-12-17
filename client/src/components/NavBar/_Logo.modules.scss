@@ -1,15 +1,15 @@
 @use "../../styles/globals.modules" as g;
 
-    .menu{
+    .logo{
         font-size: 35px;
         width: 5vw;
-        color: red;
+        font-size: max(#{22px},#{7vw});
         z-index: 1000;
         cursor: pointer;
         margin-right: 10%;
         @include g.display-large{
-            display: none;
-            color: red;
+            
+  
             background-color: blue;
         }
     }

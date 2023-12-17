@@ -6,10 +6,10 @@
     @include g.create-flexbox(column, space-evenly);
     background-color: g.$second-bg-color;
     padding: 20px 0 60px;
-    top: 50px;
+    margin-top: 50px;
     width: 100%;
     height: calc(100vh - 50px);
-    // right: -100%;
+    right: -100%;
     transition: left 0.3s;
     @include g.display-large{
         justify-content: space-between;
