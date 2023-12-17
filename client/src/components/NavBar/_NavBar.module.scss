@@ -2,13 +2,19 @@
 
 
 .navBar {
+    box-sizing: border-box;
     position: fixed;
     width: 100vw;
-    height: 70px;
+    height: 40px;
     top: 0;
     padding: 0 5vw;
     background-color: g.$main-color;
     color: g.$text-color;
-    // @include g.create-flexbox(row, space-evenly);
+    @include g.create-flexbox(row, space-evenly);
+    // align-items: center;
+    // align-content: center;
     box-shadow: 0px 0px 10px 10px rgb(1, 26, 6);
+    @include g.display-large{
+        height: 70px;
+    }
 }

@@ -1,15 +1,29 @@
 @use "../../styles/globals.modules" as g;
 
     .logo{
-        font-size: 35px;
-        width: 5vw;
-        font-size: max(#{22px},#{7vw});
+        box-sizing: border-box;
+        font-size: 20px;
+        width: 70vw;
         z-index: 1000;
         cursor: pointer;
+        padding: 0;
+        margin: 0;
         margin-right: 10%;
+        height: 100%;          
+        // background-color: red;
+        line-height: 40px;
+ 
         @include g.display-large{
-            
-  
+            width: 30%;
             background-color: blue;
+            
+
+        }
+        .text{
+            font-size: max(#{22px},#{6vw});
+            margin: 0;
+            // margin-top: 100%;
+            // margin-bottom: 100%;
+            
         }
     }

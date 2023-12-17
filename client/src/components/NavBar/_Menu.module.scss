@@ -2,14 +2,17 @@
 
 .menu{
     font-size: 35px;
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
     fill: g.$text-color;
     z-index: 1000;
     cursor: pointer;
     margin-right: 10%;
-    fill: red;
+    fill: g.$text-color;
+    border: .5px solid g.$text-color;
+    border-radius: 5px;
     padding: 5px;
+    // background-color: blue;
     @include g.display-large{
         display: none;
     }
