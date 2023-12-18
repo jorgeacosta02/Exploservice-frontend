@@ -1,0 +1,19 @@
+@use "../../styles/globals" as g;
+
+
+.container{
+    width: 100%;
+    height: calc(70vh - 50px);
+    margin-top: g.$minNavBarHeight;
+    background-color: green;
+    overflow: hidden;
+    @include g.display-large{
+    height: calc(100vh - g.$maxNavBarHeight);
+    margin-top: g.$maxNavBarHeight;
+        
+    }
+}
+.img{
+    width: calc(150% + 100px);
+
+}

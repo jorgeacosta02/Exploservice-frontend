@@ -1,10 +1,12 @@
-import './_HomeImg.modules.scss';
+import styles from './_HomeImg.module.scss';
 import img04 from '../../assets/images/campo-04.jpg'
 
 
 const HomeImg = () => {
     return (
-        <div className='container'>
+        <div 
+        className={styles.container}
+        >
             <img
                 className="img"
                 src={img04} alt="Field" />

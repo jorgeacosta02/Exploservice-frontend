@@ -1,4 +1,4 @@
-@use "../../styles/globals.modules" as g;
+@use "../../styles/globals" as g;
 
 .menu{
     box-sizing: border-box;
@@ -6,12 +6,12 @@
     width: 25px;
     height: 25px;
     margin-top: 3px;
-    fill: var(--text-color);
+    fill: g.$text-color;
     z-index: 1000;
     cursor: pointer;
     margin-right: 10%;
-    fill: var(--text-color);
-    border: .5px solid var(--text-color);
+    fill: g.$text-color;
+    border: .5px solid g.$text-color;
     border-radius: 5px;
     padding: 5px;
     // line-height: 40px;

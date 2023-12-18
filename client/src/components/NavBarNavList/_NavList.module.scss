@@ -1,11 +1,11 @@
-@use "../../styles/globals.modules" as g;;
+@use "../../styles/globals" as g;
 
 .navList{ // ul
     position: absolute;
     box-sizing: border-box;
     list-style: none;
     @include g.create-flexbox(column, space-evenly);
-    background-color: var(--second-bg-color);
+    background-color: g.$second-bg-color;
     // padding: 20px 0 60px;
     margin-top: 50px;
     width: 100%;

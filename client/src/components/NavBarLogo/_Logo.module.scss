@@ -1,4 +1,4 @@
-@use "../../styles/globals.modules" as g;
+@use "../../styles/globals" as g;
 
     .logo{
         box-sizing: border-box;
@@ -11,7 +11,7 @@
         margin-right: 10%;
         height: 100%;          
         // background-color: red;
-        line-height: var(--minNavBarHeight);
+        line-height: g.$minNavBarHeight;
  
         @include g.display-large{
             width: 30%;

@@ -1,4 +1,4 @@
-import './_Logo.modules.scss'
+import './_Logo.module.scss'
 
 const Logo = () => {
   return (
