@@ -1,3 +1,4 @@
+@use './styles/globals' as g;
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -23,7 +24,7 @@
   body {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: g.$primary-font;
   }
   
   /**

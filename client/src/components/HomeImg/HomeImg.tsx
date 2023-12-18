@@ -1,5 +1,5 @@
 import styles from './_HomeImg.module.scss';
-import img04 from '../../assets/images/campo-04.jpg'
+import img07 from '../../assets/images/campo-07.jpg'
 
 
 const HomeImg = () => {
@@ -9,7 +9,7 @@ const HomeImg = () => {
         >
             <img
                 className={styles.img}
-                src={img04} alt="Field" />
+                src={img07} alt="Field" />
         </div>
   )
 }

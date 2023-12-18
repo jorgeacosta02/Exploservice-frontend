@@ -1,5 +1,15 @@
 @use '../../styles/globals' as g;
 
 .container{
-    color: red;
+    position: absolute;
+    padding: 6px;
+    top: 80px;
+    color: g.$text-color;
+    h1{
+        font-size: min(#{20vw}, #{20px});
+    }
+    p{
+        font-weight: 700;
+        font-size: min(#{12vw}, #{12px});
+    }
 }
