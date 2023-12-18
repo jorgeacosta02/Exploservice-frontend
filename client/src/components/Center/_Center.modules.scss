@@ -7,8 +7,8 @@
     margin-top: var(--minNavBarHeight);
     background-color: blue;
     @include g.display-large{
-        height: calc(100vh - var(--minNavBarHeight));
-        margin-top: var(--minNavBarHeigh)t;
+        height: calc(100vh - var(--maxNavBarHeight));
+        margin-top: var(--maxNavBarHeight);
         
     }
 }
