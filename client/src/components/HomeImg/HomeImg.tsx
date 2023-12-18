@@ -8,7 +8,7 @@ const HomeImg = () => {
         className={styles.container}
         >
             <img
-                className="img"
+                className={styles.img}
                 src={img04} alt="Field" />
         </div>
   )

@@ -1,9 +1,9 @@
-import './_Logo.module.scss'
+import styles from './_Logo.module.scss';
 
 const Logo = () => {
   return (
-    <div className='logo'>
-      <h1 className='text'>ExploAgro</h1>
+    <div className={styles.logo}>
+      <h1 className={styles.text}>ExploAgro</h1>
     </div>
   )
 }

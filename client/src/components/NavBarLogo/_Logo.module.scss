@@ -12,18 +12,12 @@
         height: 100%;          
         // background-color: red;
         line-height: g.$minNavBarHeight;
- 
         @include g.display-large{
             width: 30%;
             background-color: blue;
-            
-
         }
         .text{
             font-size: max(#{22px},#{6vw});
             margin: 0;
-            // margin-top: 100%;
-            // margin-bottom: 100%;
-            
         }
     }
