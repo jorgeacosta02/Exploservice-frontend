@@ -1,7 +1,7 @@
 import React from "react"
-import Logo from "./Logo";
-import NavList from "./NavList";
-import Menu from "./Menu";
+import Logo from "../../components/NavBarLogo/Logo";
+import NavList from "../../components/NavBarNavList/NavList";
+import Menu from "../../components/NavBarMenu/Menu";
 import styles from './_NavBar.module.scss';
 
 

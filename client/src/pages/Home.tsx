@@ -1,5 +1,5 @@
-import NavBar from "../../layouts/NavBar/NavBar";
-import HomeImg from "../../components/Home/HomeImg";
+import NavBar from "../layouts/NavBar/NavBar";
+import HomeImg from "../components/HomeImg/HomeImg";
 
 const Home = () => {
   return (
