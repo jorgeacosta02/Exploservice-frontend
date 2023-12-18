@@ -1,23 +1,18 @@
-import './_Center.modules.scss';
+import './_HomeImg.modules.scss';
 import img04 from '../../assets/images/campo-04.jpg'
 
 
-const Center = () => {
+const HomeImg = () => {
     return (
-        <section className='container'>
+        <div className='container'>
             <img
                 className="img"
                 src={img04} alt="Field" />
-            <h2 className="mainTitle">
-                Productos para el agro...
-            </h2>
-            <p></p>
-            
-        </section>
+        </div>
   )
 }
 
-export default Center
+export default HomeImg
 
 
 

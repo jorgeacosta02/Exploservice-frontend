@@ -1,12 +1,12 @@
-import NavBar from "./components/NavBar/NavBar";
-import Center from "./components/Center/Center";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
 
-function App() {
-  
+const App = () => {
   return (
     <div>
-      <NavBar />
-      <Center />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   )
 }
