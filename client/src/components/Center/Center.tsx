@@ -2,9 +2,6 @@ import './_Center.modules.scss';
 import img04 from '../../assets/images/campo-04.jpg'
 
 
-
-
-
 const Center = () => {
     return (
         <section className='container'>

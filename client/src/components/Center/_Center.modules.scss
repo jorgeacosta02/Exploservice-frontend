@@ -4,17 +4,18 @@
 .container{
     width: 100%;
     height: calc(100vh - 50px);
-    margin-top: 40px;
+    margin-top: var(--minNavBarHeight);
     background-color: blue;
     @include g.display-large{
-        height: calc(100vh - 70px);
-        margin-top: 70px;
+        height: calc(100vh - var(--minNavBarHeight));
+        margin-top: var(--minNavBarHeigh)t;
+        
     }
 }
 .mainTitle{
     position: absolute;
     top: 250px; 
-    color: g.$text-color;
+    color: var(--text-color);
 }
 .img{
     width: 100%;
