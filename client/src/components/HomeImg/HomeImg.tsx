@@ -6,10 +6,10 @@ const HomeImg = () => {
     return (
         <div 
         className={styles.container}
-        >
-            <img
-                className={styles.img}
-                src={img07} alt="Field" />
+        ><img
+          className={styles.img}
+          src={img07} alt="Field" />
+          <div className={styles.shadow}></div>
         </div>
   )
 }
