@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux';
 import stylesReducer from './reducers/stylesReducer';
 
 const rootReducer = combineReducers({
-  counter: stylesReducer,
+  styles: stylesReducer,
   // Agrega otros reducers según sea necesario
 });
 
