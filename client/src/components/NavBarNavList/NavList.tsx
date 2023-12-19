@@ -1,9 +1,16 @@
 import { NavLink } from "react-router-dom";
 import styles from './_NavList.module.scss';
+import { RootState } from "../../redux/types";
+import { useSelector } from "react-redux";
 
 const NavList = () => {
+
+  const stylesReducer = useSelector((state: RootState) => state.styles);
+
+  const navListStyles = `${styles.navList} ${stylesReducer ? styles.show : ''}`;
+
   return (
-    <ul className={styles.navList}>
+    <ul className={navListStyles}>
         <li>
           <NavLink to="/home" className={styles.navLink} >Inicio</NavLink>
         </li>

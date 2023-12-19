@@ -5,7 +5,7 @@
     padding: 0 6px;
     top: calc(g.$minNavBarHeight + 1vh);
     color: g.$text-color;
-    z-index: 1000;
+    z-index: 10;
 
     @include g.display-large{
         padding: 5vh 5vw;

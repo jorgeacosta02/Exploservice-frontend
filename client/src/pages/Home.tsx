@@ -5,9 +5,9 @@ import HomeText from "../components/HomeText/HomeText";
 const Home = () => {
   return (
     <div>
-      <NavBar />
       <HomeImg />
       <HomeText />
+      <NavBar />
     </div>
   )
 }

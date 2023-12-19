@@ -1,7 +1,6 @@
 import styles from './_Menu.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/types';
-// import { ToggleStyleAction } from '../../redux/types';
 import { toggleStyle } from '../../redux/actions/actions';
 
 const Menu = () => {
