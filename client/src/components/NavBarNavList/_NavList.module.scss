@@ -5,24 +5,23 @@
     box-sizing: border-box;
     list-style: none;
     @include g.create-flexbox(column, space-evenly);
-    background-color: g.$second-bg-color;
-    // padding: 20px 0 60px;
-    margin-top: 50px;
     width: 100%;
-    height: calc(100vh - 50px);
     right: -100%;
     transition: left 0.3s;
     @include g.display-large{
         justify-content: space-between;
         flex-direction: row;
         font-size: min(#{2vw}, #{15px});
-        padding: 0 ;
-        width: 70%;
-        height: 70px;
-        background-color: inherit;
+        padding: 0 2px 0 0;
+        width: 67%;
+        right: 2vw;
+        // background-color: red;
     }
     .navLink{
         text-decoration: none;
         color: inherit;
     }
+}
+.hidden{
+    display: none;
 }
