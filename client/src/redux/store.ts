@@ -6,6 +6,6 @@ const rootReducer = combineReducers({
   // Agrega otros reducers según sea necesario
 });
 
-const store = createStore(rootReducer);
+export const store = createStore(rootReducer);
 
-export default store;
+

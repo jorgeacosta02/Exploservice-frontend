@@ -14,8 +14,7 @@
     border: .5px solid g.$text-color;
     border-radius: 5px;
     padding: 5px;
-    // line-height: 40px;
-    // background-color: blue;
+
     @include g.display-large{
         display: none;
     }
