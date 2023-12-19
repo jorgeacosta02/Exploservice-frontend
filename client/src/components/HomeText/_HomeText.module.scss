@@ -2,18 +2,32 @@
 
 .container{
     position: absolute;
-    padding: 6px;
-    top: 80px;
-    height: calc(70vh - 71px);
+    padding: 0 6px;
+    top: calc(g.$minNavBarHeight + 1vh);
     color: g.$text-color;
     z-index: 1000;
-    // background-color: rgba(0,0,0,.5);
+
+    @include g.display-large{
+        padding: 5vh 5vw;
+        height: calc(100vh - g.$maxNavBarHeight);
+        top: g.$maxNavBarHeight;
+    }
     h1{
         font-size: min(#{20vw}, #{20px});
-        // z-index: 1;
+
+        @include g.display-large{
+            font-size: 35px;
+        }
+
+       
     }
     p{
         font-weight: 500;
         font-size: min(#{12vw}, #{12px});
+
+        @include g.display-large{
+            font-size: 18px;
+            font-weight: 200;
+        }
     }
 }

@@ -9,7 +9,11 @@
     top: g.$minNavBarHeight;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
-    // z-index: 2;
+
+    @include g.display-large{
+        height: calc(100vh - g.$maxNavBarHeight);
+        top: g.$maxNavBarHeight;
+    }
 }
 
 .container{
@@ -18,16 +22,16 @@
     margin-top: g.$minNavBarHeight;
     background-color: green;
     overflow: hidden;
-    // z-index: 1;
 
     @include g.display-large{
         height: calc(100vh - g.$maxNavBarHeight);
         margin-top: g.$maxNavBarHeight;
     }
+
     .img{
         height: calc(100% + 150px);
         width: auto;
-        // z-index: 1;
+
         @include g.display-large{
             width: calc(150% + 150px);
             height: auto;
