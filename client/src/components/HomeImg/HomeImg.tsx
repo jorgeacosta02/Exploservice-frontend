@@ -9,7 +9,6 @@ const HomeImg = () => {
         ><img
           className={styles.img}
           src={img07} alt="Field" />
-          <div className={styles.shadow}></div>
         </div>
   )
 }
