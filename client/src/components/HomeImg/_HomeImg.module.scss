@@ -10,10 +10,9 @@
     @include g.display-large{
     height: calc(100vh - g.$maxNavBarHeight);
     margin-top: g.$maxNavBarHeight;
-        
     }
-}
-.img{
-    width: calc(150% + 100px);
+    .img{
+        width: calc(150% + 100px);
+    }
 
 }
