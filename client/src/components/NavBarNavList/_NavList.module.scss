@@ -6,12 +6,12 @@
     list-style: none;
     @include g.create-flexbox(column, space-evenly);
     width: 90%;
-    top: 12vh;
+    top: calc(g.$minNavBarHeight - 16px + 3vh);
     right: -100%;
     transition: right .2s ease;
-    z-index: 2000;
+    z-index: 200;
     background-color: g.$text-color;
-    height: calc(94vh - (g.$minNavBarHeight * 2));
+    height: calc(100vh - (g.$minNavBarHeight * 2) - 6vh);
     font-weight: 600;
     padding: 1px;
     @include g.display-large{
