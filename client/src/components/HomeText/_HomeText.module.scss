@@ -13,12 +13,14 @@
         top: g.$maxNavBarHeight;
     }
     .title{
+        position: relative;
         font-size: max(#{5vw}, #{14px});
         @include g.display-large{
             font-size: 35px;
         }
     }
     .text{
+        position: relative;
         font-weight: 500;
         font-size: min(#{12vw}, #{12px});
         

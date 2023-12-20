@@ -5,14 +5,14 @@
     box-sizing: border-box;
     list-style: none;
     @include g.create-flexbox(column, space-evenly);
-    width: 100%;
+    width: 90%;
     top: 14vh;
     right: -100%;
-    transition: left 0.3s;
+    transition: left 1s;
     z-index: 2000;
-    background-color: g.$text-color;
+    background-color: g.$main-color;
     color: g.$main-color;
-    height: calc(100vh - (g.$minNavBarHeight * 2));
+    height: calc(94vh - (g.$minNavBarHeight * 2));
     @include g.display-large{
         justify-content: space-between;
         flex-direction: row;
@@ -24,11 +24,20 @@
         line-height: g.$maxNavBarHeight;
         background-color: red;
     }
-    .navLink{
-        text-decoration: none;
-        // color: g.$text-color;
+    .navLink{// li
+        position: relative;
+        width: 100%;
+        color: black;
+        text-align: center;
+        border-bottom: 1px solid black;
+        background-color: blue;
+        .link{
+            text-decoration: none;
+        }
     }
 }
-.show{
-    right: 0;
+.show{// ul
+    right: 5%;
+    transition: right .5s ease;
+    
 }

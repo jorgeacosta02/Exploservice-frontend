@@ -11,8 +11,8 @@ const NavList = () => {
 
   return (
     <ul className={navListStyles}>
-        <li>
-          <NavLink to="/home" className={styles.navLink} >Inicio</NavLink>
+        <li className={styles.navLink}>
+          <NavLink to="/home" className={styles.link} >Inicio</NavLink>
         </li>
         <li>
           <NavLink to="/products" className={styles.navLink} >Productos</NavLink>

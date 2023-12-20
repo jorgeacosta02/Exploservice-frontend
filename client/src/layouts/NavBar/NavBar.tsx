@@ -10,8 +10,8 @@ const NavBar: React.FC = () => {
   return (
     <div className={styles.navBar}>
       <Logo/>
-      <NavList/>
       <Menu/>
+      <NavList/>
     </div>
   )
 }
