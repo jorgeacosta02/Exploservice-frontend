@@ -2,17 +2,12 @@
 
     .logo{
         box-sizing: border-box;
-        // font-size: 20px;
-        cursor: pointer;
         padding: 0;
         margin: 0;
-        // margin-right: 10%;
-        // height: 100%;          
         line-height: g.$minNavBarHeight;
         @include g.display-large{
             margin: 0;
             width: 30%;
-            // background-color: blue;
             line-height: g.$maxNavBarHeight;
         }
         .text{

@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from './_NavList.module.scss';
 import { RootState } from "../../redux/types";
 import { useDispatch, useSelector } from "react-redux";
+import { toggleStyle } from "../../redux/actions/actions";
 
 const NavList = () => {
 
@@ -9,43 +10,48 @@ const NavList = () => {
 
   const dispatch = useDispatch<any>();
 
+  const handleClick = () => {
+    console.log('click en NavLixt');
+    dispatch(toggleStyle() );
+  };
+
   const navListStyles = `${styles.navList} ${stylesReducer ? styles.show : ''}`;
 
   return (
-    <ul className={navListStyles}>
-        <li className={styles.link} >
+    <ul className={navListStyles} >
+        <li onClick={handleClick} >
           <NavLink
-            to="/home" 
+            to="#" 
             className={styles.navLink} 
            >Inicio</NavLink>
         </li>
-        <li>
+        <li onClick={handleClick} >
           <NavLink
-            to="/products" 
+            to="#" 
             className={styles.navLink} 
            >Producto</NavLink>
         </li>
-        <li>
+        <li onClick={handleClick} >
           <NavLink
-            to="/products" 
+            to="#" 
             className={styles.navLink} 
            >Empresa</NavLink>
         </li>
-        <li>
+        <li onClick={handleClick} >
           <NavLink
-            to="/signup" 
+            to="#" 
             className={styles.navLink} 
            >Registrarse</NavLink>
         </li>
-        <li>
+        <li onClick={handleClick} >
           <NavLink
-            to="/login" 
+            to="#" 
             className={styles.navLink} 
            >Ingresar</NavLink>
         </li>
-        <li>
+        <li onClick={handleClick} >
           <NavLink
-            to="/contact" 
+            to="#" 
             className={styles.navLink} 
            >Contactanos</NavLink>
         </li>

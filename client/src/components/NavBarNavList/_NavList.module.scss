@@ -5,10 +5,10 @@
     box-sizing: border-box;
     list-style: none;
     @include g.create-flexbox(column, space-evenly);
-    // align-items: flex-start;
     width: 90%;
     top: 12vh;
     right: -100%;
+    transition: right .2s ease;
     z-index: 2000;
     background-color: g.$text-color;
     height: calc(94vh - (g.$minNavBarHeight * 2));
@@ -18,14 +18,17 @@
         justify-content: space-between;
         flex-direction: row;
         top: -13px;
+        height: g.$maxNavBarHeight;
         font-size: min(#{2vw}, #{15px});
+        font-weight: 400;
         padding: 0 2px 0 0;
-        width: 67%;
-        right: 2vw;
+        width: 60%;
+        right: 5%;
         line-height: g.$maxNavBarHeight;
-        background-color: red;
+        background-color: transparent;
     }
     .navLink{// li
+        box-sizing: border-box;
         display: inline-block;
         text-decoration: none;
         text-align: center;
@@ -35,15 +38,28 @@
         line-height: 8vh;
         color: g.$main-color;
         border-radius: 2vw;
+        @include g.display-large{
+            width: 100%;
+            color: g.$text-color;
+            border-radius: .5vw;
+        }
      }
     .navLink:hover{
         background-color: g.$main-color;
         color:g.$text-color;
         transition: .2s ease;
+        @include g.display-large{
+            transform:scale(1.2);
+
+        }
     }
 }
 .show{// ul
     right: 5%;
     transition: right .3s ease;
+    @include g.display-large{
+        right: px;
+        
+    }
     
 }
