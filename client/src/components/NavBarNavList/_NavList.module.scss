@@ -1,18 +1,19 @@
 @use "../../styles/globals" as g;
 
 .navList{ // ul
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     list-style: none;
     @include g.create-flexbox(column, space-evenly);
+    // align-items: flex-start;
     width: 90%;
-    top: 14vh;
+    top: 12vh;
     right: -100%;
-    transition: left 1s;
     z-index: 2000;
-    background-color: g.$main-color;
-    color: g.$main-color;
+    background-color: g.$text-color;
     height: calc(94vh - (g.$minNavBarHeight * 2));
+    font-weight: 600;
+    padding: 1px;
     @include g.display-large{
         justify-content: space-between;
         flex-direction: row;
@@ -25,19 +26,24 @@
         background-color: red;
     }
     .navLink{// li
-        position: relative;
-        width: 100%;
-        color: black;
+        display: inline-block;
+        text-decoration: none;
         text-align: center;
-        border-bottom: 1px solid black;
-        background-color: blue;
-        .link{
-            text-decoration: none;
-        }
+        position: relative;
+        width: 70vw;
+        height: 8vh;
+        line-height: 8vh;
+        color: g.$main-color;
+        border-radius: 2vw;
+     }
+    .navLink:hover{
+        background-color: g.$main-color;
+        color:g.$text-color;
+        transition: .2s ease;
     }
 }
 .show{// ul
     right: 5%;
-    transition: right .5s ease;
+    transition: right .3s ease;
     
 }

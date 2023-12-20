@@ -11,11 +11,11 @@ const NavList = () => {
 
   return (
     <ul className={navListStyles}>
-        <li className={styles.navLink}>
-          <NavLink to="/home" className={styles.link} >Inicio</NavLink>
+        <li className={styles.link} >
+          <NavLink to="/home" className={styles.navLink} >Inicio</NavLink>
         </li>
         <li>
-          <NavLink to="/products" className={styles.navLink} >Productos</NavLink>
+          <NavLink to="/products" className={styles.navLink} >Producto</NavLink>
         </li>
         <li>
           <NavLink to="/products" className={styles.navLink} >Empresa</NavLink>
