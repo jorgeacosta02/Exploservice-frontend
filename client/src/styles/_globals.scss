@@ -1,15 +1,17 @@
+//Imports
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
 
-// Variables
+
+// General variables
 
 $second-color: white;
 $main-color: rgb(25, 73, 21);
 $active-color: rgb(241, 241, 9);
-
 $primary-font: 'Roboto', sans-serif;
-$h2-font-size: 3rem;
-$p-font-size: 1.1rem;
 
+
+// Mobile variables
 
 $mobile-NavBar-height: 14vh;
 $mobile-h1-font-size: max(#{6vw}, #{17px});
@@ -19,6 +21,8 @@ $mobile-p-font-weight: 500;
 $mobile-padding: 0 6px;
 
 
+//Desk variables
+
 $desk-NavBar-height: 90px;
 $desk-h1-font-size: 35px;
 $desk-h1-font-weight: 600;
@@ -26,14 +30,11 @@ $desk-p-font-size: 18px;
 $desk-p-font-weight: 500;
 
 
-
-
 // Breakpoints
 
 @mixin display-large {
     @media only screen and (min-width: 576px){
         @content;
-        
     }
 }
 
