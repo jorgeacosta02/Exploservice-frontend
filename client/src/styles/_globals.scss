@@ -2,19 +2,29 @@
 
 // Variables
 
-    $primary-font: 'Roboto', sans-serif;
-    $bg-color:  #121212;
-    $second-bg-color: #0b420a;
-    $text-color: white;
-    $second-text-color: #ccc;
-    $main-color: rgb(25, 73, 21);
-    $active-color: rgb(241, 241, 9);
-    $grey-color: rgb(79, 79, 79);
-    $big-font-size: 5rem;
-    $h2-font-size: 3rem;
-    $p-font-size: 1.1rem;
-    $minNavBarHeight: 14vh;
-    $maxNavBarHeight: 90px;
+$second-color: white;
+$main-color: rgb(25, 73, 21);
+$active-color: rgb(241, 241, 9);
+
+$primary-font: 'Roboto', sans-serif;
+$h2-font-size: 3rem;
+$p-font-size: 1.1rem;
+
+
+$mobile-NavBar-height: 14vh;
+$mobile-h1-font-size: max(#{6vw}, #{17px});
+$mobile-h1-font-weight: 700;
+$mobile-p-font-size: max(#{3vw}, #{12px});
+$mobile-p-font-weight: 500;
+$mobile-padding: 0 6px;
+
+
+$desk-NavBar-height: 90px;
+$desk-h1-font-size: 35px;
+$desk-h1-font-weight: 600;
+$desk-p-font-size: 18px;
+$desk-p-font-weight: 500;
+
 
 
 

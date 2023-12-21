@@ -4,18 +4,18 @@
     box-sizing: border-box;
     // position: absolute;
     width: 100vw;
-    height: max(#{g.$minNavBarHeight}, #{25px});
+    height: max(#{g.$mobile-NavBar-height}, #{25px});
     bottom: 0;
     left: 0;
     padding: 0 2vw;
     margin: 0;
     background-color: g.$main-color;
-    color: g.$text-color;
+    color: g.$second-color;
     @include g.create-flexbox(row, space-between);
     z-index: 90;
 
     @include g.display-large{
-        height: g.$maxNavBarHeight;
+        height: g.$desk-NavBar-height;
         justify-content: space-between;
         
     }

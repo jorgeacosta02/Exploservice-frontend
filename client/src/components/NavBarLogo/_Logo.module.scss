@@ -4,11 +4,11 @@
         box-sizing: border-box;
         padding: 0;
         margin: 0;
-        line-height: g.$minNavBarHeight;
+        line-height: g.$mobile-NavBar-height;
         @include g.display-large{
             margin: 0;
             width: 30%;
-            line-height: g.$maxNavBarHeight;
+            line-height: g.$desk-NavBar-height;
         }
         .text{
             font-size: max(#{19px},#{6vw});

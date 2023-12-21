@@ -1,27 +1,20 @@
 @use '../../styles/globals' as g;
 
 .container {
-    box-sizing: border-box;
-    // position: absolute;
-    width: 100vw;
-    height: 1000px;
-    bottom: 0;
-    left: 0;
-    padding: 0 2vw;
-    margin: 0;
-    background-color: g.$text-color;
-    color: g.$main-color;
-    @include g.create-flexbox(row, space-between);
-    z-index: 90;
+    position: relative;
+    padding: g.$mobile-padding;
+    padding-top: g.$mobile-NavBar-height ;
+    z-index: 200;
 
+    
+    
     @include g.display-large{
-        height: 1000px;
-        height: g.$maxNavBarHeight;
         justify-content: space-between;
         
     }
-    p{
-        background-color: blue;
-        // height: 50%;
+    h1{
+        position: relative;
+        z-index: 300;
     }
+
 }

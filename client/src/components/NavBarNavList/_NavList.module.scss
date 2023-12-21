@@ -6,25 +6,25 @@
     list-style: none;
     @include g.create-flexbox(column, space-evenly);
     width: 90%;
-    top: calc(g.$minNavBarHeight - 16px + 3vh);
+    top: calc(g.$mobile-NavBar-height - 16px + 3vh);
     right: -100%;
     transition: right .2s ease;
     z-index: 200;
-    background-color: g.$text-color;
-    height: calc(100vh - (g.$minNavBarHeight * 2) - 6vh);
+    background-color: g.$second-color;
+    height: calc(100vh - (g.$mobile-NavBar-height * 2) - 6vh);
     font-weight: 600;
     padding: 1px;
     @include g.display-large{
         justify-content: space-between;
         flex-direction: row;
         top: -13px;
-        height: g.$maxNavBarHeight;
+        height: g.$desk-NavBar-height;
         font-size: min(#{2vw}, #{15px});
         font-weight: 400;
         padding: 0 2px 0 0;
         width: 60%;
         right: 5%;
-        line-height: g.$maxNavBarHeight;
+        line-height: g.$desk-NavBar-height;
         background-color: transparent;
     }
     .navLink{// li
@@ -40,13 +40,13 @@
         border-radius: 2vw;
         @include g.display-large{
             width: 100%;
-            color: g.$text-color;
+            color: g.$second-color;
             border-radius: .5vw;
         }
      }
     .navLink:hover{
         background-color: g.$main-color;
-        color:g.$text-color;
+        color:g.$second-color;
         transition: .2s ease;
         @include g.display-large{
             transform:scale(1.2);

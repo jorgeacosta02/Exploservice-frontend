@@ -5,27 +5,27 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: calc(100vh - (g.$minNavBarHeight * 2));
-    top: g.$minNavBarHeight;
+    height: calc(100vh - (g.$mobile-NavBar-height * 2));
+    top: g.$mobile-NavBar-height;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
 
     @include g.display-large{
-        height: calc(100vh - g.$maxNavBarHeight);
-        top: g.$maxNavBarHeight;
+        height: calc(100vh - g.$desk-NavBar-height);
+        top: g.$desk-NavBar-height;
     }
 }
 
 .container{
     width: 100%;
-    height: calc(100vh - (g.$minNavBarHeight * 2));
-    margin-top: g.$minNavBarHeight;
+    height: calc(100vh - (g.$mobile-NavBar-height * 2));
+    margin-top: g.$mobile-NavBar-height;
     background-color: green;
     overflow: hidden;
 
     @include g.display-large{
-        height: calc(100vh - g.$maxNavBarHeight);
-        margin-top: g.$maxNavBarHeight;
+        height: calc(100vh - g.$desk-NavBar-height);
+        margin-top: g.$desk-NavBar-height;
     }
 
     .img{
@@ -38,5 +38,4 @@
             z-index: 1;
         }
     }
-
 }

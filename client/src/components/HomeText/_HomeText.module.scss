@@ -2,31 +2,26 @@
 
 .container{
     position: absolute;
-    padding: 0 6px;
-    top: calc(g.$minNavBarHeight + 1vh);
-    color: g.$text-color;
+    padding: g.$mobile-padding;
+    top: calc(g.$mobile-NavBar-height + 1vh);
+    color: g.$second-color;
     z-index: 10;
 
     @include g.display-large{
         padding: 5vh 5vw;
-        height: calc(100vh - g.$maxNavBarHeight);
-        top: g.$maxNavBarHeight;
+        height: calc(100vh - g.$desk-NavBar-height);
+        top: g.$desk-NavBar-height;
     }
-    .title{
+    h1{
         position: relative;
-        font-size: max(#{5vw}, #{14px});
-        @include g.display-large{
-            font-size: 35px;
-        }
     }
-    .text{
+    p{
         position: relative;
-        font-weight: 500;
-        font-size: min(#{12vw}, #{12px});
+        // font-weight: 500;
+        // font-weight: g.$mobile-p-font-weight;
+        // font-size: g.$mobile-p-font-size;
         
         @include g.display-large{
-            font-size: 18px;
-            font-weight: 200;
             max-width: 50%;
         }
     }

@@ -41,10 +41,24 @@
    */
   
   h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    // font-size: 2em;
+    // margin: 0.67em 0;
+    font-size: g.$mobile-h1-font-size;
+    font-weight: g.$mobile-h1-font-weight;
+    @include g.display-large{
+      font-size: g.$desk-h1-font-size;
+      font-weight: g.$desk-h1-font-weight;
+    }
   }
-  
+
+  p{
+    font-size: g.$mobile-p-font-size;
+    font-weight: g.$mobile-p-font-weight;
+    @include g.display-large{
+      font-size: g.$desk-p-font-size;
+      font-weight: g.$desk-p-font-weight;
+   }
+ }
   /* Grouping content
      ========================================================================== */
   
