@@ -14,18 +14,22 @@ $primary-font: 'Roboto', sans-serif;
 // Mobile variables
 
 $mobile-NavBar-height: 14vh;
-$mobile-h1-font-size: max(#{6vw}, #{17px});
+$mobile-h1-font-size: max(#{7vw}, #{18px});
 $mobile-h1-font-weight: 700;
+$mobile-h2-font-size: max(#{6vw}, #{17px});
+$mobile-h2-font-weight: 600;
 $mobile-p-font-size: max(#{3vw}, #{12px});
 $mobile-p-font-weight: 500;
-$mobile-padding: 0 6px;
+$mobile-padding: 0 2vw;
 
 
 //Desk variables
 
 $desk-NavBar-height: 90px;
-$desk-h1-font-size: 35px;
-$desk-h1-font-weight: 600;
+$desk-h1-font-size: 38px;
+$desk-h1-font-weight: 700;
+$desk-h2-font-size: 35px;
+$desk-h2-font-weight: 600;
 $desk-p-font-size: 18px;
 $desk-p-font-weight: 500;
 

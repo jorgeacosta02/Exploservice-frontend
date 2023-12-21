@@ -3,18 +3,42 @@
 .container {
     position: relative;
     padding: g.$mobile-padding;
-    padding-top: g.$mobile-NavBar-height ;
+    padding-top: g.$mobile-NavBar-height;
+    padding-bottom: g.$mobile-NavBar-height;
     z-index: 200;
-
-    
     
     @include g.display-large{
         justify-content: space-between;
-        
+        padding-left: 3vw;
+        padding-right: 3vw;
     }
     h1{
         position: relative;
         z-index: 300;
     }
-
+    .soil{
+        @include g.create-flexbox(column,space-evenly);
+        @include g.display-large{
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 33px;
+        }
+        .soilText{
+            width: 90vw;
+            @include g.display-large{
+                width: 50vw;
+            }
+        }
+        img{
+            width: 90vw;
+            @include g.display-large{
+                width: 30vw;
+            }
+        }
+    }
+    .soilText{
+        @include g.display-large{
+            width: 60%;
+        }
+    }
 }

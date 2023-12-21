@@ -34,6 +34,11 @@
   main {
     display: block;
   }
+
+  section{
+    margin-top: 20vh;
+    margin-bottom: 3vh;
+  }
   
   /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -41,13 +46,19 @@
    */
   
   h1 {
-    // font-size: 2em;
-    // margin: 0.67em 0;
     font-size: g.$mobile-h1-font-size;
     font-weight: g.$mobile-h1-font-weight;
     @include g.display-large{
       font-size: g.$desk-h1-font-size;
       font-weight: g.$desk-h1-font-weight;
+    }
+  }
+  h2 {
+    font-size: g.$mobile-h2-font-size;
+    font-weight: g.$mobile-h2-font-weight;
+    @include g.display-large{
+      font-size: g.$desk-h2-font-size;
+      font-weight: g.$desk-h2-font-weight;
     }
   }
 
