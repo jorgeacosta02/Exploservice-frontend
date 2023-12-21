@@ -3,24 +3,24 @@
 .container {
     box-sizing: border-box;
     // position: absolute;
-    width: 100vw;
-    height: max(#{g.$mobile-NavBar-height}, #{25px});
+    width: 100%;
+    height: max(calc(#{g.$mobile-NavBar-height} * 1.5), #{25px});
     bottom: 0;
     left: 0;
-    padding: 0 2vw;
+    padding: 2vw 3vw;
+    text-align: center;
     margin: 0;
     background-color: g.$main-color;
     color: g.$second-color;
-    @include g.create-flexbox(row, space-between);
     z-index: 90;
+    p{
+        font-size: 12px;
+
+    }
 
     @include g.display-large{
         height: g.$desk-NavBar-height;
         justify-content: space-between;
-        
     }
-    p{
-        background-color: blue;
-        // height: 50%;
-    }
+   
 }

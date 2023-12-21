@@ -1,11 +1,11 @@
 import styles from './_Footer.module.scss';
+import exploservice01 from '../../assets/images/exploservice01.png'
 
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <p>ExploAgro de
-        Exploservice 
-        {/* <svg xmlns="http://www.w3.org/2000/svg" ></svg> */}
+      <p className={styles.text}>
+        ExploAgro de Exploservice &copy; | Todos los derechos reservados | Diseño Web Jorge Acosta
       </p>
     </div>
   )
