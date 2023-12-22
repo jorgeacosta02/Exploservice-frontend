@@ -33,7 +33,7 @@ const NavList = () => {
         </li>
         <li onClick={handleClick} >
           <NavLink
-            to="#" 
+            to="/company" 
             className={styles.navLink} 
            >Empresa</NavLink>
         </li>

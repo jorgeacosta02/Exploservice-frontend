@@ -1,4 +1,4 @@
-import styles from './ProductComp.module.scss';
+import styles from './_ProductComp.module.scss';
 
 const ProductComp = () => {
   return (
