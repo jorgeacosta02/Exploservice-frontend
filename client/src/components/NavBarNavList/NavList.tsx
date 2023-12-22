@@ -21,13 +21,13 @@ const NavList = () => {
     <ul className={navListStyles} >
         <li onClick={handleClick} >
           <NavLink
-            to="#" 
+            to="/" 
             className={styles.navLink} 
            >Inicio</NavLink>
         </li>
         <li onClick={handleClick} >
           <NavLink
-            to="#" 
+            to="/product" 
             className={styles.navLink} 
            >Producto</NavLink>
         </li>

@@ -1,0 +1,8 @@
+@use '../../styles/globals' as g;
+
+.container{
+    // position: absolute;
+    margin-top: g.$mobile-NavBar-height;
+    height: 100vh;
+    padding: 2vh 2vw;
+}
