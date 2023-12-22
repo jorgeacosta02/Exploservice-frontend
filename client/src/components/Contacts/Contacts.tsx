@@ -18,14 +18,14 @@ const Contacts: React.FC = () => {
     message: ''
   });
 
-  const [errors, setErrors] = useState<FormData>({
-    name: "",
-    email: "",
-    subject: '',
-    message: ''
-  });
+  // const [errors, setErrors] = useState<FormData>({
+  //   name: "",
+  //   email: "",
+  //   subject: '',
+  //   message: ''
+  // });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -33,19 +33,16 @@ const Contacts: React.FC = () => {
     }));
   };
 
-  const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(formData);
+  }
 
   return (
     <div className={styles.container}>
       <div className={styles.data}>
       </div>
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <h2>Envianos un mensaje</h2>
         <div>
           <div>
@@ -54,7 +51,8 @@ const Contacts: React.FC = () => {
               type='text'
               id='name'
               name='name' 
-              placeholder='Ingrese nombre'/>
+              placeholder='Ingrese nombre'
+              onChange={handleInputChange}/>
             </div>
           <div>
             <label htmlFor='email'>Email:  </label>
@@ -62,17 +60,30 @@ const Contacts: React.FC = () => {
               type='text'
               id='email'
               name='email'
-              placeholder='Ingrese email'/>
+              placeholder='Ingrese email'
+              onChange={handleInputChange}/>
             </div>
           <div>
             <label htmlFor='subject'>Asunto:  </label>
-            <input type="text" id='subject' placeholder='Ingrese asunto'/>
+            <input
+              type="text"
+              id='subject'
+              name='subject'
+              placeholder='Ingrese asunto'
+              onChange={handleInputChange}/>
             </div>
           <div>
             <label htmlFor="message">Mensaje:  </label>
-            <textarea id='message' name='message' placeholder='Ingrese su mensaje aquí...' required></textarea>
+            <textarea
+              id='message'
+              name='message'
+              placeholder='Ingrese su mensaje aquí...'
+              onChange={handleInputChange}
+              required>
+            </textarea>
           </div>
         </div>
+        <button type='submit'>Enviar</button>
       </form>
     </div>
   )
