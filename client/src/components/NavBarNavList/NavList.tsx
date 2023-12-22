@@ -51,7 +51,7 @@ const NavList = () => {
         </li>
         <li onClick={handleClick} >
           <NavLink
-            to="#" 
+            to="/contact" 
             className={styles.navLink} 
            >Contactanos</NavLink>
         </li>
