@@ -1,5 +1,6 @@
 import styles from './_Contacts.module.scss';
 import { useState } from 'react';
+import contactValidation from './ContactValidation';
 
 
 interface FormData {
@@ -18,12 +19,12 @@ const Contacts: React.FC = () => {
     message: ''
   });
 
-  // const [errors, setErrors] = useState<FormData>({
-  //   name: "",
-  //   email: "",
-  //   subject: '',
-  //   message: ''
-  // });
+  const [errors, setErrors] = useState<FormData>({
+    name: "",
+    email: "",
+    subject: '',
+    message: ''
+  });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -31,6 +32,7 @@ const Contacts: React.FC = () => {
       ...prevData,
       [name]: value,
     }));
+    contactValidation(formData, setErrors);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
