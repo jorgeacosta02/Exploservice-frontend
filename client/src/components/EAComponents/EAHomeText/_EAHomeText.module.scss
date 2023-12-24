@@ -1,0 +1,28 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    position: absolute;
+    padding: g.$mobile-padding;
+    top: calc(g.$mobile-NavBar-height + 1vh);
+    color: g.$second-color;
+    z-index: 10;
+
+    @include g.display-large{
+        padding: 5vh 5vw;
+        height: calc(100vh - g.$desk-NavBar-height);
+        top: g.$desk-NavBar-height;
+    }
+    h1{
+        position: relative;
+    }
+    p{
+        position: relative;
+        // font-weight: 500;
+        // font-weight: g.$mobile-p-font-weight;
+        // font-size: g.$mobile-p-font-size;
+        
+        @include g.display-large{
+            max-width: 50%;
+        }
+    }
+}

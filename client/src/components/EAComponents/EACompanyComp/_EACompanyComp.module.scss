@@ -1,0 +1,7 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    margin-top: g.$mobile-NavBar-height;
+    height: 100vh;
+    padding: 2vh 2vw;
+}

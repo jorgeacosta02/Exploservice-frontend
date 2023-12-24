@@ -1,0 +1,41 @@
+@use "../../../styles/globals" as g;
+
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - (g.$mobile-NavBar-height * 2));
+    top: g.$mobile-NavBar-height;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+
+    @include g.display-large{
+        height: calc(100vh - g.$desk-NavBar-height);
+        top: g.$desk-NavBar-height;
+    }
+}
+
+.container{
+    width: 100%;
+    height: calc(100vh - (g.$mobile-NavBar-height * 2));
+    margin-top: g.$mobile-NavBar-height;
+    background-color: green;
+    overflow: hidden;
+
+    @include g.display-large{
+        height: calc(100vh - g.$desk-NavBar-height);
+        margin-top: g.$desk-NavBar-height;
+    }
+
+    .img{
+        height: calc(200% + 200px);
+        width: auto;
+
+        @include g.display-large{
+            width: calc(150% + 150px);
+            height: auto;
+            z-index: 1;
+        }
+    }
+}
