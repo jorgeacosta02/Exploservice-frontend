@@ -1,8 +1,8 @@
-import styles from './_Contacts.module.scss';
 import { useState } from 'react';
 import contactValidation from './ContactValidation';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import styles from './_ContactForm.module.scss';
 
 
 export interface FormDataShape {
@@ -12,7 +12,7 @@ export interface FormDataShape {
   message: string
 }
 
-const Contacts: React.FC = () => {
+const ContactForm: React.FC = () => {
 
   const [formData, setFormData] = useState<FormDataShape>({
     name: '',
@@ -51,7 +51,7 @@ const Contacts: React.FC = () => {
         window.location.href = '/';
       }, 2000);
     } catch (error: any) {
-      // if (error.response && error.response.data && error.response.data.message) {
+
     if (error?.response?.data?.message) {
         const errorMessage = error.response.data.message;
         toast.error(errorMessage);
@@ -69,12 +69,12 @@ const Contacts: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.data}>
-      </div>
+      {/* <div className={styles.data}>
+      </div> */}
       <form onSubmit={handleSubmit}>
         <h2>Envianos un mensaje</h2>
         <div>
-          <div>
+          <div className={styles.inputBlock}>
             <label htmlFor='name'>Nombre:  </label>
             <input
               type='text'
@@ -82,9 +82,9 @@ const Contacts: React.FC = () => {
               name='name' 
               placeholder='Ingrese nombre'
               onChange={handleInputChange}/>
-              <p>{errors.name}</p>
-            </div>
-          <div>
+          </div>
+            <p>{errors.name}</p>
+          <div className={styles.inputBlock}>
             <label htmlFor='email'>Email:  </label>
             <input
               type='text'
@@ -92,9 +92,9 @@ const Contacts: React.FC = () => {
               name='email'
               placeholder='Ingrese email'
               onChange={handleInputChange}/>
-               <p>{errors.email}</p>
-            </div>
-          <div>
+          </div>
+              <p>{errors.email}</p>
+          <div className={styles.inputBlock}>
             <label htmlFor='subject'>Asunto:  </label>
             <input
               type="text"
@@ -102,8 +102,8 @@ const Contacts: React.FC = () => {
               name='subject'
               placeholder='Ingrese asunto'
               onChange={handleInputChange}/>
-            </div>
-          <div>
+          </div>
+          <div className={styles.textareaBlock}>
             <label htmlFor="message">Mensaje:  </label>
             <textarea
               id='message'
@@ -114,10 +114,12 @@ const Contacts: React.FC = () => {
             </textarea>
           </div>
         </div>
-        <button type='submit'>Enviar</button>
+        <div className={styles.submitBox}>
+          <button type='submit' className={styles.submit}>Enviar</button>
+        </div>
       </form>
     </div>
   )
 }
 
-export default Contacts
+export default ContactForm

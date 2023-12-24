@@ -36,7 +36,7 @@ const postContactMe = async (req: Request, res: Response) => {
         <p><b>Nombre:</b> ${name}.</p>
         <p><b>Correo electrónico:</b> ${email}</p>
         </br>
-        <h3 style="color:#9E7842">Solicitud:</h3>
+        <h3 style="color:#9E7842">Mensaje:</h3>
         <p>${message}.<p>
 		</body>
 	</head>

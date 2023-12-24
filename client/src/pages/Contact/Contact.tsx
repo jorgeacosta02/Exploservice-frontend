@@ -1,12 +1,12 @@
 import NavBar from "../../layouts/NavBar/NavBar"
 import Footer from "../../components/Footer/Footer"
-import Contacts from "../../components/Contacts/Contacts"
+import ContactForm from "../../components/Contacts/ContactForm"
 
 const Contact = () => {
   return (
     <div>
       <NavBar />
-      <Contacts />
+      <ContactForm />
       <Footer />
     </div>
   )
