@@ -48,7 +48,7 @@ const Contacts: React.FC = () => {
       await axios.post("/contactme", formData)
       toast.success("Mensaje enviado exitosamente!!")
       setTimeout(() => {
-        window.location.href = "/home";
+        window.location.href = '/';
       }, 2000);
     } catch (error: any) {
       // if (error.response && error.response.data && error.response.data.message) {

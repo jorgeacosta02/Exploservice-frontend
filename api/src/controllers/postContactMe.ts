@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-const nodemailer = require("nodemailer");
+import nodemailer from 'nodemailer';
 import dotenv from "dotenv";
 dotenv.config();
 const { NODEMAILER_USER, NODEMAILER_PASS, DESTINATION_EMAIL } = process.env;
@@ -13,9 +13,15 @@ const postContactMe = async (req: Request, res: Response) => {
       host: "smtp.gmail.com",
       port: 587,
       secure: false,
+      // host: "smtp.mail.yahoo.com",
+      // port: 465,
+      // secure: true,
       auth: {
         user: NODEMAILER_USER,
         pass: NODEMAILER_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false, // Desactiva la verificación del certificado
       },
     });
     // se fusionará en cada objeto de mensaje.
@@ -31,13 +37,14 @@ const postContactMe = async (req: Request, res: Response) => {
         <p><b>Correo electrónico:</b> ${email}</p>
         </br>
         <h3 style="color:#9E7842">Solicitud:</h3>
-        <p>🍻 ${message}.<p>
+        <p>${message}.<p>
 		</body>
 	</head>
 </html>`,
     };
 
-    transporter.sendMail(mailOptions, (error: Error, info:string) => {
+    transporter.sendMail(mailOptions, (error: Error | null, info: nodemailer.SentMessageInfo) => {
+      console.log("Error in sendMail callback:", error);
       if (error) {
         return res.status(500).send(error.message)
       } else {
@@ -45,6 +52,7 @@ const postContactMe = async (req: Request, res: Response) => {
       }
     });
   } catch (error) {
+    console.log("Error in catch block:", error);
     if (error instanceof Error) {
       console.log(error.message);
      return res.status(500).send(error.message)

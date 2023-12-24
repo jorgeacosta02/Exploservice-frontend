@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -6,6 +6,7 @@ import authRoutes from './routes/auth.routes';
 import passport from 'passport';
 import passportMiddleware from './middlewares/passport';
 import specialRoutes from './routes/special.routes';
+import routes from './routes';
 
 dotenv.config();
 const port = process.env.PORT || 3001;
@@ -31,5 +32,13 @@ app.get('/', (req, res) => {
 
 app.use(authRoutes);
 app.use(specialRoutes);
+app.use('/', routes);
+
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+});
+  
+  
 
 export default app;
