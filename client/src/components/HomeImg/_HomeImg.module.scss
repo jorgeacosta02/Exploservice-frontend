@@ -8,7 +8,7 @@
     height: calc(100vh - (g.$mobile-NavBar-height * 2));
     top: g.$mobile-NavBar-height;
     left: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
 
     @include g.display-large{
         height: calc(100vh - g.$desk-NavBar-height);

@@ -80,7 +80,7 @@ const ContactForm: React.FC = () => {
               type='text'
               id='name'
               name='name' 
-              placeholder='Ingrese nombre'
+              placeholder='Ingresa nombre'
               onChange={handleInputChange}/>
           </div>
             <p>{errors.name}</p>
@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
               type='text'
               id='email'
               name='email'
-              placeholder='Ingrese email'
+              placeholder='Ingresa email'
               onChange={handleInputChange}/>
           </div>
               <p>{errors.email}</p>
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
               type="text"
               id='subject'
               name='subject'
-              placeholder='Ingrese asunto'
+              placeholder='Ingresa asunto'
               onChange={handleInputChange}/>
           </div>
           <div className={styles.textareaBlock}>
@@ -108,7 +108,7 @@ const ContactForm: React.FC = () => {
             <textarea
               id='message'
               name='message'
-              placeholder='Ingrese su mensaje aquí...'
+              placeholder='Ingresa tu mensaje aquí...'
               onChange={handleInputChange}
               required>
             </textarea>

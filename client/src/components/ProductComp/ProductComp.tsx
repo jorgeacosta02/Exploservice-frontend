@@ -7,7 +7,7 @@ import process03 from '../../assets/images/process/process03.jpg';
 const ProductComp = () => {
   return (
     <div className={styles.container}>
-      <h1>Condiciones de suelo</h1>
+      <h1>Compuesto húmico</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis quos praesentium, facilis suscipit non quae, natus laboriosam vero, numquam amet modi eos quis? Eveniet porro cumque similique culpa officia consequatur et at, officiis velit itaque veniam voluptatibus possimus a delectus quisquam assumenda excepturi iusto ipsum amet quod ipsa saepe! Temporibus maiores expedita natus laborum debitis culpa odit eos possimus, cumque eius reprehenderit! Facere adipisci eum nemo in vel! Ea modi possimus autem, deserunt at fugiat iste unde nam necessitatibus! Vero cumque nostrum nesciunt explicabo harum delectus cupiditate totam excepturi fugiat, reiciendis possimus omnis repellat sed. Doloribus sapiente sequi laborum tempore. Libero quos dolores alias dolorum quidem repellat quis rem magnam, nisi ullam obcaecati maiores, explicabo veniam aut vel. Maxime nesciunt fugiat autem repellat similique possimus in rerum veniam architecto dolor magnam ducimus, molestias itaque laudantium. Assumenda sapiente mollitia magnam deserunt, nostrum eligendi dolorum laborum animi debitis quae nisi magni! </p>
       <section>
         <h2>Separación</h2>

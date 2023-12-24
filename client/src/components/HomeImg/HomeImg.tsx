@@ -1,5 +1,5 @@
 import styles from './_HomeImg.module.scss';
-import img07 from '../../assets/images/campo-07.jpg'
+import img07 from '../../assets/images/campo-06.jpg'
 
 
 const HomeImg = () => {

@@ -5,17 +5,28 @@
     min-height: 100vh;
     padding: 2vh 2vw;
     width: 96vw;
+    @include g.display-large{
+        height: 80vh;
+        width: 40vw;
+        // font-size: 10px;
+    }
     .inputBlock{
         @include g.create-flexbox(row, space-between);
         label{
-            font-size: calc(g.$mobile-h2-font-size * .65);
+            font-size: calc(g.$mobile-p-font-size * .65);
             width: 20%;
-            // background-color: blue;
+            @include g.display-large{
+                font-size: calc(g.$desk-p-font-size * 1);
+     
+            };
         }
         input{
-            font-size: calc(g.$mobile-h2-font-size * .75);
+            font-size: calc(g.$mobile-p-font-size * 1);
             width: 72%;
-            // background-color: red;
+            @include g.display-large{
+                font-size: calc(g.$desk-p-font-size * 1);
+     
+            };
         }
     }
     .textareaBlock{
@@ -23,14 +34,21 @@
         width: 100%;
         @include g.create-flexbox(column, space-between);
         label{
-            font-size: calc(g.$mobile-h2-font-size * .7);
+            font-size: calc(g.$mobile-p-font-size * 1);
             width: 20%;
-            // background-color: blue;
+            @include g.display-large{
+                font-size: (g.$desk-p-font-size * 1);
+            };
         }
         textarea{
-            font-size: calc(g.$mobile-h2-font-size * .75);
+            font-size: calc(g.$mobile-p-font-size * .7);
             width: 100%;
             height: 130px;
+            @include g.display-large{
+                font-size: (g.$desk-p-font-size * 1);
+                height: 100px;
+     
+            };
         }
     }
     .submitBox{
@@ -39,7 +57,11 @@
         @include g.create-flexbox(row, space-evenly);
         align-items: center;
         justify-content: center;
+        @include g.display-large{
+            width: 100%;
+        };
         .submit{
+            cursor: pointer;
             margin-top: 2vh;
             margin-bottom: 2vh;
             border:none;
@@ -51,6 +73,10 @@
             height: 36px;
             font-weight: 700;
             font-size: calc(g.$mobile-h2-font-size * .85);
+            @include g.display-large{
+                font-size: (g.$desk-p-font-size * 1); 
+     
+            };
         }
     }
 }
