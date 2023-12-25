@@ -35,4 +35,18 @@
     height: 200px;
     width: 150px;
     padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    .navLink{
+        text-decoration: none;
+    }
+    .eacontainer{
+        @include g.create-flexbox(column, center);
+        p{
+            color: g.$main-color;
+            font-size: 25px;
+            font-weight: 800; 
+        }
+    }
 }

@@ -22,10 +22,14 @@ const GHome = () => {
               src={ADLLogo} alt="Field" />
         </div>
       </NavLink>
-  
-      <NavLink to='/exploagro' className={styles.exploagro}>
-        Exploagro
-      </NavLink>
+      <div className={styles.exploagro}>
+        <NavLink to='/exploagro' className={styles.navLink}>
+          <div className={styles.eacontainer}>
+            <p>EXPLO</p>
+            <p>AGRO</p>
+          </div>
+        </NavLink>
+      </div>
     </div>
   )
 }
