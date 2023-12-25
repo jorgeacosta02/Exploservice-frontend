@@ -7,27 +7,24 @@ import { NavLink } from 'react-router-dom'
 const GHome = () => {
   return (
     <div>
-      <NavLink to='/exploservice'>
-        <div className={styles.container}>
-          <div className={styles.exploservice}>
-            <img
-                className={styles.eslogo}
-                src={ESLogo} alt="Field" />
-            <img
-                className={styles.eslogo}
-                src={ESBrand} alt="Field" />
-          </div>
-          <div className={styles.adl}>
-            <img
-                className={styles.eslogo}
-                src={ADLLogo} alt="Field" />
-          </div>
+      <NavLink to='/exploservice' className={styles.container}>
+        <div className={styles.exploservice}>
+          <img
+              className={styles.eslogo}
+              src={ESLogo} alt="Field" />
+          <img
+              className={styles.eslogo}
+              src={ESBrand} alt="Field" />
+        </div>
+        <div className={styles.adl}>
+          <img
+              className={styles.eslogo}
+              src={ADLLogo} alt="Field" />
         </div>
       </NavLink>
-      <NavLink to='/exploagro'>
-        <h1 className="exploagro">
-          ExploAgro
-        </h1>
+  
+      <NavLink to='/exploagro' className={styles.exploagro}>
+        Exploagro
       </NavLink>
     </div>
   )

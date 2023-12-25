@@ -26,3 +26,13 @@
         @include g.create-flexbox(column, center);
     }
 }
+.exploagro{
+    position: absolute;
+    top: 20vh;
+    right:20vw;
+    border-radius: 5px;
+    border: 3px solid grey;
+    height: 200px;
+    width: 150px;
+    padding: 10px;
+}
