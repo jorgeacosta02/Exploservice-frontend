@@ -21,7 +21,7 @@ const EANavList = () => {
     <ul className={navListStyles} >
         <li onClick={handleClick} >
           <NavLink
-            to="/exploagro/" 
+            to="/" 
             className={styles.navLink} 
            >Inicio</NavLink>
         </li>
@@ -53,7 +53,7 @@ const EANavList = () => {
           <NavLink
             to="/exploagro/contact" 
             className={styles.navLink} 
-           >Contactanos</NavLink>
+           >Contacto</NavLink>
         </li>
       </ul>
   )

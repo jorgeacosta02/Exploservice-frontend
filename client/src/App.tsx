@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home'
+import Home from './pages/GlobalPages/GHome'
 import EAHome from './pages/EAPages/EAHome/EAHome';
 import Product from './pages/EAPages/EAProduct/EAProduct';
 import Company from './pages/EAPages/EACompany/EACompany';

@@ -1,0 +1,28 @@
+@use '../../styles/globals' as g;
+
+.container{
+    position: absolute;
+    top: 20vh;
+    left:20vw;
+    border-radius: 5px;
+    border: 3px solid grey;
+    height: 200px;
+    width: 150px;
+    padding: 10px;
+    .exploservice{
+        // background-color: blue;
+        height: 100px;
+        width: 150px;
+        border-radius: 5px;
+        // border: 1px solid rgb(194, 194, 4);
+        @include g.create-flexbox(column, center);
+    }
+    .adl{
+        // background-color: blue;
+        height: 100px;
+        width: 150px;
+        border-radius: 5px;
+        // border: 1px solid orange;
+        @include g.create-flexbox(column, center);
+    }
+}
