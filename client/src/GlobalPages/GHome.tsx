@@ -1,35 +1,31 @@
 import styles from './_GHome.module.scss'
-import ESLogo from '../ExploserviceSrc/ESAssets/ESImages/ESLogo.png'
-import ESBrand from '../ExploserviceSrc/ESAssets/ESImages/ESBrand.png'
+import ESLogoBrand from '../ExploserviceSrc/ESAssets/ESImages/Exploservice-Logo-Brand.png'
+import EALogo from '../ExploagroSrc/EAAssets/EAImages/Exploagro-Logo-Brand.png'
 import ADLLogo from '../ExploserviceSrc/ESAssets/ESImages/ADLLogo.png'
 import { NavLink } from 'react-router-dom'
 
 const GHome = () => {
   return (
     <div>
-      <NavLink to='/exploservice' className={styles.container}>
-        <div className={styles.exploservice}>
-          <img
-              className={styles.eslogo}
-              src={ESLogo} alt="Field" />
-          <img
-              className={styles.eslogo}
-              src={ESBrand} alt="Field" />
-        </div>
-        <div className={styles.adl}>
-          <img
-              className={styles.eslogo}
-              src={ADLLogo} alt="Field" />
-        </div>
+      <NavLink to='/exploservice' className={styles.EScontainer}>
+        <img
+          src={ESLogoBrand}
+          alt="Exploservice Logo"
+          className={styles.ESlogobrand}
+        />
+        <img
+          src={ADLLogo}
+          alt="ADL Logo"
+          className={styles.adl}
+        />
       </NavLink>
-      <div className={styles.exploagro}>
-        <NavLink to='/exploagro' className={styles.navLink}>
-          <div className={styles.eacontainer}>
-            <p>EXPLO</p>
-            <p>AGRO</p>
-          </div>
-        </NavLink>
-      </div>
+      <NavLink to='/exploagro' className={styles.EAcontainer}>
+          <img
+            src={EALogo}
+            alt="Exploagro Logo"
+            className={styles.EAlogobrand}
+          />
+       </NavLink>
     </div>
   )
 }

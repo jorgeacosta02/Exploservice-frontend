@@ -1,6 +1,7 @@
 @use '../styles/globals' as g;
 
-.container{
+.EScontainer{
+    text-decoration: none;
     position: absolute;
     top: 20vh;
     left:20vw;
@@ -9,24 +10,15 @@
     height: 200px;
     width: 150px;
     padding: 10px;
-    .exploservice{
-        // background-color: blue;
-        height: 100px;
-        width: 150px;
-        border-radius: 5px;
-        // border: 1px solid rgb(194, 194, 4);
-        @include g.create-flexbox(column, center);
+    @include g.create-flexbox(column, space-evenly);
+    .ESlogobrand{
+        width: 120px;
     }
-    .adl{
-        // background-color: blue;
-        height: 100px;
-        width: 150px;
-        border-radius: 5px;
-        // border: 1px solid orange;
-        @include g.create-flexbox(column, center);
+    .ADLLogo{
+        width: 180px;
     }
 }
-.exploagro{
+.EAcontainer{
     position: absolute;
     top: 20vh;
     right:20vw;
@@ -41,12 +33,10 @@
     .navLink{
         text-decoration: none;
     }
-    .eacontainer{
+    img{
         @include g.create-flexbox(column, center);
-        p{
-            color: g.$main-color;
-            font-size: 25px;
-            font-weight: 800; 
+        .EAlogobrand{
+            width: 50px;
         }
     }
 }
