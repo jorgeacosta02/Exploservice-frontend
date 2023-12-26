@@ -1,5 +1,5 @@
 import styles from './_EAHomeImg.module.scss';
-import img07 from '../../../assets/images/EAImages/campo-07.jpg'
+import img07 from '../../EAAssets/EAImages/campo-07.jpg'
 
 
 const EAHomeImg = () => {

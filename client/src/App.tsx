@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/GlobalPages/GHome'
-import EAHome from './pages/EAPages/EAHome/EAHome';
-import Product from './pages/EAPages/EAProduct/EAProduct';
-import Company from './pages/EAPages/EACompany/EACompany';
-import Contact from './pages/EAPages/EAContact/EAContact';
+import GHome from './GlobalPages/GHome';
+import EAHome from './ExploagroSrc/EAPages/EAHome/EAHome';
+import EAProduct from './ExploagroSrc/EAPages/EAProduct/EAProduct';
+import EACompany from './ExploagroSrc/EAPages/EACompany/EACompany';
+import EAContact from './ExploagroSrc/EAPages/EAContact/EAContact';
 
 const App = () => {
   return (
@@ -11,13 +11,13 @@ const App = () => {
       <Routes>
 
         {/*General Routes*/}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<GHome />} />
 
         {/*Exploagro Routes*/}
         <Route path="/exploagro/" element={<EAHome />} />
-        <Route path="/exploagro/product" element={<Product />} />
-        <Route path="/exploagro/company" element={<Company />} />
-        <Route path="/exploagro/contact" element={<Contact />} />
+        <Route path="/exploagro/product" element={<EAProduct />} />
+        <Route path="/exploagro/company" element={<EACompany />} />
+        <Route path="/exploagro/contact" element={<EAContact />} />
 
         {/*Exploservice Routes*/}
         {/* <Route path="/exploservice/" element={<ESHome />} />

@@ -1,7 +1,8 @@
 import styles from './_EAProductComp.module.scss';
-import process01 from '../../../assets/images/EAImages/process/process01.jpg';
-import process02 from '../../../assets/images/EAImages/process/process02.jpg'
-import process03 from '../../../assets/images/EAImages/process/process03.jpg'
+import process01 from '../../EAAssets/EAImages/process/process01.jpg';
+import process02 from '../../EAAssets/EAImages/process/process02.jpg';
+import process03 from '../../EAAssets/EAImages/process/process03.jpg';
+
 
 
 const EAProductComp = () => {

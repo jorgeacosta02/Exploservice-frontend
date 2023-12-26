@@ -1,7 +1,7 @@
 import styles from './_GHome.module.scss'
-import ESLogo from '../../assets/images/ESImages/ESLogo.png'
-import ESBrand from '../../assets/images/ESImages/ESBrand.png'
-import ADLLogo from '../../assets/images/ESImages/ADLLogo.png'
+import ESLogo from '../ExploserviceSrc/ESAssets/ESImages/ESLogo.png'
+import ESBrand from '../ExploserviceSrc/ESAssets/ESImages/ESBrand.png'
+import ADLLogo from '../ExploserviceSrc/ESAssets/ESImages/ADLLogo.png'
 import { NavLink } from 'react-router-dom'
 
 const GHome = () => {

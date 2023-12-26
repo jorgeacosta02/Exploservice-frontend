@@ -1,6 +1,6 @@
 import styles from './_EAComments.module.scss';
-import imgSS from '../../../assets/images/EAImages/saltySoil01.jpg'
-import imgCS from '../../../assets/images/EAImages/calcareousSoil01.jpg'
+import imgSS from '../../EAAssets/EAImages/calcareousSoil01.jpg'
+import imgCS from '../../EAAssets/EAImages/calcareousSoil02.jpg'
 
 const EAComments = () => {
   return (
