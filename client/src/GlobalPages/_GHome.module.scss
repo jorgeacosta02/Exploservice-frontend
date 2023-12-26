@@ -12,10 +12,10 @@
     padding: 10px;
     @include g.create-flexbox(column, space-evenly);
     .ESlogobrand{
-        width: 120px;
+        height: 60px;
     }
     .ADLLogo{
-        width: 180px;
+        height: 60px;
     }
 }
 .EAcontainer{
@@ -30,13 +30,8 @@
     text-align: center;
     font-size: 25px;
     font-weight: 800;
-    .navLink{
-        text-decoration: none;
-    }
-    img{
-        @include g.create-flexbox(column, center);
-        .EAlogobrand{
-            width: 50px;
-        }
+    @include g.create-flexbox(column, space-evenly);
+    .EAlogobrand{
+        height: 60px;
     }
 }

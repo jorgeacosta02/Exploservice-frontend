@@ -16,7 +16,7 @@ const GHome = () => {
         <img
           src={ADLLogo}
           alt="ADL Logo"
-          className={styles.adl}
+          className={styles.ADLLogo}
         />
       </NavLink>
       <NavLink to='/exploagro' className={styles.EAcontainer}>

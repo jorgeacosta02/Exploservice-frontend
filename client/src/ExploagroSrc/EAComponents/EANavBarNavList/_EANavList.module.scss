@@ -40,14 +40,12 @@
         border-radius: 2vw;
         @include g.display-large{
             width: 100%;
-            color: g.$second-color;
+            color: g.$main-color;
             border-radius: .5vw;
         }
      }
     .navLink:hover{
-        background-color: g.$main-color;
-        color:g.$second-color;
-        transition: .2s ease;
+        transition: .1s ease;
         @include g.display-large{
             transform:scale(1.2);
 
