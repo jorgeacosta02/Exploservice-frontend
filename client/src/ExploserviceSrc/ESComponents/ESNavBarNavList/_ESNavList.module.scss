@@ -4,7 +4,7 @@
     position: absolute;
     box-sizing: border-box;
     list-style: none;
-    @include g.create-flexbox(column, space-evenly);
+    @include g.create-flexbox(column, space-between);
     width: 90%;
     top: calc(g.$mobile-NavBar-height - 16px + 3vh);
     right: -100%;
@@ -19,10 +19,10 @@
         flex-direction: row;
         top: -13px;
         height: g.$desk-NavBar-height;
-        font-size: min(#{2vw}, #{15px});
+        font-size: max(#{1.2vw}, #{11.1px});
         font-weight: 400;
-        padding: 0 2px 0 0;
-        width: 60%;
+        // padding: 0 2px 0 0;
+        width: 70%;
         right: 5%;
         line-height: g.$desk-NavBar-height;
         background-color: transparent;
@@ -40,15 +40,17 @@
         border-radius: 2vw;
         @include g.display-large{
             width: 100%;
-            color: g.$second-color;
+            color: g.$main-color;
             border-radius: .5vw;
         }
      }
     .navLink:hover{
-        background-color: g.$main-color;
-        color:g.$second-color;
+        background-color: g.$es-color;
+        color:g.$third-color;
         transition: .2s ease;
         @include g.display-large{
+            background-color: g.$second-color;
+            color: g.$third-color;
             transform:scale(1.2);
 
         }

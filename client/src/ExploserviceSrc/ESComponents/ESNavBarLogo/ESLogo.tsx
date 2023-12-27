@@ -6,7 +6,7 @@ const ESLogo = () => {
     <img
       src={ESLogoImg}
       alt="Exploservice Logo"
-      className={styles.ESLogo}  
+      className={styles.ESLogoImg}  
     />
   )
 }

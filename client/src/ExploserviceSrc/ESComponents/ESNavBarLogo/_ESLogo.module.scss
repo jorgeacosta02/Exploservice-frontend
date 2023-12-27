@@ -2,7 +2,7 @@
 
 .ESLogoImg{
     margin: 0;
-    padding: 0 2vw;
+    // padding: 0 1vw;
     height: calc(g.$mobile-NavBar-height * .70);
     @include g.display-large{
         height: calc(g.$desk-NavBar-height * .70);
