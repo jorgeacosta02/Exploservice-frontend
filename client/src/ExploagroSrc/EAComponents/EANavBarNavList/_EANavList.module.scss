@@ -45,8 +45,12 @@
         }
      }
     .navLink:hover{
-        transition: .1s ease;
+        background-color: g.$main-color;
+        color:g.$second-color;
+        transition: .2s ease;
         @include g.display-large{
+            background-color: g.$second-color;
+            color: g.$main-color;
             transform:scale(1.2);
 
         }

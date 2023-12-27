@@ -1,9 +1,9 @@
-import styles from './_EAMenu.module.scss';
+import styles from './_ESMenu.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../redux/types';
 import { toggleStyle } from '../../../redux/actions/actions';
 
-const EAMenu = () => {
+const ESMenu = () => {
 
   const dispatch = useDispatch<any>();
   const stylesReducer = useSelector(( state: RootState ) => state.styles);
@@ -28,4 +28,4 @@ const EAMenu = () => {
   )
 }
 
-export default EAMenu
+export default ESMenu

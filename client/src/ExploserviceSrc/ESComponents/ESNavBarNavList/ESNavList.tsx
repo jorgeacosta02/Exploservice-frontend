@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import styles from './_EANavList.module.scss';
+import styles from './_ESNavList.module.scss';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/types";
 import { toggleStyle } from "../../../redux/actions/actions";
 
-const EANavList = () => {
+const ESNavList = () => {
 
   const stylesReducer = useSelector((state: RootState) => state.styles);
 
@@ -27,15 +27,27 @@ const EANavList = () => {
         </li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploagro/product" 
+            to="/exploservice/company" 
             className={styles.navLink} 
-           >Producto</NavLink>
+           >Empresa</NavLink>
         </li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploagro/company" 
+            to="/exploservice/services" 
             className={styles.navLink} 
-           >Empresa</NavLink>
+           >Servicios</NavLink>
+        </li>
+        <li onClick={handleClick} >
+          <NavLink
+            to="/exploservice/equipment" 
+            className={styles.navLink} 
+           >Equipos</NavLink>
+        </li>
+        <li onClick={handleClick} >
+          <NavLink
+            to="/exploservice/jobs" 
+            className={styles.navLink} 
+           >Trabajos</NavLink>
         </li>
         <li onClick={handleClick} >
           <NavLink
@@ -59,4 +71,4 @@ const EANavList = () => {
   )
 }
 
-export default EANavList
+export default ESNavList
