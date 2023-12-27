@@ -3,8 +3,12 @@
 .container{
     margin-top: g.$mobile-NavBar-height;
     padding: 5vh;
+    min-height: 100vh;
     .title{
-
         font-size: calc(g.$mobile-h1-font-size * .7);
+        @include g.display-large{
+            font-size: g.$desk-h1-font-size;
+            text-align: center;
+        }
     }
 }
