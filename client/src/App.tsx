@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import GHome from './GlobalPages/GHome';
-import ESHome from './ExploserviceSrc/ESPages/ESHome/ESHome';
+import GHomePage from './GlobalPages/GHomePage';
+import ESHomePage from './ExploserviceSrc/ESPages/ESHomePage/ESHomePage';
+import ESServicesPage from './ExploserviceSrc/ESPages/ESServicesPage/ESServicesPage';
 import EAHome from './ExploagroSrc/EAPages/EAHome/EAHome';
 import EAProduct from './ExploagroSrc/EAPages/EAProduct/EAProduct';
 import EACompany from './ExploagroSrc/EAPages/EACompany/EACompany';
@@ -13,11 +14,11 @@ const App = () => {
       <Routes>
 
         {/*General Routes*/}
-        <Route path="/" element={<GHome />} />
+        <Route path="/" element={<GHomePage />} />
 
         {/*Exploservice Routes*/}
-        <Route path="/exploservice/" element={<ESHome />} />
-        {/* <Route path="/exploservice/product" element={<Product />} /> */}
+        <Route path="/exploservice/company" element={<ESHomePage />} />
+        <Route path="/exploservice/services" element={<ESServicesPage />} />
         {/* <Route path="/exploservice/company" element={<Company />} /> */}
         {/* <Route path="/exploservice/contact" element={<Contact />} /> */}
 

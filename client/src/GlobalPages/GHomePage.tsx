@@ -1,13 +1,13 @@
-import styles from './_GHome.module.scss'
+import styles from './_GHomePage.module.scss'
 import ESLogoBrand from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/Exploservice-Logo-Brand.png'
 import ADLLogo from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/ADLLogo.png'
 import EALogo from '../ExploagroSrc/EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
 import { NavLink } from 'react-router-dom'
 
-const GHome = () => {
+const GHomePage = () => {
   return (
     <div>
-      <NavLink to='/exploservice' className={styles.EScontainer}>
+      <NavLink to='/exploservice/company' className={styles.EScontainer}>
         <img
           src={ESLogoBrand}
           alt="Exploservice Logo"
@@ -30,5 +30,5 @@ const GHome = () => {
   )
 }
 
-export default GHome
+export default GHomePage
 

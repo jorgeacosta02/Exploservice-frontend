@@ -1,8 +1,8 @@
-import styles from './_ESLogo.module.scss';
+import styles from './_ESLogoComp.module.scss';
 import ESLogoImg from '../../ESAssets/ESImages/ES-Logos-Brands/Exploservice-Logo-Brand.png';
 import ADLLogo from '../../ESAssets/ESImages/ES-Logos-Brands/ADLLogo.png';
 
-const ESLogo = () => {
+const ESLogoComp = () => {
   return (
     <div className={styles.container}>
       <img
@@ -19,4 +19,4 @@ const ESLogo = () => {
   )
 }
 
-export default ESLogo
+export default ESLogoComp

@@ -1,6 +1,6 @@
-import styles from './_ESComments.module.scss';
+import styles from './_ESCommentsComp.module.scss';
 
-const ESComments = () => {
+const ESCommentsComp = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>EXPLOSERVICE - ADL S.R.L.</h1>
@@ -14,4 +14,4 @@ const ESComments = () => {
   )
 }
 
-export default ESComments
+export default ESCommentsComp

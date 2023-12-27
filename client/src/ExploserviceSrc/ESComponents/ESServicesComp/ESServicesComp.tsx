@@ -1,7 +1,7 @@
-import styles from './_ESServices.module.scss'
+import styles from './_ESServicesComp.module.scss'
 import prodcuctionImg01 from '../../ESAssets/ESImages/perfoProd01.png'
 
-const ESServices = () => {
+const ESServicesComp = () => {
   return (
     <div>
       <h1 className={styles.container}>
@@ -17,4 +17,4 @@ const ESServices = () => {
   )
 }
 
-export default ESServices
+export default ESServicesComp
