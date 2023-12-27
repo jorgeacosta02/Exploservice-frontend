@@ -63,7 +63,7 @@ const ESNavListComp = () => {
         </li> */}
         <li onClick={handleClick} >
           <NavLink
-            to="/exploagro/contact" 
+            to="/exploservice/esservicesform" 
             className={styles.navLink} 
            >Contacto</NavLink>
         </li>
