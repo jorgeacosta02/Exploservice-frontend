@@ -1,0 +1,10 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    margin-top: g.$mobile-NavBar-height;
+    padding: 5vh;
+    .title{
+
+        font-size: calc(g.$mobile-h1-font-size * .7);
+    }
+}

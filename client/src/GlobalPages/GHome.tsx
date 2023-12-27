@@ -1,7 +1,7 @@
 import styles from './_GHome.module.scss'
-import ESLogoBrand from '../ExploserviceSrc/ESAssets/ESImages/Exploservice-Logo-Brand.png'
-import EALogo from '../ExploagroSrc/EAAssets/EAImages/Exploagro-Logo-Brand.png'
-import ADLLogo from '../ExploserviceSrc/ESAssets/ESImages/ADLLogo.png'
+import ESLogoBrand from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/Exploservice-Logo-Brand.png'
+import ADLLogo from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/ADLLogo.png'
+import EALogo from '../ExploagroSrc/EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
 import { NavLink } from 'react-router-dom'
 
 const GHome = () => {

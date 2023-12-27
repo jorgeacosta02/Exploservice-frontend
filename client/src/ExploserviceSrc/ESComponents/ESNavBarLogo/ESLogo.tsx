@@ -1,6 +1,6 @@
 import styles from './_ESLogo.module.scss';
-import ESLogoImg from '../../ESAssets/ESImages/Exploservice-Logo-Brand.png';
-import ADLLogo from '../../ESAssets/ESImages/ADLLogo.png';
+import ESLogoImg from '../../ESAssets/ESImages/ES-Logos-Brands/Exploservice-Logo-Brand.png';
+import ADLLogo from '../../ESAssets/ESImages/ES-Logos-Brands/ADLLogo.png';
 
 const ESLogo = () => {
   return (
@@ -12,7 +12,7 @@ const ESLogo = () => {
       />
       <img
         src={ADLLogo}
-        alt="Exploservice Logo"
+        alt="ADL Logo"
         className={styles.ADLLogo}  
       />
     </div>

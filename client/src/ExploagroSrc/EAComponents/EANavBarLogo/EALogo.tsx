@@ -1,5 +1,5 @@
 import styles from './_EALogo.module.scss';
-import EALogoImg from '../../EAAssets/EAImages/Exploagro-Logo-Brand.png'
+import EALogoImg from '../../EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
 
 const EALogo = () => {
   return (
