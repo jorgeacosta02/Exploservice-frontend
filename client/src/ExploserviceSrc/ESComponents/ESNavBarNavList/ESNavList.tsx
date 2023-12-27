@@ -49,7 +49,7 @@ const ESNavList = () => {
             className={styles.navLink} 
            >Trabajos</NavLink>
         </li>
-        <li onClick={handleClick} >
+        {/* <li onClick={handleClick} >
           <NavLink
             to="#" 
             className={styles.navLink} 
@@ -60,7 +60,7 @@ const ESNavList = () => {
             to="#" 
             className={styles.navLink} 
            >Ingresar</NavLink>
-        </li>
+        </li> */}
         <li onClick={handleClick} >
           <NavLink
             to="/exploagro/contact" 

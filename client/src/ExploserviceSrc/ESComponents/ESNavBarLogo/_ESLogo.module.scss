@@ -1,10 +1,23 @@
 @use "../../../styles/globals" as g;
 
-.ESLogoImg{
-    margin: 0;
-    // padding: 0 1vw;
-    height: calc(g.$mobile-NavBar-height * .70);
-    @include g.display-large{
-        height: calc(g.$desk-NavBar-height * .70);
+.container{
+    // @include g.create-flexbox(row, space-between);
+    // width: ;
+
+    .ESLogoImg{
+        margin-right: 1vw;
+        height: calc(g.$mobile-NavBar-height * .6);
+        @include g.display-large{
+            width: auto;
+            height: 50px;
+        }
+    }
+    .ADLLogo{
+        margin-right: 1vw;
+        height: calc(g.$mobile-NavBar-height * .6);
+        @include g.display-large{
+            width: auto;
+            height: 50px;
+        }  
     }
 }
