@@ -125,7 +125,7 @@ const ESServicesFormComp = () => {
                   onClick={onImageUpload}
                   className={styles.imgButton}
                   >
-                  Cargar Imágenes
+                  Seleccionar Imágenes
                 </button>
                 {/* Mapea sobre la lista de imágenes seleccionadas */}
                 <div className={styles.imgContainer}>
