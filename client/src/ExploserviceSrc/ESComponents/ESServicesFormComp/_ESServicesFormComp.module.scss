@@ -1,0 +1,33 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    position: absolute;
+    top: g.$mobile-NavBar-height;
+    padding: g.$mobile-padding;
+    min-height: 100vh;
+    // background-color: red;
+    .inputBlock{
+        @include g.create-flexbox(column, center);
+        align-items: flex-start;
+        input{
+            width: 92vw;
+        }
+        textarea{
+            width: 92vw;
+        }
+    }
+    .mediaContainer{
+        padding: 2vh 0;
+        .imgContainer{
+            padding: 2vh 0;
+            @include g.create-flexbox(row, space-between);
+            flex-wrap: wrap;
+        }
+        img{
+            width: 47vw;
+            max-width: 150px;
+            height: 47vw;
+            max-height: 150px;
+        }
+    }
+}

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDrop } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+// import { HTML5Backend } from 'react-dnd-html5-backend';
 import ImageUploading, { ImageListType } from 'react-images-uploading';
 import axios from 'axios';
+import styles from './_ESServicesFormComp.module.scss';
 
 const ESServicesFormComp = () => {
   // Estado para almacenar la lista de imágenes seleccionadas
@@ -85,15 +86,16 @@ const ESServicesFormComp = () => {
   // Renderiza el componente del formulario
   return (
     <div ref={drop}>
-      <div>
-        <div>
+      <div className={styles.container}>
+        <h1>AGREGAR SERVICIO</h1>
+        <div className={styles.inputBlock}>
           {/* Input para el título del formulario */}
-          <label>Title:</label>
+          <label>Nombre:</label>
           <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
-        <div>
+        <div className={styles.inputBlock}>
           {/* Textarea para la descripción del formulario */}
-          <label>Description:</label>
+          <label>Descripción:</label>
           <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
         </div>
         {/* Componente ImageUploading para manejar la carga de imágenes */}
@@ -104,27 +106,29 @@ const ESServicesFormComp = () => {
           maxNumber={5}
         >
           {({ onImageUpload }) => (
-            <div>
+            <div className={styles.mediaContainer}>
               {/* Botón para iniciar la carga de imágenes */}
               <button onClick={onImageUpload}>Subir Imágenes</button>
               {/* Mapea sobre la lista de imágenes seleccionadas */}
-              {images.map((image, index) => (
-                <div key={index} style={{ position: 'relative', display: 'inline-block' }}>
-                  {/* Muestra la imagen seleccionada */}
-                  <img
-                    src={image.dataURL}
-                    alt={`img-${index}`}
-                    style={{ width: '100px', height: '100px', marginRight: '5px' }}
-                  />
-                  {/* Botón para quitar la imagen de la lista */}
-                  <button
-                    onClick={() => handleRemove(index)}
-                    style={{ position: 'absolute', top: '5px', right: '5px', cursor: 'pointer' }}
-                  >
-                    Quitar
-                  </button>
-                </div>
-              ))}
+              <div className={styles.imgContainer}>
+                {images.map((image, index) => (
+                  <div key={index} style={{ position: 'relative', display: 'inline-block' }}>
+                    {/* Muestra la imagen seleccionada */}
+                    <img
+                      src={image.dataURL}
+                      alt={`img-${index}`}
+                      // style={{ width: '100px', height: '100px', marginRight: '5px' }}
+                    />
+                    {/* Botón para quitar la imagen de la lista */}
+                    <button
+                      onClick={() => handleRemove(index)}
+                      style={{ position: 'absolute', top: '5px', right: '5px', cursor: 'pointer' }}
+                    >
+                      Quitar
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </ImageUploading>
