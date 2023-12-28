@@ -88,60 +88,74 @@ const ESServicesFormComp = () => {
     <div ref={drop}>
       <div className={styles.container}>
         <h1>AGREGAR SERVICIO</h1>
-        <div className={styles.inputBlock}>
-          {/* Input para el título del formulario */}
-          <label>Nombre:</label>
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-        </div>
-        <div className={styles.inputBlock}>
-          {/* Textarea para la descripción del formulario */}
-          <label>Descripción:</label>
-          <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
-        </div>
-        {/* Componente ImageUploading para manejar la carga de imágenes */}
-        <ImageUploading
-          multiple
-          value={images}
-          onChange={(imageList) => setImages(imageList)}
-          maxNumber={6}
-        >
-          {({ onImageUpload }) => (
-            <div className={styles.mediaContainer}>
-              {/* Botón para iniciar la carga de imágenes */}
-              <button
-                onClick={onImageUpload}
-                className={styles.imgButton}
-              >
-                Cargar Imágenes
-              </button>
-              {/* Mapea sobre la lista de imágenes seleccionadas */}
-              <div className={styles.imgContainer}>
-                {images.map((image, index) => (
-                  <div className={styles.imgBlock} key= {index}
-                  >
-                    {/* Muestra la imagen seleccionada */}
-                    <img
-                      src={image.dataURL}
-                      alt={`img-${index}`}
-                    />
-                    {/* Botón para quitar la imagen de la lista */}
-                    <button
-                      onClick={() => handleRemove(index)}
-                      className={styles.xButton}
-                    >
-                      X
-                    </button>
-                  </div>
-                ))}
-              </div>
+        <div className={styles.dataContainer}>
+
+          <div className={styles.textContainer}>
+            <div className={styles.inputBlock}>
+              {/* Input para el título del formulario */}
+              <label>Nombre:</label>
+              <input
+                type="text"
+                value={title}
+                placeholder='Ingrese nombre del servicio...'
+                onChange={(e) => setTitle(e.target.value)}
+              />
             </div>
-          )}
-        </ImageUploading>
+            <div className={styles.inputBlock}>
+              {/* Textarea para la descripción del formulario */}
+              <label>Descripción:</label>
+              <textarea
+                value={description}
+                placeholder='Ingrese descripción del servicio...'
+                onChange={(e) => setDescription(e.target.value)}
+              />
+            </div>
+          </div>
+          {/* Componente ImageUploading para manejar la carga de imágenes */}
+          <ImageUploading
+            multiple
+            value={images}
+            onChange={(imageList) => setImages(imageList)}
+            maxNumber={6}
+            >
+            {({ onImageUpload }) => (
+              <div className={styles.mediaContainer}>
+                {/* Botón para iniciar la carga de imágenes */}
+                <button
+                  onClick={onImageUpload}
+                  className={styles.imgButton}
+                  >
+                  Cargar Imágenes
+                </button>
+                {/* Mapea sobre la lista de imágenes seleccionadas */}
+                <div className={styles.imgContainer}>
+                  {images.map((image, index) => (
+                    <div className={styles.imgBlock} key= {index}
+                    >
+                      {/* Muestra la imagen seleccionada */}
+                      <img
+                        src={image.dataURL}
+                        alt={`img-${index}`}
+                        />
+                      {/* Botón para quitar la imagen de la lista */}
+                      <button
+                        onClick={() => handleRemove(index)}
+                        className={styles.xButton}
+                        >
+                        X
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </ImageUploading>
+        </div>
         {/* Botón para enviar el formulario */}
         <button
           onClick={handleSubmit}
           className={styles.imgButton}
-        >
+          >
           Cargar Servicio
         </button>
       </div>

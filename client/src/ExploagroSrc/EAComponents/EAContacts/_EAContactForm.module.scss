@@ -34,10 +34,10 @@
         width: 100%;
         @include g.create-flexbox(column, space-between);
         label{
-            font-size: calc(g.$mobile-p-font-size * 1);
+            font-size: g.$mobile-p-font-size;
             width: 20%;
             @include g.display-large{
-                font-size: (g.$desk-p-font-size * 1);
+                font-size: g.$desk-p-font-size;
             };
         }
         textarea{
@@ -45,7 +45,7 @@
             width: 100%;
             height: 130px;
             @include g.display-large{
-                font-size: (g.$desk-p-font-size * 1);
+                font-size: g.$desk-p-font-size;
                 height: 100px;
      
             };
@@ -75,7 +75,7 @@
             font-weight: 700;
             font-size: calc(g.$mobile-h2-font-size * .85);
             @include g.display-large{
-                font-size: (g.$desk-p-font-size * 1); 
+                font-size: g.$desk-p-font-size; 
      
             };
         }

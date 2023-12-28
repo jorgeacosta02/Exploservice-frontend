@@ -1,63 +1,105 @@
 @use '../../../styles/globals' as g;
 
 .container{
-    // position: relative;
+    box-sizing: border-box;
+    width: 100vw;
     margin-top: g.$mobile-NavBar-height;
     padding: g.$mobile-padding;
     padding-bottom: 10vh;
     height: auto;
-    // min-height: 100vh;
+    min-height: 100vh;
     // background-color: grey;
     @include g.create-flexbox(column, space-evenly);
-    .inputBlock{
-        @include g.create-flexbox(column, center);
-        align-items: flex-start;
-        padding: 1vh 0;
-        input{
-            width: 92vw;
-        }
-        textarea{
-            width: 92vw;
-        }
-    }
-    .mediaContainer{
-        position: relative;
-        padding: 2vh 0;
+    
+    // @include g.display-large{
+    //     align-items: flex-start;
+    // }
+    .dataContainer{
+        box-sizing: border-box;
+        width: 100%;
         @include g.create-flexbox(column, space-between);
-        // background-color: red;
-        width: 97%;
-        .imgContainer{
-            padding: 2vh 0;
+        @include g.display-large{
+            padding-bottom: 15px;
+            align-items: flex-start;
+            flex-direction: row;
             width: 100%;
-            @include g.create-flexbox(row, space-between);
-            flex-wrap: wrap;
-            gap:2px;
-            // background-color: green;
-            .imgBlock{
+        }
+        .textContainer{
+            box-sizing: border-box;
+            width: 100%;
+            // background-color: red;
+            @include g.display-large{
                 width: 45%;
-                position: relative;
-                display: inline-block;
-                img{
-                    width: 100%;
-                    // max-width: 220px;
-                    object-fit: cover;
-                    height: 100%;
-                    max-height: 150px;
+            }
+            
+        .inputBlock{
+            box-sizing: border-box;
+            @include g.create-flexbox(column, center);
+            align-items: flex-start;
+            width: 100%;
+            padding: 1vh 0;
+            font-size: g.$mobile-p-font-size;
+            @include g.display-large{
+                font-size: g.$desk-p-font-size;
+            }
+            input{
+                box-sizing: border-box;
+                width: 100%;
+            }
+            textarea{
+                box-sizing: border-box;
+                width: 100%;
+                @include g.display-large{
+                    height: 200px;
                 }
-                .xButton{
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    top: 5px;
-                    right: 5px;
-                    // color: red;
-                    background-color: g.$es-color;
-                    cursor: pointer;
-                }
-                .xButton:hover{
-                    color: g.$es-color;
-                    background-color: g.$third-color;
+            }
+        }
+        }
+        .mediaContainer{
+            position: relative;
+            padding: 2vh 0;
+            @include g.create-flexbox(column, space-between);
+            // background-color: orange;
+            width: 97%;
+            @include g.display-large{
+                padding: 0;
+                box-sizing: border-box;
+                justify-content: flex-start;
+                width: 50%;
+            }
+            .imgContainer{
+                padding: 2vh 0;
+                width: 100%;
+                @include g.create-flexbox(row, space-between);
+                flex-wrap: wrap;
+                gap:2px;
+                // background-color: green;
+                .imgBlock{
+                    width: 45%;
+                    position: relative;
+                    display: inline-block;
+                    img{
+                        width: 100%;
+                        // max-width: 220px;
+                        object-fit: cover;
+                        height: 100%;
+                        max-height: 150px;
+                    }
+                    .xButton{
+                        position: absolute;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        top: 5px;
+                        right: 5px;
+                        // color: red;
+                        background-color: g.$es-color;
+                        cursor: pointer;
+                    }
+                    .xButton:hover{
+                        color: g.$es-color;
+                        background-color: g.$third-color;
+                    }
                 }
             }
         }
@@ -65,7 +107,7 @@
     .imgButton{
         background-color: g.$es-color;
         color: g.$third-color;
-        margin: 10vw 0;
+        margin: 12px 0;
     }
     .imgButton:hover{
         background-color: g.$third-color;
