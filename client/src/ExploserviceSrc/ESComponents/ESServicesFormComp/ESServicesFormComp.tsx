@@ -108,16 +108,16 @@ const ESServicesFormComp = () => {
           {({ onImageUpload }) => (
             <div className={styles.mediaContainer}>
               {/* Botón para iniciar la carga de imágenes */}
-              <button onClick={onImageUpload}>Subir Imágenes</button>
+              <button onClick={onImageUpload}>Cargar Imágenes</button>
               {/* Mapea sobre la lista de imágenes seleccionadas */}
               <div className={styles.imgContainer}>
                 {images.map((image, index) => (
-                  <div key={index} style={{ position: 'relative', display: 'inline-block' }}>
+                  <div className={styles.imgBlock} key= {index}
+                  >
                     {/* Muestra la imagen seleccionada */}
                     <img
                       src={image.dataURL}
                       alt={`img-${index}`}
-                      // style={{ width: '100px', height: '100px', marginRight: '5px' }}
                     />
                     {/* Botón para quitar la imagen de la lista */}
                     <button
@@ -133,7 +133,7 @@ const ESServicesFormComp = () => {
           )}
         </ImageUploading>
         {/* Botón para enviar el formulario */}
-        <button onClick={handleSubmit}>Enviar Formulario</button>
+        <button onClick={handleSubmit}>Cargar Servicio</button>
       </div>
     </div>
   );

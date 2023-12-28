@@ -1,14 +1,17 @@
 @use '../../../styles/globals' as g;
 
 .container{
-    position: absolute;
-    top: g.$mobile-NavBar-height;
+    // position: relative;
+    margin-top: g.$mobile-NavBar-height;
     padding: g.$mobile-padding;
-    min-height: 100vh;
-    // background-color: red;
+    height: auto;
+    // min-height: 100vh;
+    // background-color: grey;
+    @include g.create-flexbox(column, space-evenly);
     .inputBlock{
         @include g.create-flexbox(column, center);
         align-items: flex-start;
+        padding: 1vh 0;
         input{
             width: 92vw;
         }
@@ -17,17 +20,30 @@
         }
     }
     .mediaContainer{
+        position: relative;
         padding: 2vh 0;
+        @include g.create-flexbox(column, space-between);
+        // background-color: red;
+        width: 97%;
         .imgContainer{
             padding: 2vh 0;
+            width: 100%;
             @include g.create-flexbox(row, space-between);
             flex-wrap: wrap;
-        }
-        img{
-            width: 47vw;
-            max-width: 150px;
-            height: 47vw;
-            max-height: 150px;
+            gap:2px;
+            // background-color: green;
+            .imgBlock{
+                width: 45%;
+                position: relative;
+                display: inline-block;
+                img{
+                    width: 100%;
+                    // max-width: 220px;
+                    object-fit: cover;
+                    height: 100%;
+                    max-height: 150px;
+                }
+            }
         }
     }
 }
