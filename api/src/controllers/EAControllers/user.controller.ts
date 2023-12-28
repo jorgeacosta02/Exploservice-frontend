@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import User, { IUser } from "../models/user";
+import User, { IUser } from "../../models/EAModels/user";
 import jwt from 'jsonwebtoken';
-import config from "../config/config";
+import config from "../../config/config";
 
 const createToken = (user: IUser) => {
     return jwt.sign({id: user.id, email: user.email}, config.jwtSecret, {
