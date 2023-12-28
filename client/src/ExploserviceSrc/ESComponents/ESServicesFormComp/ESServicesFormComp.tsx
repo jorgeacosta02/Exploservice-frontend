@@ -16,12 +16,26 @@ const ESServicesFormComp = () => {
   const [, drop] = useDrop({
     accept: 'image', // Acepta elementos arrastrables con el tipo 'image'
     drop: (item: any) => handleDrop(item), // Llama a la función handleDrop cuando se suelta un elemento
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+      canDrop: !!monitor.canDrop(),
+    }),
+    options: { dropEffect: 'copy' }, // Indica que se debe copiar el elemento
   });
 
   // Función para manejar el evento de soltar una imagen
   const handleDrop = (item: any) => {
-    // Agrega la imagen a la lista de imágenes seleccionadas
-    setImages((prevImages) => [...prevImages, { file: item.file }]);
+      // Crea una copia del objeto de la imagen
+    const copiedImage = Object.assign({}, item);
+
+     // Agrega la imagen copiada a la lista de imágenes seleccionadas
+    setImages((prevImages) => [...prevImages, { file: copiedImage.file }])
+
+
+
+
+    // // Agrega la imagen a la lista de imágenes seleccionadas
+    // setImages((prevImages) => [...prevImages, { file: item.file }]);
   };
 
   // Función para manejar la eliminación de una imagen de la lista
