@@ -4,6 +4,7 @@
     // position: relative;
     margin-top: g.$mobile-NavBar-height;
     padding: g.$mobile-padding;
+    padding-bottom: 10vh;
     height: auto;
     // min-height: 100vh;
     // background-color: grey;
@@ -43,7 +44,31 @@
                     height: 100%;
                     max-height: 150px;
                 }
+                .xButton{
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    top: 5px;
+                    right: 5px;
+                    // color: red;
+                    background-color: g.$es-color;
+                    cursor: pointer;
+                }
+                .xButton:hover{
+                    color: g.$es-color;
+                    background-color: g.$third-color;
+                }
             }
         }
+    }
+    .imgButton{
+        background-color: g.$es-color;
+        color: g.$third-color;
+        margin: 10vw 0;
+    }
+    .imgButton:hover{
+        background-color: g.$third-color;
+        color: g.$es-color;
     }
 }
