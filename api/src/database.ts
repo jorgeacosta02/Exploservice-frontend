@@ -6,7 +6,7 @@ import config from './config/config';
 
 
 // Conexión a la base de datos exploservice
-const dbESURI = config.ExploagroDB.URI;
+const dbESURI = config.ExploserviceDB.URI;
 export const dbESConnection = mongoose.createConnection(dbESURI);
 
 dbESConnection.once('open', () => {
@@ -19,7 +19,7 @@ dbESConnection.on('error', (err) => {
 });
 
 // Conexión a la base de datos exploagro
-const dbEAURI = config.ExploserviceDB.URI;
+const dbEAURI = config.ExploagroDB.URI;
 export const dbEAConnection = mongoose.createConnection(dbEAURI);
 
 dbEAConnection.once('open', () => {

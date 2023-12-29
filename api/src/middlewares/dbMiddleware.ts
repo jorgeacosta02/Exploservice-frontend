@@ -6,7 +6,7 @@ import { dbESConnection, dbEAConnection } from '../database';
 
 // Extiende la interfaz Request para incluir la propiedad dbConnection
 export interface RequestWithDBConnection extends Request {
-    dbConnection: any;
+    dbConnection: Connection;
 }
 
 export const connectToExploserviceDB = (req: RequestWithDBConnection, res: Response, next: NextFunction) => {

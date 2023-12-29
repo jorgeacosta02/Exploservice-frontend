@@ -1,26 +1,14 @@
 // servicio.controller.ts
 import { Request, Response } from 'express';
 // import cloudinary from '../../config/cloudinary'; // Ajusta la ruta según tu estructura
-import Servicio from '../../models/ESModels/ESImgUlodaModel'; // Ajusta la ruta según tu estructura
+import Service from '../../models/ESModels/ESImgUplodaModel'; // Ajusta la ruta según tu estructura
 
 // Controlador para manejar la carga de imágenes y guardar en MongoDB
 export const ESImgUloadController = async (req: Request, res: Response) => {
     try {
 
-
-        // // Obtener imágenes desde Multer
-        // const images = req.files as Express.Multer.File[];
-
-        // // Subir imágenes a Cloudinary
-        // const uploadedImageUrls = await Promise.all(
-        //     images.map(async (image) => {
-        //         const result = await cloudinary.uploader.upload(image.buffer.toString('base64'));
-        //         return result.url;
-        //     })
-        // );
-
         // Crear un nuevo servicio con datos y URLs de imágenes
-        const newService = new Servicio({
+        const newService = new Service({
             title: req.body.title,
             description: req.body.description,
             imageUrls: req.body.images,
@@ -32,6 +20,13 @@ export const ESImgUloadController = async (req: Request, res: Response) => {
         res.json({ message: 'Imágenes cargadas y servicio guardado exitosamente' });
     } catch (error) {
         console.error('Error al cargar servicio:', error);
-        res.status(500).json({ error: 'Error al cargar servicio' });
+        
+        if (error instanceof Error) {
+            // Si error es del tipo Error, usar el mensaje de error
+            res.status(500).json({ error: 'Error al cargar servicio', details: error.message });
+        } else {
+            // En caso contrario, manejar el error de manera genérica
+            res.status(500).json({ error: 'Error al cargar servicio', details: 'Detalles del error desconocidos' });
+        }
     }
 };

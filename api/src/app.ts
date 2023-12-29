@@ -1,6 +1,6 @@
 // Dos bases de datos con asyn await
 
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -8,7 +8,11 @@ import passport from 'passport';
 import passportMiddleware from './middlewares/passport';
 import ESRoutes from './routes/ESRoutes/imageUpload';
 import imageUploadRoute from './routes/ESRoutes/imageUpload';
-import { dbESConnection, dbEAConnection } from './database';
+import { dbESConnection } from './database';
+
+// import authRoutes from './routes/EARoutes/auth.routes'
+// import specialRoutes from './routes/EARoutes/special.routes'
+// import routes from './routes/EARoutes/index'
 
 
 dotenv.config();
@@ -32,6 +36,21 @@ app.use('/api', imageUploadRoute);
 app.use('/exploservice', ESRoutes);
 
 console.log('Executing app.ts');
+
+
+
+// app.use(authRoutes);
+// app.use(specialRoutes);
+// app.use('/', routes);
+
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Error al cargar servicio', details: err.message });
+});
+
+
+
+
 
 export default  app ;
 
