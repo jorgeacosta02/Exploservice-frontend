@@ -4,7 +4,13 @@ import ImageUploading, { ImageListType } from 'react-images-uploading';
 import axios from 'axios';
 import styles from './_ESServicesFormComp.module.scss';
 
+
 const ESServicesFormComp = () => {
+  
+  // const cloudinaryName: string | undefined = process.env.REACT_APP_CLOUDINARY_NAME;
+
+  // console.log(cloudinaryName);
+
   const [images, setImages] = useState<ImageListType>([]);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -23,9 +29,10 @@ const ESServicesFormComp = () => {
     try {
       const formData = new FormData();
       formData.append('file', item.file);
+      formData.append('upload_preset', 'Presets_react');
 
       const cloudinaryResponse = await axios.post(
-        'https://api.cloudinary.com/v1_1/tu-cloud-name/image/upload',
+        `https://api.cloudinary.com/v1_1/duyhgdoqn/image/upload`,
         formData,
         {
           headers: {
@@ -33,6 +40,8 @@ const ESServicesFormComp = () => {
           },
         }
       );
+        
+      console.log(cloudinaryResponse.data)
 
       const imageUrl = cloudinaryResponse.data.secure_url;
 
@@ -48,39 +57,64 @@ const ESServicesFormComp = () => {
 
   const handleSubmit = async () => {
     try {
+      // 1. Cargar cada imagen a Cloudinary y obtener las URLs
       const uploadPromises = images.map(async (image) => {
-        const response = await axios.post(
-          'https://api.cloudinary.com/v1_1/tu-cloud-name/image/upload',
-          { file: image.dataURL },
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
-        );
-
-        return response.data.secure_url;
+        // Verificar si image.file es definido antes de usarlo
+        if (image.file) {
+          const formData = new FormData();
+          formData.append('file', image.file);
+          formData.append('upload_preset', 'Presets_react');
+      
+          const cloudinaryResponse = await axios.post(
+            `https://api.cloudinary.com/v1_1/duyhgdoqn/image/upload`,
+            formData,
+            {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+              },
+            }
+          );
+      
+          return cloudinaryResponse.data.secure_url;
+        }
+      
+        // En este caso, el elemento no tiene una propiedad 'file', así que puedes manejarlo según tus necesidades
+        return null;
       });
-
+  
+      // 2. Obtener todas las URLs de las imágenes
       const uploadedImageUrls = await Promise.all(uploadPromises);
-
-      const formData = {
-        title,
-        description,
-        images: uploadedImageUrls,
-      };
-
-      const response = await axios.post('/exploservice/upload', formData);
-
+  
+      // 3. Crear el objeto formData para enviar al servidor
+      const formData = new FormData();
+      formData.append('title', title);
+      formData.append('description', description);
+  
+      // 4. Agregar las URLs de las imágenes al formData
+      uploadedImageUrls.forEach((imageUrl, index) => {
+        formData.append(`images[${index}]`, imageUrl);
+      });
+  
+      // 5. Realizar la solicitud POST al servidor
+      const response = await axios.post('/exploservice/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+  
+      // 6. Manejar la respuesta del servidor
       console.log('Respuesta del servidor:', response.data);
-
+  
+      // 7. Limpiar el formulario después de la carga exitosa
       setImages([]);
       setTitle('');
       setDescription('');
     } catch (error) {
+      // Manejar los errores de carga
       console.error('Error al enviar formulario:', error);
     }
   };
+  
 
   return (
     <div ref={drop}>
