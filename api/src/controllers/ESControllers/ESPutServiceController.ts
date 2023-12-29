@@ -1,10 +1,9 @@
-// servicio.controller.ts
 import { Request, Response } from 'express';
 // import cloudinary from '../../config/cloudinary'; // Ajusta la ruta según tu estructura
-import Service from '../../models/ESModels/ESImgUplodaModel'; // Ajusta la ruta según tu estructura
+import Service from '../../models/ESModels/ESServiceModel'; // Ajusta la ruta según tu estructura
 
 // Controlador para manejar la carga de imágenes y guardar en MongoDB
-export const ESImgUloadController = async (req: Request, res: Response) => {
+export const ESPostServiceController = async (req: Request, res: Response) => {
     try {
 
         // Crear un nuevo servicio con datos y URLs de imágenes
@@ -17,7 +16,7 @@ export const ESImgUloadController = async (req: Request, res: Response) => {
         // Guardar el servicio en MongoDB
         await newService.save();
 
-        res.json({ message: 'Imágenes cargadas y servicio guardado exitosamente' });
+        res.json({ message: 'Servicio guardado exitosamente' });
     } catch (error) {
         console.error('Error al cargar servicio:', error);
         

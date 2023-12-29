@@ -20,6 +20,6 @@ const serviceSchema = new mongoose.Schema({
     imageUrls: [String],
 });
 
-export default mongoose.model<IService>('Servicio', serviceSchema);
+export default mongoose.model<IService>('Service', serviceSchema);
 
 
