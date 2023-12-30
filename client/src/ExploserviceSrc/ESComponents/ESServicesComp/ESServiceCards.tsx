@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { ESState } from "../../../redux/reducers/ESReducer";
+import { ESState } from "../../../redux/reducers";
 
 
 const ESServiceCards = () => {

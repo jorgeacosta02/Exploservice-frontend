@@ -36,7 +36,7 @@ const initialState = {
 }
 
 
-const esReducer = (state: any = initialState, action: ActionWithPayload<string,any>) => {
+export const esReducer = (state: any = initialState, action: ActionWithPayload<string,any>) => {
     switch (action.type){
         case 'GET_ALL_SERVICES':
             return{
@@ -48,5 +48,5 @@ const esReducer = (state: any = initialState, action: ActionWithPayload<string,a
     }
 }
 
-export default esReducer
+
 
