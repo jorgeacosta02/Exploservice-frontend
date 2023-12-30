@@ -1,7 +1,7 @@
 import styles from './_EAMenu.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../redux/types';
-import { toggleStyle } from '../../../redux/actions/actions';
+import { toggleStyle } from '../../../redux/actions';
 
 const EAMenu = () => {
 

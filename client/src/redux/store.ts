@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux';
-import stylesReducer from './reducers/stylesReducer';
+import stylesReducer from './reducers';
 
 const rootReducer = combineReducers({
   styles: stylesReducer,

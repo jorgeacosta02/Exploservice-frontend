@@ -115,7 +115,7 @@ const ESServicesFormComp = () => {
   return (
     <div ref={drop}>
       <div className={styles.container}>
-        <h1>AGREGAR SERVICIO</h1>
+        <h1>ALTA DE SERVICIO</h1>
         <div className={styles.dataContainer}>
           <div className={styles.textContainer}>
             <div className={styles.inputBlock}>

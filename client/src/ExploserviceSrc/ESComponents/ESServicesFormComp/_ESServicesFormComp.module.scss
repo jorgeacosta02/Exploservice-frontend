@@ -6,14 +6,10 @@
     margin-top: g.$mobile-NavBar-height;
     padding: g.$mobile-padding;
     padding-bottom: 10vh;
-    height: auto;
+    // height: auto;
     min-height: 100vh;
-    // background-color: grey;
+    background-color: grey;
     @include g.create-flexbox(column, space-evenly);
-    
-    // @include g.display-large{
-    //     align-items: flex-start;
-    // }
     .dataContainer{
         box-sizing: border-box;
         width: 100%;
@@ -27,7 +23,7 @@
         .textContainer{
             box-sizing: border-box;
             width: 100%;
-            // background-color: red;
+            background-color: red;
             @include g.display-large{
                 width: 45%;
             }
