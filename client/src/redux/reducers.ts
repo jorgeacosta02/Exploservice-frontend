@@ -1,16 +1,13 @@
 import { 
     TOGGLE_STYLE,
-    ToggleStyleAction
+    ToggleStyleAction,
+    ActionWithPayload
 } from './actions';
 
 
 // Reducer Interfaces
-export interface RootState {
-    styles: boolean;
-}
-
 export interface booleanState {
-    state: boolean
+    styles: boolean
 }
 
 
@@ -24,8 +21,6 @@ export const stylesReducer = (state: booleanState, action: ToggleStyleAction): b
   }
 };
 
-
-import { ActionWithPayload } from './actions'
 
 export interface ESState {
     services: []

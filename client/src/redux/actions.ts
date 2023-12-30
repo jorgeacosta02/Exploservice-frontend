@@ -1,4 +1,4 @@
-// Action labes
+// Action Types
 export const TOGGLE_STYLE = 'TOGGLE_STYLE';
 export const GET_ALL_SERVICES = 'GET_ALL_SERVICES'; 
 
