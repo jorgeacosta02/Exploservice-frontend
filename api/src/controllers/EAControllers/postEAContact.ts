@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const { NODEMAILER_USER, NODEMAILER_PASS, DESTINATION_EMAIL } = process.env;
 
-const postContactMe = async (req: Request, res: Response) => {
+const postEAContact = async (req: Request, res: Response) => {
   try {
     const {name,email,subject,message} = req.body;
     // inicia la funcion de recibir el mensaje
@@ -63,7 +63,7 @@ const postContactMe = async (req: Request, res: Response) => {
   }
 };
 
-export default postContactMe;
+export default postEAContact;
 
 
 

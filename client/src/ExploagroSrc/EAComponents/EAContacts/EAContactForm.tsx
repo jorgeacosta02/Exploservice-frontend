@@ -45,7 +45,7 @@ const EAContactForm: React.FC = () => {
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("/contactme", formData)
+      await axios.post("exploagro/contact", formData)
       toast.success("Mensaje enviado exitosamente!!")
       setTimeout(() => {
         window.location.href = '/exploagro';

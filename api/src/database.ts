@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import config from "./config/config";
+// import config from "./config/config";
 
 mongoose.connect('mongodb://localhost:27017/exploservice')
     .then(() => console.log('Connected to exploservice DB'))

@@ -1,6 +1,6 @@
 // import styles from './_ESServicesPage.module.scss'
 import ESNavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESServicesComp from '../../ESComponents/ESServicesComp/ESServiceCard'
+import ESServicesComp from '../../ESComponents/ESServicesComp/ESServicesComp'
 import ESFooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
 
 const ESServicesPage = () => {
