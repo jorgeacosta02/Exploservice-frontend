@@ -4,6 +4,14 @@ import imgPPP02 from '../../ESAssets/ESImages/ESServices/PerfParaProduccion/perf
 import imgPGC01 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol01.jpg'
 import imgPGC02 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol02.jpg'
 import imgPGC03 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol03.jpg'
+import imgPPC01 from '../../ESAssets/ESImages/ESServices/PerfParaConstruccion/perfoBuilding01.jpg'
+import imgPPC02 from '../../ESAssets/ESImages/ESServices/PerfParaConstruccion/perfoBuilding02.jpg'
+import imgBlasting01 from '../../ESAssets/ESImages/ESServices/Voladura/blasting01.jpg'
+import imgBlasting02 from '../../ESAssets/ESImages/ESServices/Voladura/blasting02.jpg'
+import imgBlasting03 from '../../ESAssets/ESImages/ESServices/Voladura/blasting03.jpg'
+import imgPD01 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling01.jpg'
+import imgPD02 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling02.jpg'
+import imgPD03 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling03.jpg'
 
 
 const ESCommentsComp = () => {
@@ -35,27 +43,31 @@ const ESCommentsComp = () => {
            </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h2>PERFORACIÓN PARA PRODUCCION</h2>
-        <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
+        <h2>PERFORACIÓN PARA CONSTRUCCION</h2>
+        <p>Perforación para excavaciones con explosivos en construcción; cortes cajón y media ladera para rutas, rip-rap, zanjeos, fundaciones, demoliciones, voladuras especiales, etc.</p>
         <div className={styles.serviceImgs}>
-          <img src={imgPPP01} alt="imgPPP01" />
-          <img src={imgPPP02} alt="imgPPP02" />
+          <img src={imgPPC01} alt="imgPPP01" />
+          <img src={imgPPC02} alt="imgPPP02" />
         </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h2>PERFORACIÓN PARA PRODUCCION</h2>
-        <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
+        <h2>VOLADURA</h2>
+        <p>Carguío de pozos con explosivos y detonación para la obtención de roca fragmentada en diferentes granulometrías según su posterior utilización.</p>
         <div className={styles.serviceImgs}>
-          <img src={imgPPP01} alt="imgPPP01" />
-          <img src={imgPPP02} alt="imgPPP02" />
+          <img src={imgBlasting01} alt="imgPPP01" />
+          <img src={imgBlasting02} alt="imgPPP02" />
+          <img src={imgBlasting03} alt="imgPPP03" />
+          
         </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h2>PERFORACIÓN PARA PRODUCCION</h2>
-        <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
+        <h2>PRE DRILLING</h2>
+        <p>Perforación de taladros sin extracción de cutting para facilitar el hincado de perfiles estructurales para el emplazamiento de parques solares.</p>
         <div className={styles.serviceImgs}>
-          <img src={imgPPP01} alt="imgPPP01" />
-          <img src={imgPPP02} alt="imgPPP02" />
+          <img src={imgPD01} alt="imgPPP01" />
+          <img src={imgPD02} alt="imgPPP02" />
+          <img src={imgPD03} alt="imgPPP03" />
+
         </div>
       </div>
     </div>
