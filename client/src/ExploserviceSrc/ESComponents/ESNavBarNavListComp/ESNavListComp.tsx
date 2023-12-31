@@ -27,18 +27,6 @@ const ESNavListComp = () => {
         </li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploservice/company" 
-            className={styles.navLink} 
-           >Empresa</NavLink>
-        </li>
-        <li onClick={handleClick} >
-          <NavLink
-            to="/exploservice/services" 
-            className={styles.navLink} 
-           >Servicios</NavLink>
-        </li>
-        <li onClick={handleClick} >
-          <NavLink
             to="/exploservice/equipment" 
             className={styles.navLink} 
            >Equipos</NavLink>
@@ -49,21 +37,9 @@ const ESNavListComp = () => {
             className={styles.navLink} 
            >Trabajos</NavLink>
         </li>
-        {/* <li onClick={handleClick} >
-          <NavLink
-            to="#" 
-            className={styles.navLink} 
-           >Registrarse</NavLink>
-        </li>
         <li onClick={handleClick} >
           <NavLink
-            to="#" 
-            className={styles.navLink} 
-           >Ingresar</NavLink>
-        </li> */}
-        <li onClick={handleClick} >
-          <NavLink
-            to="/exploservice/esservicesform" 
+            to="/exploservice/contact" 
             className={styles.navLink} 
            >Contacto</NavLink>
         </li>

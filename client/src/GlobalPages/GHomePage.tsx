@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 const GHomePage = () => {
   return (
     <div>
-      <NavLink to='/exploservice/company' className={styles.EScontainer}>
+      <NavLink to='/exploservice' className={styles.EScontainer}>
         <img
           src={ESLogoBrand}
           alt="Exploservice Logo"

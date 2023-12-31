@@ -27,28 +27,28 @@ const EANavList = () => {
         </li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploagro/product" 
-            className={styles.navLink} 
-           >Producto</NavLink>
-        </li>
-        <li onClick={handleClick} >
-          <NavLink
-            to="/exploagro/company" 
+            to="/exploagro" 
             className={styles.navLink} 
            >Empresa</NavLink>
         </li>
         <li onClick={handleClick} >
           <NavLink
+            to="/exploagro/product" 
+            className={styles.navLink} 
+           >Producto</NavLink>
+        </li>
+        {/* <li onClick={handleClick} >
+          <NavLink
             to="#" 
             className={styles.navLink} 
            >Registrarse</NavLink>
-        </li>
-        <li onClick={handleClick} >
+        </li> */}
+        {/* <li onClick={handleClick} >
           <NavLink
             to="#" 
             className={styles.navLink} 
            >Ingresar</NavLink>
-        </li>
+        </li> */}
         <li onClick={handleClick} >
           <NavLink
             to="/exploagro/contact" 
