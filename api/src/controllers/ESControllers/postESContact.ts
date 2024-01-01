@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import nodemailer from 'nodemailer';
 import dotenv from "dotenv";
 dotenv.config();
-const { EXPLOAGRO_NODEMAILER_USER, EXPLOAGRO_NODEMAILER_PASS, DESTINATION_EMAIL } = process.env;
+const { EXPLOSERVICE_NODEMAILER_USER, EXPLOSERVICE_NODEMAILER_PASS, DESTINATION_EMAIL } = process.env;
 
 const postEAContact = async (req: Request, res: Response) => {
   try {
@@ -17,8 +17,8 @@ const postEAContact = async (req: Request, res: Response) => {
       // port: 465,
       // secure: true,
       auth: {
-        user: EXPLOAGRO_NODEMAILER_USER,
-        pass: EXPLOAGRO_NODEMAILER_PASS,
+        user: EXPLOSERVICE_NODEMAILER_USER,
+        pass: EXPLOSERVICE_NODEMAILER_PASS,
       },
       tls: {
         rejectUnauthorized: false, // Desactiva la verificación del certificado
@@ -26,7 +26,7 @@ const postEAContact = async (req: Request, res: Response) => {
     });
     // se fusionará en cada objeto de mensaje.
     let mailOptions = {
-      from: EXPLOAGRO_NODEMAILER_USER,
+      from: EXPLOSERVICE_NODEMAILER_USER,
       to: DESTINATION_EMAIL,
       subject,
       html: `<html>

@@ -17,7 +17,7 @@
     .worksContainer{
         padding: 8vh 0;
         .work{
-            padding: 8vh 0;
+            padding-bottom: 12vh;
             
             .workData{
                 @include g.create-flexbox(row, space-between);
