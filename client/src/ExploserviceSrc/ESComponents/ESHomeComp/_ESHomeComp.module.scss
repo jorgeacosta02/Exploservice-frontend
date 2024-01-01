@@ -1,6 +1,7 @@
 @use '../../../styles/globals' as g;
 
 .container{
+    position: relative;
     margin-top: g.$mobile-NavBar-height;
     // background-color: green;
     min-height: 100vh;
@@ -86,6 +87,25 @@
             }
         }
 
+    }
+    .clientsContainer{
+        position: relative;
+        width: 100vw;
+        height: 150vh;
+        padding: 10vh 0;
+        text-align: center;
+        .clients{
+            box-sizing: border-box;
+            position: relative;
+            @include g.create-flexbox(row, center);
+            flex-wrap: wrap;
+            gap: 5vw;
+            width: 100%;
+            padding: 10%;
+        }
+        img{
+            width: 20vw;
+        }
     }
 
 }
