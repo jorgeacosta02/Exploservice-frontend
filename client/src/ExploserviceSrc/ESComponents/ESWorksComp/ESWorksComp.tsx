@@ -8,7 +8,7 @@ import imgPacsuaLama02 from '../../ESAssets/ESImages/ESWorks/pascuaLama02.jpg'
 const ESWorks = () => {
   return (
     <div className={styles.container}>
-      <h1>Nuestros Trabajos</h1>
+      <h1 className={styles.our}>Nuestros Trabajos</h1>
       <div className={styles.worksContainer}>
         <div className={styles.work}>
             <h2>
@@ -20,7 +20,10 @@ const ESWorks = () => {
                     Mina Casposo ubicada en el departamento de Calingasta - Provincia de San Juan - Argentina.
                     </p>
                     <p>
-                    Perforación, carga y voladura en roca andesita con grade control de cutting en mineral. Volumen total: 7.050.000 Ton. Contrato: desde 2011 al 2014.
+                    Perforación, carga y voladura en roca andesita con grade control de cutting en mineral. Volumen total: 7.050.000 Ton. 
+                    </p>
+                    <p>
+                    Contrato: desde 2011 al 2014.
                     </p>
                 </div>
                 <img src={imgCasposo} alt='Imagen Casposo' />
@@ -31,16 +34,19 @@ const ESWorks = () => {
                Mina Karouni - Guyana
             </h2>
             <div className={styles.workData}>
+                <img src={imgKarouni} alt='Imagen Karoni' />
                 <div className={styles.workText}>
                     <p>
                     Mina Karouni locaclizada en la región de Esequibo de la república de Guyana.
                     </p>
                     <p>
                     Exploservice provee servicios de perforación carga y voladura en saprolita y roca, con grade control de cutting en mineral.
-                    Cantidad total: 900.000 metros lineales de perforación. Contrato: desde 2015 a la actualidad.
+                    Cantidad total: 900.000 metros lineales de perforación.
+                    </p>
+                    <p>
+                    Contrato: desde 2015 a la actualidad.
                     </p>
                 </div>
-                <img src={imgKarouni} alt='Imagen Karoni' />
             </div>
         </div>
         <div className={styles.work}>
@@ -54,6 +60,8 @@ const ESWorks = () => {
                     </p>
                     <p>
                     Carga y voladura con explosivos para excavación subterránea en tunel conveyor, lado argentino.
+                    </p>
+                    <p>
                     Período 2012 y 2013.
                     </p>
                 </div>
@@ -65,16 +73,18 @@ const ESWorks = () => {
                 Proyecto binacional Pascua Lama - Argentina Chile
             </h2>
             <div className={styles.workData}>
+                <img src={imgPacsuaLama02} alt="Imagen Pascua Lama 02" />
                 <div className={styles.workText}>
                     <p>
                         Proyecto binacional Pascua Lama ubicado en el departamento de Iglesia - Provincia de San Juan - Argentina.
                     </p>
                     <p>
                         Transporte, carga y voladura con explosivos para excavación dique de colas.
+                    </p>
+                    <p>
                         Período 2012 y 2013.
                     </p>
                 </div>
-                <img src={imgPacsuaLama02} alt="Imagen Pascua Lama 02" />
             </div>
         </div>
       </div>

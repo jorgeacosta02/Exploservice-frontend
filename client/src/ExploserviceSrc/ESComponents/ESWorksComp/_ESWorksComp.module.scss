@@ -1,0 +1,40 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    position: relative;
+    top: g.$desk-NavBar-height;
+    padding: 5vh 10vw;
+    .our{
+        // background-color: g.$es-color;
+        position: relative;
+        // top: -25px;
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+        // border-top: 3px solid g.$es-color;
+        // border-bottom: 3px solid g.$es-color;
+    }
+    .worksContainer{
+        padding: 8vh 0;
+        .work{
+            padding: 8vh 0;
+            
+            .workData{
+                @include g.create-flexbox(row, space-between);
+                gap: 2vw;
+                padding-top: 3vh;
+            }
+            .workText{
+                width: 40vw;
+                @include g.create-flexbox(column, space-between);
+                p{
+                    width: 40vw;
+                }
+            }
+            img{
+                max-width: 50vw;
+                max-height: 50vh;
+            }
+        }
+    }
+}
