@@ -29,17 +29,23 @@ const ESCommentsComp = () => {
           Contamos con una vasta experiencia de más de 25 años y un equipo especializado, altamente comprometido con el desarrollo de procesos de mejora continua, garantizando el cumplimiento de los objetivos con altos estándares de calidad, seguridad y cuidando el medio ambiente.
         </p>
       </div>
-      <h2>Nuestro servicios</h2>
+      <h2 className={styles.ourServices}>Nuestros servicios</h2>
+      <div className={styles.allServicesContainer}>
+
       <div className={styles.serviceContainer}>
         <h2>PERFORACIÓN PARA PRODUCCION</h2>
-        <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
-        <div className={styles.serviceImgs}>
-          <img src={imgPPP01} alt="imgPPP01" />
-          <img src={imgPPP02} alt="imgPPP02" />
+        <div className={styles.serviceContent}>
+          <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
+          <div className={styles.serviceImgs}>
+            <img src={imgPPP01} alt="imgPPP01" />
+            <img src={imgPPP02} alt="imgPPP02" />
+          </div>
         </div>
       </div>
       <div className={styles.serviceContainer}>
+
         <h2>PERFORACIÓN PARA GRADE CONTROL</h2>
+      <div className={styles.serviceContent}>
         <p>Perforación con toma de muestras del cutting o detritus, con o sin empleo de dispositivo cuarteador.</p>
         <div className={styles.serviceImgs}>
           <img src={imgPGC01} alt="imgPGC01" />
@@ -47,16 +53,22 @@ const ESCommentsComp = () => {
           <img src={imgPGC03} alt="imgPGC03" />
            </div>
       </div>
+      </div>
       <div className={styles.serviceContainer}>
         <h2>PERFORACIÓN PARA CONSTRUCCION</h2>
+        <div className={styles.serviceContent}>
+
         <p>Perforación para excavaciones con explosivos en construcción; cortes cajón y media ladera para rutas, rip-rap, zanjeos, fundaciones, demoliciones, voladuras especiales, etc.</p>
         <div className={styles.serviceImgs}>
           <img src={imgPPC01} alt="imgPPP01" />
           <img src={imgPPC02} alt="imgPPP02" />
         </div>
+        </div>
       </div>
       <div className={styles.serviceContainer}>
         <h2>VOLADURA</h2>
+        <div className={styles.serviceContent}>
+
         <p>Carguío de pozos con explosivos y detonación para la obtención de roca fragmentada en diferentes granulometrías según su posterior utilización.</p>
         <div className={styles.serviceImgs}>
           <img src={imgBlasting01} alt="imgPPP01" />
@@ -64,9 +76,12 @@ const ESCommentsComp = () => {
           <img src={imgBlasting03} alt="imgPPP03" />
           
         </div>
+        </div>
       </div>
       <div className={styles.serviceContainer}>
         <h2>PRE DRILLING</h2>
+        <div className={styles.serviceContent}>
+
         <p>Perforación de taladros sin extracción de cutting para facilitar el hincado de perfiles estructurales para el emplazamiento de parques solares.</p>
         <div className={styles.serviceImgs}>
           <img src={imgPD01} alt="imgPPP01" />
@@ -74,6 +89,8 @@ const ESCommentsComp = () => {
           <img src={imgPD03} alt="imgPPP03" />
 
         </div>
+        </div>
+      </div>
       </div>
     </div>
   )
