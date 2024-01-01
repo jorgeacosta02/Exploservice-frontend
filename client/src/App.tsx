@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import GHomePage from './GlobalPages/GHomePage';
+import LandingPage from './GlobalPages/LandingPage';
 import ESHomePage from './ExploserviceSrc/ESPages/ESHomePage/ESHomePage';
 import EAHome from './ExploagroSrc/EAPages/EAHome/EAHome';
 import EAProduct from './ExploagroSrc/EAPages/EAProduct/EAProduct';
@@ -12,7 +12,7 @@ const App = () => {
       <Routes>
 
         {/*General Routes*/}
-        <Route path="/" element={<GHomePage />} />
+        <Route path="/" element={<LandingPage />} />
 
         {/*Exploservice Routes*/}
         <Route path="/exploservice" element={<ESHomePage />} />

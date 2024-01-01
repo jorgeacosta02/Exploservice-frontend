@@ -1,12 +1,12 @@
 import ESNavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESCommentsComp from '../../ESComponents/ESCommentsComp/ESCommentsComp'
+import ESHomeComp from '../../ESComponents/ESHomeComp/ESHomeComp'
 import ESFooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
 
 const ESHomePage = () => {
   return (
     <div>
       <ESNavBarLayout />
-      <ESCommentsComp />
+      <ESHomeComp />
       <ESFooterComp />
     </div>
   )

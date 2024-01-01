@@ -1,4 +1,4 @@
-import styles from './_ESCommentsComp.module.scss';
+import styles from './_ESHomeComp.module.scss';
 import imgPPP01 from '../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd01.png'
 import imgPPP02 from '../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd02.jpg'
 import imgPGC01 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol01.jpg'
@@ -14,7 +14,7 @@ import imgPD02 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling0
 import imgPD03 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling03.jpg'
 
 
-const ESCommentsComp = () => {
+const ESHomeComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainImage}>
@@ -96,4 +96,4 @@ const ESCommentsComp = () => {
   )
 }
 
-export default ESCommentsComp
+export default ESHomeComp

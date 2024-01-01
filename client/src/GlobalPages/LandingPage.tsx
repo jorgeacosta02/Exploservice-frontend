@@ -1,10 +1,10 @@
-import styles from './_GHomePage.module.scss'
+import styles from './_Landing.module.scss'
 import ESLogoBrand from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/Exploservice-Logo-Brand.png'
 import ADLLogo from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/ADLLogo.png'
 import EALogo from '../ExploagroSrc/EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
 import { NavLink } from 'react-router-dom'
 
-const GHomePage = () => {
+const LandingPage = () => {
   return (
     <div>
       <NavLink to='/exploservice' className={styles.EScontainer}>
@@ -30,5 +30,5 @@ const GHomePage = () => {
   )
 }
 
-export default GHomePage
+export default LandingPage
 
