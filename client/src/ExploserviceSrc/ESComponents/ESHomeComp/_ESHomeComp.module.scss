@@ -40,14 +40,14 @@
         background-size: cover;
         background-position: center;
         filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
-        opacity: 0.4; /* Ajusta la opacidad según tus necesidades */
+        opacity: 0.7; /* Ajusta la opacidad según tus necesidades */
         // background-color: red;
     }
 
     .mainText {
         position: absolute;
         padding: 20px;
-        top: 120px;
+        top: 60px;
         z-index: 2;
         color: g.$third-color;
         // color: white; /* Ajusta el color del texto según tus necesidades */
@@ -91,9 +91,10 @@
     .clientsContainer{
         position: relative;
         width: 100vw;
-        height: 150vh;
+        height: 160vh;
         padding: 10vh 0;
         text-align: center;
+        justify-content: center;
         .clients{
             box-sizing: border-box;
             position: relative;
@@ -101,10 +102,15 @@
             flex-wrap: wrap;
             gap: 5vw;
             width: 100%;
-            padding: 10%;
+            padding: 5%;
         }
         img{
             width: 20vw;
+        }
+        p{
+            position: relative;
+            width: 80%;
+            margin-left: 10%;
         }
     }
 
