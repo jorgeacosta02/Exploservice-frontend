@@ -27,6 +27,12 @@ const ESNavListComp = () => {
         </li>
         <li onClick={handleClick} >
           <NavLink
+            to="/exploservice" 
+            className={styles.navLink} 
+           >Servicios</NavLink>
+        </li>
+        <li onClick={handleClick} >
+          <NavLink
             to="/exploservice/equipment" 
             className={styles.navLink} 
            >Equipos</NavLink>

@@ -12,7 +12,15 @@ import imgBlasting03 from '../../ESAssets/ESImages/ESServices/Voladura/blasting0
 import imgPD01 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling01.jpg'
 import imgPD02 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling02.jpg'
 import imgPD03 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling03.jpg'
-
+import imgTroy from '../../ESAssets/ESImages/Clients-Img/troy.png'
+import imgAustralGold from '../../ESAssets/ESImages/Clients-Img/australgold.png'
+import imgBarrick from '../../ESAssets/ESImages/Clients-Img/barrick.png'
+import imgYamana from '../../ESAssets/ESImages/Clients-Img/yamana.png'
+import imgMapal from '../../ESAssets/ESImages/Clients-Img/mapal.jpg'
+import imgCartellone from '../../ESAssets/ESImages/Clients-Img/cartellone.jpg'
+import imgSW from '../../ESAssets/ESImages/Clients-Img/sterling&wilson.png'
+import imgMSC from '../../ESAssets/ESImages/Clients-Img/mineraSantaCruz.jpg'
+import imgZlato from '../../ESAssets/ESImages/Clients-Img/zlato.jpg'
 
 const ESHomeComp = () => {
   return (
@@ -29,7 +37,7 @@ const ESHomeComp = () => {
           Contamos con una vasta experiencia de más de 25 años y un equipo especializado, altamente comprometido con el desarrollo de procesos de mejora continua, garantizando el cumplimiento de los objetivos con altos estándares de calidad, seguridad y cuidando el medio ambiente.
         </p>
       </div>
-      <h2 className={styles.ourServices}>Nuestros servicios</h2>
+      <h2 className={styles.our}>Nuestros servicios</h2>
       <div className={styles.allServicesContainer}>
 
       <div className={styles.serviceContainer}>
@@ -91,6 +99,20 @@ const ESHomeComp = () => {
         </div>
         </div>
       </div>
+      </div>
+      <div className={styles.clientsContainer}>
+        <h1 className={styles.our}>Nuestros clientes</h1>
+        <div className={styles.clients}>
+          <img src={imgTroy} alt="imgTroy" />
+          <img src={imgAustralGold} alt="imgAustralGold" />
+          <img src={imgBarrick} alt="imgBarrick" />
+          <img src={imgYamana} alt="imgYamana" />
+          <img src={imgMapal} alt="imgMapal" />
+          <img src={imgCartellone} alt="imgCartellone" />
+          <img src={imgSW} alt="imgSW" />
+          <img src={imgMSC} alt="imgMSC" />
+          <img src={imgZlato} alt="imgZlato" />
+        </div>
       </div>
     </div>
   )

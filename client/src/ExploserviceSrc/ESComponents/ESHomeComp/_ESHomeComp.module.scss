@@ -1,7 +1,6 @@
 @use '../../../styles/globals' as g;
 
 .container{
-
     margin-top: g.$mobile-NavBar-height;
     // background-color: green;
     min-height: 100vh;
@@ -16,7 +15,7 @@
     
     .mainImage {
         position: relative;
-        top: 4px;
+        top: 0;
         box-sizing: border-box;
         // padding: 10vh 0;
         // background-color: yellow;
@@ -32,16 +31,16 @@
         content: "";
         position: absolute;
         overflow: hidden;
-        top: 0;
+        // top: g.$desk-NavBar-height;
         left: 0;
         width: 100vw;
-        height: 100%;
+        height: 400px;
         background-image: url('../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd01.png'); /* Reemplaza 'tu-imagen.jpg' con la URL de tu imagen */
         background-size: cover;
         background-position: center;
         filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
         opacity: 0.4; /* Ajusta la opacidad según tus necesidades */
-        background-color: red;
+        // background-color: red;
     }
 
     .mainText {
@@ -54,7 +53,7 @@
         text-align: center;
     }
 
-    .ourServices{
+    .our{
         // background-color: g.$es-color;
         position: relative;
         // top: -25px;

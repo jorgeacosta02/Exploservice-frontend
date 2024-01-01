@@ -1,15 +1,17 @@
 @use '../../../styles/globals' as g;
 
 .container{
+    position: relative;
     width: 100%;
+    min-height: 100vw;
     box-sizing: border-box;
-    padding: 5vh 5vw;
-    position: absolute;
+    padding: 10vh 5vw;
     top: g.$desk-NavBar-height;
     h1{
         text-align: center;
+        margin-bottom: 10vh;
     }
-    .secContainer{
+    .secondContainer{
         width: 90vw;
         // background-color: blue;
         padding: 10px;
@@ -18,7 +20,7 @@
         .equipmentContainer{
             // background-color: red;
             border-top: 2px solid g.$es-color;
-            border-bottom: 2px solid g.$es-color;
+            // border-bottom: 2px solid g.$es-color;
             padding: 10vh 0;
             width: 70vw;
             @include g.create-flexbox(row, space-between);

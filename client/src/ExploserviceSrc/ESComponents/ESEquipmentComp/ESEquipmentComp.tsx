@@ -7,7 +7,7 @@ const ESEquipmentComp = () => {
   return (
     <div className={styles.container}>
       <h1>Nuestros equipos</h1>
-      <div className={styles.secContainer}>
+      <div className={styles.secondContainer}>
         <div className={styles.equipmentContainer}>
           <img src={frd} alt="FRD-image" />
           <div className={styles.types}>
