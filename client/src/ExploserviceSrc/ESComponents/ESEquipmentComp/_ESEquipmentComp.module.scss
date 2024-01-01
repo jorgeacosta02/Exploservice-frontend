@@ -1,0 +1,35 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5vh 5vw;
+    position: absolute;
+    top: g.$desk-NavBar-height;
+    h1{
+        text-align: center;
+    }
+    .secContainer{
+        width: 90vw;
+        // background-color: blue;
+        padding: 10px;
+        @include g.create-flexbox(column, space-between);
+        align-items: center;
+        .equipmentContainer{
+            // background-color: red;
+            border-top: 2px solid g.$es-color;
+            border-bottom: 2px solid g.$es-color;
+            padding: 10vh 0;
+            width: 70vw;
+            @include g.create-flexbox(row, space-between);
+            gap: 3rem;
+            img{
+                max-width: 50vw;
+                max-height: 50vh;
+            }
+            // .types{
+                //     color: black
+                // }
+        }
+    }
+}

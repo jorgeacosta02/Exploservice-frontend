@@ -4,6 +4,7 @@ import ESHomePage from './ExploserviceSrc/ESPages/ESHomePage/ESHomePage';
 import EAHome from './ExploagroSrc/EAPages/EAHome/EAHome';
 import EAProduct from './ExploagroSrc/EAPages/EAProduct/EAProduct';
 import EAContact from './ExploagroSrc/EAPages/EAContact/EAContact';
+import ESEquipmentPage from './ExploserviceSrc/ESPages/ESEquipmentPage/ESEquipmentPage';
 
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
 
         {/*Exploservice Routes*/}
         <Route path="/exploservice" element={<ESHomePage />} />
-        {/* <Route path="/exploservice/company" element={<Company />} /> */}
+        <Route path="/exploservice/equipment" element={<ESEquipmentPage />} />
   
         {/*Exploagro Routes*/}
         <Route path="/exploagro/" element={<EAHome />} />
