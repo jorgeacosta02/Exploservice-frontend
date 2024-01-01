@@ -1,4 +1,4 @@
-import styles from './_ESWorks.module.scss'
+import styles from './_ESWorksComp.module.scss'
 import imgCasposo from '../../ESAssets/ESImages/ESWorks/casposo01.jpg'
 import imgKarouni from '../../ESAssets/ESImages/ESWorks/minaKaroniGuyana.jpg'
 import imgPacsuaLama01 from '../../ESAssets/ESImages/ESWorks/pascuaLama01.jpg'
@@ -74,7 +74,7 @@ const ESWorks = () => {
                         Período 2012 y 2013.
                     </p>
                 </div>
-                <img src="" alt="" />
+                <img src={imgPacsuaLama02} alt="Imagen Pascua Lama 02" />
             </div>
         </div>
       </div>
