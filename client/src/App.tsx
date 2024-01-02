@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './GlobalPages/LandingPage';
 import ESHomePage from './ExploserviceSrc/ESPages/ESHomePage/ESHomePage';
-import EAHome from './ExploagroSrc/EAPages/EAHome/EAHome';
-import EAProduct from './ExploagroSrc/EAPages/EAProduct/EAProduct';
-import EAContact from './ExploagroSrc/EAPages/EAContact/EAContact';
+import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
+import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
+import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
 import ESEquipmentPage from './ExploserviceSrc/ESPages/ESEquipmentPage/ESEquipmentPage';
 import ESWorksPage from './ExploserviceSrc/ESPages/ESWorksPage/ESWorksPage';
 import ESContactPage from './ExploserviceSrc/ESPages/ESContactPage/ESContactPage';
@@ -23,9 +23,9 @@ const App = () => {
         <Route path="/exploservice/contact" element={<ESContactPage />} />
   
         {/*Exploagro Routes*/}
-        <Route path="/exploagro/" element={<EAHome />} />
-        <Route path="/exploagro/product" element={<EAProduct />} />
-        <Route path="/exploagro/contact" element={<EAContact />} />
+        <Route path="/exploagro/" element={<EAHomePage />} />
+        <Route path="/exploagro/product" element={<EAProductPage />} />
+        <Route path="/exploagro/contact" element={<EAContactPage />} />
       </Routes>
     </div>
   )

@@ -1,6 +1,6 @@
-import styles from './_EAFooter.module.scss';
+import styles from './_EAFooterComp.module.scss';
 
-const EAFooter = () => {
+const EAFooterComp = () => {
   return (
     <div className={styles.container}>
       <p className={styles.text}>
@@ -10,4 +10,4 @@ const EAFooter = () => {
   )
 }
 
-export default EAFooter
+export default EAFooterComp

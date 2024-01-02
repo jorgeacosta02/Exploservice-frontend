@@ -2,7 +2,7 @@ import { useState } from 'react';
 import EAContactValidation from './EAContactValidation';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import styles from './_EAContactForm.module.scss';
+import styles from './_EAContactFormComp.module.scss';
 
 
 export interface FormDataShape {
@@ -12,7 +12,7 @@ export interface FormDataShape {
   message: string
 }
 
-const EAContactForm: React.FC = () => {
+const EAContactFormComp: React.FC = () => {
 
   const [formData, setFormData] = useState<FormDataShape>({
     name: '',
@@ -122,4 +122,4 @@ const EAContactForm: React.FC = () => {
   )
 }
 
-export default EAContactForm
+export default EAContactFormComp

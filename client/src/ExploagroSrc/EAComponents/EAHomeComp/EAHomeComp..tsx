@@ -1,8 +1,8 @@
-import styles from './_EAComments.module.scss';
+import styles from './_EAHomeComp.module.scss';
 import imgSS from '../../EAAssets/EAImages/calcareousSoil01.jpg'
 import imgCS from '../../EAAssets/EAImages/calcareousSoil02.jpg'
 
-const EAComments = () => {
+const EAHome = () => {
   return (
     <div className={styles.container}>
       <h1>Condiciones de suelo</h1>
@@ -25,4 +25,4 @@ const EAComments = () => {
   )
 }
 
-export default EAComments
+export default EAHome

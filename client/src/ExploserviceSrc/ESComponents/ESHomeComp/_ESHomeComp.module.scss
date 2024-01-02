@@ -73,6 +73,10 @@
                 @include g.create-flexbox(column, space-between);
                 margin-bottom: 10vh;
                 // border-bottom: 1px solid black
+                p{
+                    width: 60vw;
+                    margin-bottom: 5vh;
+                }
             }
             .serviceImgs{
                 @include g.create-flexbox(row, space-evenly);
