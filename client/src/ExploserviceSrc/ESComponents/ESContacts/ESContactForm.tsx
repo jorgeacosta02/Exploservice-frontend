@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import EAContactValidation from './ESContactValidation';
+import ESContactValidation from './ESContactValidation';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import styles from './_ESContactForm.module.scss';
@@ -34,7 +34,7 @@ const ESContactForm: React.FC = () => {
       ...prevData,
       [name]: value,
     }));
-    EAContactValidation(formData, setErrors);
+    ESContactValidation(formData, setErrors);
   };
 
   // const handleSubmit = (e: React.FormEvent) => {
@@ -48,7 +48,7 @@ const ESContactForm: React.FC = () => {
       await axios.post("exploservice/contact", formData)
       toast.success("Mensaje enviado exitosamente!!")
       setTimeout(() => {
-        window.location.href = '/exploagro';
+        window.location.href = '/exploservice';
       }, 2000);
     } catch (error: any) {
 
