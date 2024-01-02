@@ -66,6 +66,7 @@
   p{
     font-size: g.$mobile-p-font-size;
     font-weight: g.$mobile-p-font-weight;
+    color: rgb(60, 60, 60);
     @include g.display-large{
       font-size: g.$desk-p-font-size;
       font-weight: g.$desk-p-font-weight;

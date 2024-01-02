@@ -4,6 +4,7 @@
     margin-top: g.$mobile-NavBar-height;
     padding: 2vh 2vw;
     @include g.display-large{
+        margin-top: 100px;
         height: 70vh;
         width: 35vw;
         border: 1px solid g.$second-color;
@@ -15,7 +16,7 @@
             font-size: calc(g.$mobile-p-font-size * .65);
             width: 20%;
             @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * 1);
+                font-size: calc(g.$desk-p-font-size * .65);
      
             };
         }

@@ -19,7 +19,7 @@ $mobile-h1-font-size: max(#{7vw}, #{18px});
 $mobile-h1-font-weight: 700;
 $mobile-h2-font-size: max(#{6vw}, #{17px});
 $mobile-h2-font-weight: 600;
-$mobile-p-font-size: max(#{3vw}, #{12px});
+$mobile-p-font-size: max(#{2.2vw}, #{11px});
 $mobile-p-font-weight: 500;
 $mobile-padding: 2vh 2vw;
 
@@ -31,14 +31,14 @@ $desk-h1-font-size: 38px;
 $desk-h1-font-weight: 700;
 $desk-h2-font-size: 35px;
 $desk-h2-font-weight: 600;
-$desk-p-font-size: min(#{18px}, #{5vw});
+$desk-p-font-size: min(#{16px}, #{4.5vw});
 $desk-p-font-weight: 500;
 
 
 // Breakpoints
 
 @mixin display-large {
-    @media only screen and (min-width: 576px){
+    @media only screen and (min-width: 700px){
         @content;
     }
 }

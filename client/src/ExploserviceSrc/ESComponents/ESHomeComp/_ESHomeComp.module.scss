@@ -82,8 +82,10 @@
                 @include g.create-flexbox(row, space-evenly);
                 width: 90vw;
                 gap: 1rem;
+                overflow: hidden;
                 img{
                     max-width: 40vw;
+                    height: 300px;
                     max-height: 40vh;
                     // box-shadow: 10px 10px 5px #888888;
 
