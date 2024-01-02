@@ -6,7 +6,9 @@ import { toggleStyle } from "../../../redux/actions";
 
 const ESNavListComp = () => {
 
-  const stylesReducer = useSelector((state: RootState) => state.styles);
+  const stylesReducer = useSelector((state: RootState) => state.styles.styles);
+
+  console.log(typeof(stylesReducer));
 
   const dispatch = useDispatch<any>();
 
@@ -15,7 +17,8 @@ const ESNavListComp = () => {
     dispatch(toggleStyle() );
   };
 
-  const navListStyles = `${styles.navList} ${stylesReducer ? styles.show : ''}`;
+  const navListStyles = `${styles.navList}
+   ${stylesReducer ? styles.show : ''}`;
 
   return (
     <ul className={navListStyles} >

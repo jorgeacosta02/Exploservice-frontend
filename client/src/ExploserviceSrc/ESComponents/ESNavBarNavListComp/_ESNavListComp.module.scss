@@ -59,9 +59,9 @@
 .show{// ul
     right: 5%;
     transition: right .3s ease;
-    @include g.display-large{
-        right: px;
-        
-    }
+    // @include g.display-large{
+    //     right: 0px;
+  
+    // }
     
 }

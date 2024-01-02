@@ -6,7 +6,7 @@ import { toggleStyle } from "../../../redux/actions";
 
 const EANavList = () => {
 
-  const stylesReducer = useSelector((state: RootState) => state.styles);
+  const stylesReducer = useSelector((state: RootState) => state.styles.styles);
 
   const dispatch = useDispatch<any>();
 
