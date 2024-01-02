@@ -6,6 +6,7 @@
     padding-top: g.$mobile-NavBar-height;
     padding-bottom: g.$mobile-NavBar-height;
     z-index: 200;
+    line-height: 1.5;
     
     @include g.display-large{
         justify-content: space-between;
@@ -25,7 +26,7 @@
 
         }
         .soilText{
-            // width: 60vw;
+   
             @include g.display-large{
                 width: 50vw;
             }

@@ -6,6 +6,7 @@
     padding-top: calc(g.$mobile-NavBar-height + 4vh);
     padding-bottom: g.$mobile-NavBar-height;
     z-index: 200;
+    line-height: 1.5;
     
     @include g.display-large{
         justify-content: space-between;
