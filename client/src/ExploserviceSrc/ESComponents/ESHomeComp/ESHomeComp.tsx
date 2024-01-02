@@ -28,7 +28,6 @@ const ESHomeComp = () => {
       <div className={styles.mainImage}>
       </div>
       <div className={styles.mainText}>
-
       <h1 className={styles.title}>EXPLOSERVICE - ADL S.R.L.</h1>
         <p>
           En Exploservice ADL nos dedicamos a brindar soluciones en el campo de la perforación para voladuras, aplicadas para la exploración y explotación en minería y excavaciones para construcción.
@@ -39,7 +38,6 @@ const ESHomeComp = () => {
       </div>
       <h2 className={styles.our}>Nuestros servicios</h2>
       <div className={styles.allServicesContainer}>
-
       <div className={styles.serviceContainer}>
         <h2>PERFORACIÓN PARA PRODUCCION</h2>
         <div className={styles.serviceContent}>
@@ -51,7 +49,6 @@ const ESHomeComp = () => {
         </div>
       </div>
       <div className={styles.serviceContainer}>
-
         <h2>PERFORACIÓN PARA GRADE CONTROL</h2>
       <div className={styles.serviceContent}>
         <p>Perforación con toma de muestras del cutting o detritus, con o sin empleo de dispositivo cuarteador.</p>
@@ -59,13 +56,12 @@ const ESHomeComp = () => {
           <img src={imgPGC01} alt="imgPGC01" />
           <img src={imgPGC02} alt="imgPGC02" />
           <img src={imgPGC03} alt="imgPGC03" />
-           </div>
+        </div>
       </div>
       </div>
       <div className={styles.serviceContainer}>
         <h2>PERFORACIÓN PARA CONSTRUCCION</h2>
         <div className={styles.serviceContent}>
-
         <p>Perforación para excavaciones con explosivos en construcción; cortes cajón y media ladera para rutas, rip-rap, zanjeos, fundaciones, demoliciones, voladuras especiales, etc.</p>
         <div className={styles.serviceImgs}>
           <img src={imgPPC01} alt="imgPPP01" />
@@ -76,26 +72,22 @@ const ESHomeComp = () => {
       <div className={styles.serviceContainer}>
         <h2>VOLADURA</h2>
         <div className={styles.serviceContent}>
-
         <p>Carguío de pozos con explosivos y detonación para la obtención de roca fragmentada en diferentes granulometrías según su posterior utilización.</p>
         <div className={styles.serviceImgs}>
           <img src={imgBlasting01} alt="imgPPP01" />
           <img src={imgBlasting02} alt="imgPPP02" />
           <img src={imgBlasting03} alt="imgPPP03" />
-          
         </div>
         </div>
       </div>
       <div className={styles.serviceContainer}>
         <h2>PRE DRILLING</h2>
         <div className={styles.serviceContent}>
-
         <p>Perforación de taladros sin extracción de cutting para facilitar el hincado de perfiles estructurales para el emplazamiento de parques solares.</p>
         <div className={styles.serviceImgs}>
           <img src={imgPD01} alt="imgPPP01" />
           <img src={imgPD02} alt="imgPPP02" />
           <img src={imgPD03} alt="imgPPP03" />
-
         </div>
         </div>
       </div>
