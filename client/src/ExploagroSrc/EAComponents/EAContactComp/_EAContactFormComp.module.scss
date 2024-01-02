@@ -6,7 +6,7 @@
     @include g.display-large{
         height: 70vh;
         width: 35vw;
-        border: 1px solid rgb(57, 57, 57);
+        border: 1px solid g.$second-color;
         border-radius: 3vw;
     }
     .inputBlock{
