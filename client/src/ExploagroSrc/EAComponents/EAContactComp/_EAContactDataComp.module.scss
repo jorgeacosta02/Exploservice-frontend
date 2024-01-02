@@ -17,6 +17,8 @@
         width: 50px;
     }
     p{
+        color: rgb(150, 150, 150);
+        font-size: calc(g.$desk-p-font-size * .85);
         width: 90%;
         margin-right: 3px;
     }
