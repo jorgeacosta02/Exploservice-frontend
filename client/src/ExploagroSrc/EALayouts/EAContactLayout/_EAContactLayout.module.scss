@@ -1,0 +1,7 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    background-color: rgb(138, 120, 90);
+    @include g.create-flexbox(row, space-between);
+    padding: 5vh 5vw;
+}

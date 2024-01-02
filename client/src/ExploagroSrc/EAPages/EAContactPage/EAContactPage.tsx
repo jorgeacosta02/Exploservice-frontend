@@ -1,12 +1,13 @@
 import EANavBarLayout from "../../EALayouts/EANavBarLayout/EANavBarLayout"
+import EAContactLayout from "../../EALayouts/EAContactLayout/EAContactLayout"
 import EAFooterComp from "../../EAComponents/EAFooterComp/EAFooterComp"
-import EAContactFormComp from "../../EAComponents/EAContactComp/EAContactFormComp"
+
 
 const EAContactPage = () => {
   return (
     <div>
       <EANavBarLayout />
-      <EAContactFormComp />
+      <EAContactLayout />
       <EAFooterComp />
     </div>
   )

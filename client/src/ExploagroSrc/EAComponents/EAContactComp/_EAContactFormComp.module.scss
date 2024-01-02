@@ -2,13 +2,12 @@
 
 .container{
     margin-top: g.$mobile-NavBar-height;
-    min-height: 100vh;
     padding: 2vh 2vw;
-    width: 96vw;
     @include g.display-large{
-        height: 80vh;
-        width: 40vw;
-        // font-size: 10px;
+        height: 70vh;
+        width: 35vw;
+        border: 1px solid rgb(57, 57, 57);
+        border-radius: 3vw;
     }
     .inputBlock{
         @include g.create-flexbox(row, space-between);
