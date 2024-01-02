@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ESContactValidation from './ESContactValidation';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import styles from './_ESContactForm.module.scss';
+import styles from './_ESContactFormComp.module.scss';
 
 
 export interface FormDataShape {

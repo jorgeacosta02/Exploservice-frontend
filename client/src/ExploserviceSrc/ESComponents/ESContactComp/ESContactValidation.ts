@@ -1,4 +1,4 @@
-import { FormDataShape } from "./ESContactForm"
+import { FormDataShape } from "./ESContactFormComp"
 
 const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
     

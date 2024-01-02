@@ -1,0 +1,33 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    margin-top: g.$mobile-NavBar-height;
+    padding: 2vh 2vw;
+    @include g.display-large{
+        margin-top: 100px;
+        height: 70vh;
+        width: 35vw;
+        border: 1px solid g.$second-color;
+        border-radius: 3vw;
+    }
+    h2{
+        text-align: center;
+    }
+    .svg{
+        width: 50px;
+    }
+    p{
+        color: rgb(150, 150, 150);
+        font-size: calc(g.$desk-p-font-size * .85);
+        width: 90%;
+        margin-right: 3px;
+    }
+    .dataBlock{
+        @include g.create-flexbox(row, space-between);
+    }
+    path {
+        fill: red;
+        stroke: red;
+        stroke-width: 8px;
+    }
+}

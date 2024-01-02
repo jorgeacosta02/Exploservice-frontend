@@ -1,0 +1,8 @@
+@use '../../../styles/globals' as g;
+
+.container{
+    background-color: rgb(36, 36, 36);
+    color: g.$second-color;
+    @include g.create-flexbox(row, space-between);
+    padding: 5vh 5vw;
+}

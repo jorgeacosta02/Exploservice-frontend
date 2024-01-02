@@ -1,11 +1,13 @@
 import ESNavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESContactForm from "../../ESComponents/ESContacts/ESContactForm"
+import ESContactLayout from '../../ESLayouts/ESContactLayout/ESContactLayout'
+import ESFooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
 
 const ESContactPage = () => {
   return (
     <div>
       <ESNavBarLayout/>
-      <ESContactForm/>
+      <ESContactLayout/>
+      <ESFooterComp/>
     </div>
   )
 }
