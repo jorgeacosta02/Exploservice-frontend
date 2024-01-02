@@ -2,10 +2,11 @@
 
 .container{
     margin-top: g.$mobile-NavBar-height;
-    padding: 2vh 2vw;
+    padding: 1vh 2vw;
     @include g.display-large{
         margin-top: 100px;
         height: 70vh;
+        min-height: 420px;
         width: 35vw;
         border: 1px solid g.$second-color;
         border-radius: 3vw;
@@ -40,6 +41,7 @@
         label{
             font-size: calc(g.$mobile-p-font-size * .65);
             width: 20%;
+            margin-bottom: 1vh;
             color: rgb(150, 150, 150);
             @include g.display-large{
                 font-size: calc(g.$desk-p-font-size * .85);

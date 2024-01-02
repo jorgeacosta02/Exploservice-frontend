@@ -6,6 +6,7 @@
     @include g.display-large{
         margin-top: 100px;
         height: 70vh;
+        min-height: 420px;
         width: 35vw;
         border: 1px solid g.$second-color;
         border-radius: 3vw;
