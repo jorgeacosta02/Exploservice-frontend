@@ -5,7 +5,7 @@ import ESMenuComp from "../../ESComponents/ESNavBarMenuComp/ESMenuComp";
 import styles from './_ESNavBarLayout.module.scss';
 
 
-const EANavBarLayout: React.FC = () => {
+const ESNavBarLayout: React.FC = () => {
 
   return (
     <div className={styles.navBar}>
@@ -16,5 +16,5 @@ const EANavBarLayout: React.FC = () => {
   )
 }
 
-export default EANavBarLayout
+export default ESNavBarLayout
 

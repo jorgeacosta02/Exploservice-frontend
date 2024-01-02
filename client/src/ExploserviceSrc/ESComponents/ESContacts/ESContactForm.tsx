@@ -12,7 +12,7 @@ export interface FormDataShape {
   message: string
 }
 
-const EAContactForm: React.FC = () => {
+const ESContactForm: React.FC = () => {
 
   const [formData, setFormData] = useState<FormDataShape>({
     name: '',
@@ -122,4 +122,4 @@ const EAContactForm: React.FC = () => {
   )
 }
 
-export default EAContactForm
+export default ESContactForm
