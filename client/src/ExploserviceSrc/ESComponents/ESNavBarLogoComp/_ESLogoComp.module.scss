@@ -1,6 +1,7 @@
 @use "../../../styles/globals" as g;
 
 .container{
+    padding-top: 4px;
     .ESLogoImg{
         margin-right: 1vw;
         height: calc(g.$mobile-NavBar-height * .6);

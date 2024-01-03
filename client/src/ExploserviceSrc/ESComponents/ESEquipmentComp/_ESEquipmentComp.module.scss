@@ -3,28 +3,34 @@
 .container{
     position: relative;
     width: 100%;
-    min-height: 100vw;
+    // min-height: 100vw;
     box-sizing: border-box;
-    padding: 10vh 5vw;
+    // padding: 5vh 5vw;
     top: g.$desk-NavBar-height;
     h1{
         text-align: center;
         margin-bottom: 10vh;
     }
     .secondContainer{
+        position: relative;
         width: 90vw;
         padding: 10px;
         @include g.create-flexbox(column, space-between);
         align-items: center;
         .equipmentContainer{
             border-top: 2px solid g.$es-color;
+            @include g.create-flexbox(column, space-between);
             padding: 10vh 0;
-            width: 70vw;
-            @include g.create-flexbox(row, space-between);
-            gap: 3rem;
+
+            @include g.display-large{
+                flex-direction: row;
+                width: 70vw;
+                gap: 3rem;
+            }
             img{
                 max-width: 60vw;
                 max-height: 60vh;
+                margin-bottom: 10px;
             }
         }
     }
