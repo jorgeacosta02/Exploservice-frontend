@@ -8,28 +8,30 @@ const LandingPage = () => {
   return (
     <div>
       <div className={styles.esadlbg}></div>
-      <div className={styles.esadllinkContainer}>
-        <NavLink to='/exploservice' className={styles.EScontainer}>
+      <div className={styles.esadlLinkContainer}>
+        <NavLink to='/exploservice' className={styles.navLink}>
           <img
             src={ESLogoBrand}
             alt="Exploservice Logo"
-            className={styles.ESlogobrand}
+            // className={styles.ESlogobrand}
             />
           <img
             src={ADLLogo}
             alt="ADL Logo"
-            className={styles.ADLLogo}
+            // className={styles.ADLLogo}
             />
         </NavLink>
       </div>
       <div className={styles.eabg}></div>
-      <NavLink to='/exploagro' className={styles.EAcontainer}>
-          <img
-            src={EALogo}
-            alt="Exploagro Logo"
-            className={styles.EAlogobrand}
-          />
-       </NavLink>
+      <div className={styles.eaLinkContainer}>
+        <NavLink to='/exploagro' className={styles.navLink}>
+            <img
+              src={EALogo}
+              alt="Exploagro Logo"
+              // className={styles.EAlogobrand}
+              />
+        </NavLink>
+      </div>
     </div>
   )
 }
