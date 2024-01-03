@@ -52,7 +52,7 @@
         position: relative;
         text-align: center;
         height: 100px;
-        line-height: 100px;
+        line-height: 50px;
         border-top: 3px solid g.$es-color;
     }
     .allServicesContainer{
@@ -63,20 +63,24 @@
             .serviceContent{
                 @include g.create-flexbox(column, space-between);
                 margin-bottom: 10vh;
-
-                p{
-                    width: 60vw;
-                    margin-bottom: 5vh;
+                    p{
+                    width: 90vw;
+                    @include g.display-large{
+                        width: 60vw;
+                        margin-bottom: 5vh;
+                    }
                 }
             }
             .serviceImgs{
-                @include g.create-flexbox(row, space-evenly);
+                @include g.create-flexbox(column, space-evenly);
                 width: 90vw;
                 gap: 1rem;
                 overflow: hidden;
+                @include g.display-large{
+                    flex-direction: row;
+                }
                 img{
-                    max-width: 40vw;
-                    height: 300px;
+                    max-width: 90vw;
                     max-height: 40vh;
                 }
             }
@@ -86,7 +90,6 @@
     .clientsContainer{
         position: relative;
         width: 100vw;
-        height: 160vh;
         padding: 10vh 0;
         text-align: center;
         justify-content: center;

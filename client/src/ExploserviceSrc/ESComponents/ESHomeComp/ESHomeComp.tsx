@@ -21,6 +21,7 @@ import imgCartellone from '../../ESAssets/ESImages/ESClients/cartellone.jpg'
 import imgSW from '../../ESAssets/ESImages/ESClients/sterling&wilson.png'
 import imgMSC from '../../ESAssets/ESImages/ESClients/mineraSantaCruz.jpg'
 import imgZlato from '../../ESAssets/ESImages/ESClients/zlato.jpg'
+import imgAlya from '../../ESAssets/ESImages/ESClients/alya.png'
 
 const ESHomeComp = () => {
   return (
@@ -60,7 +61,7 @@ const ESHomeComp = () => {
       </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h2>PERFORACIÓN PARA CONSTRUCCION</h2>
+        <h4>PERFORACIÓN PARA CONSTRUCCION</h4>
         <div className={styles.serviceContent}>
         <p>Perforación para excavaciones con explosivos en construcción; cortes cajón y media ladera para rutas, rip-rap, zanjeos, fundaciones, demoliciones, voladuras especiales, etc.</p>
         <div className={styles.serviceImgs}>
@@ -104,6 +105,7 @@ const ESHomeComp = () => {
           <img src={imgSW} alt="imgSW" />
           <img src={imgMSC} alt="imgMSC" />
           <img src={imgZlato} alt="imgZlato" />
+          <img src={imgAlya} alt="imgAlya" />
         </div>
         <p>Con una extensa experiencia trabajando asociados a nuestros clientes desde las etapas iniciales hasta el final de cada proyecto, ofrecemos un amplio rango de alternativas adaptándonos para cubir cada necesidad específica.</p>
       </div>

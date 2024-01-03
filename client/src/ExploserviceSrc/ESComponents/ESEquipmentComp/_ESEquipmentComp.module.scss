@@ -3,10 +3,11 @@
 .container{
     position: relative;
     width: 100%;
-    // min-height: 100vw;
     box-sizing: border-box;
-    // padding: 5vh 5vw;
     top: g.$desk-NavBar-height;
+    @include g.display-large{
+        padding: 5vh 5vw;
+    }
     h1{
         text-align: center;
         margin-bottom: 10vh;
