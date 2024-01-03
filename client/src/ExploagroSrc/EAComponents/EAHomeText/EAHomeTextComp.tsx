@@ -1,6 +1,6 @@
-import styles from './_EAHomeText.module.scss';
+import styles from './_EAHomeTextComp.module.scss';
 
-const EAHomeText = () => {
+const EAHomeTextComp = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>COMPUESTO A BASE DE CARBON</h1>
@@ -9,4 +9,4 @@ const EAHomeText = () => {
   )
 }
 
-export default EAHomeText
+export default EAHomeTextComp

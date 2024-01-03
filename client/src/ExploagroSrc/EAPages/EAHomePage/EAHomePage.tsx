@@ -1,6 +1,6 @@
 import EANavBarLayout from "../../EALayouts/EANavBarLayout/EANavBarLayout.tsx";
-import EAHomeImg from "../../EAComponents/EAHomeImg/EAHomeImg.tsx";
-import EAHomeText from "../../EAComponents/EAHomeText/EAHomeText.tsx";
+import EAHomeImgComp from "../../EAComponents/EAHomeImgComp/EAHomeImgComp.tsx";
+import EAHomeTextComp from "../../EAComponents/EAHomeText/EAHomeTextComp.tsx";
 import EAHomeComp from "../../EAComponents/EAHomeComp/EAHomeComp..tsx";
 import EAFooterComp from "../../EAComponents/EAFooterComp/EAFooterComp.tsx";
 
@@ -8,8 +8,8 @@ const EAHomePage = () => {
   return (
     <div>
       <EANavBarLayout />
-      <EAHomeImg />
-      <EAHomeText />
+      <EAHomeImgComp />
+      <EAHomeTextComp />
       <EAHomeComp />
       <EAFooterComp />
     </div>

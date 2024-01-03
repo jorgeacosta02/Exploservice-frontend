@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { booleanState } from '../../../redux/reducers';
 import { toggleStyle } from '../../../redux/actions';
 
-const EAMenu = () => {
+const EAMenuComp = () => {
 
   const dispatch = useDispatch<any>();
   const stylesReducer = useSelector(( state: booleanState ) => state.styles);
@@ -28,4 +28,4 @@ const EAMenu = () => {
   )
 }
 
-export default EAMenu
+export default EAMenuComp

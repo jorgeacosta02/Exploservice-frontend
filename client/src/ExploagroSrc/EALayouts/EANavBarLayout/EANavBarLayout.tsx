@@ -1,7 +1,7 @@
 import React from "react"
-import EALogo from "../../EAComponents/EANavBarLogo/EALogo";
-import EANavList from "../../EAComponents/EANavBarNavList/EANavList";
-import EAMenu from "../../EAComponents/EANavBarMenu/EAMenu";
+import EALogoComp from "../../EAComponents/EANavBarLogoComp/EALogoComp";
+import EANavListComp from "../../EAComponents/EANavBarNavListComp/EANavListComp";
+import EAMenuComp from "../../EAComponents/EANavBarMenuComp/EAMenuComp";
 import styles from './_EANavBarLayout.module.scss';
 
 
@@ -9,9 +9,9 @@ const EANavBarLayout: React.FC = () => {
 
   return (
     <div className={styles.navBar}>
-      <EALogo/>
-      <EAMenu/>
-      <EANavList/>
+      <EALogoComp/>
+      <EAMenuComp/>
+      <EANavListComp/>
     </div>
   )
 }

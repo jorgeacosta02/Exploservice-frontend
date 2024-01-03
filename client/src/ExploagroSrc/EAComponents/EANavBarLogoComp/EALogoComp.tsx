@@ -1,7 +1,7 @@
-import styles from './_EALogo.module.scss';
+import styles from './_EALogoComp.module.scss';
 import EALogoImg from '../../EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
 
-const EALogo = () => {
+const EALogoComp = () => {
   return (
       <img
         className={styles.EALogoImg}
@@ -11,4 +11,4 @@ const EALogo = () => {
   )
 }
 
-export default EALogo
+export default EALogoComp
