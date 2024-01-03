@@ -1,7 +1,6 @@
 @use '../../../styles/globals' as g;
 
 .container {
-    // box-sizing: border-box;
     position: relative;
     width: 100%;
     height: max(calc(#{g.$mobile-NavBar-height} * 1.5), #{25px});
@@ -9,18 +8,17 @@
     left: 0;
     padding: 2vw 3vw;
     text-align: center;
-    background-color: g.$third-color;
+    background-color: g.$dark-black-color;
     border-top: 50px solid g.$es-color;
     z-index: 90;
-    p{
-        color: g.$footer-color;
-        font-size: 12px;
 
+    p{
+        color: g.$grey-color;
+        font-size: 12px;
     }
 
     @include g.display-large{
         height: g.$desk-NavBar-height;
         justify-content: space-between;
     }
-   
 }

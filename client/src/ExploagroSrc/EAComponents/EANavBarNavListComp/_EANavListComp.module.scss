@@ -10,7 +10,7 @@
     right: -100%;
     transition: right .2s ease;
     z-index: 200;
-    background-color: g.$second-color;
+    background-color: g.$white-color;
     height: calc(100vh - (g.$mobile-NavBar-height * 2) - 6vh);
     font-weight: 600;
     padding: 1px;
@@ -36,21 +36,20 @@
         width: 70vw;
         height: 8vh;
         line-height: 8vh;
-        color: g.$main-color;
         border-radius: 2vw;
         @include g.display-large{
             width: 100%;
-            color: g.$main-color;
+            color: g.$dark-black-color;
             border-radius: .5vw;
         }
      }
     .navLink:hover{
-        background-color: g.$main-color;
-        color:g.$second-color;
+        background-color: g.$ea-color;
+        color:g.$white-color;
         transition: .2s ease;
         @include g.display-large{
-            background-color: g.$second-color;
-            color: g.$main-color;
+            background-color: g.$white-color;
+            color: g.$ea-color;
             transform:scale(1.2);
 
         }
@@ -59,8 +58,4 @@
 .show{// ul
     right: 5%;
     transition: right .3s ease;
-    // @include g.display-large{
-    //     right: px;
-     // }
-    
 }

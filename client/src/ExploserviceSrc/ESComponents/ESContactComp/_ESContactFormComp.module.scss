@@ -8,7 +8,7 @@
         height: 70vh;
         min-height: 420px;
         width: 35vw;
-        border: 1px solid g.$second-color;
+        border: 1px solid g.$white-color;
         border-radius: 3vw;
     }
     h2{
@@ -65,18 +65,15 @@
         @include g.create-flexbox(row, space-evenly);
         align-items: center;
         justify-content: center;
-        // background-color: blue;
         @include g.display-large{
             width: 100%;
         };
         .submit{
             cursor: pointer;
-            // margin-top: 10vh;
-            // margin-bottom: 2vh;
             border:none;
-            color: g.$main-color;
-            background-color: g.$second-color;
-            border: 3px solid g.$main-color;
+            color: g.$ea-color;
+            background-color: g.$white-color;
+            border: 3px solid g.$ea-color;
             border-radius: 3px;
             width: 70%;
             height: 36px;

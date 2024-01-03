@@ -10,15 +10,13 @@
     left: 0;
     padding: 0 2vw;
     margin: 0;
-    background-color: g.$second-color;
-    color: g.$main-color;
+    background-color: g.$white-color;
+    color: g.$dark-black-color;
     @include g.create-flexbox(row, space-between);
-    border-bottom: 10px solid g.$main-color;
+    border-bottom: 10px solid g.$ea-color;
     z-index: 1000;
 
     @include g.display-large{
         height: g.$desk-NavBar-height;
-        // justify-content: space-between;
-        
     }
 }

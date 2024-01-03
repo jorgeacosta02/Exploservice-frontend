@@ -11,9 +11,6 @@
 .esadlbg::before {
     content: "";
     position: absolute;
-    // overflow: hidden;
-    // // top: g.$desk-NavBar-height;
-    // left: 0;
     width: 50vw;
     height: 100vh;
     background-image: url('../ExploserviceSrc/ESAssets/ESImages/ESServices/Voladura/blasting03.jpg');
@@ -69,19 +66,17 @@
     box-sizing: border-box;
     text-decoration: none;
     position: relative;
-    // top: 25%;
-    // left: 25%;
     height: 50vh;
     width: 25vw;
     max-width: 250px;
     min-width: 70px;
     border: 2px solid white;
-    @include g.create-flexbox(column, space-evenly);
-    z-index: 11;
-    background-color: rgba(255,255,255,.5);
     border-radius: .5vw;
+    background-color: rgba(255,255,255,.5);
     box-shadow: 7px 7px 5px rgba(0,0,0,.5);
+    z-index: 11;
     transition: .1s ease;
+    @include g.create-flexbox(column, space-evenly);
     img{
         position: relative;
         z-index: 10;
@@ -94,6 +89,7 @@
     transform: scale(1.1);
     box-shadow: 12px 12px 12px rgba(0,0,0,.8);
 }
+
 .EAcontainer{
     box-sizing: border-box;
     text-decoration: none;
@@ -105,7 +101,6 @@
     border: 2px solid white;
     @include g.create-flexbox(column, space-evenly);
     z-index: 11;
-    background-color: rgba(255,255,255,.5);
     .EAlogobrand{
         position: relative;
         z-index: 10;

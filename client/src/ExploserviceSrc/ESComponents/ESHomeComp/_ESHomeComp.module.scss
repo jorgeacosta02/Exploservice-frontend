@@ -18,21 +18,16 @@
         position: relative;
         top: 0;
         box-sizing: border-box;
-        // padding: 10vh 0;
-        // background-color: yellow;
-        width: 100vw; /* Ajusta el ancho según tus necesidades */
-        height: 400px; /* Ajusta la altura según tus necesidades */
+        width: 100vw;
+        height: 400px;
         overflow: hidden;
         z-index: 1;
-        // border-top: 10px solid g.$third-color;
-        // border-bottom: 10px solid g.$third-color;
     }
 
     .mainImage::before {
         content: "";
         position: absolute;
         overflow: hidden;
-        // top: g.$desk-NavBar-height;
         left: 0;
         width: 100vw;
         height: 400px;
@@ -49,20 +44,16 @@
         padding: 20px;
         top: 0px;
         z-index: 2;
-        color: g.$third-color;
-        // color: white; /* Ajusta el color del texto según tus necesidades */
+        color: g.$dark-black-color;
         text-align: center;
     }
 
     .our{
-        // background-color: g.$es-color;
         position: relative;
-        // top: -25px;
         text-align: center;
         height: 100px;
         line-height: 100px;
         border-top: 3px solid g.$es-color;
-        // border-bottom: 3px solid g.$es-color;
     }
     .allServicesContainer{
         padding: 3vw;
@@ -72,7 +63,7 @@
             .serviceContent{
                 @include g.create-flexbox(column, space-between);
                 margin-bottom: 10vh;
-                // border-bottom: 1px solid black
+
                 p{
                     width: 60vw;
                     margin-bottom: 5vh;
@@ -87,8 +78,6 @@
                     max-width: 40vw;
                     height: 300px;
                     max-height: 40vh;
-                    // box-shadow: 10px 10px 5px #888888;
-
                 }
             }
         }
@@ -119,5 +108,4 @@
             margin-left: 10%;
         }
     }
-
 }

@@ -10,7 +10,7 @@
     right: -100%;
     transition: right .2s ease;
     z-index: 200;
-    background-color: g.$second-color;
+    background-color: g.$white-color;
     height: calc(100vh - (g.$mobile-NavBar-height * 2) - 6vh);
     font-weight: 600;
     padding: 1px;
@@ -21,7 +21,6 @@
         height: g.$desk-NavBar-height;
         font-size: max(#{1.2vw}, #{13px});
         font-weight: 300;
-        // padding: 0 2px 0 0;
         width: 45%;
         right: 5%;
         line-height: g.$desk-NavBar-height;
@@ -36,32 +35,25 @@
         width: 70vw;
         height: 8vh;
         line-height: 8vh;
-        color: g.$third-color;
         border-radius: 2vw;
         @include g.display-large{
             width: 100%;
-            color: g.$main-color;
+            color: g.$dark-black-color;
             border-radius: .5vw;
         }
      }
     .navLink:hover{
         background-color: g.$es-color;
-        color:g.$third-color;
+        color:g.$dark-black-color;
         transition: .2s ease;
         @include g.display-large{
-            background-color: g.$second-color;
-            color: g.$third-color;
+            background-color: g.$white-color;
+            color: g.$dark-black-color;
             transform:scale(1.2);
-
         }
     }
 }
 .show{// ul
     right: 5%;
     transition: right .3s ease;
-    // @include g.display-large{
-    //     right: 0px;
-  
-    // }
-    
 }

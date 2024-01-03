@@ -13,14 +13,11 @@
     }
     .secondContainer{
         width: 90vw;
-        // background-color: blue;
         padding: 10px;
         @include g.create-flexbox(column, space-between);
         align-items: center;
         .equipmentContainer{
-            // background-color: red;
             border-top: 2px solid g.$es-color;
-            // border-bottom: 2px solid g.$es-color;
             padding: 10vh 0;
             width: 70vw;
             @include g.create-flexbox(row, space-between);
@@ -29,9 +26,6 @@
                 max-width: 60vw;
                 max-height: 60vh;
             }
-            // .types{
-                //     color: black
-                // }
         }
     }
 }

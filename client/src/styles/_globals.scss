@@ -5,16 +5,21 @@
 
 // General variables
 
-$main-color: rgb(104, 129, 68);
+// Colors
+$ea-color: rgb(104, 129, 68);
 $es-color: rgb(241, 241, 9);
-$second-color: white;
-$third-color: black;
-$primary-font: 'Roboto', sans-serif;
-$footer-color: grey;
+$white-color: white;
+$dark-black-color: black;
+$light-black-color: rgb(33, 33, 33);
+$grey-color: grey;
+$red-color: red;
+
+// Fonts
+$primary-font: 'Poppins', sans-serif;
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 // Mobile variables
-
 $mobile-NavBar-height: 14vh;
 $mobile-h1-font-size: max(#{7vw}, #{18px});
 $mobile-h1-font-weight: 700;
@@ -25,8 +30,8 @@ $mobile-p-font-weight: 500;
 $mobile-padding: 2vh 2vw;
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 //Desk variables
-
 $desk-NavBar-height: 90px;
 $desk-h1-font-size: 38px;
 $desk-h1-font-weight: 700;
@@ -36,8 +41,8 @@ $desk-p-font-size: min(#{16px}, #{4.5vw});
 $desk-p-font-weight: 500;
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 // Breakpoints
-
 @mixin display-large {
     @media only screen and (min-width: 700px){
         @content;
@@ -45,8 +50,8 @@ $desk-p-font-weight: 500;
 }
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 // Mixins
-
 @mixin create-flexbox($direction, $justify){
     display: flex;
     flex-direction: $direction;

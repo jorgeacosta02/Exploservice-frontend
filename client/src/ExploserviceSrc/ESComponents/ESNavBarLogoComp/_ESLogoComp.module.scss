@@ -1,9 +1,6 @@
 @use "../../../styles/globals" as g;
 
 .container{
-    // @include g.create-flexbox(row, space-between);
-    // width: ;
-
     .ESLogoImg{
         margin-right: 1vw;
         height: calc(g.$mobile-NavBar-height * .6);
