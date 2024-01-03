@@ -7,21 +7,23 @@ import EALogo from '../ExploagroSrc/EAAssets/EAImages/EA-Logo-Brand/Exploagro-Lo
 const LandingPage = () => {
   return (
     <div>
-      <NavLink to='/exploservice' className={styles.EScontainer}>
-        <div className={styles.esadlbg}></div>
-        <img
-          src={ESLogoBrand}
-          alt="Exploservice Logo"
-          className={styles.ESlogobrand}
-        />
-        <img
-          src={ADLLogo}
-          alt="ADL Logo"
-          className={styles.ADLLogo}
-        />
-      </NavLink>
+      <div className={styles.esadlbg}></div>
+      <div className={styles.esadllinkContainer}>
+        <NavLink to='/exploservice' className={styles.EScontainer}>
+          <img
+            src={ESLogoBrand}
+            alt="Exploservice Logo"
+            className={styles.ESlogobrand}
+            />
+          <img
+            src={ADLLogo}
+            alt="ADL Logo"
+            className={styles.ADLLogo}
+            />
+        </NavLink>
+      </div>
+      <div className={styles.eabg}></div>
       <NavLink to='/exploagro' className={styles.EAcontainer}>
-        <div className={styles.eabg}></div>
           <img
             src={EALogo}
             alt="Exploagro Logo"
