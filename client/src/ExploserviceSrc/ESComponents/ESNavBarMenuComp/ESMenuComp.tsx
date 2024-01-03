@@ -1,12 +1,12 @@
 import styles from './_ESMenuComp.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../redux/types';
+import { booleanState } from '../../../redux/reducers';
 import { toggleStyle } from '../../../redux/actions';
 
 const ESMenuComp = () => {
 
   const dispatch = useDispatch<any>();
-  const stylesReducer = useSelector(( state: RootState ) => state.styles);
+  const stylesReducer = useSelector(( state: booleanState ) => state.styles);
 
   console.log(stylesReducer);
 

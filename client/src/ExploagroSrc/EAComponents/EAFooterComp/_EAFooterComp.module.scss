@@ -1,8 +1,7 @@
 @use '../../../styles/globals' as g;
 
 .container {
-    box-sizing: border-box;
-    // position: absolute;
+    // box-sizing: border-box;
     width: 100%;
     height: max(calc(#{g.$mobile-NavBar-height} * 1.5), #{25px});
     bottom: 0;
@@ -12,8 +11,9 @@
     margin: 0;
     background-color: g.$third-color;
     z-index: 90;
+    border-top: 50px solid g.$main-color;
     p{
-        color: g.$second-color;
+        color: g.$footer-color;
         font-size: 12px;
 
     }

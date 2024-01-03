@@ -13,13 +13,12 @@
     background-color: g.$second-color;
     color: g.$main-color;
     @include g.create-flexbox(row, space-between);
-    // box-shadow: 0px 0px 10px 10px rgb(43, 40, 21);
     border-bottom: 10px solid g.$main-color;
     z-index: 1000;
 
     @include g.display-large{
         height: g.$desk-NavBar-height;
-        justify-content: space-between;
+        // justify-content: space-between;
         
     }
 }

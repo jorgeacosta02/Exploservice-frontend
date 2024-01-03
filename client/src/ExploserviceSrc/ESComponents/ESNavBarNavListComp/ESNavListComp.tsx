@@ -8,8 +8,6 @@ const ESNavListComp = () => {
 
   const stylesReducer = useSelector((state: RootState) => state.styles.styles);
 
-  console.log(typeof(stylesReducer));
-
   const dispatch = useDispatch<any>();
 
   const handleClick = () => {
@@ -17,8 +15,7 @@ const ESNavListComp = () => {
     dispatch(toggleStyle() );
   };
 
-  const navListStyles = `${styles.navList}
-   ${stylesReducer ? styles.show : ''}`;
+  const navListStyles = `${styles.navList} ${stylesReducer ? styles.show : ''}`;
 
   return (
     <ul className={navListStyles} >
