@@ -1,12 +1,14 @@
 @use '../../../styles/globals' as g;
 
 .container{
-    margin-top: g.$mobile-NavBar-height;
-    padding: 2vh 2vw;
+    box-sizing: border-box;
+    margin-top: 5vh;
+    padding: g.$mobile-main-container-padding;
+    width: 100%;
     @include g.display-large{
-        margin-top: 100px;
-        // height: 70vh;
-        min-height: 420px;
+        padding-top: 0;
+        margin-top: 0;
+        min-height: 500px;
         width: 35vw;
         border: 1px solid g.$white-color;
         border-radius: 3vw;
@@ -15,22 +17,22 @@
         text-align: center;
     }
     .inputBlock{
-        @include g.create-flexbox(row, space-between);
+        box-sizing: border-box;
+        @include g.create-flexbox(column, space-between);
+        align-items: flex-start;
+        width: 100%;
         label{
-            font-size: calc(g.$mobile-p-font-size * .65);
-            width: 20%;
-            color: rgb(150, 150, 150);
-            @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
-     
-            };
+            p{
+                margin: 0;
+                color: rgb(150, 150, 150);
+            }
         }
         input{
-            font-size: calc(g.$mobile-p-font-size * 1);
-            width: 72%;
+            font-size: g.$mobile-p-font-size;
+            box-sizing: border-box;
+            width: 100%;
             @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
-     
+                font-size: g.$desk-p-font-size;
             };
         }
     }
@@ -38,23 +40,24 @@
         margin-top: 15px;
         width: 100%;
         @include g.create-flexbox(column, space-between);
+        align-items: flex-start;
         label{
-            font-size: calc(g.$mobile-p-font-size * .65);
             width: 20%;
-            color: rgb(150, 150, 150);
+            p{
+                margin: 0;
+                color: rgb(150, 150, 150);
+            }
             @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
-                
             };
         }
         textarea{
-            font-size: calc(g.$mobile-p-font-size * .7);
+            font-size: g.$mobile-p-font-size;
+            box-sizing: border-box;
             width: 100%;
             height: 130px;
             @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
+                font-size: g.$desk-p-font-size;
                 height: 15vh;
-     
             };
         }
     }
@@ -64,24 +67,24 @@
         @include g.create-flexbox(row, space-evenly);
         align-items: center;
         justify-content: center;
-        // background-color: blue;
         @include g.display-large{
             width: 100%;
         };
         .submit{
             cursor: pointer;
             border:none;
-            color: g.$ea-color;
-            background-color: g.$white-color;
-            border: 3px solid g.$ea-color;
-            border-radius: 3px;
+            color: g.$dark-black-color;
+            background-color: g.$ea-color;
+            border-radius: 4px;
             width: 70%;
             height: 36px;
-            font-weight: 700;
+            font-weight: 300;
             font-size: calc(g.$mobile-h2-font-size * .85);
             @include g.display-large{
-                font-size: g.$desk-p-font-size; 
+                font-size: calc(g.$desk-h3-font-size * 1); 
             };
+        }.submit:hover{
+            background-color: g.$ea-dark-color;
         }
     }
 }

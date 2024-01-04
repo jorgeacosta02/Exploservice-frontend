@@ -2,7 +2,8 @@
 
 .container{
     box-sizing: border-box;
-    margin-top: g.$mobile-NavBar-height;
+    width: 100vw;
     height: 100vh;
+    margin-top: g.$mobile-NavBar-height;
     padding: g.$desk-main-container-padding;
 }

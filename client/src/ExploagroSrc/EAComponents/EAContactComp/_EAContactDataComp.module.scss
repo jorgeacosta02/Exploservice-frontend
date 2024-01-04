@@ -1,12 +1,14 @@
 @use '../../../styles/globals' as g;
 
 .container{
+    box-sizing: border-box;
     margin-top: g.$mobile-NavBar-height;
-    padding: 2vh 2vw;
+    padding: g.$mobile-main-container-padding;
+    width: 100vw;
     @include g.display-large{
-        margin-top: 100px;
-        height: 70vh;
-        min-height: 420px;
+        padding-top: 0;
+        margin-top: 0;
+        min-height: 500px;
         width: 35vw;
         border: 1px solid g.$white-color;
         border-radius: 3vw;
@@ -14,16 +16,15 @@
     h2{
         text-align: center;
     }
-    .svg{
-        width: 50px;
-    }
     p{
         color: rgb(150, 150, 150);
-        font-size: calc(g.$desk-p-font-size * .85);
         width: 90%;
         margin-right: 3px;
     }
     .dataBlock{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 2vw;
         @include g.create-flexbox(row, space-between);
     }
     path {

@@ -7,7 +7,6 @@
     padding-bottom: g.$mobile-NavBar-height;
     z-index: 200;
     line-height: 1.5;
-    
     @include g.display-large{
         justify-content: space-between;
         padding: g.$desk-main-container-padding;
