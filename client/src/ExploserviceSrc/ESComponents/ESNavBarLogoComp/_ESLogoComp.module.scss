@@ -1,10 +1,12 @@
 @use "../../../styles/globals" as g;
 
 .container{
-    padding-top: 4px;
+    // background-color: red;
+    height: calc(g.$mobile-NavBar-height * .6);
     .ESLogoImg{
         margin-right: 1vw;
         height: calc(g.$mobile-NavBar-height * .6);
+        // background-color: blue;
         @include g.display-large{
             width: auto;
             height: 50px;

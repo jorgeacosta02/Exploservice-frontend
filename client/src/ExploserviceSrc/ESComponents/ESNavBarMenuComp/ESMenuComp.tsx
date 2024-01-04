@@ -15,7 +15,7 @@ const ESMenuComp = () => {
   };
 
   return (
-    <div  >
+    <div className={styles.container}>
       <svg
         className={styles.menu}
         xmlns="http://www.w3.org/2000/svg" 
