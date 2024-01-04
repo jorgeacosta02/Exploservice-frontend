@@ -19,7 +19,7 @@
         flex-direction: row;
         top: -13px;
         height: g.$desk-NavBar-height;
-        font-size: max(#{1.2vw}, #{13px});
+        font-size: g.$desk-NavBar-font-size;
         font-weight: 300;
         width: 60%;
         right: 5%;

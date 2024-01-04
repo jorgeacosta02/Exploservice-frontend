@@ -38,14 +38,16 @@ $mobile-p-font-weight: 500;
 //Desk variables
 $desk-NavBar-height: 90px;
 $desk-main-container-padding: 5vh 5vw;
+$desk-NavBar-font-size: min(#{15px}, #{2vw});
 $desk-h1-font-size: 38px;
 $desk-h1-font-weight: 700;
 $desk-h2-font-size: 30px;
 $desk-h2-font-weight: 600;
-$desk-h3-font-size: min(#{12px}, #{2.2vw});
+$desk-h3-font-size: min(#{18px}, #{2.2vw});
 $desk-h3-font-weight: 500;
 $desk-p-font-size: min(#{15px}, #{3.5vw});
 $desk-p-font-weight: 400;
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////

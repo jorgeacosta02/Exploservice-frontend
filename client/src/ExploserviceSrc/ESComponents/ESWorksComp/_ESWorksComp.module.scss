@@ -26,6 +26,7 @@
             .workData{
                 @include g.create-flexbox(column, space-between);
                 @include g.display-large{
+                    flex-direction: row;
                     gap: 2vw;
                     padding-top: 3vh;
                 }
