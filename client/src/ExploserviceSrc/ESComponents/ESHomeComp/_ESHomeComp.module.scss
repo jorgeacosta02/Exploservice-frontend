@@ -64,26 +64,26 @@
     }
 
     .allServicesContainer{
-        padding: 3vw;
-        padding-bottom: 5vh;
+        padding: g.$mobile-main-container-padding;
         .serviceContainer{
-            padding-bottom: 20px;
             .serviceContent{
                 @include g.create-flexbox(column, space-between);
                 margin-bottom: 10vh;
-                    p{
+                p{
+                    margin: 0;
                     width: 90vw;
                     @include g.display-large{
                         width: 60vw;
-                        margin-bottom: 5vh;
+                        margin-bottom: 1vh;
                     }
                 }
             }
             .serviceImgs{
                 @include g.create-flexbox(row, space-evenly);
                 flex-wrap: wrap;
-                width: 90vw;
                 gap: 1rem;
+                width: 90vw;
+                margin: 3vh 0;
                 overflow: hidden;
                 @include g.display-large{
                     flex-direction: row;

@@ -19,11 +19,11 @@
     }
     p{
         color: rgb(150, 150, 150);
-        font-size: calc(g.$desk-p-font-size * .85);
         width: 90%;
         margin-right: 3px;
     }
     .dataBlock{
+        padding: 0 2vw;
         @include g.create-flexbox(row, space-between);
     }
     path {

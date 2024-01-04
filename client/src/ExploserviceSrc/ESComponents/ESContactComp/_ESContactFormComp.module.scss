@@ -1,10 +1,12 @@
 @use '../../../styles/globals' as g;
 
 .container{
-    margin-top: g.$mobile-NavBar-height;
+    box-sizing: border-box;
+    width: 100%;
     padding: g.$mobile-main-container-padding;
+    margin-top: 5vh;
     @include g.display-large{
-        margin-top: 100px;
+        margin-top: g.$mobile-NavBar-height;
         min-height: 420px;
         width: 35vw;
         border: 1px solid g.$white-color;
@@ -14,20 +16,20 @@
         text-align: center;
     }
     .inputBlock{
-        @include g.create-flexbox(row, space-between);
+        @include g.create-flexbox(column, space-between);
+        align-items: flex-start;
+        width: 100%;
         label{
-            font-size: calc(g.$mobile-p-font-size * .65);
-            width: 20%;
-            color: rgb(150, 150, 150);
-            @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
-            };
+            p{
+                margin: 0;
+                color: rgb(150, 150, 150);
+            }
         }
         input{
-            font-size: calc(g.$mobile-p-font-size * 1);
-            width: 72%;
+            font-size: g.$mobile-p-font-size;
+            width: 96%;
             @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
+                font-size: g.$desk-p-font-size;
             };
         }
     }
@@ -35,24 +37,23 @@
         margin-top: 15px;
         width: 100%;
         @include g.create-flexbox(column, space-between);
+        align-items: flex-start;
         label{
-            font-size: calc(g.$mobile-p-font-size * .65);
             width: 20%;
-            margin-bottom: 1vh;
-            color: rgb(150, 150, 150);
+            p{
+                margin: 0;
+                color: rgb(150, 150, 150);
+            }
             @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
-                
             };
         }
         textarea{
-            font-size: calc(g.$mobile-p-font-size * .7);
-            width: 100%;
+            font-size: g.$mobile-p-font-size;
+            width: 96%;
             height: 130px;
             @include g.display-large{
-                font-size: calc(g.$desk-p-font-size * .85);
+                font-size: g.$desk-p-font-size;
                 height: 15vh;
-     
             };
         }
     }
@@ -68,9 +69,9 @@
         .submit{
             cursor: pointer;
             border:none;
-            color: g.$ea-color;
+            color: g.$dark-black-color;
             background-color: g.$white-color;
-            border: 3px solid g.$ea-color;
+            border: 3px solid g.$es-color;
             border-radius: 3px;
             width: 70%;
             height: 36px;

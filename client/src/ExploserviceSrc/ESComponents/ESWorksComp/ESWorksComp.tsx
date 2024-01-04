@@ -12,66 +12,66 @@ const ESWorks = () => {
       <div className={styles.worksContainer}>
         <div className={styles.work}>
             <h3>
-                Mina Casposo - Argentina
+                MIMA CASPOSO - ARGENTINA
             </h3>
             <div className={styles.workData}>
                 <div className={styles.workText}>
                     <p>
-                    Mina Casposo ubicada en el departamento de Calingasta - Provincia de San Juan - Argentina.
+                        Mina Casposo ubicada en el departamento de Calingasta - Provincia de San Juan - Argentina.
                     </p>
                     <p>
-                    Perforación, carga y voladura en roca andesita con grade control de cutting en mineral. Volumen total: 7.050.000 Ton. 
+                        Perforación, carga y voladura en roca andesita con grade control de cutting en mineral. Volumen total: 7.050.000 Ton. 
                     </p>
                     <p>
-                    Contrato: desde 2011 al 2014.
+                        Contrato: desde 2011 al 2014.
                     </p>
                 </div>
                 <img src={imgCasposo} alt='Imagen Casposo' />
             </div>
         </div>
         <div className={styles.work}>
-            <h2>
-               Mina Karouni - Guyana
-            </h2>
+            <h3>
+               MIMA KAROUNI - GUYANA
+            </h3>
             <div className={styles.workData}>
                 <img src={imgKarouni} alt='Imagen Karoni' />
                 <div className={styles.workText}>
                     <p>
-                    Mina Karouni locaclizada en la región de Esequibo de la república de Guyana.
+                        Mina Karouni locaclizada en la región de Esequibo de la república de Guyana.
                     </p>
                     <p>
-                    Exploservice provee servicios de perforación carga y voladura en saprolita y roca, con grade control de cutting en mineral.
+                        Exploservice provee servicios de perforación carga y voladura en saprolita y roca, con grade control de cutting en mineral.
                     Cantidad total: 900.000 metros lineales de perforación.
                     </p>
                     <p>
-                    Contrato: desde 2015 a la actualidad.
+                        Contrato: desde 2015 a la actualidad.
                     </p>
                 </div>
             </div>
         </div>
         <div className={styles.work}>
-            <h2>
-                Proyecto binacional Pascua Lama - Argentina Chile
-            </h2>
+            <h3>
+                PROYECTO BINACIONAL PASCUA LAMA - ARGENTINA CHILE
+            </h3>
             <div className={styles.workData}>
                 <div className={styles.workText}>
                     <p>
-                    Proyecto binacional Pascua Lama ubicado en el departamento de Iglesia - Provincia de San Juan - Argentina.
+                        Proyecto binacional Pascua Lama ubicado en el departamento de Iglesia - Provincia de San Juan - Argentina.
                     </p>
                     <p>
-                    Carga y voladura con explosivos para excavación subterránea en tunel conveyor, lado argentino.
+                        Carga y voladura con explosivos para excavación subterránea en tunel conveyor, lado argentino.
                     </p>
                     <p>
-                    Período 2012 y 2013.
+                        Período 2012 y 2013.
                     </p>
                 </div>
                 <img src={imgPacsuaLama01} alt='Imagen Pascua Lama 01' />
             </div>
         </div>
         <div className={styles.work}>
-            <h2>
-                Proyecto binacional Pascua Lama - Argentina Chile
-            </h2>
+            <h3>
+                PROYECTO BINACIONAL PASCUA LAMA - ARGENTINA CHILE
+            </h3>
             <div className={styles.workData}>
                 <img src={imgPacsuaLama02} alt="Imagen Pascua Lama 02" />
                 <div className={styles.workText}>

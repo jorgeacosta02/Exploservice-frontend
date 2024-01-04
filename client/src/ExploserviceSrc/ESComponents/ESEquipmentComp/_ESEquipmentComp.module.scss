@@ -1,9 +1,9 @@
 @use '../../../styles/globals' as g;
 
 .container{
-    margin-top: g.$mobile-NavBar-height;
     width: 100%;
-    padding-top: g.$mobile-main-container-padding;
+    margin-top: g.$mobile-NavBar-height;
+    padding: g.$mobile-main-container-padding;
     box-sizing: border-box;
     @include g.display-large{
         margin-top: g.$desk-NavBar-height;
@@ -14,7 +14,7 @@
         text-align: center;
         height: 30px;
         line-height: 30px;
-        padding-top: 5vh;
+        // padding-top: 5vh;
         // border-top: 3px solid g.$es-color;
     }
     .secondContainer{
@@ -27,7 +27,7 @@
             border-top: 2px solid g.$es-color;
             @include g.create-flexbox(column, space-between);
             padding: 10vh 0;
-
+            width: 90%;
             @include g.display-large{
                 flex-direction: row;
                 width: 70vw;

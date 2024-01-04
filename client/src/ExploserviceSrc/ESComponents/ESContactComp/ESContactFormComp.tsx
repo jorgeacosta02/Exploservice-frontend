@@ -75,7 +75,7 @@ const ESContactForm: React.FC = () => {
         <h2>Envianos un mensaje</h2>
         <div>
           <div className={styles.inputBlock}>
-            <label htmlFor='name'>Nombre:  </label>
+            <label htmlFor='name'><p>Nombre:  </p></label>
             <input
               type='text'
               id='name'
@@ -85,7 +85,7 @@ const ESContactForm: React.FC = () => {
           </div>
             <p>{errors.name}</p>
           <div className={styles.inputBlock}>
-            <label htmlFor='email'>Email:  </label>
+            <label htmlFor='email'><p>Email:  </p></label>
             <input
               type='text'
               id='email'
@@ -95,7 +95,7 @@ const ESContactForm: React.FC = () => {
           </div>
               <p>{errors.email}</p>
           <div className={styles.inputBlock}>
-            <label htmlFor='subject'>Asunto:  </label>
+            <label htmlFor='subject'><p>Asunto:  </p></label>
             <input
               type="text"
               id='subject'
@@ -104,7 +104,7 @@ const ESContactForm: React.FC = () => {
               onChange={handleInputChange}/>
           </div>
           <div className={styles.textareaBlock}>
-            <label htmlFor="message">Mensaje:  </label>
+            <label htmlFor="message"><p>Mensaje:  </p></label>
             <textarea
               id='message'
               name='message'
