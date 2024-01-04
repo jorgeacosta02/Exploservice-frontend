@@ -2,7 +2,8 @@
 
 .container{
     position: absolute;
-    padding: g.$mobile-padding;
+    box-sizing: border-box;
+    padding: g.$mobile-main-container-padding;
     top: calc(g.$mobile-NavBar-height + 1vh);
     color: g.$white-color;
     z-index: 10;

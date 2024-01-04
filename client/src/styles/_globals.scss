@@ -21,24 +21,27 @@ $primary-font: 'Poppins', sans-serif;
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Mobile variables
 $mobile-NavBar-height: 14vh;
-$mobile-h1-font-size: max(#{7vw}, #{22px});
+$mobile-main-container-padding: 2vh 2vw;
+$mobile-h1-font-size: max(#{22px}, #{7vw});
 $mobile-h1-font-weight: 700;
-$mobile-h2-font-size: max(#{3vw}, #{15px});
+$mobile-h2-font-size: max(#{15px}, #{3vw});
 $mobile-h2-font-weight: 600;
-$mobile-h3-font-size: max(#{2.2vw}, #{12px});
-$mobile-h3-font-weight: 600;
-$mobile-p-font-size: max(#{2.2vw}, #{11px});
+$mobile-h3-font-size: max(#{12px}, #{2.2vw});
+$mobile-h3-font-weight: 500;
+$mobile-p-font-size: max(#{11px}, #{2.2vw});
 $mobile-p-font-weight: 500;
-$mobile-padding: 2vh 2vw;
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //Desk variables
 $desk-NavBar-height: 90px;
+$desk-main-container-padding: 5vh 5vw;
 $desk-h1-font-size: 38px;
 $desk-h1-font-weight: 700;
 $desk-h2-font-size: 30px;
 $desk-h2-font-weight: 600;
+$desk-h3-font-size: min(#{12px}, #{2.2vw});
+$desk-h3-font-weight: 500;
 $desk-p-font-size: min(#{16px}, #{4.5vw});
 $desk-p-font-weight: 500;
 

@@ -17,12 +17,10 @@
 }
 
 .container{
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - (g.$mobile-NavBar-height * 2));
     margin-top: g.$mobile-NavBar-height;
-    background-color: green;
     overflow: hidden;
-
     @include g.display-large{
         height: calc(100vh - g.$desk-NavBar-height);
         margin-top: g.$desk-NavBar-height;
@@ -31,7 +29,6 @@
     .img{
         height: calc(200% + 200px);
         width: auto;
-
         @include g.display-large{
             width: calc(150% + 150px);
             height: auto;

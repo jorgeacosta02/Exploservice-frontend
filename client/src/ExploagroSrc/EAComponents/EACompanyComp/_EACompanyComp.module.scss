@@ -1,7 +1,8 @@
 @use '../../../styles/globals' as g;
 
 .container{
+    box-sizing: border-box;
     margin-top: g.$mobile-NavBar-height;
     height: 100vh;
-    padding: 2vh 2vw;
+    padding: g.$desk-main-container-padding;
 }

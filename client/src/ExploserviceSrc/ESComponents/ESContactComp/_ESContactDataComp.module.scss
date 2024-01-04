@@ -2,7 +2,7 @@
 
 .container{
     margin-top: g.$mobile-NavBar-height;
-    padding: 2vh 2vw;
+    padding: g.$mobile-main-container-padding;
     @include g.display-large{
         margin-top: 100px;
         height: 70vh;

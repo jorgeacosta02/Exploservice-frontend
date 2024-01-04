@@ -91,6 +91,10 @@
                 img{
                     max-width: 90vw;
                     max-height: 60vh;
+                    @include g.display-large{
+                        max-width: 90vw;
+                        max-height: 45vh;
+                    }
                 }
             }
         }

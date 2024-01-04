@@ -6,7 +6,7 @@ import tamrock from '../../ESAssets/ESImages/ESEquipment/tamrock01.png'
 const ESEquipmentComp = () => {
   return (
     <div className={styles.container}>
-      <h1>Nuestros equipos</h1>
+      <h2 className={styles.our}>Nuestros equipos</h2>
       <div className={styles.secondContainer}>
         <div className={styles.equipmentContainer}>
           <img src={frd} alt="FRD-image" />

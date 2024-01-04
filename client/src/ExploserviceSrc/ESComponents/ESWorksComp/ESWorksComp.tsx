@@ -8,12 +8,12 @@ import imgPacsuaLama02 from '../../ESAssets/ESImages/ESWorks/pascuaLama02.jpg'
 const ESWorks = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.our}>Nuestros trabajos</h1>
+      <h2 className={styles.our}>Nuestros trabajos</h2>
       <div className={styles.worksContainer}>
         <div className={styles.work}>
-            <h2>
+            <h3>
                 Mina Casposo - Argentina
-            </h2>
+            </h3>
             <div className={styles.workData}>
                 <div className={styles.workText}>
                     <p>

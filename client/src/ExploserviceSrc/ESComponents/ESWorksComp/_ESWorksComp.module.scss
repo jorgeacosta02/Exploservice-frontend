@@ -1,15 +1,15 @@
 @use '../../../styles/globals' as g;
 
 .container{
-    position: relative;
-    top: g.$desk-NavBar-height;
-    padding: 5vh 10vw;
+    margin-top: g.$mobile-NavBar-height;
+    padding: 0 4vw;
+    @include g.display-large{
+        top: g.$desk-NavBar-height;
+
+    }
     .our{
-        // background-color: g.$es-color;
         position: relative;
         text-align: center;
-        height: 100px;
-        line-height: 100px;
     }
     .worksContainer{
         padding: 8vh 0;

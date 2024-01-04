@@ -1,16 +1,21 @@
 @use '../../../styles/globals' as g;
 
 .container{
-    position: relative;
+    margin-top: g.$mobile-NavBar-height;
     width: 100%;
+    padding-top: g.$mobile-main-container-padding;
     box-sizing: border-box;
-    top: g.$desk-NavBar-height;
     @include g.display-large{
-        padding: 5vh 5vw;
+        margin-top: g.$desk-NavBar-height;
+        // padding: 5vh 5vw;
     }
-    h1{
+    .our{
+        position: relative;
         text-align: center;
-        margin-bottom: 10vh;
+        height: 30px;
+        line-height: 30px;
+        padding-top: 5vh;
+        // border-top: 3px solid g.$es-color;
     }
     .secondContainer{
         position: relative;

@@ -2,7 +2,7 @@
 
 .container {
     position: relative;
-    padding: g.$mobile-padding;
+    padding: g.$mobile-main-container-padding;
     padding-top: calc(g.$mobile-NavBar-height + 4vh);
     padding-bottom: g.$mobile-NavBar-height;
     z-index: 200;

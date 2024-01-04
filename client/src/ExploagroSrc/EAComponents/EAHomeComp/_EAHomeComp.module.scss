@@ -2,7 +2,7 @@
 
 .container {
     position: relative;
-    padding: g.$mobile-padding;
+    padding: g.$mobile-main-container-padding;
     padding-top: g.$mobile-NavBar-height;
     padding-bottom: g.$mobile-NavBar-height;
     z-index: 200;
@@ -10,8 +10,7 @@
     
     @include g.display-large{
         justify-content: space-between;
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding: g.$desk-main-container-padding;
     }
     h1{
         position: relative;
