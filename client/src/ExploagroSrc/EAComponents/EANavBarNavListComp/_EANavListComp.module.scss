@@ -23,6 +23,7 @@
         font-weight: 400;
         padding: 0 2px 0 0;
         width: 45%;
+        min-width: 330px;
         right: 5%;
         line-height: g.$desk-NavBar-height;
         background-color: transparent;
@@ -49,7 +50,7 @@
         transition: .2s ease;
         @include g.display-large{
             background-color: g.$white-color;
-            color: g.$ea-color;
+            color: g.$ea-dark-color;
             transform:scale(1.2);
         }
     }

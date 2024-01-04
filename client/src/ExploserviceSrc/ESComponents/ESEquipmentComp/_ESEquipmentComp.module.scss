@@ -1,29 +1,26 @@
 @use '../../../styles/globals' as g;
 
 .container{
+    box-sizing: border-box;
     width: 100%;
     margin-top: g.$mobile-NavBar-height;
     padding: g.$mobile-main-container-padding;
-    box-sizing: border-box;
     @include g.display-large{
         margin-top: g.$desk-NavBar-height;
-        // padding: 5vh 5vw;
     }
     .our{
         position: relative;
         text-align: center;
         height: 30px;
         line-height: 30px;
-        // padding-top: 5vh;
-        // border-top: 3px solid g.$es-color;
     }
-    .secondContainer{
+    .equipmentsContainer{
         position: relative;
         width: 90vw;
         padding: 10px;
         @include g.create-flexbox(column, space-between);
         align-items: center;
-        .equipmentContainer{
+        .equipment{
             border-top: 2px solid g.$es-color;
             @include g.create-flexbox(column, space-between);
             padding: 10vh 0;

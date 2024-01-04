@@ -1,6 +1,8 @@
 import { 
     TOGGLE_STYLE,
     ToggleStyleAction,
+    FALSE_STYLE,
+    FalseStyleAction,
 } from './actions';
 
 
@@ -17,10 +19,12 @@ const initialState: booleanState = {
 
 
 // Reducers
-export const stylesReducer = (state: booleanState = initialState, action: ToggleStyleAction): booleanState => {
+export const stylesReducer = (state: booleanState = initialState, action: any): booleanState => {
   switch (action.type) {
     case TOGGLE_STYLE:
         return { ...state, styles: !state.styles };
+    case FALSE_STYLE:
+        return { ...state, styles: false};
     default:
         return state;
   }

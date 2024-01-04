@@ -6,7 +6,7 @@
     margin-top: g.$mobile-NavBar-height;
     padding: g.$mobile-main-container-padding;
     @include g.display-large{
-        top: g.$desk-NavBar-height;
+        margin-top: g.$desk-NavBar-height;
     }
     .our{
         position: relative;

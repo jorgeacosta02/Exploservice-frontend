@@ -21,7 +21,8 @@
         height: g.$desk-NavBar-height;
         font-size: g.$desk-NavBar-font-size;
         font-weight: 300;
-        width: 60%;
+        width: 50%;
+        min-width: 420px;
         right: 5%;
         line-height: g.$desk-NavBar-height;
         background-color: transparent;
@@ -48,7 +49,7 @@
         transition: .2s ease;
         @include g.display-large{
             background-color: g.$white-color;
-            color: g.$dark-black-color;
+            color: g.$es-dark-color;
             transform:scale(1.2);
         }
     }

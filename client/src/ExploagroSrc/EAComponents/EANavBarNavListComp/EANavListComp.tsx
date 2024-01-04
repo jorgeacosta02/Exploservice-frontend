@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from './_EANavListComp.module.scss';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/types";
-import { toggleStyle } from "../../../redux/actions";
+import { falseStyle } from "../../../redux/actions";
 
 const EANavListComp = () => {
 
@@ -12,7 +12,7 @@ const EANavListComp = () => {
 
   const handleClick = () => {
     console.log('click en NavLixt');
-    dispatch(toggleStyle() );
+    dispatch(falseStyle() );
   };
 
   const navListStyles = `${styles.navList} ${stylesReducer ? styles.show : ''}`;
