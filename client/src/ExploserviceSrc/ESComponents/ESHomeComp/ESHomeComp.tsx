@@ -40,7 +40,7 @@ const ESHomeComp = () => {
       <h2 className={styles.our}>Nuestros servicios</h2>
       <div className={styles.allServicesContainer}>
       <div className={styles.serviceContainer}>
-        <h2>PERFORACIÓN PARA PRODUCCION</h2>
+        <h3>PERFORACIÓN PARA PRODUCCION</h3>
         <div className={styles.serviceContent}>
           <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
           <div className={styles.serviceImgs}>
@@ -50,7 +50,7 @@ const ESHomeComp = () => {
         </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h2>PERFORACIÓN PARA GRADE CONTROL</h2>
+        <h3>PERFORACIÓN PARA GRADE CONTROL</h3>
       <div className={styles.serviceContent}>
         <p>Perforación con toma de muestras del cutting o detritus, con o sin empleo de dispositivo cuarteador.</p>
         <div className={styles.serviceImgs}>
@@ -61,7 +61,7 @@ const ESHomeComp = () => {
       </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h4>PERFORACIÓN PARA CONSTRUCCION</h4>
+        <h3>PERFORACIÓN PARA CONSTRUCCION</h3>
         <div className={styles.serviceContent}>
         <p>Perforación para excavaciones con explosivos en construcción; cortes cajón y media ladera para rutas, rip-rap, zanjeos, fundaciones, demoliciones, voladuras especiales, etc.</p>
         <div className={styles.serviceImgs}>
@@ -71,7 +71,7 @@ const ESHomeComp = () => {
         </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h2>VOLADURA</h2>
+        <h3>VOLADURA</h3>
         <div className={styles.serviceContent}>
         <p>Carguío de pozos con explosivos y detonación para la obtención de roca fragmentada en diferentes granulometrías según su posterior utilización.</p>
         <div className={styles.serviceImgs}>
@@ -82,7 +82,7 @@ const ESHomeComp = () => {
         </div>
       </div>
       <div className={styles.serviceContainer}>
-        <h2>PRE DRILLING</h2>
+        <h3>PRE DRILLING</h3>
         <div className={styles.serviceContent}>
         <p>Perforación de taladros sin extracción de cutting para facilitar el hincado de perfiles estructurales para el emplazamiento de parques solares.</p>
         <div className={styles.serviceImgs}>
@@ -94,7 +94,7 @@ const ESHomeComp = () => {
       </div>
       </div>
       <div className={styles.clientsContainer}>
-        <h1 className={styles.our}>Nuestros clientes</h1>
+        <h2 className={styles.our}>Nuestros clientes</h2>
         <div className={styles.clients}>
           <img src={imgTroy} alt="imgTroy" />
           <img src={imgAustralGold} alt="imgAustralGold" />

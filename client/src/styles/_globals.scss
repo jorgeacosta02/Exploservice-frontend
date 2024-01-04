@@ -21,10 +21,12 @@ $primary-font: 'Poppins', sans-serif;
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Mobile variables
 $mobile-NavBar-height: 14vh;
-$mobile-h1-font-size: max(#{7vw}, #{18px});
+$mobile-h1-font-size: max(#{7vw}, #{22px});
 $mobile-h1-font-weight: 700;
-$mobile-h2-font-size: max(#{2vw}, #{9px});
+$mobile-h2-font-size: max(#{3vw}, #{15px});
 $mobile-h2-font-weight: 600;
+$mobile-h3-font-size: max(#{2.2vw}, #{12px});
+$mobile-h3-font-weight: 600;
 $mobile-p-font-size: max(#{2.2vw}, #{11px});
 $mobile-p-font-weight: 500;
 $mobile-padding: 2vh 2vw;

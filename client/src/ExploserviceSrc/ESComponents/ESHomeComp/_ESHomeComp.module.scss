@@ -3,7 +3,6 @@
 .container{
     position: relative;
     margin-top: g.$mobile-NavBar-height;
-    // background-color: green;
     min-height: 100vh;
     .title{
         font-size: calc(g.$mobile-h1-font-size * .7);
@@ -19,9 +18,13 @@
         top: 0;
         box-sizing: border-box;
         width: 100vw;
-        height: 400px;
+        height: 270px;
         overflow: hidden;
         z-index: 1;
+        @include g.display-large{
+            width: 100vw;
+            height: 400px;
+        }
     }
 
     .mainImage::before {
@@ -30,13 +33,16 @@
         overflow: hidden;
         left: 0;
         width: 100vw;
-        height: 400px;
+        height: 70vh;
         background-image: url('../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd01.png');
         background-size: cover;
         background-position: center;
         filter: grayscale(100%);
         opacity: 1;
-        // background-color: red;
+        @include g.display-large{
+            width: 100vw;
+            height: 400px;
+        }
     }
 
     .mainText {
@@ -51,11 +57,12 @@
     .our{
         position: relative;
         text-align: center;
-        height: 20px;
-        line-height: 50px;
-        margin-top: 3vh;
+        height: 30px;
+        line-height: 30px;
+        padding-top: 5vh;
         border-top: 3px solid g.$es-color;
     }
+
     .allServicesContainer{
         padding: 3vw;
         padding-bottom: 5vh;
@@ -73,7 +80,8 @@
                 }
             }
             .serviceImgs{
-                @include g.create-flexbox(column, space-evenly);
+                @include g.create-flexbox(row, space-evenly);
+                flex-wrap: wrap;
                 width: 90vw;
                 gap: 1rem;
                 overflow: hidden;
@@ -82,7 +90,7 @@
                 }
                 img{
                     max-width: 90vw;
-                    max-height: 40vh;
+                    max-height: 60vh;
                 }
             }
         }

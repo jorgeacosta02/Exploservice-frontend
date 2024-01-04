@@ -62,6 +62,14 @@
       font-weight: g.$desk-h2-font-weight;
     }
   }
+  h3 {
+    font-size: g.$mobile-h3-font-size;
+    font-weight: g.$mobile-h3-font-weight;
+    @include g.display-large{
+      font-size: g.$desk-h2-font-size;
+      font-weight: g.$desk-h2-font-weight;
+    }
+  }
 
   p{
     font-size: g.$mobile-p-font-size;
