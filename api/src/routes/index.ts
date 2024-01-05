@@ -6,3 +6,5 @@ const router = Router()
 
 router.use('/exploservice', ESRoutes);
 router.use('/exploagro', EARoutes);
+
+export default router

@@ -1,6 +1,9 @@
 import { Router } from 'express';
+import { ESsignUp, ESLogIn } from '../../controllers/ESControllers/ESuser.controller';
 
-const router = Router();
+const ESRouter = Router();
 
-router.post('/signup', )
-router.post('/loging', )
+ESRouter.post('/signup', ESsignUp);
+ESRouter.post('/loging', ESLogIn);
+
+export default ESRouter

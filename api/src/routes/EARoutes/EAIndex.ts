@@ -4,7 +4,6 @@ import EAPostContactController from '../../controllers/EAControllers/EAPostConta
 
 const EARoutes = Router();
 
-
-EARoutes.post('/exploagro/contact', EAPostContactController);
+EARoutes.post('/contact', EAPostContactController);
 
 export default EARoutes;

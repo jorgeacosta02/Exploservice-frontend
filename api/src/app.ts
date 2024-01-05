@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import routes from './routes/ESRoutes/ESIndex'
+import routes from './routes/index'
 
 import './database';
 
