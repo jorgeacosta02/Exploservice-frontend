@@ -9,8 +9,10 @@ import routes from './routes/index'
 import './database';
 
 dotenv.config();
-const app = express();
 const port = process.env.PORT || 3001;
+
+// initializations
+const app = express();
 
 // settings
 app.set('port', port);
