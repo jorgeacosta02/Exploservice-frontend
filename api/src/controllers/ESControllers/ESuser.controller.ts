@@ -3,7 +3,7 @@ import ESUser, { IUser } from "../../models/ESModels/ESuser";
 import jwt from 'jsonwebtoken';
 import config from "../../config/config";
 
-const createToken = (user: IUser) => {
+const ESCreateToken = (user: IUser) => {
     return jwt.sign({id: user.id, email: user.email}, config.jwtSecret, {
         expiresIn: 86400
     });
@@ -24,7 +24,7 @@ export const ESsignUp = async (req: Request, res: Response) => {
     return res.status(201).json(newUser);
 }
 
-export const logIn = async (req: Request, res: Response) => {
+export const ESLogIn = async (req: Request, res: Response) => {
     if(!req.body.email || !req.body.password){
         return res.status(400).json({msg: 'Por favor envíe su correo y contraseña.'});
     };
@@ -36,7 +36,7 @@ export const logIn = async (req: Request, res: Response) => {
 
     const isMatch = await user.comparePassword(req.body.password);
     if(isMatch){
-        return res.status(200).json({token: createToken(user)});
+        return res.status(200).json({token: ESCreateToken(user)});
     };
 
     return res.status(400).json({msg: 'El correo o la contraseña son incorrectos.'})
