@@ -1,7 +1,17 @@
+import dotenv from 'dotenv';
+
+dotenv.config()
+
+export interface ExploserviceDBType {
+    URI: string | undefined;
+    USER: string | undefined;
+    PASSWORD: string | undefined;
+}
+
 export default {
     jwtSecret: process.env.JWT_SECRET || 'somesecrettoken',
     ExploserviceDB: {
-        URI: process.env.EXPLOSERVICE_MONGODB_URI || 'https://localhost:27017/exploservice',
+        URI: process.env.EXPLOSERVICE_MONGODB_URI,
         USER: process.env.EXPLOSERVICE_MONGODB_USER,
         PASSWORD: process.env.EXPLOSERVICE_MONGODB_PASSWORD
     },
