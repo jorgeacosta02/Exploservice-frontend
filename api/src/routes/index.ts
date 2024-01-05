@@ -1,11 +1,8 @@
 import { Router } from 'express';
-import postESContact from '../controllers/ESControllers/postESContact';
-import postEAContact from '../controllers/EAControllers/postEAContact';
+import ESRoutes from './ESRoutes/ESIndex';
+import EARoutes from './EARoutes/EAIndex';
 
+const router = Router()
 
-const routes = Router();
-
-routes.post('/exploservice/contact', postESContact);
-routes.post('/exploagro/contact', postEAContact);
-
-export default routes;
+router.use('/exploservice', ESRoutes);
+router.use('/exploagro', EARoutes);

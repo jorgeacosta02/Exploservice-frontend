@@ -41,4 +41,4 @@ userSchema.methods.comparePassword = async function (password: string): Promise<
     return await bcrypt.compare(password, this.password);
 }
 
-export default model<IUser>('User', userSchema);
+export default model<IUser>('ESUser', userSchema);
