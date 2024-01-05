@@ -42,7 +42,7 @@
             width: 100%;
             border-radius: .5vw;
         }
-     }
+    }
     .navLink:hover{
         background-color: g.$es-color;
         color:g.$dark-black-color;
@@ -50,7 +50,14 @@
         @include g.display-large{
             background-color: g.$white-color;
             color: g.$es-dark-color;
-            transform:scale(1.2);
+            transform:scale(1.1);
+        }
+    }
+    .splitBar{
+        @include g.display-large{
+            width: 1px;
+            height: calc(g.$desk-NavBar-height * .25);
+            background-color: rgb(95, 98, 0);
         }
     }
 }

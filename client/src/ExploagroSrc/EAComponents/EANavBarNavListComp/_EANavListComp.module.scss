@@ -51,7 +51,14 @@
         @include g.display-large{
             background-color: g.$white-color;
             color: g.$ea-dark-color;
-            transform:scale(1.2);
+            transform:scale(1.1);
+        }
+    }
+    .splitBar{
+        @include g.display-large{
+            width: 1px;
+            height: calc(g.$desk-NavBar-height * .25);
+            background-color: rgb(19, 56, 16);
         }
     }
 }

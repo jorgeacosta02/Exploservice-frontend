@@ -25,18 +25,21 @@ const EANavListComp = () => {
             className={styles.navLink} 
            >Inicio</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
             to="/exploagro" 
             className={styles.navLink} 
            >Empresa</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
             to="/exploagro/product" 
             className={styles.navLink} 
            >Producto</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         {/* <li onClick={handleClick} >
           <NavLink
             to="#" 

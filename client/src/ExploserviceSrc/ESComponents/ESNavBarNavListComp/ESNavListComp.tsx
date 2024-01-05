@@ -25,30 +25,35 @@ const ESNavListComp = () => {
             className={styles.navLink} 
            >Inicio</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
             to="/" 
             className={styles.navLink} 
            >Empresa</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
             to="/exploservice" 
             className={styles.navLink} 
            >Servicios</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
             to="/exploservice/equipment" 
             className={styles.navLink} 
            >Equipos</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
             to="/exploservice/works" 
             className={styles.navLink} 
            >Trabajos</NavLink>
         </li>
+        <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
             to="/exploservice/contact" 
