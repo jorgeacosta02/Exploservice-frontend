@@ -22,25 +22,23 @@ const EAContactFormComp: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<FormDataShape>({
-    name: "",
-    email: "",
+    name: '',
+    email: '',
     subject: '',
     message: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    await setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+    console.log(name, value);
+    console.log(formData, errors);
     EAContactValidation(formData, setErrors);
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   console.log(formData);
-  // }
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();

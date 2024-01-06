@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import ESUser, { IUser } from "../../models/ESModels/ESuser";
+import ESUser, { IUser } from "../../models/ESModels/ESUserModel";
 import jwt from 'jsonwebtoken';
 import config from "../../config/config";
 

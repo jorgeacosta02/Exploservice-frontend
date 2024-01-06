@@ -1,6 +1,6 @@
 import { FormDataShape } from "./EAContactFormComp"
 
-const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+const EAcontactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
     
     const { name, email } = data;
    
@@ -12,7 +12,7 @@ const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.
     if (!name) {
         setErrors((prevErrors) => ({
             ...prevErrors,
-            name: "Ingrese su nombre",
+            name: "Ingresa tu nombre",
         }));
     } else if (!nameRegex.test(name)){
         setErrors((prevErrors) => ({
@@ -22,7 +22,7 @@ const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.
     } else {
         setErrors((prevErrors) => ({
             ...prevErrors,
-            name: "",
+            name: '',
         }));
     };
     // EMAIL VALIDATION
@@ -39,8 +39,8 @@ const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.
     } else {
         setErrors((prevErrors) => ({
             ...prevErrors,
-            email: "",
+            email: '',
         }));
     };
 }
-export default contactValidation
+export default EAcontactValidation
