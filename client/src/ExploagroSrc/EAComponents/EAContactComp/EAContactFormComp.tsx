@@ -1,5 +1,10 @@
-import { useState } from 'react';
-import EAContactValidation from './EAContactValidation';
+import { useEffect, useState } from 'react';
+import {
+  EANameCorrectValidation,
+  EANameExistValidation,
+  EAEmailCorrectValidation
+} from './EAContactValidation';
+
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import styles from './_EAContactFormComp.module.scss';
@@ -28,17 +33,39 @@ const EAContactFormComp: React.FC = () => {
     message: ''
   });
 
-  const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  let submitOk = false;
+
+  if(
+    formData.name !== '' &&
+    formData.email !== '' &&
+    formData.subject !== '' &&
+    formData.message !== '' &&
+    errors.name === '' &&
+    errors.email === '' &&
+    errors.subject === '' &&
+    errors.message === '' 
+  ){
+    submitOk = true;
+  };
+
+  useEffect(() => {
+    EANameCorrectValidation(formData, setErrors);
+    EAEmailCorrectValidation(formData, setErrors);
+  },[formData])
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    await setFormData((prevData) => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
     console.log(name, value);
     console.log(formData, errors);
-    EAContactValidation(formData, setErrors);
   };
 
+  const handleCheck: any () => {
+    EANameCorrectValidation(formData,setErrors)
+  }
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
@@ -79,6 +106,7 @@ const EAContactFormComp: React.FC = () => {
               id='name'
               name='name' 
               placeholder='Ingresa nombre'
+              value={formData.name}
               onChange={handleInputChange}/>
           </div>
             <p>{errors.name}</p>
@@ -113,7 +141,14 @@ const EAContactFormComp: React.FC = () => {
           </div>
         </div>
         <div className={styles.submitBox}>
-          <button type='submit' className={styles.submit}>Enviar</button>
+          <button
+            type='submit'
+            className={styles.submit}
+            disabled={!submitOk}
+            // onClick={handleCheck}
+          >
+           Enviar
+          </button>
         </div>
       </form>
     </div>

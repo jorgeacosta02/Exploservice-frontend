@@ -85,6 +85,9 @@
             };
         }.submit:hover{
             background-color: g.$ea-dark-color;
+        }.submit:disabled{
+            background-color: g.$ea-light-color;
+            color: g.$grey-color;
         }
     }
 }
