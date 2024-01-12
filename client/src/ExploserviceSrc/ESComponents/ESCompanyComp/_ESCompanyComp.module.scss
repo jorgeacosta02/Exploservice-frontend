@@ -53,6 +53,16 @@
         z-index: 2;
         color: g.$dark-black-color;
         text-align: center;
+        .introContainer{
+            width: 80%;
+            margin-left: 10%;
+            @include g.create-flexbox(row, center);
+            align-items: flex-start;
+            gap: 30px;
+            p{
+                text-align: left;
+            }
+        }
     }
 
     .our{

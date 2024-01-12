@@ -19,18 +19,20 @@ const ESCompanyComp = () => {
       <div className={styles.mainText}>
         <h1 className={styles.title}>EXPLOSERVICE - ADL S.R.L.</h1>
         <h2 className={styles.our}>Nuestros inicios</h2>
-        <p>
-          Al hacer una introducción de Exploserivce y ADL, no debemos olvidar la experiencia absorbida en Magma Ingeniería Minera, empresa de servicos formada por egresados de la Facultad de Ingeniería de la Universidad Nacional de Cuyo. Obras como Altas cumbres (Córdoba), Embalse Rí Grande, Itaipú; entre otras como minería de Uranio y Malagueño.
-        </p>
-        <p>
-          Pasada la "aventura" de Malvinas, nos concuentra nuevamente en torno a la Faculatad de Ingeniería de la Universidad Nacional de San Juan, desarrollando el proyecto de Repositorio Nuclear, en Gastre.
-        </p>
-        <p>
-          La cercanía al Instituto de Investigaciones Mineras de la U.N.S.J. y la docencia, fueron el respaldo, para un ampli catálogo de valiosas ideas, refrendadas por el ejercicio profesional de nuestra especialidad minera.
-        </p>
-        <p>
-          Esta etapa que continúa, ininterrumpidamente, comienza con la ejecución de labores de formación de bancos y camino a botadero para Mount Isa Minerales en Bajo La Alumbrera.
-        </p>
+        <div className={styles.introContainer}>
+          <p>
+            Al hacer una introducción de Exploserivce y ADL, no debemos olvidar la experiencia absorbida en Magma Ingeniería Minera, empresa de servicos formada por egresados de la Facultad de Ingeniería de la Universidad Nacional de Cuyo. Obras como Altas cumbres (Córdoba), Embalse Río Grande, Itaipú; entre otras como minería de Uranio y Malagueño.
+          </p>
+          <p>
+            Pasada la "aventura" de Malvinas, nos concuentra nuevamente en torno a la Faculatad de Ingeniería de la Universidad Nacional de San Juan, desarrollando el proyecto de Repositorio Nuclear, en Gastre.
+          </p>
+          <p>
+            La cercanía al Instituto de Investigaciones Mineras de la U.N.S.J. y la docencia, fueron el respaldo, para un ampli catálogo de valiosas ideas, refrendadas por el ejercicio profesional de nuestra especialidad minera.
+          </p>
+          <p>
+            Esta etapa que continúa, ininterrumpidamente, comienza con la ejecución de labores de formación de bancos y camino a botadero para Mount Isa Minerales en Bajo La Alumbrera.
+          </p>
+        </div>
       </div>
       <div className={styles.clientsContainer}>
         <h2 className={styles.our}>Nuestros clientes</h2>
