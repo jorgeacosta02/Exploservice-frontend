@@ -94,7 +94,7 @@ const ESServicesComp = () => {
         </div>
       </div>
       </div>
-      <div className={styles.clientsContainer}>
+      {/* <div className={styles.clientsContainer}>
         <h2 className={styles.our}>Nuestros clientes</h2>
         <div className={styles.clients}>
           <img src={imgTroy} alt="imgTroy" />
@@ -109,7 +109,7 @@ const ESServicesComp = () => {
           <img src={imgAlya} alt="imgAlya" />
         </div>
         <p>Con una extensa experiencia trabajando asociados a nuestros clientes desde las etapas iniciales hasta el final de cada proyecto, ofrecemos un amplio rango de alternativas adaptándonos para cubir cada necesidad específica.</p>
-      </div>
+      </div> */}
     </div>
   )
 }
