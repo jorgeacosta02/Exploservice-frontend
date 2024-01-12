@@ -1,15 +1,15 @@
 import ESNavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESHomeComp from '../../ESComponents/ESHomeComp/ESHomeComp'
+import ESServicesComp from '../../ESComponents/ESServicesComp/ESServicesComp'
 import ESFooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
 
-const ESHomePage = () => {
+const ESServicesPage = () => {
   return (
     <div>
       <ESNavBarLayout />
-      <ESHomeComp />
+      <ESServicesComp />
       <ESFooterComp />
     </div>
   )
 }
 
-export default ESHomePage
+export default ESServicesPage

@@ -28,14 +28,14 @@ const ESNavListComp = () => {
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
-            to="/" 
+            to="/exploservice/company" 
             className={styles.navLink} 
            >Empresa</NavLink>
         </li>
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploservice" 
+            to="/exploservice/services" 
             className={styles.navLink} 
            >Servicios</NavLink>
         </li>

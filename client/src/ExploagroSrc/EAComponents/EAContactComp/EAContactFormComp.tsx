@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import {
   EANameCorrectValidation,
-  EANameExistValidation,
-  EAEmailCorrectValidation
+  EANameExistsValidation,
+  EAEmailCorrectValidation,
+  EAEmailExistsValidation,
+  EASubjectExistsValidation,
+  EAMessageExistsValidation
 } from './EAContactValidation';
 
 import axios from 'axios';
@@ -47,11 +50,24 @@ const EAContactFormComp: React.FC = () => {
   ){
     submitOk = true;
   };
+  
+  console.log('submitOK: ', submitOk);
 
   useEffect(() => {
     EANameCorrectValidation(formData, setErrors);
+  },[formData.name])
+ 
+  useEffect(() => {
     EAEmailCorrectValidation(formData, setErrors);
-  },[formData])
+  },[formData.email])
+
+  useEffect(() => {
+    EASubjectExistsValidation(formData, setErrors);
+  },[formData.subject])
+ 
+  useEffect(() => {
+    EAMessageExistsValidation(formData, setErrors);
+  },[formData.message])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -63,18 +79,27 @@ const EAContactFormComp: React.FC = () => {
     console.log(formData, errors);
   };
 
-  const handleCheck: any () => {
-    EANameCorrectValidation(formData,setErrors)
-  }
+  // const handleCheck: React.MouseEventHandler<HTMLButtonElement> = () => {
+  //   console.log('handleCheck')
+  //   EANameExistsValidation(formData, setErrors);
+  //   EAEmailExistsValidation(formData, setErrors);
+  // };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("exploagro/contact", formData)
-      toast.success("Mensaje enviado exitosamente!!")
-      setTimeout(() => {
-        window.location.href = '/exploagro';
-      }, 2000);
+      if(!submitOk){
+        console.log('if en handleSubmit')
+        EANameExistsValidation(formData, setErrors);
+        EAEmailExistsValidation(formData, setErrors);
+        EASubjectExistsValidation(formData, setErrors);
+        return EAMessageExistsValidation(formData, setErrors);
+      }
+        await axios.post("exploagro/contact", formData)
+        toast.success("Mensaje enviado exitosamente!!")
+        setTimeout(() => {
+          window.location.href = '/exploagro';
+        }, 2000);
     } catch (error: any) {
 
     if (error?.response?.data?.message) {
@@ -109,7 +134,7 @@ const EAContactFormComp: React.FC = () => {
               value={formData.name}
               onChange={handleInputChange}/>
           </div>
-            <p>{errors.name}</p>
+          <p>{errors.name}</p>
           <div className={styles.inputBlock}>
             <label htmlFor='email'>Email:  </label>
             <input
@@ -117,9 +142,10 @@ const EAContactFormComp: React.FC = () => {
               id='email'
               name='email'
               placeholder='Ingresa email'
+              value={formData.email}
               onChange={handleInputChange}/>
           </div>
-              <p>{errors.email}</p>
+          <p>{errors.email}</p>
           <div className={styles.inputBlock}>
             <label htmlFor='subject'>Asunto:  </label>
             <input
@@ -127,25 +153,27 @@ const EAContactFormComp: React.FC = () => {
               id='subject'
               name='subject'
               placeholder='Ingresa asunto'
+              value={formData.subject}
               onChange={handleInputChange}/>
           </div>
+          <p>{errors.subject}</p>
           <div className={styles.textareaBlock}>
             <label htmlFor="message">Mensaje:  </label>
             <textarea
               id='message'
               name='message'
               placeholder='Ingresa tu mensaje aquí...'
+              value={formData.message}
               onChange={handleInputChange}
-              required>
+            >
             </textarea>
           </div>
+          <p>{errors.message}</p>
         </div>
         <div className={styles.submitBox}>
           <button
             type='submit'
             className={styles.submit}
-            disabled={!submitOk}
-            // onClick={handleCheck}
           >
            Enviar
           </button>

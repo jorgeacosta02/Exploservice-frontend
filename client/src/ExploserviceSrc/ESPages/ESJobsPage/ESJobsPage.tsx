@@ -1,15 +1,15 @@
 import NavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESWorksComp from '../../ESComponents/ESWorksComp/ESWorksComp'
+import ESJobsComp from '../../ESComponents/ESJobsComp/ESJobsComp'
 import ESFooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
 
-const ESWorksPage = () => {
+const ESJobsPage = () => {
   return (
     <div>
       <NavBarLayout/>
-      <ESWorksComp/>
+      <ESJobsComp/>
       <ESFooterComp/>
     </div>
   )
 }
 
-export default ESWorksPage
+export default ESJobsPage

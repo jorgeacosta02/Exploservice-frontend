@@ -1,4 +1,5 @@
-import styles from './_ESHomeComp.module.scss';
+
+import styles from './_ESServicesComp.module.scss';
 import imgPPP01 from '../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd01.png'
 import imgPPP02 from '../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd02.jpg'
 import imgPGC01 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol01.jpg'
@@ -23,7 +24,7 @@ import imgMSC from '../../ESAssets/ESImages/ESClients/mineraSantaCruz.jpg'
 import imgZlato from '../../ESAssets/ESImages/ESClients/zlato.jpg'
 import imgAlya from '../../ESAssets/ESImages/ESClients/alya.png'
 
-const ESHomeComp = () => {
+const ESServicesComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainImage}>
@@ -113,4 +114,4 @@ const ESHomeComp = () => {
   )
 }
 
-export default ESHomeComp
+export default ESServicesComp

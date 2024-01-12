@@ -23,14 +23,19 @@ export const EANameCorrectValidation = (data: FormDataShape, setErrors: React.Di
     };
 
 }
-export const EANameExistValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+export const EANameExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
     
     const { name } = data;
  
     if (name === ''){
         setErrors((prevErrors) => ({
             ...prevErrors,
-            name: "Ingresa un nombre"
+            name: 'Ingresa un nombre'
+        }))
+    } else {
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            name: ''
         }))
     };
 }
@@ -44,13 +49,56 @@ export const EAEmailCorrectValidation = (data: FormDataShape, setErrors: React.D
     if (email !== '' && !emailRegex.test(email)){
         setErrors((prevErrors) => ({
             ...prevErrors,
-            email: "Debe ser una dirección de correo"
+            email: "Debe ser una dirección de email"
         }))
     } else {
         setErrors((prevErrors) => ({
             ...prevErrors,
             email: '',
         }));
+    };
+}
+
+export const EAEmailExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { email } = data;
+ 
+    if (email === ''){
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            email: "Ingresa un email"
+        }))
+    };
+}
+
+// SUBJECT VALIDATIONS
+export const EASubjectExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { subject } = data;
+ 
+    if (subject === ''){
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            subject: 'Ingresa un asunto'
+        }))
+    } else {
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            subject: ''
+        }))
+    };
+}
+
+// MESSAGE VALIDATIONS
+export const EAMessageExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { message } = data;
+ 
+    if (message === ''){
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            message: "Ingresa un mensaje"
+        }))
     };
 }
 

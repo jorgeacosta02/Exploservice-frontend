@@ -1,11 +1,11 @@
-import styles from './_ESWorksComp.module.scss'
+import styles from './_ESJobsComp.module.scss'
 import imgCasposo from '../../ESAssets/ESImages/ESWorks/casposo01.jpg'
 import imgKarouni from '../../ESAssets/ESImages/ESWorks/minaKaroniGuyana.jpg'
 import imgPacsuaLama01 from '../../ESAssets/ESImages/ESWorks/pascuaLama01.jpg'
 import imgPacsuaLama02 from '../../ESAssets/ESImages/ESWorks/pascuaLama02.jpg'
 
 
-const ESWorks = () => {
+const ESJobsComp = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.our}>Nuestros trabajos</h2>
@@ -92,4 +92,4 @@ const ESWorks = () => {
   )
 }
 
-export default ESWorks
+export default ESJobsComp
