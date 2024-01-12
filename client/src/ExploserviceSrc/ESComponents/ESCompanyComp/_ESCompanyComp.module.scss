@@ -54,13 +54,18 @@
         color: g.$dark-black-color;
         text-align: center;
         .introContainer{
+            box-sizing: border-box;
             width: 80%;
             margin-left: 10%;
             @include g.create-flexbox(row, center);
             align-items: flex-start;
             gap: 30px;
+            border: 1px solid grey;
+            padding: 2vh 4vw;
+            border-radius: 8px;
             p{
                 text-align: left;
+                width: 35vw;
             }
         }
     }

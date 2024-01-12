@@ -36,6 +36,9 @@ const ESCompanyComp = () => {
       </div>
       <div className={styles.clientsContainer}>
         <h2 className={styles.our}>Nuestros clientes</h2>
+        <p>
+          A lo largo de nuestra trayectorio hemos prestado servicios a empresas de renombre en el ambiente minero a nivel nacional e internacional entre las que se encuentran las siguientes.
+        </p>
         <div className={styles.clients}>
           <img src={imgTroy} alt="imgTroy" />
           <img src={imgAustralGold} alt="imgAustralGold" />
