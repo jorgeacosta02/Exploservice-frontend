@@ -1,20 +1,16 @@
 import { FormDataShape } from "./ESContactFormComp"
 
-const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
-    
-    const { name, email } = data;
-   
-    // REGEX
-    const nameRegex = /^[a-zA-Z\s'-]+$/
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
-    // NAME VALIDATION
-    if (!name) {
-        setErrors((prevErrors) => ({
-            ...prevErrors,
-            name: "Ingrese su nombre",
-        }));
-    } else if (!nameRegex.test(name)){
+// REGEX
+const nameRegex = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+// NAME VALIDATIONS
+export const ESNameCorrectValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { name } = data;
+ 
+    if (name !== '' && !nameRegex.test(name)){
         setErrors((prevErrors) => ({
             ...prevErrors,
             name: "El nombre debe contener solo letras"
@@ -22,16 +18,35 @@ const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.
     } else {
         setErrors((prevErrors) => ({
             ...prevErrors,
-            name: "",
+            name: '',
         }));
     };
-    // EMAIL VALIDATION
-    if (!email) {
+
+}
+export const ESNameExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { name } = data;
+ 
+    if (name === ''){
         setErrors((prevErrors) => ({
             ...prevErrors,
-            email: "Ingrese su email",
-        }));
-    } else if (!emailRegex.test(email)){
+            name: 'Ingresa un nombre'
+        }))
+    } else {
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            name: ''
+        }))
+    };
+}
+
+
+// EMAIL VALIDATIONS
+export const ESEmailCorrectValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+
+    const { email } = data;
+
+    if (email !== '' && !emailRegex.test(email)){
         setErrors((prevErrors) => ({
             ...prevErrors,
             email: "Debe ser una dirección de email"
@@ -39,8 +54,87 @@ const contactValidation = (data: FormDataShape, setErrors: React.Dispatch<React.
     } else {
         setErrors((prevErrors) => ({
             ...prevErrors,
-            email: "",
+            email: '',
         }));
     };
 }
-export default contactValidation
+
+export const ESEmailExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { email } = data;
+ 
+    if (email === ''){
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            email: "Ingresa un email"
+        }))
+    };
+}
+
+// SUBJECT VALIDATIONS
+export const ESSubjectExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { subject } = data;
+ 
+    if (subject === ''){
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            subject: 'Ingresa un asunto'
+        }))
+    } else {
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            subject: ''
+        }))
+    };
+}
+
+// MESSAGE VALIDATIONS
+export const ESMessageExistsValidation = (data: FormDataShape, setErrors: React.Dispatch<React.SetStateAction<FormDataShape>>) => {
+    
+    const { message } = data;
+ 
+    if (message === ''){
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            message: "Ingresa un mensaje"
+        }))
+    };
+}
+
+
+
+    // NAME VALIDATION
+    // if (!name) {
+    //     setErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         name: "Ingresa tu nombre",
+    //     }));
+    // } else if (!nameRegex.test(name)){
+    //     setErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         name: "El nombre debe contener solo letras"
+    //     }))
+    // } else {
+    //     setErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         name: '',
+    //     }));
+    // };
+    // EMAIL VALIDATION
+    // if (!email) {
+    //     setErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         email: "Ingrese su email",
+    //     }));
+    // } else if (!emailRegex.test(email)){
+    //     setErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         email: "Debe ser una dirección de email"
+    //     }))
+    // } else {
+    //     setErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         email: '',
+    //     }));
+    // };

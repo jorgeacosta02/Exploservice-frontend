@@ -1,5 +1,13 @@
-import { useState } from 'react';
-import ESContactValidation from './ESContactValidation';
+import { useEffect, useState } from 'react';
+import {
+  ESNameCorrectValidation,
+  ESNameExistsValidation,
+  ESEmailCorrectValidation,
+  ESEmailExistsValidation,
+  ESSubjectExistsValidation,
+  ESMessageExistsValidation
+} from './ESContactValidation';
+
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import styles from './_ESContactFormComp.module.scss';
@@ -12,7 +20,7 @@ export interface FormDataShape {
   message: string
 }
 
-const ESContactForm: React.FC = () => {
+const ESContactFormComp: React.FC = () => {
 
   const [formData, setFormData] = useState<FormDataShape>({
     name: '',
@@ -28,28 +36,60 @@ const ESContactForm: React.FC = () => {
     message: ''
   });
 
+  let submitOk = false;
+
+  if(
+    formData.name !== '' &&
+    formData.email !== '' &&
+    formData.subject !== '' &&
+    formData.message !== '' &&
+    errors.name === '' &&
+    errors.email === '' &&
+    errors.subject === '' &&
+    errors.message === '' 
+  ){
+    submitOk = true;
+  };
+  
+  console.log('submitOK: ', submitOk);
+
+  useEffect(() => {
+    ESNameCorrectValidation(formData, setErrors);
+  },[formData.name])
+ 
+  useEffect(() => {
+    ESEmailCorrectValidation(formData, setErrors);
+  },[formData.email])
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-    ESContactValidation(formData, setErrors);
+    setErrors((prevData) => ({
+      ...prevData,
+      [name]: '',
+    }));
+    console.log(name, value);
+    console.log(formData, errors);
   };
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   console.log(formData);
-  // }
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('exploservice/contact', formData)
-      toast.success('Mensaje enviado exitosamente!!')
-      setTimeout(() => {
-        window.location.href = '/exploservice';
-      }, 2000);
+      if(!submitOk){
+        console.log('if en handleSubmit')
+        ESNameExistsValidation(formData, setErrors);
+        ESEmailExistsValidation(formData, setErrors);
+        ESSubjectExistsValidation(formData, setErrors);
+        return ESMessageExistsValidation(formData, setErrors);
+      }
+        await axios.post('exploservice/contact', formData)
+        toast.success('Mensaje enviado exitosamente!!')
+        setTimeout(() => {
+          window.location.href = '/exploservice/company';
+        }, 2000);
     } catch (error: any) {
 
     if (error?.response?.data?.message) {
@@ -73,51 +113,62 @@ const ESContactForm: React.FC = () => {
         <h2>Envianos un mensaje</h2>
         <div>
           <div className={styles.inputBlock}>
-            <label htmlFor='name'><p>Nombre:  </p></label>
+            <label htmlFor='name'>Nombre:  </label>
             <input
               type='text'
               id='name'
               name='name' 
               placeholder='Ingresa nombre'
+              value={formData.name}
               onChange={handleInputChange}/>
           </div>
-            <p>{errors.name}</p>
+          <p className={styles.errMessage}>{errors.name}</p>
           <div className={styles.inputBlock}>
-            <label htmlFor='email'><p>Email:  </p></label>
+            <label htmlFor='email'>Email:  </label>
             <input
               type='text'
               id='email'
               name='email'
               placeholder='Ingresa email'
+              value={formData.email}
               onChange={handleInputChange}/>
           </div>
-              <p>{errors.email}</p>
+          <p className={styles.errMessage}>{errors.email}</p>
           <div className={styles.inputBlock}>
-            <label htmlFor='subject'><p>Asunto:  </p></label>
+            <label htmlFor='subject'>Asunto:  </label>
             <input
-              type='text'
+              type="text"
               id='subject'
               name='subject'
               placeholder='Ingresa asunto'
+              value={formData.subject}
               onChange={handleInputChange}/>
           </div>
+          <p className={styles.errMessage}>{errors.subject}</p>
           <div className={styles.textareaBlock}>
-            <label htmlFor="message"><p>Mensaje:  </p></label>
+            <label htmlFor="message">Mensaje:  </label>
             <textarea
               id='message'
               name='message'
               placeholder='Ingresa tu mensaje aquí...'
+              value={formData.message}
               onChange={handleInputChange}
-              required>
+            >
             </textarea>
           </div>
+          <p className={styles.errMessage}>{errors.message}</p>
         </div>
         <div className={styles.submitBox}>
-          <button type='submit' className={styles.submit}>Enviar</button>
+          <button
+            type='submit'
+            className={styles.submit}
+          >
+           Enviar
+          </button>
         </div>
       </form>
     </div>
   )
 }
 
-export default ESContactForm
+export default ESContactFormComp

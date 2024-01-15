@@ -21,12 +21,6 @@
         @include g.create-flexbox(column, space-between);
         align-items: flex-start;
         width: 100%;
-        label{
-            p{
-                margin: 0;
-                color: rgb(150, 150, 150);
-            }
-        }
         input{
             font-size: g.$mobile-p-font-size;
             box-sizing: border-box;
@@ -36,6 +30,10 @@
             };
         }
     }
+    p{
+        margin: 0;
+        color: g.$red-color;
+    }
     .textareaBlock{
         margin-top: 15px;
         width: 100%;
@@ -43,10 +41,6 @@
         align-items: flex-start;
         label{
             width: 20%;
-            p{
-                margin: 0;
-                color: rgb(150, 150, 150);
-            }
             @include g.display-large{
             };
         }
@@ -60,6 +54,10 @@
                 height: 15vh;
             };
         }
+    }
+    p{
+        margin: 0;
+        color: g.$red-color;
     }
     .submitBox{
         width: 100%;
@@ -78,13 +76,16 @@
             border-radius: 4px;
             width: 70%;
             height: 36px;
-            font-weight: 400;
+            font-weight: 300;
             font-size: calc(g.$mobile-h2-font-size * .85);
             @include g.display-large{
-                font-size: g.$desk-p-font-size; 
+                font-size: calc(g.$desk-h3-font-size * 1); 
             };
         }.submit:hover{
             background-color: g.$es-dark-color;
+        }.submit:disabled{
+            background-color: g.$es-light-color;
+            color: g.$grey-color;
         }
     }
 }
