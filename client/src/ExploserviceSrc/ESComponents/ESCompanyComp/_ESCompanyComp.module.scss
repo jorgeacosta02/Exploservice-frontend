@@ -57,13 +57,11 @@
         .introContainer{
             box-sizing: border-box;
             width: 100%;
-            // margin-left: 2%;
             @include g.create-flexbox(column, center);
-            // align-items: flex-start;
-            // gap: 30px;
             border: 1px solid grey;
             padding: 2vh 4vw;
             border-radius: 8px;
+            box-shadow: 5px 5px 10px g.$grey-color;
             p{
                 text-align: left;
                 margin: 0 0 1.5vh 0;

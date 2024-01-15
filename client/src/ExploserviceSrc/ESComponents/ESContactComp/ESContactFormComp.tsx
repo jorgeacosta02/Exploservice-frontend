@@ -22,8 +22,8 @@ const ESContactForm: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<FormDataShape>({
-    name: "",
-    email: "",
+    name: '',
+    email: '',
     subject: '',
     message: ''
   });
@@ -45,8 +45,8 @@ const ESContactForm: React.FC = () => {
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("exploservice/contact", formData)
-      toast.success("Mensaje enviado exitosamente!!")
+      await axios.post('exploservice/contact', formData)
+      toast.success('Mensaje enviado exitosamente!!')
       setTimeout(() => {
         window.location.href = '/exploservice';
       }, 2000);
@@ -56,21 +56,19 @@ const ESContactForm: React.FC = () => {
         const errorMessage = error.response.data.message;
         toast.error(errorMessage);
       } else {
-      toast.error("Error al enviar el mensaje.");
+      toast.error('Error al enviar el mensaje.');
       }
     }
     setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
     })
   };
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.data}>
-      </div> */}
       <form onSubmit={handleSubmit}>
         <h2>Envianos un mensaje</h2>
         <div>
@@ -97,7 +95,7 @@ const ESContactForm: React.FC = () => {
           <div className={styles.inputBlock}>
             <label htmlFor='subject'><p>Asunto:  </p></label>
             <input
-              type="text"
+              type='text'
               id='subject'
               name='subject'
               placeholder='Ingresa asunto'

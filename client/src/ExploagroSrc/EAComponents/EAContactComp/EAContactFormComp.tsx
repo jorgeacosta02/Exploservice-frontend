@@ -61,29 +61,19 @@ const EAContactFormComp: React.FC = () => {
     EAEmailCorrectValidation(formData, setErrors);
   },[formData.email])
 
-  useEffect(() => {
-    EASubjectExistsValidation(formData, setErrors);
-  },[formData.subject])
- 
-  useEffect(() => {
-    EAMessageExistsValidation(formData, setErrors);
-  },[formData.message])
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+    setErrors((prevData) => ({
+      ...prevData,
+      [name]: '',
+    }));
     console.log(name, value);
     console.log(formData, errors);
   };
-
-  // const handleCheck: React.MouseEventHandler<HTMLButtonElement> = () => {
-  //   console.log('handleCheck')
-  //   EANameExistsValidation(formData, setErrors);
-  //   EAEmailExistsValidation(formData, setErrors);
-  // };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
@@ -95,8 +85,8 @@ const EAContactFormComp: React.FC = () => {
         EASubjectExistsValidation(formData, setErrors);
         return EAMessageExistsValidation(formData, setErrors);
       }
-        await axios.post("exploagro/contact", formData)
-        toast.success("Mensaje enviado exitosamente!!")
+        await axios.post('exploagro/contact', formData)
+        toast.success('Mensaje enviado exitosamente!!')
         setTimeout(() => {
           window.location.href = '/exploagro';
         }, 2000);
@@ -106,21 +96,19 @@ const EAContactFormComp: React.FC = () => {
         const errorMessage = error.response.data.message;
         toast.error(errorMessage);
       } else {
-      toast.error("Error al enviar el mensaje.");
+      toast.error('Error al enviar el mensaje.');
       }
     }
     setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
     })
   };
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.data}>
-      </div> */}
       <form onSubmit={handleSubmit}>
         <h2>Envianos un mensaje</h2>
         <div>
