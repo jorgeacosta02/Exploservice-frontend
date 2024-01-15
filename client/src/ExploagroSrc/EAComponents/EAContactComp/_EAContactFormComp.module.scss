@@ -21,12 +21,6 @@
         @include g.create-flexbox(column, space-between);
         align-items: flex-start;
         width: 100%;
-        label{
-            p{
-                margin: 0;
-                color: rgb(150, 150, 150);
-            }
-        }
         input{
             font-size: g.$mobile-p-font-size;
             box-sizing: border-box;
@@ -36,6 +30,10 @@
             };
         }
     }
+    p{
+        margin: 0;
+        color: g.$red-color;
+    }
     .textareaBlock{
         margin-top: 15px;
         width: 100%;
@@ -43,10 +41,6 @@
         align-items: flex-start;
         label{
             width: 20%;
-            p{
-                margin: 0;
-                color: rgb(150, 150, 150);
-            }
             @include g.display-large{
             };
         }
@@ -60,6 +54,10 @@
                 height: 15vh;
             };
         }
+    }
+    p{
+        margin: 0;
+        color: g.$red-color;
     }
     .submitBox{
         width: 100%;

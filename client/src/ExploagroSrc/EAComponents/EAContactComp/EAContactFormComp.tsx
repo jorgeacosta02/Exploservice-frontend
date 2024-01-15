@@ -122,7 +122,7 @@ const EAContactFormComp: React.FC = () => {
               value={formData.name}
               onChange={handleInputChange}/>
           </div>
-          <p>{errors.name}</p>
+          <p className={styles.errMessage}>{errors.name}</p>
           <div className={styles.inputBlock}>
             <label htmlFor='email'>Email:  </label>
             <input
@@ -133,7 +133,7 @@ const EAContactFormComp: React.FC = () => {
               value={formData.email}
               onChange={handleInputChange}/>
           </div>
-          <p>{errors.email}</p>
+          <p className={styles.errMessage}>{errors.email}</p>
           <div className={styles.inputBlock}>
             <label htmlFor='subject'>Asunto:  </label>
             <input
@@ -144,7 +144,7 @@ const EAContactFormComp: React.FC = () => {
               value={formData.subject}
               onChange={handleInputChange}/>
           </div>
-          <p>{errors.subject}</p>
+          <p className={styles.errMessage}>{errors.subject}</p>
           <div className={styles.textareaBlock}>
             <label htmlFor="message">Mensaje:  </label>
             <textarea
@@ -156,7 +156,7 @@ const EAContactFormComp: React.FC = () => {
             >
             </textarea>
           </div>
-          <p>{errors.message}</p>
+          <p className={styles.errMessage}>{errors.message}</p>
         </div>
         <div className={styles.submitBox}>
           <button
