@@ -10,6 +10,10 @@ import imgMSC from '../../ESAssets/ESImages/ESClients/mineraSantaCruz.jpg'
 import imgZlato from '../../ESAssets/ESImages/ESClients/zlato.jpg'
 import imgAlya from '../../ESAssets/ESImages/ESClients/alya.png'
 import imgAlPat from '../../ESAssets/ESImages/ESClients/alcalis_IDENTIDAD-CURVAS-2-1.png'
+import imgXtrata from '../../ESAssets/ESImages/ESClients/xstrata_copper_logo.jpg'
+import imgMASA from '../../ESAssets/ESImages/ESClients/minas_argentinas_s_a_logo.jpg'
+import imgBajoAlum from '../../ESAssets/ESImages/ESClients/alumbrera.jpg'
+import imgCNEA from '../../ESAssets/ESImages/ESClients/CMEA.jpg'
 
 const ESCompanyComp = () => {
   return (
@@ -21,13 +25,13 @@ const ESCompanyComp = () => {
         <h2 className={styles.our}>Nuestros inicios</h2>
         <div className={styles.introContainer}>
           <p>
-            Al hacer una introducción de Exploserivce y ADL, no debemos olvidar la experiencia absorbida en Magma Ingeniería Minera, empresa de servicos formada por egresados de la Facultad de Ingeniería de la Universidad Nacional de Cuyo. Obras como Altas cumbres (Córdoba), Embalse Río Grande, Itaipú; entre otras como minería de Uranio y Malagueño.
+            Al hacer una introducción de Exploserivce y ADL, no debemos olvidar la experiencia absorbida en Magma Ingeniería Minera (1977), empresa de servicos formada por egresados de la Facultad de Ingeniería de la Universidad Nacional de Cuyo. Obras como Altas cumbres (Córdoba), Embalse Río Grande (Córdoba), Itaipú (Misiones); entre otras como minería de Uranio y Malagueño Córdoba.
           </p>
           <p>
             Pasada la "aventura" de Malvinas, nos concuentra nuevamente en torno a la Faculatad de Ingeniería de la Universidad Nacional de San Juan, desarrollando el proyecto de Repositorio Nuclear, en Gastre.
           </p>
           <p>
-            La cercanía al Instituto de Investigaciones Mineras de la U.N.S.J. y la docencia, fueron el respaldo, para un ampli catálogo de valiosas ideas, refrendadas por el ejercicio profesional de nuestra especialidad minera.
+            La cercanía al Instituto de Investigaciones Mineras de la U.N.S.J. y la docencia, fueron el respaldo, para un amplio catálogo de valiosas ideas, refrendadas por el ejercicio profesional de nuestra especialidad minera.
           </p>
           <p>
             Esta etapa que continúa, ininterrumpidamente, comienza con la ejecución de labores de formación de bancos y camino a botadero para Mount Isa Minerales en Bajo La Alumbrera.
@@ -51,10 +55,15 @@ const ESCompanyComp = () => {
           <img src={imgZlato} alt="imgZlato" />
           <img src={imgAlya} alt="imgAlya" />
           <img src={imgAlPat} alt="imgAlPat" />
+          <img src={imgXtrata} alt="imgAlPat" />
+          <img src={imgMASA} alt="imgAlPat" />
+          <img src={imgBajoAlum} alt="imgAlPat" />
+          <img src={imgCNEA} alt="imgAlPat" />
         </div>
         <p>Con una extensa experiencia trabajando asociados a nuestros clientes desde las etapas iniciales hasta el final de cada proyecto, ofrecemos un amplio rango de alternativas adaptándonos para cubir cada necesidad específica.</p>
       </div>
     </div>
+    // Minera salta, xtrata copper, pachon sa minera, minas argentinas, bajo la alumnbrera minera alumbrera Ymad ute., comision nacional de energía atómica.
   )
 }
 
