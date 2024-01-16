@@ -1,8 +1,6 @@
 import { 
     TOGGLE_STYLE,
-    ToggleStyleAction,
     FALSE_STYLE,
-    FalseStyleAction,
 } from './actions';
 
 
