@@ -39,6 +39,10 @@ const ESCompanyComp = () => {
         </div>
       </div>
       <div className={styles.clientsContainer}>
+        <h2 className={styles.our}>Nuestras instalaciones</h2>
+        <p>La idea es colocar en este espacio un detalle con fotos de las instalaciones de exploserice, galón, oficinas, polvorín.</p>
+      </div>
+      <div className={styles.clientsContainer}>
         <h2 className={styles.our}>Nuestros clientes</h2>
         <p>
           A lo largo de nuestra trayectorio hemos prestado servicios a empresas de renombre en el ambiente minero a nivel nacional e internacional entre las que se encuentran las siguientes.
