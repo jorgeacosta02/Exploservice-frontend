@@ -20,7 +20,7 @@ const ESCompanyComp = () => {
     <div className={styles.container}>
       <div className={styles.mainImage}>
       </div>
-      <div className={styles.mainText}>
+      {/* <div className={styles.mainText}>
         <h1 className={styles.title}>EXPLOSERVICE - ADL S.R.L.</h1>
         <h2 className={styles.our}>Nuestros inicios</h2>
         <div className={styles.introContainer}>
@@ -37,7 +37,7 @@ const ESCompanyComp = () => {
             Esta etapa que continúa, ininterrumpidamente, comienza con la ejecución de labores de formación de bancos y camino a botadero para Mount Isa Minerales en Bajo La Alumbrera.
           </p>
         </div>
-      </div>
+      </div> */}
       <div className={styles.clientsContainer}>
         <h2 className={styles.our}>Nuestras instalaciones</h2>
         <p>La idea es colocar en este espacio un detalle con fotos de las instalaciones de exploserice, galón, oficinas, polvorín.</p>
