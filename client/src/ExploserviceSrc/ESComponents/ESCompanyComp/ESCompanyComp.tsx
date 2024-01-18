@@ -13,7 +13,7 @@ import imgAlPat from '../../ESAssets/ESImages/ESClients/alcalis_IDENTIDAD-CURVAS
 import imgXtrata from '../../ESAssets/ESImages/ESClients/xstrata_copper_logo.jpg'
 import imgMASA from '../../ESAssets/ESImages/ESClients/minas_argentinas_s_a_logo.jpg'
 import imgBajoAlum from '../../ESAssets/ESImages/ESClients/alumbrera.jpg'
-import imgCNEA from '../../ESAssets/ESImages/ESClients/CMEA.jpg'
+// import imgCNEA from '../../ESAssets/ESImages/ESClients/CMEA.jpg'
 
 const ESCompanyComp = () => {
   return (
@@ -59,10 +59,10 @@ const ESCompanyComp = () => {
           <img src={imgZlato} alt="imgZlato" />
           <img src={imgAlya} alt="imgAlya" />
           <img src={imgAlPat} alt="imgAlPat" />
-          <img src={imgXtrata} alt="imgAlPat" />
+          <img src={imgXtrata} alt="imgXtrata" />
           <img src={imgMASA} alt="imgAlPat" />
-          <img src={imgBajoAlum} alt="imgAlPat" />
-          <img src={imgCNEA} alt="imgAlPat" />
+          <img src={imgBajoAlum} alt="imgBAjoAlum" />
+          {/* <img src={imgCNEA} alt="imgCNEA" /> */}
         </div>
         <p>Con una extensa experiencia trabajando asociados a nuestros clientes desde las etapas iniciales hasta el final de cada proyecto, ofrecemos un amplio rango de alternativas adaptándonos para cubir cada necesidad específica.</p>
       </div>
