@@ -5,7 +5,7 @@ import ESServicesPage from './ExploserviceSrc/ESPages/ESServicesPage/ESServicesP
 import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
 import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
 import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
-import ESEquipmentPage from './ExploserviceSrc/ESPages/ESEquipmentPage/ESEquipmentPage';
+import ESEquipmentPage from './pages/equipmentPage/equipmentPage';
 import ESJobsPage from './ExploserviceSrc/ESPages/ESJobsPage/ESJobsPage';
 import ESContactPage from './pages/contactPage/contactPage';
 
