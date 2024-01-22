@@ -28,35 +28,35 @@ const NavBarNavListComp = () => {
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploservice/company" 
+            to="/company" 
             className={styles.navLink} 
            >Empresa</NavLink>
         </li>
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploservice/services" 
+            to="/services" 
             className={styles.navLink} 
            >Servicios</NavLink>
         </li>
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploservice/equipment" 
+            to="/equipment" 
             className={styles.navLink} 
            >Equipos</NavLink>
         </li>
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploservice/works" 
+            to="/jobs" 
             className={styles.navLink} 
            >Trabajos</NavLink>
         </li>
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
-            to="/exploservice/contact" 
+            to="/contact" 
             className={styles.navLink} 
            >Contacto</NavLink>
         </li>

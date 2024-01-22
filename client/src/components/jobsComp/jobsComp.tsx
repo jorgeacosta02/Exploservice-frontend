@@ -1,8 +1,8 @@
 import styles from './_jobsComp.module.scss'
-import imgCasposo from '../../Assets/Images/Works/casposo01.jpg'
-import imgKarouni from '../../Assets/Images/Works/minaKaroniGuyana.jpg'
-import imgPacsuaLama01 from '../../Assets/Images/Works/pascuaLama01.jpg'
-import imgPacsuaLama02 from '../../Assets/Images/Works/pascuaLama02.jpg'
+import imgCasposo from '../../Assets/Images/jobs/casposo01.jpg'
+import imgKarouni from '../../Assets/Images/jobs/minaKaroniGuyana.jpg'
+import imgPacsuaLama01 from '../../Assets/Images/jobs/pascuaLama01.jpg'
+import imgPacsuaLama02 from '../../Assets/Images/jobs/pascuaLama02.jpg'
 
 
 const JobsComp = () => {
