@@ -1,8 +1,8 @@
-import styles from './_ESLogoComp.module.scss';
-import ESLogoImg from '../../ESAssets/ESImages/ES-Logos-Brands/Exploservice-Logo-Brand.png';
-import ADLLogo from '../../ESAssets/ESImages/ES-Logos-Brands/ADLLogo.png';
+import styles from './_LogoComp.module.scss';
+import ESLogoImg from '../../Assets/Images/Logos&Brands/ExploserviceLogoBrand.png';
+import ADLLogo from '../../Assets/Images/Logos&Brands/ADLLogo.png';
 
-const ESLogoComp = () => {
+const logoComp = () => {
   return (
     <div className={styles.container}>
       <img
@@ -19,4 +19,4 @@ const ESLogoComp = () => {
   )
 }
 
-export default ESLogoComp
+export default logoComp
