@@ -1,11 +1,11 @@
-import styles from './_ESJobsComp.module.scss'
-import imgCasposo from '../../ESAssets/ESImages/ESWorks/casposo01.jpg'
-import imgKarouni from '../../ESAssets/ESImages/ESWorks/minaKaroniGuyana.jpg'
-import imgPacsuaLama01 from '../../ESAssets/ESImages/ESWorks/pascuaLama01.jpg'
-import imgPacsuaLama02 from '../../ESAssets/ESImages/ESWorks/pascuaLama02.jpg'
+import styles from './_jobsComp.module.scss'
+import imgCasposo from '../../Assets/Images/Works/casposo01.jpg'
+import imgKarouni from '../../Assets/Images/Works/minaKaroniGuyana.jpg'
+import imgPacsuaLama01 from '../../Assets/Images/Works/pascuaLama01.jpg'
+import imgPacsuaLama02 from '../../Assets/Images/Works/pascuaLama02.jpg'
 
 
-const ESJobsComp = () => {
+const jobsComp = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.our}>Nuestros trabajos</h2>
@@ -92,4 +92,4 @@ const ESJobsComp = () => {
   )
 }
 
-export default ESJobsComp
+export default jobsComp
