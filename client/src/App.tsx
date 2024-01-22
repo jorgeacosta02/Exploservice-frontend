@@ -8,6 +8,9 @@ import ContactPage from './pages/contactPage/contactPage';
 import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
 import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
 import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
+import SignupPage from './pages/signupPage/SignupPage';
+import LoginPage from './pages/loginPage/LoginPage';
+
 
 const App = () => {
   return (
@@ -16,6 +19,15 @@ const App = () => {
 
         {/*General Routes*/}
         <Route path="/" element={<LandingPage />} />
+
+        {/*Register Routes*/}
+        <Route path='/signup' element={<SignupPage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/tasks' element={<h1>tasks</h1>}/>
+        <Route path='/add-task' element={<h1>add-task</h1>}/>
+        <Route path='/task/:id' element={<h1>task/:id</h1>}/>
+        <Route path='/profile' element={<h1>profile</h1>}/>
+  
 
         {/*Exploservice Routes*/}
         <Route path="/company" element={<CompanyPage />} />
