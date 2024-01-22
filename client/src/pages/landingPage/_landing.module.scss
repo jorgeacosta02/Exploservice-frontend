@@ -1,4 +1,4 @@
-@use '../styles/globals' as g;
+@use '../../styles/globals' as g;
 
 .esadlbg{
     position: absolute;
@@ -13,7 +13,7 @@
     position: absolute;
     width: 50vw;
     height: 100vh;
-    background-image: url('../ExploserviceSrc/ESAssets/ESImages/ESServices/Voladura/blasting03.jpg');
+    background-image: url('../../Assets/Images/Services/Voladura/blasting03.jpg');
     background-size: cover;
     // background-position: center;
     filter: grayscale(0%);
@@ -35,7 +35,7 @@
     left: 0;
     width: 50vw;
     height: 100vh;
-    background-image: url('../ExploagroSrc/EAAssets/EAImages/campo-04.jpg');
+    background-image: url('../../ExploagroSrc/EAAssets/EAImages/campo-04.jpg');
     background-size: cover;
     background-position: center;
     filter: grayscale(0%);

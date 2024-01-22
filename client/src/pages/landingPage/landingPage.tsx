@@ -1,8 +1,8 @@
 import styles from './_landing.module.scss'
 import { NavLink } from 'react-router-dom'
-import LogoBrand from '../Assets/Images/Logos&Brands/ExploserviceLogoBrand.png'
-import ADLLogo from '../Assets/Images/Logos&Brands/ADLLogo2.png'
-import EALogo from '../ExploagroSrc/EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
+import LogoBrand from '../../Assets/Images/Logos&Brands/ExploserviceLogoBrand.png'
+import ADLLogo from '../../Assets/Images/Logos&Brands/ADLLogo2.png'
+import EALogo from '../../ExploagroSrc/EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
 
 const LandingPage = () => {
   return (
