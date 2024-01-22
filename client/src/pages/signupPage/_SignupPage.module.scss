@@ -10,6 +10,7 @@
         width: 100%;
         @include g.create-flexbox(column, space-between);
         align-items: center;
+        gap: 2vh;
         .inputBlock{
             width: 90%;
             label{
