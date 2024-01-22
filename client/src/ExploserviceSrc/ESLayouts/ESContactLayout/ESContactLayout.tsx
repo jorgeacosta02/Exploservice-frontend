@@ -1,6 +1,6 @@
 import styles from './_ESContactLayout.module.scss'
-import ESContactFormComp from '../../ESComponents/ESContactComp/ESContactFormComp'
-import ESContactDataComp from '../../ESComponents/ESContactComp/ESContactDataComp'
+import ESContactFormComp from '../../ESComponents/contactComp/contactFormComp'
+import ESContactDataComp from '../../ESComponents/contactComp/contactDataComp'
 
 const ESContactLayout = () => {
   return (

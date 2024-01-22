@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import {
-  ESNameCorrectValidation,
-  ESNameExistsValidation,
-  ESEmailCorrectValidation,
-  ESEmailExistsValidation,
-  ESSubjectExistsValidation,
-  ESMessageExistsValidation
-} from './ESContactValidation';
+  nameCorrectValidation,
+  nameExistsValidation,
+  emailCorrectValidation,
+  emailExistsValidation,
+  subjectExistsValidation,
+  messageExistsValidation
+} from './contactValidation';
 
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -20,7 +20,7 @@ export interface FormDataShape {
   message: string
 }
 
-const ESContactFormComp: React.FC = () => {
+const contactFormComp: React.FC = () => {
 
   const [formData, setFormData] = useState<FormDataShape>({
     name: '',
@@ -54,11 +54,11 @@ const ESContactFormComp: React.FC = () => {
   console.log('submitOK: ', submitOk);
 
   useEffect(() => {
-    ESNameCorrectValidation(formData, setErrors);
+    nameCorrectValidation(formData, setErrors);
   },[formData.name])
  
   useEffect(() => {
-    ESEmailCorrectValidation(formData, setErrors);
+    emailCorrectValidation(formData, setErrors);
   },[formData.email])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -80,10 +80,10 @@ const ESContactFormComp: React.FC = () => {
     try {
       if(!submitOk){
         console.log('if en handleSubmit')
-        ESNameExistsValidation(formData, setErrors);
-        ESEmailExistsValidation(formData, setErrors);
-        ESSubjectExistsValidation(formData, setErrors);
-        return ESMessageExistsValidation(formData, setErrors);
+        nameExistsValidation(formData, setErrors);
+        emailExistsValidation(formData, setErrors);
+        subjectExistsValidation(formData, setErrors);
+        return messageExistsValidation(formData, setErrors);
       }
         await axios.post('exploservice/contact', formData)
         toast.success('Mensaje enviado exitosamente!!')
@@ -171,4 +171,4 @@ const ESContactFormComp: React.FC = () => {
   )
 }
 
-export default ESContactFormComp
+export default contactFormComp

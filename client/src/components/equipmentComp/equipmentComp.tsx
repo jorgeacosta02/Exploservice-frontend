@@ -1,9 +1,9 @@
-import styles from './_ESEquipmentComp.module.scss'
-import frd from '../../ESAssets/ESImages/ESEquipment/frd1200-01.png'
-import atlas from '../../ESAssets/ESImages/ESEquipment/atlas-f9-01.png'
-import tamrock from '../../ESAssets/ESImages/ESEquipment/tamrock01.png'
+import styles from './_equipmentComp.module.scss'
+import frd from '../../Assets/Images/equipment/frd1200-01.png'
+import atlas from '../../Assets/Images/equipment/atlas-f9-01.png'
+import tamrock from '../../Assets/Images/equipment/tamrock01.png'
 
-const ESEquipmentComp = () => {
+const equipmentComp = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.our}>Nuestros equipos</h2>
@@ -34,4 +34,4 @@ const ESEquipmentComp = () => {
   )
 }
 
-export default ESEquipmentComp
+export default equipmentComp

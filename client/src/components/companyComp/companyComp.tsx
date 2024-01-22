@@ -1,21 +1,21 @@
-import styles from './_ESCompanyComp.module.scss';
-import imgTroy from '../../ESAssets/ESImages/ESClients/troy.png'
-import imgAustralGold from '../../ESAssets/ESImages/ESClients/australgold.png'
-import imgBarrick from '../../ESAssets/ESImages/ESClients/barrick.png'
-import imgYamana from '../../ESAssets/ESImages/ESClients/yamana.png'
-import imgMapal from '../../ESAssets/ESImages/ESClients/mapal.jpg'
-import imgCartellone from '../../ESAssets/ESImages/ESClients/cartellone.jpg'
-import imgSW from '../../ESAssets/ESImages/ESClients/sterling&wilson.png'
-import imgMSC from '../../ESAssets/ESImages/ESClients/mineraSantaCruz.jpg'
-import imgZlato from '../../ESAssets/ESImages/ESClients/zlato.jpg'
-import imgAlya from '../../ESAssets/ESImages/ESClients/alya.png'
-import imgAlPat from '../../ESAssets/ESImages/ESClients/alcalis_IDENTIDAD-CURVAS-2-1.png'
-import imgXtrata from '../../ESAssets/ESImages/ESClients/xstrata_copper_logo.jpg'
-import imgMASA from '../../ESAssets/ESImages/ESClients/minas_argentinas_s_a_logo.jpg'
-import imgBajoAlum from '../../ESAssets/ESImages/ESClients/alumbrera.jpg'
-// import imgCNEA from '../../ESAssets/ESImages/ESClients/CMEA.jpg'
+import styles from './_CompanyComp.module.scss';
+import imgTroy from '../../Assets/Images/Clients/troy.png'
+import imgAustralGold from '../../Assets/Images/Clients/australgold.png'
+import imgBarrick from '../../Assets/Images/Clients/barrick.png'
+import imgYamana from '../../Assets/Images/Clients/yamana.png'
+import imgMapal from '../../Assets/Images/Clients/mapal.jpg'
+import imgCartellone from '../../Assets/Images/Clients/cartellone.jpg'
+import imgSW from '../../Assets/Images/Clients/sterling&wilson.png'
+import imgMSC from '../../Assets/Images/clients/mineraSantaCruz.jpg'
+import imgZlato from '../../Assets/Images/clients/zlato.jpg'
+import imgAlya from '../../Assets/Images/clients/alya.png'
+import imgAlPat from '../../Assets/Images/clients/alcalis_IDENTIDAD-CURVAS-2-1.png'
+import imgXtrata from '../../Assets/Images/clients/xstrata_copper_logo.jpg'
+import imgMASA from '../../Assets/Images/cients/minas_argentinas_s_a_logo.jpg'
+import imgBajoAlum from '../../Assets/Images/clients/alumbrera.jpg'
+// import imgCNEA from '../../Assets/Images/clients/CMEA.jpg'
 
-const ESCompanyComp = () => {
+const companyComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainImage}>
@@ -71,4 +71,4 @@ const ESCompanyComp = () => {
   )
 }
 
-export default ESCompanyComp
+export default companyComp

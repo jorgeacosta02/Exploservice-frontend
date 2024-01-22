@@ -1,6 +1,6 @@
 import styles from './_Landing.module.scss'
 import { NavLink } from 'react-router-dom'
-import ESLogoBrand from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/Exploservice-Logo-Brand.png'
+import LogoBrand from '../Assets/Images/Logos&Brands/ExploserviceLogoBrand.png'
 import ADLLogo from '../ExploserviceSrc/ESAssets/ESImages/ES-Logos-Brands/ADLLogo2.png'
 import EALogo from '../ExploagroSrc/EAAssets/EAImages/EA-Logo-Brand/Exploagro-Logo-Brand.png'
 
@@ -11,7 +11,7 @@ const LandingPage = () => {
       <div className={styles.esadlLinkContainer}>
         <NavLink to='/exploservice/company' className={styles.navLink}>
           <img
-            src={ESLogoBrand}
+            src={LogoBrand}
             alt="Exploservice Logo"
             // className={styles.ESlogobrand}
             />
