@@ -3,7 +3,7 @@ import frd from '../../Assets/Images/equipment/frd1200-01.png'
 import atlas from '../../Assets/Images/equipment/atlas-f9-01.png'
 import tamrock from '../../Assets/Images/equipment/tamrock01.png'
 
-const equipmentComp = () => {
+const EquipmentComp = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.our}>Nuestros equipos</h2>
@@ -34,4 +34,4 @@ const equipmentComp = () => {
   )
 }
 
-export default equipmentComp
+export default EquipmentComp

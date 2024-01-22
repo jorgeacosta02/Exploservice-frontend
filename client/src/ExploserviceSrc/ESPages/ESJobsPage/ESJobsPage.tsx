@@ -1,5 +1,5 @@
-import NavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESJobsComp from '../../ESComponents/ESJobsComp/ESJobsComp'
+import NavBarLayout from '../../../layouts/navBarLayout/navBarLayout'
+import ESJobsComp from '../../../components/jobsComp/jobsComp'
 import ESFooterComp from '../../../components/footerComp/footerComp'
 
 const ESJobsPage = () => {

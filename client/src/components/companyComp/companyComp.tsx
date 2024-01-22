@@ -15,7 +15,7 @@ import imgMASA from '../../Assets/Images/cients/minas_argentinas_s_a_logo.jpg'
 import imgBajoAlum from '../../Assets/Images/clients/alumbrera.jpg'
 // import imgCNEA from '../../Assets/Images/clients/CMEA.jpg'
 
-const companyComp = () => {
+const CompanyComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainImage}>
@@ -71,4 +71,4 @@ const companyComp = () => {
   )
 }
 
-export default companyComp
+export default CompanyComp

@@ -1,5 +1,5 @@
-import ESNavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESServicesComp from '../../ESComponents/ESServicesComp/ESServicesComp'
+import ESNavBarLayout from '../../../layouts/navBarLayout/navBarLayout'
+import ESServicesComp from '../../../components/servicesComp/servicesComp'
 import ESFooterComp from '../../../components/footerComp/footerComp'
 
 const ESServicesPage = () => {

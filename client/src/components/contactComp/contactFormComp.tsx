@@ -20,7 +20,7 @@ export interface FormDataShape {
   message: string
 }
 
-const contactFormComp: React.FC = () => {
+const ContactFormComp: React.FC = () => {
 
   const [formData, setFormData] = useState<FormDataShape>({
     name: '',
@@ -171,4 +171,4 @@ const contactFormComp: React.FC = () => {
   )
 }
 
-export default contactFormComp
+export default ContactFormComp

@@ -13,7 +13,7 @@ import imgPD01 from '../../Assets/Images/services/PreDrilling/preDrilling01.jpg'
 import imgPD02 from '../../Assets/Images/services/PreDrilling/preDrilling02.jpg'
 import imgPD03 from '../../Assets/Images/services/PreDrilling/preDrilling03.jpg'
 
-const servicesComp = () => {
+const ServicesComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainImage}>
@@ -87,4 +87,4 @@ const servicesComp = () => {
   )
 }
 
-export default servicesComp
+export default ServicesComp

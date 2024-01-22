@@ -1,6 +1,6 @@
 import styles from './_footerComp.module.scss';
 
-const footerComp = () => {
+const FooterComp = () => {
   return (
     <div className={styles.container}>
       <p className={styles.text}>
@@ -10,4 +10,4 @@ const footerComp = () => {
   )
 }
 
-export default footerComp
+export default FooterComp

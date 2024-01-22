@@ -1,9 +1,9 @@
-import styles from './_menuComp.module.scss';
+import styles from './_navBarMenuComp.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { booleanState } from '../../redux/reducers';
 import { toggleStyle } from '../../redux/actions';
 
-const menuComp = () => {
+const NavBarMenuComp = () => {
 
   const dispatch = useDispatch<any>();
   const stylesReducer = useSelector(( state: booleanState ) => state.styles);
@@ -28,4 +28,4 @@ const menuComp = () => {
   )
 }
 
-export default menuComp
+export default NavBarMenuComp

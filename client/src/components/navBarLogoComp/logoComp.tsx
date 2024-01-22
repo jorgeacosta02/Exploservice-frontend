@@ -2,7 +2,7 @@ import styles from './_LogoComp.module.scss';
 import ESLogoImg from '../../Assets/Images/Logos&Brands/ExploserviceLogoBrand.png';
 import ADLLogo from '../../Assets/Images/Logos&Brands/ADLLogo.png';
 
-const logoComp = () => {
+const LogoComp = () => {
   return (
     <div className={styles.container}>
       <img
@@ -19,4 +19,4 @@ const logoComp = () => {
   )
 }
 
-export default logoComp
+export default LogoComp

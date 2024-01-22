@@ -1,6 +1,6 @@
-import styles from './_ESContactDataComp.module.scss'
+import styles from './_contactDataComp.module.scss'
 
-const EAContactDataComp = () => {
+const ContactDataComp = () => {
   return (
     <div className={styles.container}>
       <h2>Nuestros datos de contacto</h2>
@@ -28,4 +28,4 @@ const EAContactDataComp = () => {
   )
 }
 
-export default EAContactDataComp
+export default ContactDataComp

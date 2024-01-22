@@ -5,7 +5,7 @@ import imgPacsuaLama01 from '../../Assets/Images/Works/pascuaLama01.jpg'
 import imgPacsuaLama02 from '../../Assets/Images/Works/pascuaLama02.jpg'
 
 
-const jobsComp = () => {
+const JobsComp = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.our}>Nuestros trabajos</h2>
@@ -92,4 +92,4 @@ const jobsComp = () => {
   )
 }
 
-export default jobsComp
+export default JobsComp
