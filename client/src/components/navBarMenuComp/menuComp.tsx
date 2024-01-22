@@ -1,9 +1,9 @@
-import styles from './_ESMenuComp.module.scss';
+import styles from './_menuComp.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { booleanState } from '../../../redux/reducers';
-import { toggleStyle } from '../../../redux/actions';
+import { booleanState } from '../../redux/reducers';
+import { toggleStyle } from '../../redux/actions';
 
-const ESMenuComp = () => {
+const menuComp = () => {
 
   const dispatch = useDispatch<any>();
   const stylesReducer = useSelector(( state: booleanState ) => state.styles);
@@ -28,4 +28,4 @@ const ESMenuComp = () => {
   )
 }
 
-export default ESMenuComp
+export default menuComp
