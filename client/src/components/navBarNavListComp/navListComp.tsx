@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import styles from './_ESNavListComp.module.scss';
+import styles from './_navListComp.module.scss';
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../redux/types";
-import { falseStyle } from "../../../redux/actions";
+import { RootState } from "../../redux/types";
+import { falseStyle } from "../../redux/actions";
 
-const ESNavListComp = () => {
+const navListComp = () => {
 
   const stylesReducer = useSelector((state: RootState) => state.styles.styles);
 
@@ -64,4 +64,4 @@ const ESNavListComp = () => {
   )
 }
 
-export default ESNavListComp
+export default navListComp

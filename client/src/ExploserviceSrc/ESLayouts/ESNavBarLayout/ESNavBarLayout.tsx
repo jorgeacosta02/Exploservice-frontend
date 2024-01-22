@@ -1,6 +1,6 @@
 import React from "react"
 import ESLogoComp from "../../../components/navBarLogoComp/logoComp";
-import ESNavListComp from "../../ESComponents/ESNavBarNavListComp/ESNavListComp";
+import ESNavListComp from "../../../components/navBarNavListComp/navListComp";
 import ESMenuComp from "../../../components/navBarMenuComp/menuComp";
 import styles from './_ESNavBarLayout.module.scss';
 

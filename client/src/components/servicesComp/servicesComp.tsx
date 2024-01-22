@@ -1,20 +1,19 @@
+import styles from './_servicesComp.module.scss';
+import imgPPP01 from '../../Assets/Images/services/PerfParaProduccion/perfoProd01.png'
+import imgPPP02 from '../../Assets/Images/services/PerfParaProduccion/perfoProd02.jpg'
+import imgPGC01 from '../../Assets/Images/services/PerfParaGradeControl/perfoGradecontrol01.jpg'
+import imgPGC02 from '../../Assets/Images/services/PerfParaGradeControl/perfoGradecontrol02.jpg'
+import imgPGC03 from '../../Assets/Images/services/PerfParaGradeControl/perfoGradecontrol03.jpg'
+import imgPPC01 from '../../Assets/Images/services/PerfParaConstruccion/perfoBuilding01.jpg'
+import imgPPC02 from '../../Assets/Images/services/PerfParaConstruccion/perfoBuilding02.jpg'
+import imgBlasting01 from '../../Assets/Images/services/Voladura/blasting01.jpg'
+import imgBlasting02 from '../../Assets/Images/services/Voladura/blasting02.jpg'
+import imgBlasting03 from '../../Assets/Images/services/Voladura/blasting03.jpg'
+import imgPD01 from '../../Assets/Images/services/PreDrilling/preDrilling01.jpg'
+import imgPD02 from '../../Assets/Images/services/PreDrilling/preDrilling02.jpg'
+import imgPD03 from '../../Assets/Images/services/PreDrilling/preDrilling03.jpg'
 
-import styles from './_ESServicesComp.module.scss';
-import imgPPP01 from '../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd01.png'
-import imgPPP02 from '../../ESAssets/ESImages/ESServices/PerfParaProduccion/perfoProd02.jpg'
-import imgPGC01 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol01.jpg'
-import imgPGC02 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol02.jpg'
-import imgPGC03 from '../../ESAssets/ESImages/ESServices/PerfParaGradeControl/perfoGradecontrol03.jpg'
-import imgPPC01 from '../../ESAssets/ESImages/ESServices/PerfParaConstruccion/perfoBuilding01.jpg'
-import imgPPC02 from '../../ESAssets/ESImages/ESServices/PerfParaConstruccion/perfoBuilding02.jpg'
-import imgBlasting01 from '../../ESAssets/ESImages/ESServices/Voladura/blasting01.jpg'
-import imgBlasting02 from '../../ESAssets/ESImages/ESServices/Voladura/blasting02.jpg'
-import imgBlasting03 from '../../ESAssets/ESImages/ESServices/Voladura/blasting03.jpg'
-import imgPD01 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling01.jpg'
-import imgPD02 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling02.jpg'
-import imgPD03 from '../../ESAssets/ESImages/ESServices/PreDrilling/preDrilling03.jpg'
-
-const ESServicesComp = () => {
+const servicesComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mainImage}>
@@ -88,4 +87,4 @@ const ESServicesComp = () => {
   )
 }
 
-export default ESServicesComp
+export default servicesComp
