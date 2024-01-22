@@ -1,6 +1,6 @@
 import ESNavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
 import ESContactLayout from '../../ESLayouts/ESContactLayout/ESContactLayout'
-import ESFooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
+import ESFooterComp from '../../../components/footerComp/footerComp'
 
 const ESContactPage = () => {
   return (

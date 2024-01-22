@@ -1,6 +1,6 @@
 import NavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import ESEquipmentComp from '../../ESComponents/ESEquipmentComp/ESEquipmentComp'
-import ESFooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
+import ESEquipmentComp from '../../../components/equipmentComp/equipmentComp'
+import ESFooterComp from '../../../components/footerComp/footerComp'
 
 const ESEquipmentPage = () => {
   return (

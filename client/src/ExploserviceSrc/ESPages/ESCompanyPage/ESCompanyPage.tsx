@@ -1,6 +1,6 @@
 import NavBarLayout from '../../ESLayouts/ESNavBarLayout/ESNavBarLayout'
-import CompanyComp from '../../../ExploagroSrc/CompanyComp/CompanyComp'
-import FooterComp from '../../ESComponents/ESFooterComp/ESFooterComp'
+import CompanyComp from '../../../components/companyComp/companyComp'
+import FooterComp from '../../../components/footerComp/footerComp'
 
 const ESCompanyPage = () => {
   return (

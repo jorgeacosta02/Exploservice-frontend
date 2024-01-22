@@ -1,6 +1,6 @@
-import styles from './_ESFooterComp.module.scss';
+import styles from './_footerComp.module.scss';
 
-const ESFooterComp = () => {
+const footerComp = () => {
   return (
     <div className={styles.container}>
       <p className={styles.text}>
@@ -10,4 +10,4 @@ const ESFooterComp = () => {
   )
 }
 
-export default ESFooterComp
+export default footerComp
