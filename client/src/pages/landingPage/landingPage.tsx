@@ -9,7 +9,7 @@ const LandingPage = () => {
     <div>
       <div className={styles.esadlbg}></div>
       <div className={styles.esadlLinkContainer}>
-        <NavLink to='/exploservice/company' className={styles.navLink}>
+        <NavLink to='/company' className={styles.navLink}>
           <img
             src={LogoBrand}
             alt="Exploservice Logo"

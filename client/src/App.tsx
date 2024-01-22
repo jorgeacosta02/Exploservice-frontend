@@ -2,12 +2,12 @@ import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/landingPage/landingPage';
 import CompanyPage from './pages/companyPage/companyPage';
 import ServicesPage from './pages/servicesPage/servicesPage';
-import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
-import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
-import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
 import EquipmentPage from './pages/equipmentPage/equipmentPage';
 import JobsPage from './pages/jobsPage/lobsPage';
 import ContactPage from './pages/contactPage/contactPage';
+import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
+import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
+import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
 
 const App = () => {
   return (
