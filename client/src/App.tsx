@@ -6,7 +6,7 @@ import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
 import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
 import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
 import ESEquipmentPage from './pages/equipmentPage/equipmentPage';
-import ESJobsPage from './ExploserviceSrc/ESPages/ESJobsPage/ESJobsPage';
+import ESJobsPage from './pages/jobsPage/lobsPage';
 import ESContactPage from './pages/contactPage/contactPage';
 
 const App = () => {
