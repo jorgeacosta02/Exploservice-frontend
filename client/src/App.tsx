@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './GlobalPages/LandingPage';
 import ESCompanyPage from './pages/companyPage/companyPage';
-import ESServicesPage from './ExploserviceSrc/ESPages/ESServicesPage/ESServicesPage';
+import ESServicesPage from './pages/servicesPage/servicesPage';
 import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
 import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
 import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
