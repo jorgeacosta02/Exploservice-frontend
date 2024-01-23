@@ -25,7 +25,7 @@ const CompanyComp = () => {
         <h2 className={styles.our}>Nuestros inicios</h2>
         <div className={styles.introContainer}>
           <p>
-            Al hacer una introducción de Exploserivce y ADL, no debemos olvidar la experiencia absorbida en Magma Ingeniería Minera (1977), empresa de servicos formada por egresados de la Facultad de Ingeniería de la Universidad Nacional de Cuyo. Obras como Altas cumbres (Córdoba), Embalse Río Grande (Córdoba), Itaipú (Misiones); entre otras como minería de Uranio y Malagueño Córdoba.
+            Al hacer una introducción de Exploserivce y ADL, no debemos olvidar la experiencia absorbida en Magma Ingeniería Minera (1977), empresa de servicos formada por egresados de la Facultad de Ingeniería de la Universidad Nacional de Cuyo. Obras como Altas cumbres (Córdoba), Embalse Río Grande (Córdoba), Corpus (Misiones); entre otras como minería de Uranio y Malagueño Córdoba.
           </p>
           <p>
             Pasada la "aventura" de Malvinas, nos concuentra nuevamente en torno a la Faculatad de Ingeniería de la Universidad Nacional de San Juan, desarrollando el proyecto de Repositorio Nuclear, en Gastre.

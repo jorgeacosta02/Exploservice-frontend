@@ -11,11 +11,11 @@ import axios from 'axios';
 axios.defaults.baseURL = 'http://localhost:3001'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-<Provider store={store}>
-  <DndProvider backend={HTML5Backend}>
-    <BrowserRouter> 
-        <App />
-    </BrowserRouter>
-  </DndProvider>
-</Provider>
+  <Provider store={store}>
+    <DndProvider backend={HTML5Backend}>
+      <BrowserRouter> 
+          <App />
+      </BrowserRouter>
+    </DndProvider>
+  </Provider>
 )

@@ -29,60 +29,103 @@ const ServicesComp = () => {
       </div>
       <h2 className={styles.our}>Nuestros servicios</h2>
       <div className={styles.allServicesContainer}>
-      <div className={styles.serviceContainer}>
-        <h3>PERFORACIÓN PARA PRODUCCION</h3>
+        <div className={styles.serviceContainer}>
+          <h3>PERFORACIÓN PARA PRODUCCION</h3>
+          <div className={styles.serviceContent}>
+            <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
+            <div className={styles.serviceImgs}>
+              <img src={imgPPP01} alt="imgPPP01" />
+              <img src={imgPPP02} alt="imgPPP02" />
+            </div>
+          </div>
+        </div>
+        <div className={styles.serviceContainer}>
+          <h3>PERFORACIÓN PARA GRADE CONTROL</h3>
         <div className={styles.serviceContent}>
-          <p>Perforación de taladros con equipo top hammer o DTH, siguiendo un patrón o grilla preestablecido que luego serán cargados con explosivo para su posterior detonación.</p>
+          <p>Perforación con toma de muestras del cutting o detritus, con o sin empleo de dispositivo cuarteador.</p>
           <div className={styles.serviceImgs}>
-            <img src={imgPPP01} alt="imgPPP01" />
-            <img src={imgPPP02} alt="imgPPP02" />
+            <img src={imgPGC01} alt="imgPGC01" />
+            <img src={imgPGC02} alt="imgPGC02" />
+            <img src={imgPGC03} alt="imgPGC03" />
+          </div>
+        </div>
+        </div>
+        <div className={styles.serviceContainer}>
+          <h3>PERFORACIÓN PARA CONSTRUCCION</h3>
+          <div className={styles.serviceContent}>
+          <p>Perforación para excavaciones con explosivos en construcción; cortes cajón y media ladera para rutas, rip-rap, zanjeos, fundaciones, demoliciones, voladuras especiales, etc.</p>
+          <div className={styles.serviceImgs}>
+            <img src={imgPPC01} alt="imgPPP01" />
+            <img src={imgPPC02} alt="imgPPP02" />
+          </div>
+          </div>
+        </div>
+        <div className={styles.serviceContainer}>
+          <h3>VOLADURA</h3>
+          <div className={styles.serviceContent}>
+          <p>Carguío de pozos con explosivos y detonación para la obtención de roca fragmentada en diferentes granulometrías según su posterior utilización.</p>
+          <div className={styles.serviceImgs}>
+            <img src={imgBlasting01} alt="imgPPP01" />
+            <img src={imgBlasting02} alt="imgPPP02" />
+            <img src={imgBlasting03} alt="imgPPP03" />
+          </div>
+          </div>
+        </div>
+        <div className={styles.serviceContainer}>
+          <h3>PRE DRILLING</h3>
+          <div className={styles.serviceContent}>
+          <p>Perforación de taladros sin extracción de cutting para facilitar el hincado de perfiles estructurales para el emplazamiento de parques solares.</p>
+          <div className={styles.serviceImgs}>
+            <img src={imgPD01} alt="imgPPP01" />
+            <img src={imgPD02} alt="imgPPP02" />
+            <img src={imgPD03} alt="imgPPP03" />
+          </div>
           </div>
         </div>
       </div>
-      <div className={styles.serviceContainer}>
-        <h3>PERFORACIÓN PARA GRADE CONTROL</h3>
-      <div className={styles.serviceContent}>
-        <p>Perforación con toma de muestras del cutting o detritus, con o sin empleo de dispositivo cuarteador.</p>
-        <div className={styles.serviceImgs}>
-          <img src={imgPGC01} alt="imgPGC01" />
-          <img src={imgPGC02} alt="imgPGC02" />
-          <img src={imgPGC03} alt="imgPGC03" />
+        <div className={styles.toolsContainer}>
+          <h2 className={styles.toolsTitle}>
+            Herramientas, preceptos reglamentarios y procedimientos implementados en todos nuestros servicios en el país.
+          </h2>
+          <div>
+            Fábrica de explosivos y provisión de accesorios, certificación de calidad - Leyes termoquímicas.
+          </div>
+          <div>
+            Selección de explosivo, según proyectos. Transporte según leyes vigentes - Polvorines.
+          </div>
+          <div>
+            In situ
+          </div>
+          <div>
+            * Génesis del yacimiento - Geología estructural.<br/>
+            * Mineralogía - Microfisuración.<br/>
+            * Petrografía y petrología. <br/>
+            * Ensayos resistentes.<br/>
+            * Proyección futura del yacimiento.
+          </div>
+          <div>
+            Diseño energético y geométrico
+          </div>
+          <div>
+            ARRANCAR - FRAGMENTAR - LANZAR
+          </div>
+          <div>
+            TREN DE PERFORACION - PERFORABILIDAD - FACTOR DE ROCA
+          </div>
+          <div>
+            RESPUESTAS ECONOMICAS
+          </div>
+          <p>
+            Cuando se trata de hacer aplicaciones, de energía y diagramas de perforaciones ggeométricas, hemos recurrido a la Escuela Europea y utilizar empírico solo para supervisión y campo.
+          </p>
+          <p>
+            La mecánica y la termidinámica de las voladuras en cargas idénticas, producirán resultados diferentes; por ejemplo en: caliza, pizarra, arenisca, andesita, riolita, cuarcita, gneis, dolomitas, basaltos, skarn, taconita, etc, etc. Por ello la figura del jefe de disparo, debe ser entrenado específicamente, en físico-química y geología estructural.
+          </p>
+          <p>
+            Esta síntesis de procedimientos, como prueba de los servicios fue probado en FRAGMENTACIÓN, en los alrededores de San Juan como La Laja, Los Berror y Jáchal. Los resultados fueron satisfactorios, como se esperaba por contar San Juan, con calizas, dolomitas y dolomías de calidad y homogeneidad, como pocas en el mundo. También se perfecconó la utilización de un amonal, camiando el diámetro, ajustando el taco, ampliando la grilla, usando remolcadores de ondas con aumento de confinamiento. Se llegó a comprobar, que se lograban velocidades de detonación de 4200m/seg. La cual se coloca en como explosivo pulverulento. Este se utilizó con éxito en proyectos como Lindero (Salta) y Gualcamayo (San Juan - Jáchal) gasoductos neuquinos y RN 150 incluido sus túneles, acueductos San Luis, entre otros.
+          </p>
         </div>
-      </div>
-      </div>
-      <div className={styles.serviceContainer}>
-        <h3>PERFORACIÓN PARA CONSTRUCCION</h3>
-        <div className={styles.serviceContent}>
-        <p>Perforación para excavaciones con explosivos en construcción; cortes cajón y media ladera para rutas, rip-rap, zanjeos, fundaciones, demoliciones, voladuras especiales, etc.</p>
-        <div className={styles.serviceImgs}>
-          <img src={imgPPC01} alt="imgPPP01" />
-          <img src={imgPPC02} alt="imgPPP02" />
-        </div>
-        </div>
-      </div>
-      <div className={styles.serviceContainer}>
-        <h3>VOLADURA</h3>
-        <div className={styles.serviceContent}>
-        <p>Carguío de pozos con explosivos y detonación para la obtención de roca fragmentada en diferentes granulometrías según su posterior utilización.</p>
-        <div className={styles.serviceImgs}>
-          <img src={imgBlasting01} alt="imgPPP01" />
-          <img src={imgBlasting02} alt="imgPPP02" />
-          <img src={imgBlasting03} alt="imgPPP03" />
-        </div>
-        </div>
-      </div>
-      <div className={styles.serviceContainer}>
-        <h3>PRE DRILLING</h3>
-        <div className={styles.serviceContent}>
-        <p>Perforación de taladros sin extracción de cutting para facilitar el hincado de perfiles estructurales para el emplazamiento de parques solares.</p>
-        <div className={styles.serviceImgs}>
-          <img src={imgPD01} alt="imgPPP01" />
-          <img src={imgPD02} alt="imgPPP02" />
-          <img src={imgPD03} alt="imgPPP03" />
-        </div>
-        </div>
-      </div>
-      </div>
+
     </div>
   )
 }
