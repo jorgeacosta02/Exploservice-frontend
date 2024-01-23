@@ -107,9 +107,9 @@ const ServicesComp = () => {
             * Proyección futura del yacimiento.
           </h3>
           <div className={styles.separator}></div>
-          <h3>
+          <h2 className={styles.toolsTitle}>
             Diseño energético y geométrico
-          </h3>
+          </h2>
           <h3>
             ARRANCAR &rarr; FRAGMENTAR &rarr; LANZAR
           </h3>
