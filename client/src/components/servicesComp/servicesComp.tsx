@@ -85,7 +85,7 @@ const ServicesComp = () => {
       </div>
         <div className={styles.toolsContainer}>
           <h2 className={styles.toolsTitle}>
-            Herramientas, preceptos reglamentarios y procedimientos implementados en todos nuestros servicios en el país.
+            Herramientas, preceptos, reglamentarios y procedimientos implementados en todos nuestros servicios en el país.
           </h2>
           <h3>
             Fábrica de explosivos y provisión de accesorios, certificación de calidad - Leyes termoquímicas.
