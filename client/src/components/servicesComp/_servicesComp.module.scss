@@ -5,6 +5,7 @@
     position: relative;
     margin-top: g.$mobile-NavBar-height;
     min-height: 100vh;
+    padding: 0 0 15vh;
     .title{
         font-size: g.$mobile-h1-font-size;
         @include g.display-large{
@@ -125,6 +126,9 @@
         }
         .separator{
             height: 30vh;
+        }
+        .shortSeparator{
+            height: 15vh;
         }
     }
 }

@@ -121,9 +121,9 @@ const ServicesComp = () => {
           <h3>
             RESPUESTAS ECONOMICAS
           </h3>
-          <div className={styles.separator}></div>
+          <div className={styles.shortSeparator}></div>
           <p>
-            Cuando se trata de hacer aplicaciones, de energía y diagramas de perforaciones ggeométricas, hemos recurrido a la Escuela Europea y utilizar empírico solo para supervisión y campo.
+            Cuando se trata de hacer aplicaciones, de energía y diagramas de perforaciones geométricas, hemos recurrido a la Escuela Europea y utilizar empírico solo para supervisión y campo.
           </p>
           <p>
             La mecánica y la termidinámica de las voladuras en cargas idénticas, producirán resultados diferentes; por ejemplo en: caliza, pizarra, arenisca, andesita, riolita, cuarcita, gneis, dolomitas, basaltos, skarn, taconita, etc, etc. Por ello la figura del jefe de disparo, debe ser entrenado específicamente, en físico-química y geología estructural.
