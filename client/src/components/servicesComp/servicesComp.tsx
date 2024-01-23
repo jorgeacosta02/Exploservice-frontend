@@ -90,12 +90,15 @@ const ServicesComp = () => {
           <h3>
             Fábrica de explosivos y provisión de accesorios, certificación de calidad - Leyes termoquímicas.
           </h3>
+          <div className={styles.arrow}></div>
           <h3>
             Selección de explosivo, según proyectos. Transporte según leyes vigentes - Polvorines.
           </h3>
+          <div className={styles.arrow}></div>
           <h3>
             In situ
           </h3>
+          <div className={styles.arrow}></div>
           <h3>
             * Génesis del yacimiento - Geología estructural.<br/>
             * Mineralogía - Microfisuración.<br/>
@@ -103,18 +106,22 @@ const ServicesComp = () => {
             * Ensayos resistentes.<br/>
             * Proyección futura del yacimiento.
           </h3>
+          <div className={styles.separator}></div>
           <h3>
             Diseño energético y geométrico
           </h3>
           <h3>
-            ARRANCAR - FRAGMENTAR - LANZAR
+            ARRANCAR &rarr; FRAGMENTAR &rarr; LANZAR
           </h3>
+          <div className={styles.arrow}></div>
           <h3>
             TREN DE PERFORACION - PERFORABILIDAD - FACTOR DE ROCA
           </h3>
+          <div className={styles.arrow}></div>
           <h3>
             RESPUESTAS ECONOMICAS
           </h3>
+          <div className={styles.separator}></div>
           <p>
             Cuando se trata de hacer aplicaciones, de energía y diagramas de perforaciones ggeométricas, hemos recurrido a la Escuela Europea y utilizar empírico solo para supervisión y campo.
           </p>

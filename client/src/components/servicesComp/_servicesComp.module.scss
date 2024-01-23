@@ -104,11 +104,27 @@
     .toolsContainer{
         padding: 3vh 5vw;
         border-top: 2px solid g.$es-color;
+        .toolsTitle{
+            text-align: center;
+        }
         h3{
             border: 1px solid g.$grey-color;
             border-radius: 2vw;
             padding: 2vh 2vw;
             text-align: center;
+        }
+        .arrow{
+            position: relative;
+            width: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: solid transparent;
+            border-width: 20px;
+            margin-bottom: -20px;
+            border-top-color: g.$light-black-color;
+        }
+        .separator{
+            height: 30vh;
         }
     }
 }
