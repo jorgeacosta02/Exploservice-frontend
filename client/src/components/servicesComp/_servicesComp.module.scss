@@ -104,8 +104,11 @@
     .toolsContainer{
         padding: 3vh 5vw;
         border-top: 2px solid g.$es-color;
-        .toolsTitle{
-            
+        h3{
+            border: 1px solid g.$grey-color;
+            border-radius: 2vw;
+            padding: 2vh 2vw;
+            text-align: center;
         }
     }
 }

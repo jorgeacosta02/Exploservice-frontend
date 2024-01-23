@@ -87,34 +87,34 @@ const ServicesComp = () => {
           <h2 className={styles.toolsTitle}>
             Herramientas, preceptos reglamentarios y procedimientos implementados en todos nuestros servicios en el país.
           </h2>
-          <div>
+          <h3>
             Fábrica de explosivos y provisión de accesorios, certificación de calidad - Leyes termoquímicas.
-          </div>
-          <div>
+          </h3>
+          <h3>
             Selección de explosivo, según proyectos. Transporte según leyes vigentes - Polvorines.
-          </div>
-          <div>
+          </h3>
+          <h3>
             In situ
-          </div>
-          <div>
+          </h3>
+          <h3>
             * Génesis del yacimiento - Geología estructural.<br/>
             * Mineralogía - Microfisuración.<br/>
             * Petrografía y petrología. <br/>
             * Ensayos resistentes.<br/>
             * Proyección futura del yacimiento.
-          </div>
-          <div>
+          </h3>
+          <h3>
             Diseño energético y geométrico
-          </div>
-          <div>
+          </h3>
+          <h3>
             ARRANCAR - FRAGMENTAR - LANZAR
-          </div>
-          <div>
+          </h3>
+          <h3>
             TREN DE PERFORACION - PERFORABILIDAD - FACTOR DE ROCA
-          </div>
-          <div>
+          </h3>
+          <h3>
             RESPUESTAS ECONOMICAS
-          </div>
+          </h3>
           <p>
             Cuando se trata de hacer aplicaciones, de energía y diagramas de perforaciones ggeométricas, hemos recurrido a la Escuela Europea y utilizar empírico solo para supervisión y campo.
           </p>
