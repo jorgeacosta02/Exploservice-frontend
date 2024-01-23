@@ -3,7 +3,7 @@ import LandingPage from './pages/landingPage/landingPage';
 import CompanyPage from './pages/companyPage/companyPage';
 import ServicesPage from './pages/servicesPage/servicesPage';
 import EquipmentPage from './pages/equipmentPage/equipmentPage';
-import JobsPage from './pages/jobsPage/lobsPage';
+import JobsPage from './pages/jobsPage/jobsPage';
 import ContactPage from './pages/contactPage/contactPage';
 import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
 import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
