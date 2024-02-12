@@ -51,6 +51,15 @@
                 max-height: 50vh;
                 }
             }
+            .troyCertificate {
+                margin: 3vh 0;
+                max-width: 90vw;
+                max-height: 90vh;
+                @include g.display-large{
+                    max-width: 150%;
+                    max-height: 150vh;
+                }
+            }
         }
     }
 }

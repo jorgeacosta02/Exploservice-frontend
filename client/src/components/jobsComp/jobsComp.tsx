@@ -3,6 +3,7 @@ import imgCasposo from '../../Assets/Images/jobs/casposo01.jpg'
 import imgKarouni from '../../Assets/Images/jobs/minaKaroniGuyana.jpg'
 import imgPacsuaLama01 from '../../Assets/Images/jobs/pascuaLama01.jpg'
 import imgPacsuaLama02 from '../../Assets/Images/jobs/pascuaLama02.jpg'
+import troyCertifcate from '../../Assets/Images/Certifications/Troy-Karouni_page-0001.jpg'
 
 
 const JobsComp = () => {
@@ -33,6 +34,11 @@ const JobsComp = () => {
             <h3>
                MIMA KAROUNI - GUYANA
             </h3>
+                <img
+                    src={troyCertifcate}
+                    className={styles.troyCertificate}
+                    alt='troyCertifcate'
+                />
             <div className={styles.workData}>
                 <img src={imgKarouni} alt='Imagen Karoni' />
                 <div className={styles.workText}>

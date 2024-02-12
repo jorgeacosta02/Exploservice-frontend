@@ -83,56 +83,55 @@ const ServicesComp = () => {
           </div>
         </div>
       </div>
-        <div className={styles.toolsContainer}>
-          <h2 className={styles.toolsTitle}>
-            Herramientas, preceptos, reglamentarios y procedimientos implementados en todos nuestros servicios en el país.
-          </h2>
-          <h3>
-            Fábrica de explosivos y provisión de accesorios, certificación de calidad - Leyes termoquímicas.
-          </h3>
-          <div className={styles.arrow}></div>
-          <h3>
-            Selección de explosivo, según proyectos. Transporte según leyes vigentes - Polvorines.
-          </h3>
-          <div className={styles.arrow}></div>
-          <h3>
-            In situ
-          </h3>
-          <div className={styles.arrow}></div>
-          <h3>
-            * Génesis del yacimiento - Geología estructural.<br/>
-            * Mineralogía - Microfisuración.<br/>
-            * Petrografía y petrología. <br/>
-            * Ensayos resistentes.<br/>
-            * Proyección futura del yacimiento.
-          </h3>
-          <div className={styles.separator}></div>
-          <h2 className={styles.toolsTitle}>
-            Diseño energético y geométrico
-          </h2>
-          <h3>
-            ARRANCAR &rarr; FRAGMENTAR &rarr; LANZAR
-          </h3>
-          <div className={styles.arrow}></div>
-          <h3>
-            TREN DE PERFORACION - PERFORABILIDAD - FACTOR DE ROCA
-          </h3>
-          <div className={styles.arrow}></div>
-          <h3>
-            RESPUESTAS ECONOMICAS
-          </h3>
-          <div className={styles.shortSeparator}></div>
-          <p>
-            Cuando se trata de hacer aplicaciones, de energía y diagramas de perforaciones geométricas, hemos recurrido a la Escuela Europea y utilizar empírico solo para supervisión y campo.
-          </p>
-          <p>
-            La mecánica y la termidinámica de las voladuras en cargas idénticas, producirán resultados diferentes; por ejemplo en: caliza, pizarra, arenisca, andesita, riolita, cuarcita, gneis, dolomitas, basaltos, skarn, taconita, etc, etc. Por ello la figura del jefe de disparo, debe ser entrenado específicamente, en físico-química y geología estructural.
-          </p>
-          <p>
-            Esta síntesis de procedimientos, como prueba de los servicios fue probado en FRAGMENTACIÓN, en los alrededores de San Juan como La Laja, Los Berror y Jáchal. Los resultados fueron satisfactorios, como se esperaba por contar San Juan, con calizas, dolomitas y dolomías de calidad y homogeneidad, como pocas en el mundo. También se perfecconó la utilización de un amonal, camiando el diámetro, ajustando el taco, ampliando la grilla, usando remolcadores de ondas con aumento de confinamiento. Se llegó a comprobar, que se lograban velocidades de detonación de 4200m/seg. La cual se coloca en como explosivo pulverulento. Este se utilizó con éxito en proyectos como Lindero (Salta) y Gualcamayo (San Juan - Jáchal) gasoductos neuquinos y RN 150 incluido sus túneles, acueductos San Luis, entre otros.
-          </p>
-        </div>
-
+      <div className={styles.toolsContainer}>
+        <h2 className={styles.toolsTitle}>
+          Herramientas, preceptos reglamentarios y procedimientos implementados en todos nuestros servicios en el país.
+        </h2>
+        <h3>
+          Provisión de explosivos y accesorios de voladura, certificación de calidad - Leyes termoquímicas.
+        </h3>
+        <div className={styles.arrow}></div>
+        <h3>
+          Selección de explosivo, según proyectos. Transporte según leyes vigentes - Polvorines.
+        </h3>
+        <div className={styles.arrow}></div>
+        <h3>
+          In situ
+        </h3>
+        <div className={styles.arrow}></div>
+        <h3>
+          * Génesis del yacimiento - Geología estructural.<br/>
+          * Mineralogía - Microfisuración.<br/>
+          * Petrografía y petrología. <br/>
+          * Ensayos resistentes.<br/>
+          * Proyección futura del yacimiento.
+        </h3>
+        <div className={styles.separator}></div>
+        <h2 className={styles.toolsTitle}>
+          Diseño energético y geométrico
+        </h2>
+        <h3>
+          ARRANCAR &rarr; FRAGMENTAR &rarr; LANZAR
+        </h3>
+        <div className={styles.arrow}></div>
+        <h3>
+          TREN DE PERFORACION - PERFORABILIDAD - FACTOR DE ROCA
+        </h3>
+        <div className={styles.arrow}></div>
+        <h3>
+          RESPUESTAS ECONOMICAS
+        </h3>
+        <div className={styles.shortSeparator}></div>
+        <p>
+          Cuando se trata de hacer aplicaciones, de energía y diagramas de perforaciones geométricas, hemos recurrido a la Escuela Europea y utilizar empírico solo para supervisión y campo.
+        </p>
+        <p>
+          La mecánica y la termidinámica de las voladuras en cargas idénticas, producirán resultados diferentes; por ejemplo en: caliza, pizarra, arenisca, andesita, riolita, cuarcita, gneis, dolomitas, basaltos, skarn, taconita, etc, etc. Por ello la figura del jefe de disparo, debe ser entrenado específicamente, en físico-química y geología estructural.
+        </p>
+        <p>
+          Esta síntesis de procedimientos, como prueba de los servicios fue probado en FRAGMENTACIÓN, en los alrededores de San Juan como La Laja, Los Berror y Jáchal. Los resultados fueron satisfactorios, como se esperaba por contar San Juan, con calizas, dolomitas y dolomías de calidad y homogeneidad, como pocas en el mundo. También se perfecconó la utilización de un amonal, cambiando el diámetro, ajustando el taco, ampliando la grilla, usando remolcadores de ondas con aumento de confinamiento. Se llegó a comprobar, que se lograban velocidades de detonación de 4200m/seg. La cual se coloca en como explosivo pulverulento. Este se utilizó con éxito en proyectos como Lindero (Salta) y Gualcamayo (San Juan - Jáchal) gasoductos neuquinos y RN 150 incluido sus túneles, acueductos San Luis, entre otros.
+        </p>
+      </div>
     </div>
   )
 }
