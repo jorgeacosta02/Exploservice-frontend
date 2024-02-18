@@ -14,10 +14,12 @@ import imgPD02 from '../../Assets/Images/services/PreDrilling/preDrilling02.jpg'
 import imgPD03 from '../../Assets/Images/services/PreDrilling/preDrilling03.jpg'
 
 
+
 const ServicesComp = () => {
   return (
     <div className={styles.container}>
-      <img src="" alt="" />
+      <div className={styles.backImg}></div>
+      <div className={styles.backImgCover}></div>
       <div className={styles.mainImage}>
       </div>
       <div className={styles.mainText}>

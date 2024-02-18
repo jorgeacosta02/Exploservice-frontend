@@ -7,9 +7,18 @@
     min-height: 100vh;
     padding: 0 0 15vh;
     background-image: url('../../Assets/Images/Blasting/IMG_0005.JPG');
-    background-position: center;
+    background-position:top;
     background-size:contain;
     background-repeat: no-repeat;
+    .backImg{
+        position : fixed;
+        top: 300px;
+        left: 0;
+        // z-index: 5000;
+    }
+    .backImgCover{
+        background-color: rgba(255,255,255,.6);
+    }
 
     .title{
         font-size: g.$mobile-h1-font-size;
