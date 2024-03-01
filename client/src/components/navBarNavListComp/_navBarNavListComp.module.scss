@@ -44,12 +44,12 @@
         }
     }
     .navLink:hover{
-        background-color: g.$es-color;
+        background-color: g.$main-color;
         color:g.$dark-black-color;
         transition: .2s ease;
         @include g.display-large{
             background-color: g.$white-color;
-            color: g.$es-dark-color;
+            color: g.$main-dark-color;
             transform:scale(1.1);
         }
     }
