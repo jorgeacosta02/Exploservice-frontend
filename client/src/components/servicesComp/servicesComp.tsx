@@ -12,23 +12,16 @@ import imgBlasting03 from '../../Assets/Images/services/Voladura/blasting03.jpg'
 import imgPD01 from '../../Assets/Images/services/PreDrilling/preDrilling01.jpg'
 import imgPD02 from '../../Assets/Images/services/PreDrilling/preDrilling02.jpg'
 import imgPD03 from '../../Assets/Images/services/PreDrilling/preDrilling03.jpg'
-import img005 from '../../Assets/Images/Blasting/IMG_0005.jpg'
 
 
 const ServicesComp = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.backImgContainer}>
-        <img
-          src={img005}
-          alt='Imagen de voladura'
-          className={styles.backImg}
-        />
-        <div className={styles.backImgCover}></div>
-      </div>
+      <div className={styles.backImgContainer}></div>
+      <div className={styles.backImgCover}></div>
       <div className={styles.mainImage}></div>
       <div className={styles.mainText}>
-      <h1 className={styles.title}>EXPLOSERVICE - ADL S.R.L.</h1>
+        <h1 className={styles.title}>EXPLOSERVICE - ADL S.R.L.</h1>
         <p>
           En Exploservice ADL nos dedicamos a brindar soluciones en el campo de la perforación para voladuras, aplicadas para la exploración y explotación en minería y excavaciones para construcción.
         </p>
