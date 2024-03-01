@@ -1,17 +1,16 @@
 import styles from './_navBarMenuComp.module.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { booleanState } from '../../redux/reducers';
-import { toggleStyle } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
+import { toggleMenu } from '../../redux/slices/menuSlice';
+// import { selectMenuState } from '../../redux/slices/menuSlice';
 
 const NavBarMenuComp = () => {
 
   const dispatch = useDispatch<any>();
-  const stylesReducer = useSelector(( state: booleanState ) => state.styles);
-
-  console.log(stylesReducer);
+ 
+  // const menuState = useSelector(selectMenuState).menu;
 
   const handleClick = () => {
-    dispatch(toggleStyle() );
+    dispatch(toggleMenu() );
   };
 
   return (
