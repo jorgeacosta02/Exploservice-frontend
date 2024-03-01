@@ -5,9 +5,6 @@ import ServicesPage from './pages/servicesPage/servicesPage';
 import EquipmentPage from './pages/equipmentPage/equipmentPage';
 import JobsPage from './pages/jobsPage/jobsPage';
 import ContactPage from './pages/contactPage/contactPage';
-import EAHomePage from './ExploagroSrc/EAPages/EAHomePage/EAHomePage';
-import EAProductPage from './ExploagroSrc/EAPages/EAProductPage/EAProductPage';
-import EAContactPage from './ExploagroSrc/EAPages/EAContactPage/EAContactPage';
 import WorkerRegisterPage from './pages/workerRegisterPage/WorkerRegisterPage';
 
 
@@ -34,10 +31,6 @@ const App = () => {
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/contact" element={<ContactPage />} />
   
-        {/*Exploagro Routes*/}
-        <Route path="/exploagro/" element={<EAHomePage />} />
-        <Route path="/exploagro/product" element={<EAProductPage />} />
-        <Route path="/exploagro/contact" element={<EAContactPage />} />
       </Routes>
     </div>
   )
