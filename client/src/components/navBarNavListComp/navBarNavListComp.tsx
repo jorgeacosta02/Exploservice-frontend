@@ -1,21 +1,20 @@
 import { NavLink } from "react-router-dom";
 import styles from './_navBarNavListComp.module.scss';
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../redux/types";
-import { falseStyle } from "../../redux/actions";
+import { selectMenuState, falseMenu } from "../../redux/slices/menuSlice";
 
 const NavBarNavListComp = () => {
 
-  const stylesReducer = useSelector((state: RootState) => state.styles.styles);
+  const menuState = useSelector(selectMenuState).menu;
 
   const dispatch = useDispatch<any>();
 
   const handleClick = () => {
     console.log('click en NavLixt');
-    dispatch(falseStyle() );
+    dispatch(falseMenu() );
   };
 
-  const navListStyles = `${styles.navList} ${stylesReducer ? styles.show : ''}`;
+  const navListStyles = `${styles.navList} ${menuState ? styles.show : ''}`;
 
   return (
     <ul className={navListStyles} >
