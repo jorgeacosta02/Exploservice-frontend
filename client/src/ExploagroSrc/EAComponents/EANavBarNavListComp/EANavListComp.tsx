@@ -1,21 +1,21 @@
 import { NavLink } from "react-router-dom";
 import styles from './_EANavListComp.module.scss';
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../redux/types";
-import { falseStyle } from "../../../redux/actions";
+import { falseMenu, selectMenuState } from "../../../redux/slices/menuSlice";
+
 
 const EANavListComp = () => {
 
-  const stylesReducer = useSelector((state: RootState) => state.styles.styles);
+  const menuState = useSelector(selectMenuState).menu;
 
   const dispatch = useDispatch<any>();
 
   const handleClick = () => {
     console.log('click en NavLixt');
-    dispatch(falseStyle() );
+    dispatch(falseMenu() );
   };
 
-  const navListStyles = `${styles.navList} ${stylesReducer ? styles.show : ''}`;
+  const navListStyles = `${styles.navList} ${menuState ? styles.show : ''}`;
 
   return (
     <ul className={navListStyles} >
@@ -40,18 +40,6 @@ const EANavListComp = () => {
            >Producto</NavLink>
         </li>
         <li className={styles.splitBar}></li>
-        {/* <li onClick={handleClick} >
-          <NavLink
-            to="#" 
-            className={styles.navLink} 
-           >Registrarse</NavLink>
-        </li> */}
-        {/* <li onClick={handleClick} >
-          <NavLink
-            to="#" 
-            className={styles.navLink} 
-           >Ingresar</NavLink>
-        </li> */}
         <li onClick={handleClick} >
           <NavLink
             to="/exploagro/contact" 

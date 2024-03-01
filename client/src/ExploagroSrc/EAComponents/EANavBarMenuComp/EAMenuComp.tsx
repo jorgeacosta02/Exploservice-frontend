@@ -1,17 +1,14 @@
 import styles from './_EAMenu.module.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { booleanState } from '../../../redux/reducers';
-import { toggleStyle } from '../../../redux/actions';
+import { useDispatch } from 'react-redux';
+import { toggleMenu } from '../../../redux/slices/menuSlice';
+
 
 const EAMenuComp = () => {
 
   const dispatch = useDispatch<any>();
-  const stylesReducer = useSelector(( state: booleanState ) => state.styles);
-
-  console.log(stylesReducer);
 
   const handleClick = () => {
-    dispatch(toggleStyle() );
+    dispatch(toggleMenu() );
   };
 
   return (
