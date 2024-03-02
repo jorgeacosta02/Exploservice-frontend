@@ -10,6 +10,7 @@
     @include g.create-flexbox(column, space-around);
     background-size: cover;
     .formContainer{
+        
         box-sizing: border-box;
         padding: 4vh 4vw;
         width: 90%;
