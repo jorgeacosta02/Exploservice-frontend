@@ -55,6 +55,13 @@ const NavBarNavListComp = () => {
         <li className={styles.splitBar}></li>
         <li onClick={handleClick} >
           <NavLink
+            to="#" 
+            className={styles.navLink} 
+           >Intranet</NavLink>
+        </li>
+        <li className={styles.splitBar}></li>
+        <li onClick={handleClick} >
+          <NavLink
             to="/contact" 
             className={styles.navLink} 
            >Contacto</NavLink>
