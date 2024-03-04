@@ -1,12 +1,13 @@
-import styles from './_WorkerRegisterComp.module.scss';
+import styles from './_UserRegisterComp.module.scss';
 import { useForm, SubmitHandler } from 'react-hook-form';
-// import { zodResolver } from '@hookform/resolvers/zod';
-// import { workerRegisterSchema } from '../../validations/zodWorkerSchemas';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { userRegisterSchema } from '../../validations/zodUserSchemas';
 import axios from 'axios'
-import { IWorkerRegisterData } from '../../Interfaces/workerInterfaces';
+import { Link } from 'react-router-dom';
+import { IUserRegisterData } from '../../Interfaces/userInterfaces';
 
 
-const WorkerRegisterComp
+const UserRegisterComp
  = () => {
 
   const {
@@ -15,26 +16,25 @@ const WorkerRegisterComp
     // watch,
     reset,
     formState: { errors },
-  } = useForm<IWorkerRegisterData>({
-    // resolver: zodResolver(workerRegisterSchema)
+  } = useForm<IUserRegisterData>({
+    resolver: zodResolver(userRegisterSchema)
   });
 
 
-
-  const onSubmit: SubmitHandler<IWorkerRegisterData> = async (data) => {
+  const onSubmit: SubmitHandler<IUserRegisterData> = async (data) => {
     console.log(data);
     try {
-      await axios.post('/worker-register', data);
+      await axios.post(`/user-register`, data);
       console.log('Formulario enviado con éxito');
       reset();
     } catch (error) {
       console.error('Error al enviarlo', error);
         // Verificación de tipos para 'error.response'
-    if (axios.isAxiosError(error) && error.response) {
-      console.error('Detalles del error:', error.response.data);
-    } else {
-      console.error('Error desconocido:', error);
-    }
+      if (axios.isAxiosError(error) && error.response) {
+        console.error('Detalles del error:', error.response.data);
+      } else {
+        console.error('Error desconocido:', error);
+      }
     }
   };
 
@@ -116,10 +116,19 @@ const WorkerRegisterComp
             Enviar formulario
           </button>
         </form>
+        <p className={styles.linkContainer}>
+          Ya tenés una cuenta?
+          <Link 
+            to='/user-login'
+            className={styles.login}
+          >
+            Ingresar
+          </Link>
+        </p>
       </div>
     </div>
   )
 }
 
-export default WorkerRegisterComp
+export default UserRegisterComp
 
