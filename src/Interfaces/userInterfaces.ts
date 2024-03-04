@@ -31,10 +31,11 @@ export interface IUserRegisterData {
     firstName: string;
     lastName: string;
     dni: string;
-    healthPlan?: string;
+    birthDate:string,
     phone: string;
     email: string;
     password: string;
+    role:string;
 }
 
 // LOGIN
