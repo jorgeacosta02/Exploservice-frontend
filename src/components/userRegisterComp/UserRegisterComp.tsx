@@ -1,25 +1,11 @@
 import styles from './_UserRegisterComp.module.scss';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { userRegisterSchema } from '../../validations/zodUserSchemas';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import { IUserRegisterData } from '../../Interfaces/userInterfaces';
 
 
-const UserRegisterComp
- = () => {
-
-  const {
-    register,
-    handleSubmit,
-    // watch,
-    reset,
-    formState: { errors },
-  } = useForm<IUserRegisterData>({
-    resolver: zodResolver(userRegisterSchema)
-  });
-
+const UserRegisterComp = () => {
 
   const onSubmit: SubmitHandler<IUserRegisterData> = async (data) => {
     console.log(data);
@@ -38,8 +24,7 @@ const UserRegisterComp
     }
   };
 
-  console.log(errors);
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
