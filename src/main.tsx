@@ -6,9 +6,9 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import { store } from './redux/store/store.ts';
 import App from './App.tsx';
 import './_main.module.scss';
-import axios from 'axios';
+// import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3001'
+// axios.defaults.baseURL = 'http://localhost:3001'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>

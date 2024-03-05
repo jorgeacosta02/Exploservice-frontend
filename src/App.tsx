@@ -31,7 +31,7 @@ const App = () => {
         {/*Exploservice Routes*/}
         <Route path='/location-up-form' element={<LocationUpPage/>} />
         <Route path='/article-up-form' element={<ArticleUpFormPage/>} />
-        <Route path='/inv-mov-form' element={<InvMovFormPage/>} />
+        <Route path='/inventory-movement' element={<InvMovFormPage/>} />
         <Route path='/intranet' element={<IntranetPage/>} />
         <Route path='/register' element={<UserRegisterPage/>} />
         <Route path="/company" element={<CompanyPage />} />

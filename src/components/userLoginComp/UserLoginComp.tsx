@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { IUserLoginData } from '../../Interfaces/userInterfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUserAuth } from '../../redux/slices/userAuthSlice';
-import { loginUser } from '../../redux/actions/actions';
+import { loginUser } from '../../redux/actions/loginUserActions';
 import { useNavigate } from 'react-router-dom';
 
 

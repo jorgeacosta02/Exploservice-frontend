@@ -30,7 +30,7 @@ const IntranetComp = () => {
                 </li>
                 <li>
                     <NavLink 
-                        to='#'
+                        to='/inventory-movement'
                         className={styles.link}
                     >
                         Movimiento en almacenes
