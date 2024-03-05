@@ -3,7 +3,6 @@ import { useState } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
 import MessageComp from '../messageComp/MessageComp';
-import { Link } from 'react-router-dom';
 import { IUserRegisterData } from '../../Interfaces/userInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
 import { selectMessageState, toggleMessage } from '../../redux/slices/messageSlice';
@@ -185,8 +184,6 @@ const UserRegisterComp = () => {
      };
    };
    
-   // constantes de estilos para dark-mode
-
    
    const handleSubmit = (event:any) => {
      event.preventDefault();
@@ -202,7 +199,6 @@ const UserRegisterComp = () => {
    const submitForm = async () => {
      try{
        const response = await axios.post(
-         // 'https://newportfolio-backend.onrender.com/contact',
          'http://localhost:5001/contact',
           formData
        );
@@ -221,19 +217,7 @@ const UserRegisterComp = () => {
        })
  
        messageHandleClick()
- 
-       // const toastOptions: ToastOptions = {
-       //   style: {
-       //     background: '#333',
-       //     color: '#fff',
-       //     zIndex: 2100,
-       //     position: 'absolute' // Posición del toast
-       //     // Otros estilos según sea necesario
-       //   },
-       //   position: 'top-right' // Posición del toast
-       // };
-       
-       // toast.success("Mensaje enviado correctamente", toastOptions);
+
      }catch(error:any){
        console.log(error.message)
      }
