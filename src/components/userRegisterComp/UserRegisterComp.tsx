@@ -247,7 +247,7 @@ const UserRegisterComp = () => {
           onSubmit={handleSubmit}
         >
           <h1 className={styles.title}>
-            Registrarse
+            Registrar personal
           </h1>
           <div className={styles.inputBlock}>
               <label 
