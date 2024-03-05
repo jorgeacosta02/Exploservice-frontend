@@ -9,9 +9,6 @@ import { selectMessageState, toggleMessage } from '../../redux/slices/messageSli
 
 
 
-
-
-
 const UserRegisterComp = () => {
 
    // Estados globales para opciones
