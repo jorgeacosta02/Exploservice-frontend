@@ -22,6 +22,14 @@ const IntranetComp = () => {
                 </li>
                 <li>
                     <NavLink 
+                        to='/location-up-form'
+                        className={styles.link}
+                    >
+                        Alta de location en almacenes
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
                         to='#'
                         className={styles.link}
                     >

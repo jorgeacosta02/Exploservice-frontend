@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
 import MessageComp from '../messageComp/MessageComp';
-import { IArticleData } from '../../Interfaces/warehouseInterfaces';
+import { IArticleData } from '../../Interfaces/articleInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
 import { selectMessageState, toggleMessage } from '../../redux/slices/messageSlice';
 

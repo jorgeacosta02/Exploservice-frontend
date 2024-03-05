@@ -1,15 +1,15 @@
-import styles from './_ArticleUpFormComp.module.scss';
+import styles from './_LocationUpFormComp.module.scss';
 import { useState } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
 import MessageComp from '../messageComp/MessageComp';
-import { IArticleData } from '../../Interfaces/articleInterfaces';
+import { ILocationData } from '../../Interfaces/locationInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
 import { selectMessageState, toggleMessage } from '../../redux/slices/messageSlice';
 
 
 
-const ArticleUpFormComp = () => {
+const LocationUpFormComp = () => {
 
    // Estados globales para opciones
   const langState = useSelector(selectLangState).lang;
@@ -17,13 +17,13 @@ const ArticleUpFormComp = () => {
   const dispatch = useDispatch()
    
   // Estado de datos del formulario
-  const [formData, setFormData] = useState<IArticleData>({
+  const [formData, setFormData] = useState<ILocationData>({
     name:'',
     description:'',
   });
  
    // Estado de errores del formulario
-   const [errors, setErrors] = useState<IArticleData>({
+   const [errors, setErrors] = useState<ILocationData>({
     name:'',
     description:'',
    });
@@ -89,7 +89,7 @@ const ArticleUpFormComp = () => {
    const submitForm = async () => {
      try{
        const response = await axios.post(
-         'http://localhost:5000/article',
+         'http://localhost:5000/location',
           formData
        );
        console.log('response', response.status);
@@ -114,7 +114,7 @@ const ArticleUpFormComp = () => {
           onSubmit={handleSubmit}
         >
           <h1 className={styles.title}>
-            Registrar artículo nuevo
+            Registrar nueva locación
           </h1>
           <div className={styles.inputBlock}>
               <label 
@@ -179,5 +179,5 @@ const ArticleUpFormComp = () => {
   )
 }
 
-export default ArticleUpFormComp
+export default LocationUpFormComp
 
