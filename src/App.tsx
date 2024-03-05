@@ -5,7 +5,8 @@ import ServicesPage from './pages/servicesPage/servicesPage';
 import EquipmentPage from './pages/equipmentPage/equipmentPage';
 import JobsPage from './pages/jobsPage/jobsPage';
 import ContactPage from './pages/contactPage/contactPage';
-import WorkerRegisterPage from './pages/workerRegisterPage/WorkerRegisterPage';
+import UserRegisterPage from './pages/userRegisterPage/UserRegisterPage';
+
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
   
 
         {/*Exploservice Routes*/}
-        <Route path='/register-page' element={<WorkerRegisterPage/>}/>
+        <Route path='/register' element={<UserRegisterPage/>}/>
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/equipment" element={<EquipmentPage />} />

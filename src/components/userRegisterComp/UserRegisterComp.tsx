@@ -16,7 +16,8 @@ import { selectMessageState, toggleMessage } from '../../redux/slices/messageSli
 const UserRegisterComp = () => {
 
    // Estados globales para opciones
-  const langState = useSelector(selectLangState);
+  const langState = useSelector(selectLangState).lang;
+  const  messageState = useSelector(selectMessageState).message;
   const dispatch = useDispatch()
    
   // Estado de datos del formulario
@@ -28,7 +29,8 @@ const UserRegisterComp = () => {
     phone: '',
     email: '',
     password: '',
-    role:''
+    role:'',
+    // active: false,
   });
  
    // Estado de errores del formulario
@@ -40,7 +42,8 @@ const UserRegisterComp = () => {
     phone: '',
     email: '',
     password: '',
-    role:''
+    role:'',
+    // active: false,
    });
    
    // Comprobación de estados para enviar formulario
@@ -54,7 +57,8 @@ const UserRegisterComp = () => {
     formData.phone  !== '' &&
     formData.email  !== '' &&
     formData.password  !== '' &&
-    formData.role !== ''
+    formData.role !== '' 
+    // formData.active !== false
   ){
     submitOk = true;
   };
@@ -212,7 +216,8 @@ const UserRegisterComp = () => {
         phone: '',
         email: '',
         password: '',
-        role:''
+        role:'',
+        // active: false,
        })
  
        messageHandleClick()
@@ -246,16 +251,16 @@ const UserRegisterComp = () => {
           </h1>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                htmlFor='firstName'>
+                {langState === 'es' ? 'Nombre' : 'First Name'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
+                id='firtsName'
+                name='firstName' 
                 value={formData.firstName}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter first name...'}
                 // className={inputColor}
               />
               {
@@ -268,158 +273,180 @@ const UserRegisterComp = () => {
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                htmlFor='lastName'>
+                {langState === 'es' ? 'Apellido' : 'LastName'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
-                value={formData.firstName}
+                id='lastName'
+                name='lastName' 
+                value={formData.lastName}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese apellido...' :  'Enter last name...'}
                 // className={inputColor}
               />
               {
-                errors.firstName 
+                errors.lastName 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.firstName}
+                  {errors.lastName}
                 </p>
               }
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                htmlFor='dni'>
+                {langState === 'es' ? 'DNI' : 'DNI'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
-                value={formData.firstName}
+                id='dni'
+                name='dni' 
+                value={formData.dni}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese dni...' :  'Enter dni...'}
                 // className={inputColor}
               />
               {
-                errors.firstName 
+                errors.dni 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.firstName}
+                  {errors.dni}
                 </p>
               }
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                htmlFor='birthDate'>
+                {langState === 'es' ? 'Fecha de nacimiento' : 'Birthdate'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
-                value={formData.firstName}
+                id='birthDate'
+                name='birthDate' 
+                value={formData.birthDate}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese fecha de nacimiento...' :  'Enter birthdate...'}
                 // className={inputColor}
               />
               {
-                errors.firstName 
+                errors.birthDate 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.firstName}
+                  {errors.birthDate}
                 </p>
               }
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                htmlFor='phone'>
+                {langState === 'es' ? 'Teléfono' : 'Phone'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
+                id='phone'
+                name='phone' 
                 value={formData.firstName}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese número de teléfono...' :  'Enter phone number...'}
                 // className={inputColor}
               />
               {
-                errors.firstName 
+                errors.phone 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.firstName}
+                  {errors.phone}
                 </p>
               }
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
+                htmlFor='email'>
                 {langState === 'es' ? 'Nombre' : 'Name'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
-                value={formData.firstName}
+                id='email'
+                name='email' 
+                value={formData.email}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese correo electrónico...' :  'Enter email...'}
                 // className={inputColor}
               />
               {
-                errors.firstName 
+                errors.email 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.firstName}
+                  {errors.email}
                 </p>
               }
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
+                htmlFor='password'>
                 {langState === 'es' ? 'Nombre' : 'Name'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
-                value={formData.firstName}
+                id='password'
+                name='password' 
+                value={formData.password}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese contraseña...' :  'Enter password...'}
                 // className={inputColor}
               />
               {
-                errors.firstName 
+                errors.password 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.firstName}
+                  {errors.password}
                 </p>
               }
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='name'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                htmlFor='role'>
+                {langState === 'es' ? 'Rol' : 'Role'}
               </label>
               <input
                 type='text'
-                id='name'
-                name='name' 
-                value={formData.firstName}
+                id='role'
+                name='role' 
+                value={formData.role}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                placeholder={langState === 'es' ? 'Ingrese rol...' :  'Enter role...'}
                 // className={inputColor}
               />
               {
-                errors.firstName 
+                errors.role 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.firstName}
+                  {errors.role}
                 </p>
               }
             </div>
+          {/* <div className={styles.inputBlock}>
+              <label 
+                htmlFor='active'>
+                {langState === 'es' ? 'Activo' : 'Active'}
+              </label>
+              <input
+                type='text'
+                id='active'
+                name='active' 
+                value={formData.active}
+                onChange={handleInputChange} 
+                placeholder={langState === 'es' ? 'Defina activo...' :  'Define active...'}
+                // className={inputColor}
+              />
+              {
+                errors.active 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.active}
+                </p>
+              }
+            </div> */}
       
           <button
             className={styles.submit}
@@ -428,16 +455,14 @@ const UserRegisterComp = () => {
             Enviar formulario
           </button>
         </form>
-        <p className={styles.linkContainer}>
-          Ya tenés una cuenta?
-          <Link 
-            to='/user-login'
-            className={styles.login}
-          >
-            Ingresar
-          </Link>
-        </p>
       </div>
+      { messageState && 
+      <MessageComp
+        data={ langState === 'es' ?
+                'Mensaje enviado exitosamente' :
+                'Message sent successfully'
+              }
+      />}
     </div>
   )
 }
