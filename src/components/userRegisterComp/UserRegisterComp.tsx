@@ -21,7 +21,7 @@ const UserRegisterComp = () => {
     firstName: '',
     lastName: '',
     dni: '',
-    birthDate:'',
+    // birthDate:'',
     phone: '',
     email: '',
     password: '',
@@ -34,7 +34,7 @@ const UserRegisterComp = () => {
     firstName: '',
     lastName: '',
     dni: '',
-    birthDate:'',
+    // birthDate:'',
     phone: '',
     email: '',
     password: '',
@@ -49,7 +49,7 @@ const UserRegisterComp = () => {
     formData.firstName  !== '' &&
     formData.lastName  !== '' &&
     formData.dni  !== '' &&
-    formData.birthDate !== '' &&
+    // formData.birthDate !== '' &&
     formData.phone  !== '' &&
     formData.email  !== '' &&
     formData.password  !== '' &&
@@ -60,64 +60,72 @@ const UserRegisterComp = () => {
   };
    
    // Expresiones de validación
-   const nameRegExp = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]*$/;
-   const emailRegExp = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+  //  const nameRegExp = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]*$/;
+  //  const emailRegExp = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
  
    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
      const { name, value } = e.target;
+     setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setErrors((prevData) => ({
+      ...prevData,
+      [name]: '',
+    }));
      // Valida solo letras
-     if (name === 'name'){
-       if(!nameRegExp.test(value)){
-         setErrors((prevData) => ({
-           ...prevData,
-           [name]: langState === 'es' ? 'El nombre debe contener solo letras.' : 'The name must contain only letters.',
-         }));
-       }else{
-         setFormData((prevData) => ({
-           ...prevData,
-           [name]: value,
-         }));
-         setErrors((prevData) => ({
-           ...prevData,
-           [name]: '',
-         }));
-       }
-     }
+    //  if (name === 'name'){
+    //    if(!nameRegExp.test(value)){
+    //      setErrors((prevData) => ({
+    //        ...prevData,
+    //        [name]: langState === 'es' ? 'El nombre debe contener solo letras.' : 'The name must contain only letters.',
+    //      }));
+    //    }else{
+    //      setFormData((prevData) => ({
+    //        ...prevData,
+    //        [name]: value,
+    //      }));
+    //      setErrors((prevData) => ({
+    //        ...prevData,
+    //        [name]: '',
+    //      }));
+    //    }
+    //  }
  
      // Valida campo email
-     if (name === 'email'){
-       if(!emailRegExp.test(value)){
-         setErrors((prevData) => ({
-           ...prevData,
-           [name]: langState === 'es' ? 'Debe ingresar un mail válido.': 'You must enter  a valid email.',
-         }));
-         setFormData((prevData) => ({
-           ...prevData,
-           [name]: value,
-         }));
-       }else{
-         setFormData((prevData) => ({
-           ...prevData,
-           [name]: value,
-         }));
-         setErrors((prevData) => ({
-           ...prevData,
-           [name]: '',
-         }));
-       }
-     }
-     if (name === 'subject' || name === 'message'){
-        setFormData((prevData) => ({
-         ...prevData,
-         [name]: value,
-       }));
-       setErrors((prevData) => ({
-         ...prevData,
-         [name]: '',
-       }));
-     }
-     console.log('name y value in handleInputChange: ',name, value);
-     console.log('formData y errors in handleInputChange: ',formData, errors);
+    //  if (name === 'email'){
+    //    if(!emailRegExp.test(value)){
+    //      setErrors((prevData) => ({
+    //        ...prevData,
+    //        [name]: langState === 'es' ? 'Debe ingresar un mail válido.': 'You must enter  a valid email.',
+    //      }));
+    //      setFormData((prevData) => ({
+    //        ...prevData,
+    //        [name]: value,
+    //      }));
+    //    }else{
+    //      setFormData((prevData) => ({
+    //        ...prevData,
+    //        [name]: value,
+    //      }));
+    //      setErrors((prevData) => ({
+    //        ...prevData,
+    //        [name]: '',
+    //      }));
+    //    }
+    //  }
+    //  if (name === 'subject' || name === 'message'){
+    //     setFormData((prevData) => ({
+    //      ...prevData,
+    //      [name]: value,
+    //    }));
+    //    setErrors((prevData) => ({
+    //      ...prevData,
+    //      [name]: '',
+    //    }));
+    //  }
+    //  console.log('name y value in handleInputChange: ',name, value);
+    //  console.log('formData y errors in handleInputChange: ',formData, errors);
    }
  
    const emptyMessage = langState === 'es' ?
@@ -149,12 +157,12 @@ const UserRegisterComp = () => {
          dni: emptyMessage,
        }));
      };
-     if(!formData.birthDate){
-       setErrors((prevData) => ({
-         ...prevData,
-         birthDate: emptyMessage,
-       }));
-     };
+    //  if(!formData.birthDate){
+    //    setErrors((prevData) => ({
+    //      ...prevData,
+    //      birthDate: emptyMessage,
+    //    }));
+    //  };
      if(!formData.phone){
        setErrors((prevData) => ({
          ...prevData,
@@ -196,7 +204,7 @@ const UserRegisterComp = () => {
    const submitForm = async () => {
      try{
        const response = await axios.post(
-         'http://localhost:5001/contact',
+         'http://localhost:5000/register',
           formData
        );
        console.log('response', response.status);
@@ -205,7 +213,7 @@ const UserRegisterComp = () => {
         firstName: '',
         lastName: '',
         dni: '',
-        birthDate:'',
+        // birthDate:'',
         phone: '',
         email: '',
         password: '',
@@ -296,7 +304,7 @@ const UserRegisterComp = () => {
                 </p>
               }
             </div>
-          <div className={styles.inputBlock}>
+          {/* <div className={styles.inputBlock}>
               <label 
                 htmlFor='birthDate'>
                 {langState === 'es' ? 'Fecha de nacimiento' : 'Birthdate'}
@@ -317,7 +325,7 @@ const UserRegisterComp = () => {
                   {errors.birthDate}
                 </p>
               }
-            </div>
+            </div> */}
           <div className={styles.inputBlock}>
               <label 
                 htmlFor='phone'>
@@ -327,7 +335,7 @@ const UserRegisterComp = () => {
                 type='text'
                 id='phone'
                 name='phone' 
-                value={formData.firstName}
+                value={formData.phone}
                 onChange={handleInputChange} 
                 placeholder={langState === 'es' ? 'Ingrese número de teléfono...' :  'Enter phone number...'}
                 // className={inputColor}
@@ -343,7 +351,7 @@ const UserRegisterComp = () => {
           <div className={styles.inputBlock}>
               <label 
                 htmlFor='email'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                {langState === 'es' ? 'Correo electrónico' : 'Email'}
               </label>
               <input
                 type='text'
@@ -365,7 +373,7 @@ const UserRegisterComp = () => {
           <div className={styles.inputBlock}>
               <label 
                 htmlFor='password'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
+                {langState === 'es' ? 'Contraseña' : 'Password'}
               </label>
               <input
                 type='text'

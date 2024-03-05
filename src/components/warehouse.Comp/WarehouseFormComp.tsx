@@ -160,29 +160,6 @@ const WarehouseComp = () => {
                 </p>
               }
             </div>
-           {/* <div className={styles.inputBlock}>
-              <label 
-                htmlFor='active'>
-                {langState === 'es' ? 'Activo' : 'Active'}
-              </label>
-              <input
-                type='text'
-                id='active'
-                name='active' 
-                value={formData.active}
-                onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Defina activo...' :  'Define active...'}
-                // className={inputColor}
-              />
-              {
-                errors.active 
-                && 
-                <p className={styles.errorMessage}>
-                  {errors.active}
-                </p>
-              }
-            </div> */}
-      
           <button
             className={styles.submit}
             type='submit'
