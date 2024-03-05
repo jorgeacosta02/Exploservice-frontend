@@ -1,4 +1,4 @@
-import styles from './_WarehouseComp.module.scss';
+import styles from './_InvMovFormComp.module.scss';
 import { useState } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
@@ -9,7 +9,7 @@ import { selectMessageState, toggleMessage } from '../../redux/slices/messageSli
 
 
 
-const WarehouseComp = () => {
+const InvMovFormComp = () => {
 
    // Estados globales para opciones
   const langState = useSelector(selectLangState).lang;
@@ -89,7 +89,7 @@ const WarehouseComp = () => {
    const submitForm = async () => {
      try{
        const response = await axios.post(
-         'http://localhost:5001/contact',
+         'http://localhost:5000/inventory-movement',
           formData
        );
        console.log('response', response.status);
@@ -179,5 +179,5 @@ const WarehouseComp = () => {
   )
 }
 
-export default WarehouseComp
+export default InvMovFormComp
 

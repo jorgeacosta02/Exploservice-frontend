@@ -6,7 +6,8 @@ import EquipmentPage from './pages/equipmentPage/equipmentPage';
 import JobsPage from './pages/jobsPage/jobsPage';
 import ContactPage from './pages/contactPage/contactPage';
 import UserRegisterPage from './pages/userRegisterPage/UserRegisterPage';
-import IntranetPage from './pages/IntranetPage/IntranetPage';
+import IntranetPage from './pages/intranetPage/IntranetPage';
+import InvMovFormPage from './pages/invMovFormPage/InvMovFormPage';
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
   
 
         {/*Exploservice Routes*/}
+        <Route path='/inv-mov-form' element={<InvMovFormPage/>} />
         <Route path='/intranet' element={<IntranetPage/>} />
         <Route path='/register' element={<UserRegisterPage/>} />
         <Route path="/company" element={<CompanyPage />} />
