@@ -57,37 +57,3 @@ export const { cleanUser } = userSlice.actions;
 export default userSlice.reducer;
 
 export const selectUserAuth = (state:any) => state.userAuth;
-
-
-
-
-
-
-// import { createSlice } from "@reduxjs/toolkit";
-
-
-// const initialState = {
-//     firstName: '',
-//     lastName: '',
-//     dni: 0,
-//     healthPlan: '',
-//     phone: 0,
-//     email: '',
-//     password: '',
-//     status: false,
-//     role: '',
-// }
-
-// export const userAuthSlice = createSlice({
-//     name: 'userAuth',
-//     initialState,
-//     reducers: {
-
-//     }
-// })
-
-// export const {  } = userAuthSlice.actions;
-
-// export const userAuthState = (state:any) => state.userAuth;
-
-// export default userAuthSlice.reducer;

@@ -4,9 +4,9 @@ import axios from 'axios';
 // import { IArticleFormDB } from '../../Interfaces/articleInterfaces';
 
 
-export const getAllArticlesAction: any = createAsyncThunk('user/loginUser', async () => {
+export const getAllArticlesAction: any = createAsyncThunk('http://localhost:5000/article', async () => {
   try {
-    const response = await axios.get('http://localhost:5001/article');
+    const response = await axios.get('http://localhost:5000/article');
     console.log('response.data en getAllArticlesAction: ', response.data);
     const data = response.data;
     // localStorage.setItem('accessLogin', JSON.stringify(data));
