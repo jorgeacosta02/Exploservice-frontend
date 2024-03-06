@@ -5,6 +5,7 @@ import messageReducer from '../slices/messageSlice'
 import userReducer from '../slices/userAuthSlice'
 import articleReducer from '../slices/articleSlice'
 import locationReducer from '../slices/locationSlice'
+import inquiryReducer from '../slices/inquirySlice'
 
 
 export const store = configureStore ({
@@ -15,5 +16,6 @@ export const store = configureStore ({
     userReducer: userReducer,
     article: articleReducer,
     location: locationReducer,
+    inquiry: inquiryReducer,
   }
 })
