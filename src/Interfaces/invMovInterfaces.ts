@@ -4,7 +4,7 @@ export interface IInvMovData {
     articleId: any;
     originLocationId: any;
     destinationLocationId: any;
-    quantity: number;
+    quantity: any;
 }
 
 
@@ -15,5 +15,5 @@ export interface IInvMovFormDB {
     articleId: any;
     originLocationId: any;
     destinationLocationId: any;
-    quantity: number;
+    quantity: any;
 }

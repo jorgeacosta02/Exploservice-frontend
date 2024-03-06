@@ -91,16 +91,34 @@ const InvMovFormComp = () => {
      'This field must be filled out.';
  
    const emptyValidationHandler =()=>{
+     if(!formData.movementType){
+       setErrors((prevData) => ({
+         ...prevData,
+         movementType: emptyMessage,
+       }));
+     };
      if(!formData.articleId){
        setErrors((prevData) => ({
          ...prevData,
-         firstName: emptyMessage,
+         articleId: emptyMessage,
        }));
      };
      if(!formData.originLocationId){
        setErrors((prevData) => ({
          ...prevData,
-         email: emptyMessage,
+         originLocationId: emptyMessage,
+       }));
+     };
+     if(!formData.destinationLocationId){
+       setErrors((prevData) => ({
+         ...prevData,
+         destinationLocationId: emptyMessage,
+       }));
+     };
+     if(formData.quantity <= 0){
+       setErrors((prevData) => ({
+         ...prevData,
+         quantity: emptyMessage,
        }));
      };
    };
@@ -189,17 +207,20 @@ const InvMovFormComp = () => {
                 id="movementType"
                 name="movementType"
                 // multiple
-                // value={articleState}
+                value={formData.movementType}
                 onChange={addGenreHandler}
             >
-                {movementTypes.map((mov:any) => (
-                    <option
-                    key={mov}
-                    value={mov}
-                >
-                    {mov}
-                </option>
-                ))}
+              <option value="" disabled selected>
+                Seleccionar un tipo de movimiento
+              </option>
+              {movementTypes.map((mov:any) => (
+                  <option
+                  key={mov}
+                  value={mov}
+              >
+                  {mov}
+              </option>
+              ))}
             </select>
             {
               errors.movementType 
@@ -219,17 +240,20 @@ const InvMovFormComp = () => {
                 id="articleId"
                 name="articleId"
                 // multiple
-                // value={articleState}
+                value={formData.articleId}
                 onChange={addGenreHandler}
             >
-                {articleState.map((art:any) => (
-                    <option
-                    key={art.id}
-                    value={art.id}
-                >
-                    {art.name}
-                </option>
-                ))}
+              <option value="" disabled selected>
+                Seleccionar un artículo
+              </option>
+              {articleState.map((art:any) => (
+                  <option
+                  key={art.id}
+                  value={art.id}
+              >
+                  {art.name}
+              </option>
+              ))}
             </select>
             {
               errors.articleId 
@@ -249,17 +273,20 @@ const InvMovFormComp = () => {
                 id="originLocationId"
                 name="originLocationId"
                 // multiple
-                // value={locationState}
+                value={formData.originLocationId}
                 onChange={addGenreHandler}
             >
-                {locationState.map((loc:any) => (
-                    <option
-                    key={loc.id}
-                    value={loc.id}
-                >
-                    {loc.name}
-                </option>
-                ))}
+              <option value="" disabled selected>
+                Seleccionar una ubicación
+              </option>
+              {locationState.map((loc:any) => (
+                  <option
+                  key={loc.id}
+                  value={loc.id}
+              >
+                  {loc.name}
+              </option>
+              ))}
             </select>
             {
               errors.originLocationId 
@@ -279,17 +306,20 @@ const InvMovFormComp = () => {
                   id="destinationLocationId"
                   name="destinationLocationId"
                   // multiple
-                  // value={locationState}
+                  value={formData.destinationLocationId}
                   onChange={addGenreHandler}
               >
-                  {locationState.map((loc:any) => (
-                      <option
-                      key={loc.id}
-                      value={loc.id}
-                  >
-                      {loc.name}
-                  </option>
-                  ))}
+                <option value="" disabled selected>
+                  Seleccionar una ubicación
+                </option>
+                {locationState.map((loc:any) => (
+                    <option
+                    key={loc.id}
+                    value={loc.id}
+                >
+                    {loc.name}
+                </option>
+                ))}
               </select>
               {
                 errors.destinationLocationId 
