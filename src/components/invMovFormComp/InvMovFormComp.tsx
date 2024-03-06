@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
 import MessageComp from '../messageComp/MessageComp';
-import { IArticleData } from '../../Interfaces/articleInterfaces';
+import { IInvMovData } from '../../Interfaces/invMovInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
 import { selectMessageState, toggleMessage } from '../../redux/slices/messageSlice';
 import { selectArticleState } from '../../redux/slices/articleSlice';
@@ -21,6 +21,8 @@ const InvMovFormComp = () => {
   const articleState = useSelector(selectArticleState).data;
   const locationState = useSelector(selectLocationState).data;
   const dispatch = useDispatch();
+
+  const movementTypes = ['entrada', 'salida', 'transferencia']
   
   const start = async () =>{
     await dispatch(getAllArticlesAction());
@@ -32,29 +34,38 @@ const InvMovFormComp = () => {
     start()
   },[]);
   
-  console.log('selectArticlesState: ', selectArticleState)
-  console.log('articleState: ',articleState);
-  console.log('selectLangState: ', selectLangState)
-  console.log('langState: ',langState);
+  // console.log('selectArticlesState: ', selectArticleState)
+  // console.log('articleState: ',articleState);
+  // console.log('selectLangState: ', selectLangState)
+  // console.log('langState: ',langState);
    
   // Estado de datos del formulario
-  const [formData, setFormData] = useState<IArticleData>({
-    name:'',
-    description:'',
+  const [formData, setFormData] = useState<IInvMovData>({
+    movementType: '',
+    articleId: '',
+    originLocationId: '',
+    destinationLocationId: '',
+    quantity: 0
   });
  
    // Estado de errores del formulario
-   const [errors, setErrors] = useState<IArticleData>({
-    name:'',
-    description:'',
+   const [errors, setErrors] = useState<IInvMovData>({
+    movementType: '',
+    articleId: '',
+    originLocationId: '',
+    destinationLocationId: '',
+    quantity: 0
    });
    
    // Comprobación de estados para enviar formulario
    let submitOk = false;
   
   if(
-    formData.name !== '' &&
-    formData.description !== ''
+    formData.movementType !== '' &&
+    formData.articleId !== '' &&
+    formData.originLocationId !== '' &&
+    formData.destinationLocationId !== '' &&
+    formData.quantity !== 0
   ){
     submitOk = true;
   };
@@ -80,19 +91,18 @@ const InvMovFormComp = () => {
      'This field must be filled out.';
  
    const emptyValidationHandler =()=>{
-     if(!formData.name){
+     if(!formData.articleId){
        setErrors((prevData) => ({
          ...prevData,
          firstName: emptyMessage,
        }));
      };
-     if(!formData.description){
+     if(!formData.originLocationId){
        setErrors((prevData) => ({
          ...prevData,
          email: emptyMessage,
        }));
      };
-   
    };
    
    
@@ -112,16 +122,17 @@ const InvMovFormComp = () => {
        const response = await axios.post(
          'http://localhost:5000/inventory-movement',
           formData
-       );
-       console.log('response', response.status);
-       // queryResponse = await response.status;
-      setFormData({
-        name:'',
-        description:'',
-      })
- 
-       messageHandleClick()
-
+        );
+        console.log('response', response.status);
+        // queryResponse = await response.status;
+        setFormData({
+          movementType: '',
+          articleId:'',
+          originLocationId:'',
+          destinationLocationId:'',
+          quantity: 0
+        })
+        messageHandleClick()
      }catch(error:any){
        console.log(error.message)
      }
@@ -133,6 +144,16 @@ const InvMovFormComp = () => {
 
     console.log('selArticle: ', selArticle)
 
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setErrors((prevData) => ({
+      ...prevData,
+      [name]: '',
+    }));
+
     // const selGenreName = event.target.options[event.target.selectedIndex].label;
     
     // if(!gameContent.genreIds.includes(selGenre)){
@@ -143,7 +164,10 @@ const InvMovFormComp = () => {
     // };
     
     // console.log('gameContent.genreIds al final dentro de genresHandler', gameContent.genreIds);
-};
+  };
+
+  console.log('formData :', formData)
+  console.log('errors :', errors)
 
   
   return (
@@ -156,76 +180,106 @@ const InvMovFormComp = () => {
             Registrar movimiento en almacenes
           </h1>
           <div className={styles.inputBlock}>
-              <label 
-                htmlFor='name'>
-                {langState === 'es' ? 'Nombre' : 'Name'}
-              </label>
-              <select
-                  className={styles.select}
-                  id="articles"
-                  name="articles"
-                  // multiple
-                  value={articleState}
-                  onChange={addGenreHandler}
-              >
-                  {articleState.map((art:any) => (
-                      <option
-                      key={art.id}
-                      value={art.id}
-                  >
-                      {art.name}
-                  </option>
-                  ))}
-              </select>
-              {
-                errors.name 
-                && 
-                <p className={styles.errorMessage}>
-                  {errors.name}
-                </p>
-              }
-            </div>
+            <label 
+              htmlFor='movementType'>
+              {langState === 'es' ? 'Tipo de movimiento' : 'Movement type'}
+            </label>
+            <select
+                className={styles.select}
+                id="movementType"
+                name="movementType"
+                // multiple
+                // value={articleState}
+                onChange={addGenreHandler}
+            >
+                {movementTypes.map((mov:any) => (
+                    <option
+                    key={mov}
+                    value={mov}
+                >
+                    {mov}
+                </option>
+                ))}
+            </select>
+            {
+              errors.movementType 
+              && 
+              <p className={styles.errorMessage}>
+                {errors.movementType}
+              </p>
+            }
+          </div>
+          <div className={styles.inputBlock}>
+            <label 
+              htmlFor='articleId'>
+              {langState === 'es' ? 'Nombre' : 'Name'}
+            </label>
+            <select
+                className={styles.select}
+                id="articleId"
+                name="articleId"
+                // multiple
+                // value={articleState}
+                onChange={addGenreHandler}
+            >
+                {articleState.map((art:any) => (
+                    <option
+                    key={art.id}
+                    value={art.id}
+                >
+                    {art.name}
+                </option>
+                ))}
+            </select>
+            {
+              errors.articleId 
+              && 
+              <p className={styles.errorMessage}>
+                {errors.articleId}
+              </p>
+            }
+          </div>
+          <div className={styles.inputBlock}>
+            <label 
+              htmlFor='originLocationId'>
+              {langState === 'es' ? 'Locación de origen' : 'Origin location'}
+            </label>
+            <select
+                className={styles.select}
+                id="originLocationId"
+                name="originLocationId"
+                // multiple
+                // value={locationState}
+                onChange={addGenreHandler}
+            >
+                {locationState.map((loc:any) => (
+                    <option
+                    key={loc.id}
+                    value={loc.id}
+                >
+                    {loc.name}
+                </option>
+                ))}
+            </select>
+            {
+              errors.originLocationId 
+              && 
+              <p className={styles.errorMessage}>
+                {errors.originLocationId}
+              </p>
+            }
+          </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='origin'>
-                {langState === 'es' ? 'Locación de origen' : 'Origin location'}
-              </label>
-              <select
-                  className={styles.select}
-                  id="origin"
-                  name="origin"
-                  // multiple
-                  value={locationState}
-                  onChange={addGenreHandler}
-              >
-                  {locationState.map((loc:any) => (
-                      <option
-                      key={loc.id}
-                      value={loc.id}
-                  >
-                      {loc.name}
-                  </option>
-                  ))}
-              </select>
-              {
-                errors.description 
-                && 
-                <p className={styles.errorMessage}>
-                  {errors.description}
-                </p>
-              }
-            </div>
-          <div className={styles.inputBlock}>
-              <label 
-                htmlFor='destination'>
+                htmlFor='destinationLocationId'>
                 {langState === 'es' ? 'Locación de destino' : 'Destination location'}
               </label>
               <select
                   className={styles.select}
-                  id="destination"
-                  name="destination"
+                  id="destinationLocationId"
+                  name="destinationLocationId"
                   // multiple
-                  value={locationState}
+                  // value={locationState}
                   onChange={addGenreHandler}
               >
                   {locationState.map((loc:any) => (
@@ -238,10 +292,32 @@ const InvMovFormComp = () => {
                   ))}
               </select>
               {
-                errors.description 
+                errors.destinationLocationId 
                 && 
                 <p className={styles.errorMessage}>
-                  {errors.description}
+                  {errors.destinationLocationId}
+                </p>
+              }
+            </div>
+            <div className={styles.inputBlock}>
+              <label 
+                htmlFor='quantity'>
+                {langState === 'es' ? 'Cantidad' : 'Quantity'}
+              </label>
+              <input
+                type='number'
+                id='quantity'
+                name='quantity' 
+                value={formData.quantity}
+                onChange={handleInputChange} 
+                placeholder={langState === 'es' ? 'Ingrese cantidad...' :  'Enter quantity...'}
+                // className={inputColor}
+              />
+              {
+                errors.quantity 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.quantity}
                 </p>
               }
             </div>
@@ -255,10 +331,11 @@ const InvMovFormComp = () => {
       </div>
       { messageState && 
       <MessageComp
-        data={ langState === 'es' ?
-                'Mensaje enviado exitosamente' :
-                'Message sent successfully'
-              }
+        data={
+          langState === 'es' ?
+            'Mensaje enviado exitosamente' :
+            'Message sent successfully'
+        }
       />}
     </div>
   )

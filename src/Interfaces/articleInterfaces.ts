@@ -7,7 +7,7 @@ export interface IArticleData {
 }
 
 
-// Interface for save article in db
+// Interface article from db
 export interface IArticleFormDB {
     id: any;
     name: string;
