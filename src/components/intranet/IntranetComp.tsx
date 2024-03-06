@@ -38,10 +38,10 @@ const IntranetComp = () => {
                 </li>
                 <li>
                     <NavLink 
-                        to='#'
+                        to='/inquiry'
                         className={styles.link}
                     >
-                        Parte diario de obra
+                        Consultas
                     </NavLink>
                 </li>
                 <li>

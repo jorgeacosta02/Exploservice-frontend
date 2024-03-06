@@ -1,4 +1,4 @@
-import styles from './_InvMovFormComp.module.scss';
+import styles from './_InquiryComp.module.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
@@ -6,10 +6,8 @@ import MessageComp from '../messageComp/MessageComp';
 import { IInvMovData } from '../../Interfaces/invMovInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
 import { selectMessageState, toggleMessage } from '../../redux/slices/messageSlice';
-import { selectArticleState } from '../../redux/slices/articleSlice';
-import { getAllArticlesAction } from '../../redux/actions/articleActions';
-import { selectLocationState } from '../../redux/slices/locationSlice';
-import { getAllLocationsAction } from '../../redux/actions/locationActions';
+import { getAllInquiriesAction } from '../../redux/actions/inquiryActions';
+import { selectInquiryState } from '../../redux/slices/inquirySlice';
 
 
 
@@ -18,15 +16,14 @@ const InquiryComp = () => {
    // Estados globales para opciones
   const langState = useSelector(selectLangState);
   const messageState = useSelector(selectMessageState).message;
-  const articleState = useSelector(selectArticleState).data;
-  const locationState = useSelector(selectLocationState).data;
+  const inquiryState = useSelector(selectInquiryState).data
+
   const dispatch = useDispatch();
 
   const movementTypes = ['entrada', 'salida', 'transferencia']
   
   const start = async () =>{
-    await dispatch(getAllArticlesAction());
-    await dispatch(getAllLocationsAction());
+    await dispatch(getAllInquiriesAction());
   }
 
  
@@ -34,6 +31,7 @@ const InquiryComp = () => {
     start()
   },[]);
   
+  console.log(inquiryState);
   // console.log('selectArticlesState: ', selectArticleState)
   // console.log('articleState: ',articleState);
   // console.log('selectLangState: ', selectLangState)
@@ -138,7 +136,7 @@ const InquiryComp = () => {
    const submitForm = async () => {
      try{
        const response = await axios.post(
-         'http://localhost:5000/inventory-movement',
+         'http://localhost:5000/inventory',
           formData
         );
         console.log('response', response.status);
@@ -195,9 +193,9 @@ const InquiryComp = () => {
           onSubmit={handleSubmit}
         >
           <h1 className={styles.title}>
-            Registrar movimiento en almacenes
+            Consultas
           </h1>
-          <div className={styles.inputBlock}>
+          {/* <div className={styles.inputBlock}>
             <label 
               htmlFor='movementType'>
               {langState === 'es' ? 'Tipo de movimiento' : 'Movement type'}
@@ -248,9 +246,9 @@ const InquiryComp = () => {
               </option>
               {articleState.map((art:any) => (
                   <option
-                  key={art.id}
-                  value={art.id}
-              >
+                    key={art.id}
+                    value={art.id}
+                  >
                   {art.name}
               </option>
               ))}
@@ -328,7 +326,7 @@ const InquiryComp = () => {
                   {errors.destinationLocationId}
                 </p>
               }
-            </div>
+            </div> */}
             <div className={styles.inputBlock}>
               <label 
                 htmlFor='quantity'>

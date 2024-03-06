@@ -10,6 +10,7 @@ import IntranetPage from './pages/intranetPage/IntranetPage';
 import InvMovFormPage from './pages/invMovFormPage/InvMovFormPage';
 import ArticleUpFormPage from './pages/articleUpFormPage/ArticleUpFormPage';
 import LocationUpPage from './pages/locationUpPage/LocationUpPage';
+import InquiryPage from './pages/in/InquiryPage';
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
   
 
         {/*Exploservice Routes*/}
+        <Route path='/inquiry' element={<InquiryPage/>}/>
         <Route path='/location-up-form' element={<LocationUpPage/>} />
         <Route path='/article-up-form' element={<ArticleUpFormPage/>} />
         <Route path='/inventory-movement' element={<InvMovFormPage/>} />
