@@ -1,42 +1,42 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getAllArticlesAction } from '../actions/articleActions';
-import { IArticleData } from '../../Interfaces/articleInterfaces';
+import { getAllLocationsAction } from '../actions/locationActions';
+import { ILocationData } from '../../Interfaces/locationInterfaces';
 
-interface ArticleState {
-    data: IArticleData[] | null;
+interface ILocationState {
+    data: ILocationData[] | null;
     loading: boolean;
     error: string | null;
 }
 
-const initialState: ArticleState = {
+const initialState: ILocationState = {
     data: [],
     loading: false,
     error: null,
 };
 
-const articleSlice = createSlice({
-    name: 'article',
+const locationSlice = createSlice({
+    name: 'location',
     initialState,
     reducers: {
-      cleanArticles: (state) => {
+      cleanLocations: (state) => {
         state.data = null;
       }
     },
     extraReducers: (builder) => {
         builder
         .addCase(
-          getAllArticlesAction.pending, (state) => {
+          getAllLocationsAction.pending, (state) => {
           state.loading = true;
           state.error = null;
         })
         .addCase(
-          getAllArticlesAction.fulfilled, (state, action: PayloadAction<IArticleData[]>) => {
+          getAllLocationsAction.fulfilled, (state, action: PayloadAction<ILocationData[]>) => {
           state.loading = false;
           state.data = action.payload;
           console.log('state.data :', state.data)
         })
         .addCase(
-          getAllArticlesAction.rejected,
+          getAllLocationsAction.rejected,
           (state, action: any) => {
             state.loading = false;
             state.error = action.error.message || 'Error desconocido en la solicitud de los artículos';
@@ -47,9 +47,8 @@ const articleSlice = createSlice({
 });
 
 
-export default articleSlice.reducer;
+export default locationSlice.reducer;
 
-export const { cleanArticles } = articleSlice.actions;
+export const { cleanLocations } = locationSlice.actions;
 
-export const selectArticleState = (state: any) => state.article;
-
+export const selectLocationState = (state: any) => state.location

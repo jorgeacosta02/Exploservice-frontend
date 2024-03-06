@@ -6,24 +6,36 @@ import MessageComp from '../messageComp/MessageComp';
 import { IArticleData } from '../../Interfaces/articleInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
 import { selectMessageState, toggleMessage } from '../../redux/slices/messageSlice';
-import { selectArticlesState } from '../../redux/slices/articleSlice';
+import { selectArticleState } from '../../redux/slices/articleSlice';
 import { getAllArticlesAction } from '../../redux/actions/articleActions';
+import { selectLocationState } from '../../redux/slices/locationSlice';
+import { getAllLocationsAction } from '../../redux/actions/locationActions';
 
 
 
 const InvMovFormComp = () => {
 
    // Estados globales para opciones
-  const langState = useSelector(selectLangState).lang;
+  const langState = useSelector(selectLangState);
   const messageState = useSelector(selectMessageState).message;
-  const articleState = useSelector(selectArticlesState);
+  const articleState = useSelector(selectArticleState).data;
+  const locationState = useSelector(selectLocationState).data;
   const dispatch = useDispatch();
+  
+  const start = async () =>{
+    await dispatch(getAllArticlesAction());
+    await dispatch(getAllLocationsAction());
+  }
 
+ 
   useEffect(()=>{
-    dispatch(getAllArticlesAction());
+    start()
   },[]);
-
+  
+  console.log('selectArticlesState: ', selectArticleState)
   console.log('articleState: ',articleState);
+  console.log('selectLangState: ', selectLangState)
+  console.log('langState: ',langState);
    
   // Estado de datos del formulario
   const [formData, setFormData] = useState<IArticleData>({
@@ -115,6 +127,24 @@ const InvMovFormComp = () => {
      }
    }
 
+   const addGenreHandler =(event:any)=>{
+        
+    const selArticle = event.target.value;
+
+    console.log('selArticle: ', selArticle)
+
+    // const selGenreName = event.target.options[event.target.selectedIndex].label;
+    
+    // if(!gameContent.genreIds.includes(selGenre)){
+    //     setGameContent({...gameContent,genreIds:[...gameContent.genreIds,selGenre]})
+    //     setErrorGenreIds('');
+    //     const data = {id:selGenre, name:selGenreName}
+    //     return dispatch(addIdNameGenre(data))
+    // };
+    
+    // console.log('gameContent.genreIds al final dentro de genresHandler', gameContent.genreIds);
+};
+
   
   return (
     <div className={styles.container}>
@@ -130,15 +160,23 @@ const InvMovFormComp = () => {
                 htmlFor='name'>
                 {langState === 'es' ? 'Nombre' : 'Name'}
               </label>
-              <input
-                type='text'
-                id='name'
-                name='name' 
-                value={formData.name}
-                onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter first name...'}
-                // className={inputColor}
-              />
+              <select
+                  className={styles.select}
+                  id="articles"
+                  name="articles"
+                  // multiple
+                  value={articleState}
+                  onChange={addGenreHandler}
+              >
+                  {articleState.map((art:any) => (
+                      <option
+                      key={art.id}
+                      value={art.id}
+                  >
+                      {art.name}
+                  </option>
+                  ))}
+              </select>
               {
                 errors.name 
                 && 
@@ -149,18 +187,56 @@ const InvMovFormComp = () => {
             </div>
           <div className={styles.inputBlock}>
               <label 
-                htmlFor='description'>
-                {langState === 'es' ? 'Descripción' : 'Description'}
+                htmlFor='origin'>
+                {langState === 'es' ? 'Locación de origen' : 'Origin location'}
               </label>
-              <input
-                type='text'
-                id='description'
-                name='description' 
-                value={formData.description}
-                onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese descripción...' :  'Enter description...'}
-                // className={inputColor}
-              />
+              <select
+                  className={styles.select}
+                  id="origin"
+                  name="origin"
+                  // multiple
+                  value={locationState}
+                  onChange={addGenreHandler}
+              >
+                  {locationState.map((loc:any) => (
+                      <option
+                      key={loc.id}
+                      value={loc.id}
+                  >
+                      {loc.name}
+                  </option>
+                  ))}
+              </select>
+              {
+                errors.description 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.description}
+                </p>
+              }
+            </div>
+          <div className={styles.inputBlock}>
+              <label 
+                htmlFor='destination'>
+                {langState === 'es' ? 'Locación de destino' : 'Destination location'}
+              </label>
+              <select
+                  className={styles.select}
+                  id="destination"
+                  name="destination"
+                  // multiple
+                  value={locationState}
+                  onChange={addGenreHandler}
+              >
+                  {locationState.map((loc:any) => (
+                      <option
+                      key={loc.id}
+                      value={loc.id}
+                  >
+                      {loc.name}
+                  </option>
+                  ))}
+              </select>
               {
                 errors.description 
                 && 
