@@ -194,17 +194,22 @@ const InquiryComp = () => {
         <h1 className={styles.title}>
           Consultas
         </h1>
-        <p>{inquiryState[0]?.article?.brand}</p>
+        {/* <p>{inquiryState[0]?.article?.brand}</p> */}
         {
-          inquiryState.map((inq:any) => {
+          inquiryState.map((inq:any) => (
             <div>
-              <p>Uno</p>
+              {/* <p>Uno</p> */}
               <InqSingleComp
                 key={inq.id}
-                name={inq.article.brand}
+                article={inq.article.name}
+                feature1={inq.article.feature1}
+                feature2={inq.article.feature2}
+                brand={inq.article.brand}
+                location={inq.location.name}
+                quantity={inq.amount}
               />
             </div>
-          })
+          ))
         }
       </div>
     </div>
