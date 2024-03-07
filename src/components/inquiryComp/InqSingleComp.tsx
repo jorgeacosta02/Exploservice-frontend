@@ -8,7 +8,22 @@ const InqSingleComp = (props: any) => {
             className={styles.container}
         >
             <p>
-                {props.article} -{props.feature1} - {props.feature2} - {props.brand} - {props.location} - {props.quantity}
+                {props.article}
+            </p>
+            <p>
+                {props.feature1}
+            </p>
+            <p>
+                {props.feature2}
+            </p>
+            <p>
+                {props.brand}
+            </p>
+            <p>
+                {props.location}
+            </p>
+            <p>
+                {props.quantity}
             </p>
 
         </div>

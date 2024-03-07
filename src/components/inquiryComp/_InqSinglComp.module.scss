@@ -1,0 +1,10 @@
+@use '../../styles/globals' as g;
+
+.container{
+    width: 50%;
+    @include g.create-flexbox(row, space-evenly);
+    p{
+        width: 15%;
+        text-align: left;
+    }
+}
