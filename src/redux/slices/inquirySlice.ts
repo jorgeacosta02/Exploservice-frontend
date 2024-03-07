@@ -33,7 +33,7 @@ const inquirySlice = createSlice({
           getAllInquiriesAction.fulfilled, (state, action: PayloadAction<IArticleData[]>) => {
           state.loading = false;
           state.data = action.payload;
-          console.log('state.data :', state.data)
+          // console.log('state.data :', state.data)
         })
         .addCase(
           getAllInquiriesAction.rejected,
