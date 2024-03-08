@@ -239,7 +239,7 @@ const InvMovFormComp = () => {
                   key={art.id}
                   value={art.id}
               >
-                  {art.name}
+                  {art.name} {art.brand} {art.grup1} {art.group2}
               </option>
               ))}
             </select>

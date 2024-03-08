@@ -10,7 +10,7 @@ import IntranetPage from './pages/intranetPage/IntranetPage';
 import InvMovFormPage from './pages/invMovFormPage/InvMovFormPage';
 import ArticleUpFormPage from './pages/articleUpFormPage/ArticleUpFormPage';
 import LocationUpPage from './pages/locationUpPage/LocationUpPage';
-import InquiryPage from './pages/in/InquiryPage';
+import InquiryPage from './pages/inquiryPage/InquiryPage';
 
 
 
