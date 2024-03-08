@@ -7,7 +7,7 @@ import { selectInquiryState } from '../../redux/slices/inquirySlice';
 import InqSingleComp from './InqSingleComp';
 import { selectArticleState } from '../../redux/slices/articleSlice';
 import { getAllArticlesAction } from '../../redux/actions/articleActions';
-import { selectLocationState } from '../../redux/slices/locationSlice';
+// import { selectLocationState } from '../../redux/slices/locationSlice';
 import { getAllLocationsAction } from '../../redux/actions/locationActions';
 import { selectLangState } from '../../redux/slices/langSlice';
 
@@ -42,11 +42,6 @@ const InquiryComp = () => {
   console.log('inquiryState: ', inquiryState);
 
   const handleChange =(event:any)=>{
-        
-    // const selArticle = event.target.value;
-
-    // console.log('selArticle: ', selArticle)
-
     const { name, value } = event.target;
     setOptions((prevData) => ({
       ...prevData,
