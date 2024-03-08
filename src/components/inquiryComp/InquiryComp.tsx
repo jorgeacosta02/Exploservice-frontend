@@ -25,7 +25,7 @@ const InquiryComp = () => {
     feature1:'',
     feature2:'',
     brand:'',
-    location:'Central',
+    location:'',
     quantity:''
   })
 
@@ -48,6 +48,13 @@ const InquiryComp = () => {
       [name]: value,
     }));
   };
+
+  //Array filtrado por article para mostrar options de feature1
+  let feature1Options = articleState
+                .filter((art:any) => 
+                  (!options.article || art.name === options.article)
+                )
+  console.log('feature1Options: ', feature1Options);
   
   return (
     <div className={styles.container}>
@@ -56,7 +63,7 @@ const InquiryComp = () => {
           Consultas
         </h1>
         <div>
-        <div className={styles.inputBlock}>
+          <div className={styles.inputBlock}>
             <label 
               htmlFor='article'>
               {langState === 'es' ? 'Artículo' : 'Article'}
@@ -77,6 +84,31 @@ const InquiryComp = () => {
                   value={art.name}
               >
                   {art.name}
+              </option>
+              ))}
+            </select>
+          </div>
+          <div className={styles.inputBlock}>
+            <label 
+              htmlFor='feature1'>
+              {langState === 'es' ? 'Caract 1' : 'Feature 1'}
+            </label>
+            <select
+                className={styles.select}
+                id="feature1"
+                name="feature1"
+                value={options.feature1}
+                onChange={handleChange}
+            >
+              <option value="" disabled selected>
+                Seleccionar característica 1
+              </option>
+              {feature1Options.map((art:any) => (
+                    <option
+                    key={art.id}
+                    value={art.feature1}
+              >
+                  {art.feature1}
               </option>
               ))}
             </select>
