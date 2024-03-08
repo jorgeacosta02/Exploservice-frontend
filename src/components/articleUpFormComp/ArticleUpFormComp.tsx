@@ -19,21 +19,24 @@ const ArticleUpFormComp = () => {
   // Estado de datos del formulario
   const [formData, setFormData] = useState<IArticleData>({
     name:'',
-    description:'',
+    group1:'',
+    group2:''
   });
  
    // Estado de errores del formulario
    const [errors, setErrors] = useState<IArticleData>({
     name:'',
-    description:'',
+    group1:'',
+    group2:''
    });
    
    // Comprobación de estados para enviar formulario
    let submitOk = false;
   
   if(
-    formData.name !== '' &&
-    formData.description !== ''
+    formData.name !== ''
+    // formData.group1 !== '' &&
+    // formData.group2 !== ''
   ){
     submitOk = true;
   };
@@ -65,12 +68,12 @@ const ArticleUpFormComp = () => {
          firstName: emptyMessage,
        }));
      };
-     if(!formData.description){
-       setErrors((prevData) => ({
-         ...prevData,
-         email: emptyMessage,
-       }));
-     };
+    //  if(!formData.){
+    //    setErrors((prevData) => ({
+    //      ...prevData,
+    //      email: emptyMessage,
+    //    }));
+    //  };
    
    };
    
@@ -96,7 +99,8 @@ const ArticleUpFormComp = () => {
        // queryResponse = await response.status;
       setFormData({
         name:'',
-        description:'',
+        group1:'',
+        group2:''
       })
  
        messageHandleClick()
@@ -128,7 +132,6 @@ const ArticleUpFormComp = () => {
                 value={formData.name}
                 onChange={handleInputChange} 
                 placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter first name...'}
-                // className={inputColor}
               />
               {
                 errors.name 
@@ -138,7 +141,7 @@ const ArticleUpFormComp = () => {
                 </p>
               }
             </div>
-          <div className={styles.inputBlock}>
+            <div className={styles.inputBlock}>
               <label 
                 htmlFor='description'>
                 {langState === 'es' ? 'Descripción' : 'Description'}
@@ -147,18 +150,40 @@ const ArticleUpFormComp = () => {
                 type='text'
                 id='description'
                 name='description' 
-                value={formData.description}
+                value={formData.group1}
                 onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese descripción...' :  'Enter description...'}
+                placeholder={langState === 'es' ? 'Ingrese grupo 1...' :  'Enter group 1...'}
                 // className={inputColor}
               />
-              {
+              {/* {
                 errors.description 
                 && 
                 <p className={styles.errorMessage}>
                   {errors.description}
                 </p>
-              }
+              } */}
+            </div>
+            <div className={styles.inputBlock}>
+              <label 
+                htmlFor='description'>
+                {langState === 'es' ? 'Descripción' : 'Description'}
+              </label>
+              <input
+                type='text'
+                id='description'
+                name='description' 
+                value={formData.group1}
+                onChange={handleInputChange} 
+                placeholder={langState === 'es' ? 'Ingrese grupo 2...' :  'Enter group 2...'}
+                // className={inputColor}
+              />
+              {/* {
+                errors.description 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.description}
+                </p>
+              } */}
             </div>
           <button
             className={styles.submit}
@@ -171,9 +196,9 @@ const ArticleUpFormComp = () => {
       { messageState && 
       <MessageComp
         data={ langState === 'es' ?
-                'Mensaje enviado exitosamente' :
-                'Message sent successfully'
-              }
+          'Mensaje enviado exitosamente' :
+          'Message sent successfully'
+        }
       />}
     </div>
   )

@@ -156,7 +156,7 @@ const InvMovFormComp = () => {
      }
    }
 
-   const addGenreHandler =(event:any)=>{
+   const selectChangeHandler =(event:any)=>{
         
     const selArticle = event.target.value;
 
@@ -172,16 +172,6 @@ const InvMovFormComp = () => {
       [name]: '',
     }));
 
-    // const selGenreName = event.target.options[event.target.selectedIndex].label;
-    
-    // if(!gameContent.genreIds.includes(selGenre)){
-    //     setGameContent({...gameContent,genreIds:[...gameContent.genreIds,selGenre]})
-    //     setErrorGenreIds('');
-    //     const data = {id:selGenre, name:selGenreName}
-    //     return dispatch(addIdNameGenre(data))
-    // };
-    
-    // console.log('gameContent.genreIds al final dentro de genresHandler', gameContent.genreIds);
   };
 
   console.log('formData :', formData)
@@ -206,9 +196,8 @@ const InvMovFormComp = () => {
                 className={styles.select}
                 id="movementType"
                 name="movementType"
-                // multiple
                 value={formData.movementType}
-                onChange={addGenreHandler}
+                onChange={selectChangeHandler}
             >
               <option value="" disabled selected>
                 Seleccionar un tipo de movimiento
@@ -233,15 +222,14 @@ const InvMovFormComp = () => {
           <div className={styles.inputBlock}>
             <label 
               htmlFor='articleId'>
-              {langState === 'es' ? 'Nombre' : 'Name'}
+              {langState === 'es' ? 'Artículo' : 'Article'}
             </label>
             <select
                 className={styles.select}
                 id="articleId"
                 name="articleId"
-                // multiple
                 value={formData.articleId}
-                onChange={addGenreHandler}
+                onChange={selectChangeHandler}
             >
               <option value="" disabled selected>
                 Seleccionar un artículo
@@ -274,7 +262,7 @@ const InvMovFormComp = () => {
                 name="originLocationId"
                 // multiple
                 value={formData.originLocationId}
-                onChange={addGenreHandler}
+                onChange={selectChangeHandler}
             >
               <option value="" disabled selected>
                 Seleccionar una ubicación
@@ -307,7 +295,7 @@ const InvMovFormComp = () => {
                   name="destinationLocationId"
                   // multiple
                   value={formData.destinationLocationId}
-                  onChange={addGenreHandler}
+                  onChange={selectChangeHandler}
               >
                 <option value="" disabled selected>
                   Seleccionar una ubicación
