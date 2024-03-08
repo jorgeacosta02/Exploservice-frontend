@@ -11,12 +11,14 @@ import { IArticleFormDB } from '../../Interfaces/articleInterfaces';
 import { getAllLocationsAction } from '../../redux/actions/locationActions';
 import { selectLangState } from '../../redux/slices/langSlice';
 import { Link } from 'react-router-dom';
+import { selectLocationState } from '../../redux/slices/locationSlice';
 
 
 
 const InquiryComp = () => {
 
   const langState = useSelector(selectLangState).lang
+  const locationState = useSelector(selectLocationState).data
   const articleState = useSelector(selectArticleState).data
   const inquiryState = useSelector(selectInquiryState).data
 
@@ -24,9 +26,9 @@ const InquiryComp = () => {
 
   const [options, setOptions] = useState({
     article:'',
-    brand:'',
     group1:'',
     group2:'',
+    brand:'',
     location:'',
     quantity:''
   })
@@ -51,37 +53,33 @@ const InquiryComp = () => {
 
   // Obtener una lista de nombres únicos de los artículos
   const uniqueArticleNames: any[] = Array.from(new Set<IArticleFormDB>(articleState.map((art:any) => art.name)));
+  // Obtener una lista de nombres únicos de los artículos
+  const uniqueGroup1Names: any[] = Array.from(new Set<IArticleFormDB>(articleState.map((art:any) => art.group1)));
+  // Obtener una lista de nombres únicos de los artículos
+  const uniqueGroup2Names: any[] = Array.from(new Set<IArticleFormDB>(articleState.map((art:any) => art.group2)));
+  // Obtener una lista de nombres únicos de los artículos
+  const uniqueBrandNames: any[] = Array.from(new Set<IArticleFormDB>(articleState.map((art:any) => art.brand)));
+  // Obtener una lista de nombres únicos de los artículos
+  const uniqueLocationNames: any[] = Array.from(new Set<IArticleFormDB>(locationState.map((art:any) => art.name)));
   
-  //Array filtrado por article para mostrar options de feature1
-  let brandOptions = articleState.filter((art:any) => (!options.article || art.name === options.article))
 
-  //Array filtrado por article para mostrar options de feature1
-  let group1Options = articleState.filter((art:any) => (!options.article || art.group1 === options.group1))
-  
-  // let brandOptions: any[] = [];
-  // let uniqueNames = new Set();
-  
-  // articleState.forEach((art:any) => {
-  //   if ((!options.article || art.name === options.article) && !uniqueNames.has(art.name)) {
-  //     brandOptions.push(art);
-  //     uniqueNames.add(art.name);
-  //   }
-  // });
-      
-  // let brands: any[] =  Array.from(uniqueNames)
-
-  // console.log('brands: ', brands)
+  console.log('options: ', options)
   console.log('inquiryState: ', inquiryState);
-  console.log('articleState: ', articleState)
+  console.log('articleState: ', articleState);
+  console.log('locationState: ', locationState)
   console.log('uniqueArticleNames: ', uniqueArticleNames)
-  console.log('brandOptions: ', brandOptions);
+  console.log('uniqueGroup1Names: ', uniqueGroup1Names)
+  console.log('uniqueGroup2Names: ', uniqueGroup2Names)
+  console.log('uniqueBrandNames: ', uniqueBrandNames)
+  console.log('uniqueLocationNames: ', uniqueLocationNames)
+
 
   const cleanFiltersHandler = () => {
     setOptions({
       article:'',
-      brand:'',
       group1:'',
       group2:'',
+      brand:'',
       location:'',
       quantity:''
     })
@@ -135,12 +133,9 @@ const InquiryComp = () => {
             <option value="" disabled selected>
               Seleccionar Grupo 
             </option>
-            {brandOptions.map((art:any) => (
-              <option
-                key={art.id}
-                value={art.group1}
-              >
-                {art.group1}
+            {uniqueGroup1Names.map((name, index) => (
+              <option key={index} value={name}>
+                {name}
               </option>
             ))}
           </select>
@@ -160,12 +155,9 @@ const InquiryComp = () => {
             <option value="" disabled selected>
               Seleccionar Grupo 
             </option>
-            {brandOptions.map((art:any) => (
-              <option
-                key={art.id}
-                value={art.group2}
-              >
-                {art.group2}
+            {uniqueGroup2Names.map((name, index) => (
+              <option key={index} value={name}>
+                {name}
               </option>
             ))}
           </select>
@@ -185,12 +177,31 @@ const InquiryComp = () => {
             <option value="" disabled selected>
               Seleccionar Marca
             </option>
-            {brandOptions.map((art:any) => (
-              <option
-                key={art.id}
-                value={art.brand}
-              >
-                {art.brand}
+            {uniqueBrandNames.map((name, index) => (
+              <option key={index} value={name}>
+                {name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.selectBlock}>
+          <label 
+            htmlFor='location'>
+            {langState === 'es' ? 'Locación' : 'Location'}
+          </label>
+          <select
+            className={styles.select}
+            id="location"
+            name="location"
+            value={options.location}
+            onChange={handleChange}
+          >
+            <option value="" disabled selected>
+              Seleccionar Locación
+            </option>
+            {uniqueLocationNames.map((name, index) => (
+              <option key={index} value={name}>
+                {name}
               </option>
             ))}
           </select>
@@ -200,9 +211,9 @@ const InquiryComp = () => {
         inquiryState
         .filter((inq:any) => 
         (!options.article || inq.article.name === options.article) && 
-        (!options.brand || inq.article.brand === options.brand) && 
         (!options.group1 || inq.article.group1 === options.group1) && 
         (!options.group2 || inq.article.group1 === options.group2) && 
+        (!options.brand || inq.article.brand === options.brand) && 
         (!options.location || inq.location.name === options.location)
       )
         .map((inq:any) => (
