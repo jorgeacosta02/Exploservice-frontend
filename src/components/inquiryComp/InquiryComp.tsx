@@ -40,6 +40,19 @@ const InquiryComp = () => {
   },[]);
   
   console.log('inquiryState: ', inquiryState);
+
+  const handleChange =(event:any)=>{
+        
+    // const selArticle = event.target.value;
+
+    // console.log('selArticle: ', selArticle)
+
+    const { name, value } = event.target;
+    setOptions((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
   
   return (
     <div className={styles.container}>
@@ -50,15 +63,15 @@ const InquiryComp = () => {
         <div>
         <div className={styles.inputBlock}>
             <label 
-              htmlFor='articleId'>
-              {langState === 'es' ? 'Nombre' : 'Name'}
+              htmlFor='article'>
+              {langState === 'es' ? 'Artículo' : 'Article'}
             </label>
             <select
                 className={styles.select}
-                id="articleId"
-                name="articleId"
-                // value={formData.articleId}
-                // onChange={addGenreHandler}
+                id="article"
+                name="article"
+                value={options.article}
+                onChange={handleChange}
             >
               <option value="" disabled selected>
                 Seleccionar un artículo
@@ -66,7 +79,7 @@ const InquiryComp = () => {
               {articleState.map((art:any) => (
                   <option
                   key={art.id}
-                  value={art.id}
+                  value={art.name}
               >
                   {art.name}
               </option>
