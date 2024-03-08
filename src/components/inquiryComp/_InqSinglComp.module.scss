@@ -1,7 +1,7 @@
 @use '../../styles/globals' as g;
 
 .container{
-    width: 50%;
+    width: 80%;
     @include g.create-flexbox(row, space-evenly);
     p{
         width: 15%;
