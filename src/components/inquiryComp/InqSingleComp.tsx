@@ -2,7 +2,7 @@ import styles from './_InqSinglComp.module.scss'
 
 const InqSingleComp = (props: any) => {
 
-    console.log('props in single: ', props)
+    // console.log('props in single: ', props)
     return (
         <div
             className={styles.container}
@@ -11,10 +11,10 @@ const InqSingleComp = (props: any) => {
                 {props.article}
             </p>
             <p>
-                {props.feature1}
+                {props.group1}
             </p>
             <p>
-                {props.feature2}
+                {props.group2}
             </p>
             <p>
                 {props.brand}

@@ -40,9 +40,7 @@ const InquiryComp = () => {
   useEffect(()=>{
     start()
   },[]);
-  
-  console.log('inquiryState: ', inquiryState);
-
+ 
   const handleChange =(event:any)=>{
     const { name, value } = event.target;
     setOptions((prevData) => ({
@@ -53,12 +51,29 @@ const InquiryComp = () => {
 
   // Obtener una lista de nombres únicos de los artículos
   const uniqueArticleNames: any[] = Array.from(new Set<IArticleFormDB>(articleState.map((art:any) => art.name)));
+  
+  //Array filtrado por article para mostrar options de feature1
+  let brandOptions = articleState.filter((art:any) => (!options.article || art.name === options.article))
 
   //Array filtrado por article para mostrar options de feature1
-  let brandOptions = articleState
-                .filter((art:any) => 
-                  (!options.article || art.name === options.article)
-                )
+  let group1Options = articleState.filter((art:any) => (!options.article || art.group1 === options.group1))
+  
+  // let brandOptions: any[] = [];
+  // let uniqueNames = new Set();
+  
+  // articleState.forEach((art:any) => {
+  //   if ((!options.article || art.name === options.article) && !uniqueNames.has(art.name)) {
+  //     brandOptions.push(art);
+  //     uniqueNames.add(art.name);
+  //   }
+  // });
+      
+  // let brands: any[] =  Array.from(uniqueNames)
+
+  // console.log('brands: ', brands)
+  console.log('inquiryState: ', inquiryState);
+  console.log('articleState: ', articleState)
+  console.log('uniqueArticleNames: ', uniqueArticleNames)
   console.log('brandOptions: ', brandOptions);
 
   const cleanFiltersHandler = () => {
@@ -89,11 +104,11 @@ const InquiryComp = () => {
             {langState === 'es' ? 'Artículo' : 'Article'}
           </label>
           <select
-              className={styles.select}
-              id="article"
-              name="article"
-              value={options.article}
-              onChange={handleChange}
+            className={styles.select}
+            id="article"
+            name="article"
+            value={options.article}
+            onChange={handleChange}
           >
             <option value="" disabled selected>
               Seleccionar un artículo
@@ -107,15 +122,65 @@ const InquiryComp = () => {
         </div>
         <div className={styles.selectBlock}>
           <label 
+            htmlFor='group1'>
+            {langState === 'es' ? 'Grupo 1' : 'Group 1'}
+          </label>
+          <select
+            className={styles.select}
+            id="group1"
+            name="group1"
+            value={options.group1}
+            onChange={handleChange}
+          >
+            <option value="" disabled selected>
+              Seleccionar Grupo 
+            </option>
+            {brandOptions.map((art:any) => (
+              <option
+                key={art.id}
+                value={art.group1}
+              >
+                {art.group1}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.selectBlock}>
+          <label 
+            htmlFor='group2'>
+            {langState === 'es' ? 'Grupo 2' : 'Group 2'}
+          </label>
+          <select
+            className={styles.select}
+            id="group2"
+            name="group2"
+            value={options.group2}
+            onChange={handleChange}
+          >
+            <option value="" disabled selected>
+              Seleccionar Grupo 
+            </option>
+            {brandOptions.map((art:any) => (
+              <option
+                key={art.id}
+                value={art.group2}
+              >
+                {art.group2}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.selectBlock}>
+          <label 
             htmlFor='brand'>
             {langState === 'es' ? 'Marca' : 'Brand'}
           </label>
           <select
-              className={styles.select}
-              id="brand"
-              name="brand"
-              value={options.brand}
-              onChange={handleChange}
+            className={styles.select}
+            id="brand"
+            name="brand"
+            value={options.brand}
+            onChange={handleChange}
           >
             <option value="" disabled selected>
               Seleccionar Marca
@@ -145,8 +210,8 @@ const InquiryComp = () => {
             <InqSingleComp
               article={inq.article.name}
               brand={inq.article.brand}
-              feature1={inq.article.group1}
-              feature2={inq.article.group2}
+              group1={inq.article.group1}
+              group2={inq.article.group2}
               location={inq.location.name}
               quantity={inq.amount}
             />
