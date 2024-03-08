@@ -2,6 +2,7 @@ import styles from './_InvMovFormComp.module.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import MessageComp from '../messageComp/MessageComp';
 import { IInvMovData } from '../../Interfaces/invMovInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
@@ -187,6 +188,7 @@ const InvMovFormComp = () => {
           <h1 className={styles.title}>
             Registrar movimiento en almacenes
           </h1>
+          <Link to='/inquiry'>A Consultas</Link>
           <div className={styles.inputBlock}>
             <label 
               htmlFor='movementType'>
@@ -239,7 +241,7 @@ const InvMovFormComp = () => {
                   key={art.id}
                   value={art.id}
               >
-                  {art.name} {art.brand} {art.grup1} {art.group2}
+                  {art.name} {art.brand} {art.group1} {art.group2}
               </option>
               ))}
             </select>

@@ -10,6 +10,7 @@ import { getAllArticlesAction } from '../../redux/actions/articleActions';
 // import { selectLocationState } from '../../redux/slices/locationSlice';
 import { getAllLocationsAction } from '../../redux/actions/locationActions';
 import { selectLangState } from '../../redux/slices/langSlice';
+import { Link } from 'react-router-dom';
 
 
 const InquiryComp = () => {
@@ -22,9 +23,9 @@ const InquiryComp = () => {
 
   const [options, setOptions] = useState({
     article:'',
-    feature1:'',
-    feature2:'',
     brand:'',
+    group1:'',
+    group2:'',
     location:'',
     quantity:''
   })
@@ -50,11 +51,11 @@ const InquiryComp = () => {
   };
 
   //Array filtrado por article para mostrar options de feature1
-  let feature1Options = articleState
+  let brandOptions = articleState
                 .filter((art:any) => 
                   (!options.article || art.name === options.article)
                 )
-  console.log('feature1Options: ', feature1Options);
+  console.log('brandOptions: ', brandOptions);
   
   return (
     <div className={styles.container}>
@@ -90,25 +91,25 @@ const InquiryComp = () => {
           </div>
           <div className={styles.inputBlock}>
             <label 
-              htmlFor='feature1'>
-              {langState === 'es' ? 'Caract 1' : 'Feature 1'}
+              htmlFor='brand'>
+              {langState === 'es' ? 'Marca' : 'Brand'}
             </label>
             <select
                 className={styles.select}
-                id="feature1"
-                name="feature1"
-                value={options.feature1}
+                id="brand"
+                name="brand"
+                value={options.brand}
                 onChange={handleChange}
             >
               <option value="" disabled selected>
                 Seleccionar característica 1
               </option>
-              {feature1Options.map((art:any) => (
+              {brandOptions.map((art:any) => (
                     <option
                     key={art.id}
-                    value={art.feature1}
+                    value={art.brand}
               >
-                  {art.feature1}
+                  {art.brand}
               </option>
               ))}
             </select>
@@ -118,18 +119,18 @@ const InquiryComp = () => {
           inquiryState
           .filter((inq:any) => 
           (!options.article || inq.article.name === options.article) && 
-          (!options.feature1 || inq.article.feature1 === options.feature1) && 
-          (!options.feature2 || inq.article.feature1 === options.feature2) && 
           (!options.brand || inq.article.brand === options.brand) && 
+          (!options.group1 || inq.article.group1 === options.group1) && 
+          (!options.group2 || inq.article.group1 === options.group2) && 
           (!options.location || inq.location.name === options.location)
         )
           .map((inq:any) => (
             <div key={inq.id}>
               <InqSingleComp
                 article={inq.article.name}
-                feature1={inq.article.feature1}
-                feature2={inq.article.feature2}
                 brand={inq.article.brand}
+                feature1={inq.article.group1}
+                feature2={inq.article.group2}
                 location={inq.location.name}
                 quantity={inq.amount}
               />
@@ -137,6 +138,7 @@ const InquiryComp = () => {
           ))
         }
       </div>
+      <Link to='/inventory-movement'>Inventory Movemente</Link>
     </div>
   )
 }
