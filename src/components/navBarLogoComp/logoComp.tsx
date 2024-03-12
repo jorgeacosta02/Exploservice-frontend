@@ -1,5 +1,5 @@
 import styles from './_LogoComp.module.scss';
-import ESLogoImg from '../../Assets/Images/Logos&Brands/ExploserviceLogoBrand.png';
+import ESLogoImg from '../../Assets/Images/Logos&Brands/Exploservice-Logo-Brand-black.png';
 import ADLLogo from '../../Assets/Images/Logos&Brands/ADLLogo.png';
 
 const LogoComp = () => {

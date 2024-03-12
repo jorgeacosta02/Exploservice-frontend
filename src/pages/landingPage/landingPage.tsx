@@ -1,6 +1,6 @@
 import styles from './_landing.module.scss'
 import { NavLink } from 'react-router-dom'
-import LogoBrand from '../../Assets/Images/Logos&Brands/ExploserviceLogoBrand.png'
+import LogoBrand from '../../Assets/Images/Logos&Brands/Exploservice-Logo-Brand-black.png'
 import ADLLogo from '../../Assets/Images/Logos&Brands/ADLLogo2.png'
 
 
