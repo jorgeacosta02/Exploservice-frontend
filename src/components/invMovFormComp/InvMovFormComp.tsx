@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import ReactSelect from 'react-select';
 import MessageComp from '../messageComp/MessageComp';
 import { IInvMovData } from '../../Interfaces/invMovInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
@@ -175,6 +176,20 @@ const InvMovFormComp = () => {
 
   };
 
+
+  const selectChangeHandler2 = (selectedOption: any) => {
+    setFormData((prevData) => ({
+        ...prevData,
+        articleId: selectedOption.value,
+    }));
+    setErrors((prevData) => ({
+        ...prevData,
+        articleId: '',
+    }));
+};
+
+
+
   console.log('formData :', formData)
   console.log('errors :', errors)
 
@@ -222,37 +237,30 @@ const InvMovFormComp = () => {
             }
           </div>
           <div className={styles.inputBlock}>
-            <label 
-              htmlFor='articleId'>
-              {langState === 'es' ? 'Artículo' : 'Article'}
-            </label>
-            <select
-                className={styles.select}
-                id="articleId"
-                name="articleId"
-                value={formData.articleId}
-                onChange={selectChangeHandler}
-            >
-              <option value="" disabled selected>
-                Seleccionar un artículo
-              </option>
-              {articleState.map((art:any) => (
-                  <option
-                  key={art.id}
-                  value={art.id}
-              >
-                  {art.name} {art.brand} {art.group1} {art.group2}
-              </option>
-              ))}
-            </select>
-            {
-              errors.articleId 
-              && 
-              <p className={styles.errorMessage}>
-                {errors.articleId}
-              </p>
-            }
-          </div>
+    <label 
+        htmlFor='movementType'>
+        {langState === 'es' ? 'Artículo' : 'Article'}
+    </label>
+    <ReactSelect
+    className={styles.select}
+    id="articleId"
+    name="articleId"
+    value={articleState.find((art: any) => art.id === formData.articleId)}
+    options={articleState.map((art: any) => ({ value: art.id, label: `${art.name} ${art.brand} ${art.group1} ${art.group2}` }))}
+    onChange={selectChangeHandler2} // No necesitas pasar el nombre del campo aquí
+    placeholder={langState === 'es' ? 'Seleccionar un artículo' : 'Select an article'}
+    isSearchable
+/>
+
+
+    {
+        errors.movementType 
+        && 
+        <p className={styles.errorMessage}>
+            {errors.movementType}
+        </p>
+    }
+    </div>
           <div className={styles.inputBlock}>
             <label 
               htmlFor='originLocationId'>

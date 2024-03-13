@@ -1,21 +1,28 @@
 @use '../../styles/globals' as g;
 
-.container{
+.container {
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
-    .formContainer{
-        .inputBlock{
+
+    .formContainer {
+        .inputBlock {
             padding: 3px 0;
-            label{
+
+            label {
                 font-size: g.$mobile-p-font-size;
             }
-            .select{
+
+            .select {
                 border: none;
                 width: 100%;
-                font-size: g.$mobile-p-font-size;
-                option{
-                    font-family: inherit;
+                height: 80px;
+                font-size: calc(g.$mobile-p-font-size * .7);
+                overflow: auto; /* Permite desplazamiento vertical si es necesario */
+                white-space: normal; /* Permite que el texto se divida en varias líneas */
+                .option{
+                    border-bottom: 1px solid black;
+                    background-color: red;
                 }
             }
         }

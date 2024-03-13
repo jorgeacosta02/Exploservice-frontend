@@ -28,6 +28,7 @@
     "react-images-uploading": "^3.1.7",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.0",
+    "react-select": "^5.8.0",
     "redux": "^5.0.0",
     "redux-thunk": "^3.1.0"
   },
