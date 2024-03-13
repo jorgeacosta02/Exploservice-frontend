@@ -185,9 +185,9 @@ const InvMovFormComp = () => {
         <form
           onSubmit={handleSubmit}
         >
-          <h1 className={styles.title}>
+          <h3 className={styles.title}>
             Registrar movimiento en almacenes
-          </h1>
+          </h3>
           <Link to='/inquiry'>A Consultas</Link>
           <div className={styles.inputBlock}>
             <label 

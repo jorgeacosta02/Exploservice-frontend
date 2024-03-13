@@ -1,5 +1,23 @@
 @use '../../styles/globals' as g;
 
 .container{
+    width: 100%;
+    box-sizing: border-box;
     padding: g.$mobile-main-container-padding;
+    .formContainer{
+        .inputBlock{
+            padding: 3px 0;
+            label{
+                font-size: g.$mobile-p-font-size;
+            }
+            .select{
+                border: none;
+                width: 100%;
+                font-size: g.$mobile-p-font-size;
+                option{
+                    font-family: inherit;
+                }
+            }
+        }
+    }
 }
