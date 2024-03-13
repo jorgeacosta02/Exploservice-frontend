@@ -334,7 +334,7 @@ const InvMovFormComp = () => {
                 // className={inputColor}
               />
               {
-                errors.quantity 
+                errors.quantity !== 0
                 && 
                 <p className={styles.errorMessage}>
                   {errors.quantity}
