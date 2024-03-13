@@ -16,14 +16,23 @@
             .select {
                 border: none;
                 width: 100%;
-                height: 80px;
-                font-size: calc(g.$mobile-p-font-size * .7);
+                height: 30px;
+                font-size: calc(g.$mobile-p-font-size * .8);
                 overflow: auto; /* Permite desplazamiento vertical si es necesario */
                 white-space: normal; /* Permite que el texto se divida en varias líneas */
                 .option{
                     border-bottom: 1px solid black;
                     background-color: red;
                 }
+                // &::-webkit-scrollbar {
+                //     /* Estilos para la barra de desplazamiento en navegadores WebKit */
+                //     width: 50px; /* Ancho deseado de la barra de desplazamiento */
+                // }
+        
+                // scrollbar {
+                //     /* Estilos para la barra de desplazamiento en navegadores no WebKit */
+                //     width: 50px; /* Ancho deseado de la barra de desplazamiento */
+                // }
             }
         }
     }
