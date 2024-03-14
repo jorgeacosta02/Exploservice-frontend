@@ -84,7 +84,82 @@ const InquiryComp = () => {
       quantity:''
     })
   }
+
+
+  const filteredInquiryState = inquiryState
+    .filter((inq:any) => 
+    (!options.article || inq.article.name === options.article) && 
+    (!options.group1 || inq.article.group1 === options.group1) && 
+    (!options.group2 || inq.article.group1 === options.group2) && 
+    (!options.brand || inq.article.brand === options.brand) && 
+    (!options.location || inq.location.name === options.location)
+  )
+
+  console.log('filteredInquiryState: ', filteredInquiryState)
+
+  const ordered1 = filteredInquiryState.sort((a:any, b:any) => {
+    // Comparar por 'name' dentro de 'article'
+    const nameA = a.article.name.toUpperCase();
+    const nameB = b.article.name.toUpperCase();
   
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+  
+    // Si 'name' es el mismo, comparar por 'group1' dentro de 'article'
+    const group1A = a.article.group1.toUpperCase();
+    const group1B = b.article.group1.toUpperCase();
+  
+    if (group1A < group1B) {
+      return -1;
+    }
+    if (group1A > group1B) {
+      return 1;
+    }
+  
+    // Si 'group1' es el mismo, comparar por 'group2' dentro de 'article'
+    const group2A = a.article.group2.toUpperCase();
+    const group2B = b.article.group2.toUpperCase();
+  
+    if (group2A < group2B) {
+      return -1;
+    }
+    if (group2A > group2B) {
+      return 1;
+    }
+  
+    // Si 'group2' es el mismo, comparar por 'brand' dentro de 'article'
+    const brandA = a.article.brand.toUpperCase();
+    const brandB = b.article.brand.toUpperCase();
+  
+    if (brandA < brandB) {
+      return -1;
+    }
+    if (brandA > brandB) {
+      return 1;
+    }
+  
+    // Si 'brand' es el mismo, comparar por 'name' dentro de 'location'
+    const locationA = a.location.name.toUpperCase();
+    const locationB = b.location.name.toUpperCase();
+  
+    if (locationA < locationB) {
+      return -1;
+    }
+    if (locationA > locationB) {
+      return 1;
+    }
+  
+    // Si todas las propiedades son iguales
+    return 0;
+  });
+
+  console.log('ordered1: ', ordered1)
+
+
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
@@ -211,21 +286,13 @@ const InquiryComp = () => {
         </div>
         <div className={styles.logsContainer}>
           {
-            inquiryState
-            .filter((inq:any) => 
-            (!options.article || inq.article.name === options.article) && 
-            (!options.group1 || inq.article.group1 === options.group1) && 
-            (!options.group2 || inq.article.group1 === options.group2) && 
-            (!options.brand || inq.article.brand === options.brand) && 
-            (!options.location || inq.location.name === options.location)
-          )
-            .map((inq:any) => (
+            filteredInquiryState.map((inq:any) => (
               <div key={inq.id}>
                 <InqSingleComp
                   article={inq.article.name}
-                  brand={inq.article.brand}
                   group1={inq.article.group1}
                   group2={inq.article.group2}
+                  brand={inq.article.brand}
                   location={inq.location.name}
                   quantity={inq.amount}
                 />
