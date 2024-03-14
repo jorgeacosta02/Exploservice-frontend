@@ -47,6 +47,8 @@
    */
   
   h1 {
+    margin: 0;
+    padding: 0;
     font-size: g.$mobile-h1-font-size;
     font-weight: g.$mobile-h1-font-weight;
     @include g.display-large{
@@ -55,6 +57,8 @@
     }
   }
   h2 {
+    margin: 0;
+    padding: 0;
     font-size: g.$mobile-h2-font-size;
     font-weight: g.$mobile-h2-font-weight;
     @include g.display-large{
@@ -63,6 +67,8 @@
     }
   }
   h3 {
+    margin: 0;
+    padding: 0;
     font-size: g.$mobile-h3-font-size;
     font-weight: g.$mobile-h3-font-weight;
     @include g.display-large{

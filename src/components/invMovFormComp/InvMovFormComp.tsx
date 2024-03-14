@@ -628,13 +628,12 @@ const InvMovFormComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
+        <h3 className={styles.title}>
+          Registrar movimiento en almacenes
+        </h3>
         <form
           onSubmit={handleSubmit}
         >
-          <h3 className={styles.title}>
-            Registrar movimiento en almacenes
-          </h3>
-          <Link to='/inquiry'>A Consultas</Link>
           <div className={styles.inputBlock}>
             <label 
               htmlFor='movementType'>
@@ -767,36 +766,41 @@ const InvMovFormComp = () => {
                   {errors.destinationLocationId}
                 </p>
               }
-            </div>
-            <div className={styles.inputBlock}>
-              <label 
-                htmlFor='quantity'>
-                {langState === 'es' ? 'Cantidad' : 'Quantity'}
-              </label>
-              <input
-                type='number'
-                id='quantity'
-                name='quantity' 
-                value={formData.quantity}
-                onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese cantidad...' :  'Enter quantity...'}
-                // className={inputColor}
-              />
-              {
-                errors.quantity !== 0
-                && 
-                <p className={styles.errorMessage}>
-                  {errors.quantity}
-                </p>
-              }
-            </div>
-          <button
-            className={styles.submit}
-            type='submit'
-          >
-            Enviar formulario
-          </button>
+          </div>
+          <div className={styles.inputBlock}>
+            <label 
+              htmlFor='quantity'>
+              {langState === 'es' ? 'Cantidad' : 'Quantity'}
+            </label>
+            <input
+              type='number'
+              id='quantity'
+              name='quantity' 
+              value={formData.quantity}
+              onChange={handleInputChange} 
+              placeholder={langState === 'es' ? 'Ingrese cantidad...' :  'Enter quantity...'}
+              // className={inputColor}
+            />
+            {
+              errors.quantity !== 0
+              && 
+              <p className={styles.errorMessage}>
+                {errors.quantity}
+              </p>
+            }
+          </div>
+          <div className={styles.submitContainer}>
+            <button
+              className={styles.submit}
+              type='submit'
+              >
+              Enviar formulario
+            </button>
+          </div>
         </form>
+        <div className={styles.linksContainer}>
+          <Link to='/inquiry'>A Consultas</Link>
+        </div>
       </div>
       { messageState && 
       <MessageComp
