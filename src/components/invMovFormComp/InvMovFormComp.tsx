@@ -633,6 +633,7 @@ const InvMovFormComp = () => {
         </h3>
         <form
           onSubmit={handleSubmit}
+          className={styles.form}
         >
           <div className={styles.inputBlock}>
             <label 
@@ -779,7 +780,7 @@ const InvMovFormComp = () => {
               value={formData.quantity}
               onChange={handleInputChange} 
               placeholder={langState === 'es' ? 'Ingrese cantidad...' :  'Enter quantity...'}
-              // className={inputColor}
+              className={styles.select}
             />
             {
               errors.quantity !== 0
@@ -799,7 +800,24 @@ const InvMovFormComp = () => {
           </div>
         </form>
         <div className={styles.linksContainer}>
-          <Link to='/inquiry'>A Consultas</Link>
+          <Link
+            to='/inquiry'
+            className={styles.link}
+          >
+            Consultas
+          </Link>
+          <Link
+            to='/intranet'
+            className={styles.link}
+          >
+            Intranet
+          </Link>
+          <Link
+            to='/company'
+            className={styles.link}
+          >
+            Inicio
+          </Link>
         </div>
       </div>
       { messageState && 
