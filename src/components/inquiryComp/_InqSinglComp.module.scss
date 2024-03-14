@@ -2,13 +2,14 @@
 
 .container{
     border: 1px solid g.$grey-color;
-    width: 80%;
-    // height: 20px;
-   @include g.create-flexbox(row, space-evenly);
+    width: 100%;
+    @include g.create-flexbox(row, space-between);
+    
     p{
-        width: 15%;
+        // width: 15%;
         text-align: left;
         padding: 0;
         margin:0;
+        font-size: calc(g.$mobile-p-font-size * .75);
     }
 }

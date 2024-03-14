@@ -87,149 +87,173 @@ const InquiryComp = () => {
   
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>
-        Consultas
-      </h1>
-      <div className={styles.selectGroup}>
-        <button
-          onClick={cleanFiltersHandler}
-        >
-          Limpiar filtros
-        </button>
-        <div className={styles.selectBlock}>
-          <label 
-            htmlFor='article'>
-            {langState === 'es' ? 'Artículo' : 'Article'}
-          </label>
-          <select
-            className={styles.select}
-            id="article"
-            name="article"
-            value={options.article}
-            onChange={handleChange}
+      <div className={styles.formContainer}>
+        <h3 className={styles.title}>
+          Consultas
+        </h3>
+        <div className={styles.form}>
+          <button
+            className={styles.cleanFilters}
+            onClick={cleanFiltersHandler}
           >
-            <option value="" disabled selected>
-              Seleccionar un artículo
-            </option>
-            {uniqueArticleNames.map((name, index) => (
-              <option key={index} value={name}>
-                {name}
+            Limpiar filtros
+          </button>
+          <div className={styles.selectBlock}>
+            <label 
+              htmlFor='article'>
+              {langState === 'es' ? 'Artículo' : 'Article'}
+            </label>
+            <select
+              className={styles.select}
+              id="article"
+              name="article"
+              value={options.article}
+              onChange={handleChange}
+            >
+              <option value="" disabled selected>
+                Seleccionar un artículo
               </option>
-            ))}
-          </select>
+              {uniqueArticleNames.map((name, index) => (
+                <option key={index} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className={styles.selectBlock}>
+            <label 
+              htmlFor='group1'>
+              {langState === 'es' ? 'Grupo 1' : 'Group 1'}
+            </label>
+            <select
+              className={styles.select}
+              id="group1"
+              name="group1"
+              value={options.group1}
+              onChange={handleChange}
+            >
+              <option value="" disabled selected>
+                Seleccionar Grupo 
+              </option>
+              {uniqueGroup1Names.map((name, index) => (
+                <option key={index} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className={styles.selectBlock}>
+            <label 
+              htmlFor='group2'>
+              {langState === 'es' ? 'Grupo 2' : 'Group 2'}
+            </label>
+            <select
+              className={styles.select}
+              id="group2"
+              name="group2"
+              value={options.group2}
+              onChange={handleChange}
+            >
+              <option value="" disabled selected>
+                Seleccionar Grupo 
+              </option>
+              {uniqueGroup2Names.map((name, index) => (
+                <option key={index} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className={styles.selectBlock}>
+            <label 
+              htmlFor='brand'>
+              {langState === 'es' ? 'Marca' : 'Brand'}
+            </label>
+            <select
+              className={styles.select}
+              id="brand"
+              name="brand"
+              value={options.brand}
+              onChange={handleChange}
+            >
+              <option value="" disabled selected>
+                Seleccionar Marca
+              </option>
+              {uniqueBrandNames.map((name, index) => (
+                <option key={index} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className={styles.selectBlock}>
+            <label 
+              htmlFor='location'>
+              {langState === 'es' ? 'Locación' : 'Location'}
+            </label>
+            <select
+              className={styles.select}
+              id="location"
+              name="location"
+              value={options.location}
+              onChange={handleChange}
+            >
+              <option value="" disabled selected>
+                Seleccionar Locación
+              </option>
+              {uniqueLocationNames.map((name, index) => (
+                <option key={index} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
-        <div className={styles.selectBlock}>
-          <label 
-            htmlFor='group1'>
-            {langState === 'es' ? 'Grupo 1' : 'Group 1'}
-          </label>
-          <select
-            className={styles.select}
-            id="group1"
-            name="group1"
-            value={options.group1}
-            onChange={handleChange}
-          >
-            <option value="" disabled selected>
-              Seleccionar Grupo 
-            </option>
-            {uniqueGroup1Names.map((name, index) => (
-              <option key={index} value={name}>
-                {name}
-              </option>
-            ))}
-          </select>
+        <div className={styles.logsContainer}>
+          {
+            inquiryState
+            .filter((inq:any) => 
+            (!options.article || inq.article.name === options.article) && 
+            (!options.group1 || inq.article.group1 === options.group1) && 
+            (!options.group2 || inq.article.group1 === options.group2) && 
+            (!options.brand || inq.article.brand === options.brand) && 
+            (!options.location || inq.location.name === options.location)
+          )
+            .map((inq:any) => (
+              <div key={inq.id}>
+                <InqSingleComp
+                  article={inq.article.name}
+                  brand={inq.article.brand}
+                  group1={inq.article.group1}
+                  group2={inq.article.group2}
+                  location={inq.location.name}
+                  quantity={inq.amount}
+                />
+              </div>
+            ))
+          }
         </div>
-        <div className={styles.selectBlock}>
-          <label 
-            htmlFor='group2'>
-            {langState === 'es' ? 'Grupo 2' : 'Group 2'}
-          </label>
-          <select
-            className={styles.select}
-            id="group2"
-            name="group2"
-            value={options.group2}
-            onChange={handleChange}
+        <div className={styles.linksContainer}>
+          <Link
+            to='/inventory-movement'
+            className={styles.link}
           >
-            <option value="" disabled selected>
-              Seleccionar Grupo 
-            </option>
-            {uniqueGroup2Names.map((name, index) => (
-              <option key={index} value={name}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.selectBlock}>
-          <label 
-            htmlFor='brand'>
-            {langState === 'es' ? 'Marca' : 'Brand'}
-          </label>
-          <select
-            className={styles.select}
-            id="brand"
-            name="brand"
-            value={options.brand}
-            onChange={handleChange}
+            Movimientos
+          </Link>
+          <Link
+            to='/intranet'
+            className={styles.link}
           >
-            <option value="" disabled selected>
-              Seleccionar Marca
-            </option>
-            {uniqueBrandNames.map((name, index) => (
-              <option key={index} value={name}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.selectBlock}>
-          <label 
-            htmlFor='location'>
-            {langState === 'es' ? 'Locación' : 'Location'}
-          </label>
-          <select
-            className={styles.select}
-            id="location"
-            name="location"
-            value={options.location}
-            onChange={handleChange}
+            Intranet
+          </Link>
+          <Link
+            to='/company'
+            className={styles.link}
           >
-            <option value="" disabled selected>
-              Seleccionar Locación
-            </option>
-            {uniqueLocationNames.map((name, index) => (
-              <option key={index} value={name}>
-                {name}
-              </option>
-            ))}
-          </select>
+            Inicio
+          </Link>
         </div>
       </div>
-      {
-        inquiryState
-        .filter((inq:any) => 
-        (!options.article || inq.article.name === options.article) && 
-        (!options.group1 || inq.article.group1 === options.group1) && 
-        (!options.group2 || inq.article.group1 === options.group2) && 
-        (!options.brand || inq.article.brand === options.brand) && 
-        (!options.location || inq.location.name === options.location)
-      )
-        .map((inq:any) => (
-          <div key={inq.id}>
-            <InqSingleComp
-              article={inq.article.name}
-              brand={inq.article.brand}
-              group1={inq.article.group1}
-              group2={inq.article.group2}
-              location={inq.location.name}
-              quantity={inq.amount}
-            />
-          </div>
-        ))
-      }
-      <Link to='/inventory-movement'>Inventory Movemente</Link>
     </div>
   )
 }
