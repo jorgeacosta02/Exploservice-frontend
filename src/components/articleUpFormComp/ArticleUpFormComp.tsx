@@ -117,13 +117,16 @@ const ArticleUpFormComp = () => {
   
   return (
     <div className={styles.container}>
+      <div className={styles.backImgContainer}></div>
+      <div className={styles.backImgCover}></div>
+      <h3 className={styles.mainTitle}>
+        Alta de artículo
+      </h3>
       <div className={styles.formContainer}>
         <form
           onSubmit={handleSubmit}
+          className={styles.form}
         >
-          <h1 className={styles.title}>
-            Registrar artículo nuevo
-          </h1>
           <div className={styles.inputBlock}>
             <label 
               htmlFor='name'>
@@ -136,6 +139,7 @@ const ArticleUpFormComp = () => {
               value={formData.name}
               onChange={handleInputChange} 
               placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter first name...'}
+              className={styles.input}
             />
             {
               errors.name 
@@ -157,6 +161,7 @@ const ArticleUpFormComp = () => {
               value={formData.brand}
               onChange={handleInputChange} 
               placeholder={langState === 'es' ? 'Ingrese marca...' :  'Enter brand...'}
+              className={styles.input}
             />
             {
               errors.brand 
@@ -178,7 +183,7 @@ const ArticleUpFormComp = () => {
               value={formData.group1}
               onChange={handleInputChange} 
               placeholder={langState === 'es' ? 'Ingrese grupo 1...' :  'Enter group 1..'}
-              // className={inputColor}
+              className={styles.input}
             />
             {/* {
               errors.description 
@@ -200,7 +205,7 @@ const ArticleUpFormComp = () => {
               value={formData.group2}
               onChange={handleInputChange} 
               placeholder={langState === 'es' ? 'Ingrese grupo 2...' :  'Enter group 2..'}
-              // className={inputColor}
+              className={styles.input}
             />
             {/* {
               errors.description 

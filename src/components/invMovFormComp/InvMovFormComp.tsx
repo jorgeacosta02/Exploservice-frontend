@@ -627,8 +627,10 @@ const InvMovFormComp = () => {
   
   return (
     <div className={styles.container}>
+      <div className={styles.backImgContainer}></div>
+      <div className={styles.backImgCover}></div>
       <div className={styles.formContainer}>
-        <h3 className={styles.title}>
+        <h3 className={styles.mainTitle}>
           Registrar movimiento en almacenes
         </h3>
         <form
