@@ -8,6 +8,7 @@
     z-index: 10;
     padding: g.$mobile-main-container-padding;
     width: 100%;
+    @include g.create-flexbox(column, center);
     .backImgContainer{
         position: fixed;
         top: 0;
@@ -39,6 +40,11 @@
         box-sizing: border-box;
         z-index: 10;
         width: 100%;
+        max-width: 300px;
+        // background-color: grey;
+        .blockTitle{
+            text-align: center;
+        }
         .linksContainer{
             box-sizing: border-box;
             list-style: none;
@@ -46,18 +52,19 @@
             // background-color: blue;
             width: 100%;
             margin-left: 0;
-            padding: 5vw;
+            padding: 10px;
             @include g.create-flexbox(column, space-between);
-            gap: 10px;
+            // gap: 10px;
             .link{
                 box-sizing: border-box;
                 display: inline-block;
                 width: 100%;
                 height: auto;
-                padding: 10px 5px;
+                padding: 10px 10px;
                 text-decoration: none;
                 color: inherit;
                 border-radius: 5px;
+                text-align: center;
                 // background-color: red;
             }
             .link:hover{
