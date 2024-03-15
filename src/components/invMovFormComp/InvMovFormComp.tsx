@@ -803,22 +803,10 @@ const InvMovFormComp = () => {
         </form>
         <div className={styles.linksContainer}>
           <Link
-            to='/inquiry'
-            className={styles.link}
-          >
-            Consultas
-          </Link>
-          <Link
             to='/intranet'
             className={styles.link}
           >
-            Intranet
-          </Link>
-          <Link
-            to='/company'
-            className={styles.link}
-          >
-            Inicio
+            Volver a Intranet
           </Link>
         </div>
       </div>

@@ -2,6 +2,7 @@ import styles from './_ArticleUpFormComp.module.scss';
 import { useState } from 'react';
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import MessageComp from '../messageComp/MessageComp';
 import { IArticleData } from '../../Interfaces/articleInterfaces';
 import { selectLangState } from '../../redux/slices/langSlice';
@@ -138,7 +139,7 @@ const ArticleUpFormComp = () => {
               name='name' 
               value={formData.name}
               onChange={handleInputChange} 
-              placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter first name...'}
+              placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
               className={styles.input}
             />
             {
@@ -182,7 +183,7 @@ const ArticleUpFormComp = () => {
               name='group1' 
               value={formData.group1}
               onChange={handleInputChange} 
-              placeholder={langState === 'es' ? 'Ingrese grupo 1...' :  'Enter group 1..'}
+              placeholder={langState === 'es' ? 'Ingrese grupo 1...' :  'Enter group 1...'}
               className={styles.input}
             />
             {/* {
@@ -204,7 +205,7 @@ const ArticleUpFormComp = () => {
               name='group2' 
               value={formData.group2}
               onChange={handleInputChange} 
-              placeholder={langState === 'es' ? 'Ingrese grupo 2...' :  'Enter group 2..'}
+              placeholder={langState === 'es' ? 'Ingrese grupo 2...' :  'Enter group 2...'}
               className={styles.input}
             />
             {/* {
@@ -215,13 +216,23 @@ const ArticleUpFormComp = () => {
               </p>
             } */}
           </div>
-          <button
-            className={styles.submit}
-            type='submit'
-          >
-            Enviar formulario
-          </button>
+          <div className={styles.submitContainer}>
+            <button
+              className={styles.submit}
+              type='submit'
+            >
+              Enviar formulario
+            </button>
+          </div>
         </form>
+        <div className={styles.linksContainer}>
+          <Link
+            to='/intranet'
+            className={styles.link}
+          >
+            Volver a Intranet
+          </Link>
+        </div>
       </div>
       { messageState && 
       <MessageComp
