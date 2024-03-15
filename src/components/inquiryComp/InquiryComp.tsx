@@ -162,128 +162,131 @@ const InquiryComp = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.backImgContainer}></div>
+      <div className={styles.backImgCover}></div>
+      <h3 className={styles.mainTitle}>
+        Consultas
+      </h3>
       <div className={styles.formContainer}>
-        <h3 className={styles.title}>
-          Consultas
-        </h3>
         <div className={styles.form}>
-          <button
-            className={styles.cleanFilters}
-            onClick={cleanFiltersHandler}
-          >
-            Limpiar filtros
-          </button>
-          <div className={styles.selectBlock}>
-            <label 
-              htmlFor='article'>
-              {langState === 'es' ? 'Artículo' : 'Article'}
-            </label>
-            <select
-              className={styles.select}
-              id="article"
-              name="article"
-              value={options.article}
-              onChange={handleChange}
+          <div className={styles.dataContainer}>
+            <button
+              className={styles.cleanFilters}
+              onClick={cleanFiltersHandler}
             >
-              <option value="" disabled selected>
-                Seleccionar un artículo
-              </option>
-              {uniqueArticleNames.map((name, index) => (
-                <option key={index} value={name}>
-                  {name}
+              Limpiar filtros
+            </button>
+            <div className={styles.selectBlock}>
+              <label 
+                htmlFor='article'>
+                {langState === 'es' ? 'Artículo' : 'Article'}
+              </label>
+              <select
+                className={styles.select}
+                id="article"
+                name="article"
+                value={options.article}
+                onChange={handleChange}
+              >
+                <option value="" disabled selected>
+                  Seleccionar un artículo
                 </option>
-              ))}
-            </select>
-          </div>
-          <div className={styles.selectBlock}>
-            <label 
-              htmlFor='group1'>
-              {langState === 'es' ? 'Grupo 1' : 'Group 1'}
-            </label>
-            <select
-              className={styles.select}
-              id="group1"
-              name="group1"
-              value={options.group1}
-              onChange={handleChange}
-            >
-              <option value="" disabled selected>
-                Seleccionar Grupo 
-              </option>
-              {uniqueGroup1Names.map((name, index) => (
-                <option key={index} value={name}>
-                  {name}
+                {uniqueArticleNames.map((name, index) => (
+                  <option key={index} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.selectBlock}>
+              <label 
+                htmlFor='group1'>
+                {langState === 'es' ? 'Grupo 1' : 'Group 1'}
+              </label>
+              <select
+                className={styles.select}
+                id="group1"
+                name="group1"
+                value={options.group1}
+                onChange={handleChange}
+              >
+                <option value="" disabled selected>
+                  Seleccionar Grupo 
                 </option>
-              ))}
-            </select>
-          </div>
-          <div className={styles.selectBlock}>
-            <label 
-              htmlFor='group2'>
-              {langState === 'es' ? 'Grupo 2' : 'Group 2'}
-            </label>
-            <select
-              className={styles.select}
-              id="group2"
-              name="group2"
-              value={options.group2}
-              onChange={handleChange}
-            >
-              <option value="" disabled selected>
-                Seleccionar Grupo 
-              </option>
-              {uniqueGroup2Names.map((name, index) => (
-                <option key={index} value={name}>
-                  {name}
+                {uniqueGroup1Names.map((name, index) => (
+                  <option key={index} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.selectBlock}>
+              <label 
+                htmlFor='group2'>
+                {langState === 'es' ? 'Grupo 2' : 'Group 2'}
+              </label>
+              <select
+                className={styles.select}
+                id="group2"
+                name="group2"
+                value={options.group2}
+                onChange={handleChange}
+              >
+                <option value="" disabled selected>
+                  Seleccionar Grupo 
                 </option>
-              ))}
-            </select>
-          </div>
-          <div className={styles.selectBlock}>
-            <label 
-              htmlFor='brand'>
-              {langState === 'es' ? 'Marca' : 'Brand'}
-            </label>
-            <select
-              className={styles.select}
-              id="brand"
-              name="brand"
-              value={options.brand}
-              onChange={handleChange}
-            >
-              <option value="" disabled selected>
-                Seleccionar Marca
-              </option>
-              {uniqueBrandNames.map((name, index) => (
-                <option key={index} value={name}>
-                  {name}
+                {uniqueGroup2Names.map((name, index) => (
+                  <option key={index} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.selectBlock}>
+              <label 
+                htmlFor='brand'>
+                {langState === 'es' ? 'Marca' : 'Brand'}
+              </label>
+              <select
+                className={styles.select}
+                id="brand"
+                name="brand"
+                value={options.brand}
+                onChange={handleChange}
+              >
+                <option value="" disabled selected>
+                  Seleccionar Marca
                 </option>
-              ))}
-            </select>
-          </div>
-          <div className={styles.selectBlock}>
-            <label 
-              htmlFor='location'>
-              {langState === 'es' ? 'Locación' : 'Location'}
-            </label>
-            <select
-              className={styles.select}
-              id="location"
-              name="location"
-              value={options.location}
-              onChange={handleChange}
-            >
-              <option value="" disabled selected>
-                Seleccionar Locación
-              </option>
-              {uniqueLocationNames.map((name, index) => (
-                <option key={index} value={name}>
-                  {name}
+                {uniqueBrandNames.map((name, index) => (
+                  <option key={index} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.selectBlock}>
+              <label 
+                htmlFor='location'>
+                {langState === 'es' ? 'Locación' : 'Location'}
+              </label>
+              <select
+                className={styles.select}
+                id="location"
+                name="location"
+                value={options.location}
+                onChange={handleChange}
+              >
+                <option value="" disabled selected>
+                  Seleccionar Locación
                 </option>
-              ))}
-            </select>
+                {uniqueLocationNames.map((name, index) => (
+                  <option key={index} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
-        </div>
         <div className={styles.logsContainer}>
           {
             filteredInquiryState.map((inq:any) => (
@@ -300,24 +303,13 @@ const InquiryComp = () => {
             ))
           }
         </div>
+        </div>
         <div className={styles.linksContainer}>
-          <Link
-            to='/inventory-movement'
-            className={styles.link}
-          >
-            Movimientos
-          </Link>
           <Link
             to='/intranet'
             className={styles.link}
           >
-            Intranet
-          </Link>
-          <Link
-            to='/company'
-            className={styles.link}
-          >
-            Inicio
+            Volver a Intranet
           </Link>
         </div>
       </div>
