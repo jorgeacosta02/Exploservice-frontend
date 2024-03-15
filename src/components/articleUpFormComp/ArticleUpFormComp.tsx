@@ -128,93 +128,95 @@ const ArticleUpFormComp = () => {
           onSubmit={handleSubmit}
           className={styles.form}
         >
-          <div className={styles.inputBlock}>
-            <label 
-              htmlFor='name'>
-              {langState === 'es' ? 'Nombre' : 'Name'}
-            </label>
-            <input
-              type='text'
-              id='name'
-              name='name' 
-              value={formData.name}
-              onChange={handleInputChange} 
-              placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
-              className={styles.input}
-            />
-            {
-              errors.name 
-              && 
-              <p className={styles.errorMessage}>
-                {errors.name}
-              </p>
-            }
-          </div>
-          <div className={styles.inputBlock}>
-            <label 
-              htmlFor='brand'>
-              {langState === 'es' ? 'Marca' : 'Brand'}
-            </label>
-            <input
-              type='text'
-              id='brand'
-              name='brand' 
-              value={formData.brand}
-              onChange={handleInputChange} 
-              placeholder={langState === 'es' ? 'Ingrese marca...' :  'Enter brand...'}
-              className={styles.input}
-            />
-            {
-              errors.brand 
-              && 
-              <p className={styles.errorMessage}>
-                {errors.brand}
-              </p>
-            }
-          </div>
-          <div className={styles.inputBlock}>
-            <label 
-              htmlFor='group1'>
-              {langState === 'es' ? 'Grupo 1' : 'Group 1'}
-            </label>
-            <input
-              type='text'
-              id='group1'
-              name='group1' 
-              value={formData.group1}
-              onChange={handleInputChange} 
-              placeholder={langState === 'es' ? 'Ingrese grupo 1...' :  'Enter group 1...'}
-              className={styles.input}
-            />
-            {/* {
-              errors.description 
-              && 
-              <p className={styles.errorMessage}>
-                {errors.description}
-              </p>
-            } */}
-          </div>
-          <div className={styles.inputBlock}>
-            <label 
-              htmlFor='group2'>
-              {langState === 'es' ? 'Grupo 2' : 'Group 2'}
-            </label>
-            <input
-              type='text'
-              id='group2'
-              name='group2' 
-              value={formData.group2}
-              onChange={handleInputChange} 
-              placeholder={langState === 'es' ? 'Ingrese grupo 2...' :  'Enter group 2...'}
-              className={styles.input}
-            />
-            {/* {
-              errors.description 
-              && 
-              <p className={styles.errorMessage}>
-                {errors.description}
-              </p>
-            } */}
+          <div className={styles.dataContainer}>
+            <div className={styles.inputBlock}>
+              <label 
+                htmlFor='name'>
+                {langState === 'es' ? 'Nombre' : 'Name'}
+              </label>
+              <input
+                type='text'
+                id='name'
+                name='name' 
+                value={formData.name}
+                onChange={handleInputChange} 
+                placeholder={langState === 'es' ? 'Ingrese nombre...' :  'Enter name...'}
+                className={styles.input}
+              />
+              {
+                errors.name 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.name}
+                </p>
+              }
+            </div>
+            <div className={styles.inputBlock}>
+              <label 
+                htmlFor='brand'>
+                {langState === 'es' ? 'Marca' : 'Brand'}
+              </label>
+              <input
+                type='text'
+                id='brand'
+                name='brand' 
+                value={formData.brand}
+                onChange={handleInputChange} 
+                placeholder={langState === 'es' ? 'Ingrese marca...' :  'Enter brand...'}
+                className={styles.input}
+              />
+              {
+                errors.brand 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.brand}
+                </p>
+              }
+            </div>
+            <div className={styles.inputBlock}>
+              <label 
+                htmlFor='group1'>
+                {langState === 'es' ? 'Grupo 1' : 'Group 1'}
+              </label>
+              <input
+                type='text'
+                id='group1'
+                name='group1' 
+                value={formData.group1}
+                onChange={handleInputChange} 
+                placeholder={langState === 'es' ? 'Ingrese grupo 1...' :  'Enter group 1...'}
+                className={styles.input}
+              />
+              {/* {
+                errors.description 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.description}
+                </p>
+              } */}
+            </div>
+            <div className={styles.inputBlock}>
+              <label 
+                htmlFor='group2'>
+                {langState === 'es' ? 'Grupo 2' : 'Group 2'}
+              </label>
+              <input
+                type='text'
+                id='group2'
+                name='group2' 
+                value={formData.group2}
+                onChange={handleInputChange} 
+                placeholder={langState === 'es' ? 'Ingrese grupo 2...' :  'Enter group 2...'}
+                className={styles.input}
+              />
+              {/* {
+                errors.description 
+                && 
+                <p className={styles.errorMessage}>
+                  {errors.description}
+                </p>
+              } */}
+            </div>
           </div>
           <div className={styles.submitContainer}>
             <button
