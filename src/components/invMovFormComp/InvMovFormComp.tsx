@@ -23,7 +23,7 @@ const InvMovFormComp = () => {
   const locationState = useSelector(selectLocationState).data;
   const dispatch = useDispatch();
 
-  const movementTypes = ['entrada', 'salida', 'transferencia']
+  const movementTypes = ['Entrada', 'Salida', 'Transferencia']
   
   const start = async () =>{
     await dispatch(getAllArticlesAction());
