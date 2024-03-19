@@ -27,7 +27,7 @@ const App = () => {
         <Route path='/task/:id' element={<h1>task/:id</h1>}/>
         <Route path='/profile' element={<h1>profile</h1>}/>
   
-
+        {/* Free Routes*/}
         <Route path="/" element={<CompanyPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/equipment" element={<EquipmentPage />} />
@@ -35,6 +35,7 @@ const App = () => {
         <Route path='/intranet' element={<IntranetPage/>} />
         <Route path="/contact" element={<ContactPage />} />
     
+        {/* Admin Routes*/}
         <Route path='/inquiry' element={<InquiryPage/>}/>
         <Route path='/location-up-form' element={<LocationUpPage/>} />
         <Route path='/article-up-form' element={<ArticleUpFormPage/>} />
