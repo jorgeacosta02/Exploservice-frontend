@@ -25,13 +25,13 @@ const NavBarNavListComp = () => {
            >Inicio</NavLink>
         </li>
         <li className={styles.splitBar}></li>
-        <li onClick={handleClick} >
+        {/* <li onClick={handleClick} >
           <NavLink
             to="/company" 
             className={styles.navLink} 
            >Empresa</NavLink>
-        </li>
-        <li className={styles.splitBar}></li>
+        </li> */}
+        {/* <li className={styles.splitBar}></li> */}
         <li onClick={handleClick} >
           <NavLink
             to="/services" 

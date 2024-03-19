@@ -20,7 +20,7 @@ const App = () => {
       <Routes>
 
         {/*General Routes*/}
-        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/" element={<LandingPage />} /> */}
 
         {/*Register Routes*/}
         <Route path='/tasks' element={<h1>tasks</h1>}/>
@@ -29,18 +29,18 @@ const App = () => {
         <Route path='/profile' element={<h1>profile</h1>}/>
   
 
-        {/*Exploservice Routes*/}
+        <Route path="/" element={<CompanyPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/equipment" element={<EquipmentPage />} />
+        <Route path="/jobs" element={<JobsPage />} />
+        <Route path='/intranet' element={<IntranetPage/>} />
+        <Route path="/contact" element={<ContactPage />} />
+    
         <Route path='/inquiry' element={<InquiryPage/>}/>
         <Route path='/location-up-form' element={<LocationUpPage/>} />
         <Route path='/article-up-form' element={<ArticleUpFormPage/>} />
         <Route path='/inventory-movement' element={<InvMovFormPage/>} />
-        <Route path='/intranet' element={<IntranetPage/>} />
         <Route path='/register' element={<UserRegisterPage/>} />
-        <Route path="/company" element={<CompanyPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/equipment" element={<EquipmentPage />} />
-        <Route path="/jobs" element={<JobsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
   
       </Routes>
     </div>

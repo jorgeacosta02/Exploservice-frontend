@@ -81,11 +81,12 @@
                 height: 40px;
                 padding: 6px 0;
                 .submit{
-                    text-align: none;
+                    text-decoration: none;
+                    color: inherit;
+                    font-size: calc(g.$mobile-p-font-size * 1);
+                    padding: 5px 10px;
                     border: 1px solid grey;
                     border-radius: 5px;
-                    padding: 5px 10px;
-                    font-size: g.$mobile-p-font-size;
                     background-color: g.$main-color;
                 }
                 .submit:hover{
