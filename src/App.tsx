@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/landingPage/landingPage';
 import CompanyPage from './pages/companyPage/companyPage';
 import ServicesPage from './pages/servicesPage/servicesPage';
 import EquipmentPage from './pages/equipmentPage/equipmentPage';
