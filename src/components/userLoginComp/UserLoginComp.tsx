@@ -3,11 +3,10 @@ import { IUserLoginData } from '../../Interfaces/userInterfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios'
 import { selectUserAuth } from '../../redux/slices/userAuthSlice';
-import { loginUser } from '../../redux/actions/loginUserActions';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { selectLangState } from '../../redux/slices/langSlice';
-import { selectMessageState, toggleMessage } from '../../redux/slices/messageSlice';
+import { toggleMessage } from '../../redux/slices/messageSlice';
 
 
 const UserLoginComp = () => {
@@ -28,15 +27,6 @@ const UserLoginComp = () => {
         dni: '',
         password: '',
     });
-
-    //   const {
-    //     register,
-    //     handleSubmit,
-    //     reset,
-    //     formState: { errors },
-    //   } = useForm<IUserLoginData>({
-    //     resolver: zodResolver(userLoginSchema)
-    //   })
 
     // Comprobación de estados para enviar formulario
     let submitOk = false;
@@ -64,27 +54,20 @@ const UserLoginComp = () => {
      'Este campo debe ser completado.' :
      'This field must be filled out.';
  
-   const emptyValidationHandler =()=>{
-     if(!formData.dni){
-       setErrors((prevData) => ({
-         ...prevData,
-         dni: emptyMessage,
-       }));
-     };
-     if(!formData.password){
-       setErrors((prevData) => ({
-         ...prevData,
-         password: emptyMessage,
-       }));
-     };
-   };
-
-    // const onSubmit = async (data:IUserLoginData) => {
-    //     console.log('data en onSubmit ', data)
-    //     dispatch(loginUser(data));
-    //     reset();
-    //     navigate('/');
-    // };
+    const emptyValidationHandler =()=>{
+        if(!formData.dni){
+        setErrors((prevData) => ({
+            ...prevData,
+            dni: emptyMessage,
+        }));
+        };
+        if(!formData.password){
+        setErrors((prevData) => ({
+            ...prevData,
+            password: emptyMessage,
+        }));
+        };
+    };
 
     const handleSubmit = (event:any) => {
         event.preventDefault();
@@ -93,29 +76,29 @@ const UserLoginComp = () => {
         submitForm();
       }
       
-      const messageHandleClick = () => {
+    const messageHandleClick = () => {
         dispatch( toggleMessage() );
-      };
-    
-      const submitForm = async () => {
+    };
+
+    const submitForm = async () => {
         try{
-          const response = await axios.post(
+            const response = await axios.post(
             'http://localhost:5000/login',
-             formData
-          );
-          console.log('response', response.status);
-          // queryResponse = await response.status;
-          setFormData({
+                formData
+            );
+            console.log('response', response.status);
+            // queryResponse = await response.status;
+            setFormData({
             dni: '',
             password: '',
-          })
-    
-          messageHandleClick()
-   
+            })
+
+            messageHandleClick()
+
         }catch(error:any){
-          console.log(error.message)
+            console.log(error.message)
         }
-      }
+    }
   
     console.log('userAuth en LoginComp:  ',userAuth);
     

@@ -13,7 +13,7 @@ const UserRegisterComp = () => {
 
    // Estados globales para opciones
   const langState = useSelector(selectLangState).lang;
-  const  messageState = useSelector(selectMessageState).message;
+  const messageState = useSelector(selectMessageState).message;
   const dispatch = useDispatch()
    
   // Estado de datos del formulario
@@ -59,7 +59,7 @@ const UserRegisterComp = () => {
     submitOk = true;
   };
    
-   // Expresiones de validación
+  // Expresiones de validación
   //  const nameRegExp = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]*$/;
   //  const emailRegExp = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
  
@@ -371,27 +371,27 @@ const UserRegisterComp = () => {
               }
             </div>
           <div className={styles.inputBlock}>
-              <label 
-                htmlFor='password'>
-                {langState === 'es' ? 'Contraseña' : 'Password'}
-              </label>
-              <input
-                type='text'
-                id='password'
-                name='password' 
-                value={formData.password}
-                onChange={handleInputChange} 
-                placeholder={langState === 'es' ? 'Ingrese contraseña...' :  'Enter password...'}
-                // className={inputColor}
-              />
-              {
-                errors.password 
-                && 
-                <p className={styles.errorMessage}>
-                  {errors.password}
-                </p>
-              }
-            </div>
+            <label 
+              htmlFor='password'>
+              {langState === 'es' ? 'Contraseña' : 'Password'}
+            </label>
+            <input
+              type='text'
+              id='password'
+              name='password' 
+              value={formData.password}
+              onChange={handleInputChange} 
+              placeholder={langState === 'es' ? 'Ingrese contraseña...' :  'Enter password...'}
+              // className={inputColor}
+            />
+            {
+              errors.password 
+              && 
+              <p className={styles.errorMessage}>
+                {errors.password}
+              </p>
+            }
+          </div>
           <div className={styles.inputBlock}>
               <label 
                 htmlFor='role'>
