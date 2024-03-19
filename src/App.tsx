@@ -10,6 +10,7 @@ import InvMovFormPage from './pages/invMovFormPage/InvMovFormPage';
 import ArticleUpFormPage from './pages/articleUpFormPage/ArticleUpFormPage';
 import LocationUpPage from './pages/locationUpPage/LocationUpPage';
 import InquiryPage from './pages/inquiryPage/InquiryPage';
+import UserRoutesComp from './components/protectedRoutes/userRoutesComp/UserRoutesComp';
 
 
 
@@ -32,8 +33,12 @@ const App = () => {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/equipment" element={<EquipmentPage />} />
         <Route path="/jobs" element={<JobsPage />} />
-        <Route path='/intranet' element={<IntranetPage/>} />
         <Route path="/contact" element={<ContactPage />} />
+
+        {/* Admin & user Routes*/}
+        <Route element={<UserRoutesComp/>}>
+          <Route path='/intranet' element={<IntranetPage/>} />
+        </Route>
     
         {/* Admin Routes*/}
         <Route path='/inquiry' element={<InquiryPage/>}/>
