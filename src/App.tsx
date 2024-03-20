@@ -10,8 +10,8 @@ import InvMovFormPage from './pages/invMovFormPage/InvMovFormPage';
 import ArticleUpFormPage from './pages/articleUpFormPage/ArticleUpFormPage';
 import LocationUpPage from './pages/locationUpPage/LocationUpPage';
 import InquiryPage from './pages/inquiryPage/InquiryPage';
+import UserLoginPage from './pages/userLoginPage/UserLoginPage';
 import UserRoutesComp from './components/protectedRoutes/userRoutesComp/UserRoutesComp';
-
 
 
 const App = () => {
@@ -29,6 +29,7 @@ const App = () => {
         <Route path='/profile' element={<h1>profile</h1>}/>
   
         {/* Free Routes*/}
+        <Route path='/login' element={<UserLoginPage/>}/>
         <Route path="/" element={<CompanyPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/equipment" element={<EquipmentPage />} />
