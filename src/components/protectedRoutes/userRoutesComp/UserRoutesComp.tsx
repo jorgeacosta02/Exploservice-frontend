@@ -8,12 +8,12 @@ const UserRoutesComp = () => {
 
   console.log(accessLogin)
 
-  if ( accessLogin.user.active && accessLogin.user.role === 'user' ) {
-    console.log('dentro del if')
-    return <Outlet/>;
-  }
+  // if ( accessLogin.user.active && accessLogin.user.role === 'user' ) {
+  //   console.log('dentro del if')
+  //   return <Outlet/>;
+  // }
   console.log('fuera del if')
-  return <Navigate to='/user-login' />
+  return <Navigate to='/login' />
 };
 
 export default UserRoutesComp

@@ -105,8 +105,8 @@ const UserLoginComp = () => {
     
     console.log('document.cookie', document);
 
-    const userAuthCompleteReducer = useSelector((state: any) => state.userAuth.data);
-    console.log('userAuthCompleteReducer state.usrerAuth.data in LoginAction :',userAuthCompleteReducer);
+    // const userAuthCompleteReducer = useSelector((state: any) => state.userAuth.data);
+    // console.log('userAuthCompleteReducer state.usrerAuth.data in LoginAction :',userAuthCompleteReducer);
 
     
     return (
